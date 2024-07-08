@@ -3,6 +3,7 @@ import 'package:bm_app/api/api_client.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:intl/intl.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class NewScreen extends StatelessWidget {
@@ -15,6 +16,7 @@ class NewScreen extends StatelessWidget {
       throw Exception('Could not launch $_url');
     }
   }
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -34,7 +36,6 @@ class NewScreen extends StatelessWidget {
                   onTap: () {
                     final Uri _url = Uri.parse(snapshot.data![index].url);
                     launchUrl(_url);
-
                   },
                   child: Card(
                     child: Row(
@@ -54,8 +55,7 @@ class NewScreen extends StatelessWidget {
                           child: Column(
                             children: [
                               Text(
-                              DateFormat('MM/dd/yyyy, hh:mm a').foDateTime.fromMillisecondsSinceEpoch(snapshot.data![index].datetime * 1000).toString()
-                              ),
+                                (snapshot.data![index].datetime * 1000).toString()),
                               AutoSizeText(
                                 snapshot.data![index].headline,
                                 maxLines: 1,

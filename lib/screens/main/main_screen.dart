@@ -1,76 +1,66 @@
 import 'package:bm_app/api/api_client.dart';
 import 'package:bm_app/common/utils.dart';
 import 'package:bm_app/data/remote/quote.dart';
-import 'package:bm_app/screens/main/alarm/alarm_screen.dart';
-import 'package:bm_app/screens/main/news/news_screen.dart';
-import 'package:bm_app/screens/main/search/search_screen.dart';
-import 'package:bm_app/screens/main/search/widget/stock_search_input.dart';
+import 'package:bm_app/screens/alarm/alarm_screen.dart';
+import 'package:bm_app/screens/main/generate_viewmodels.dart';
+import 'package:bm_app/screens/news/news_screen.dart';
+import 'package:bm_app/screens/search/search_screen.dart';
+import 'package:bm_app/screens/search/widget/stock_search_input.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import 'home/home_screen.dart';
-import 'my_stock/my_stock_screen.dart';
+import '../home/home_screen.dart';
+import '../my_stock/my_stock_screen.dart';
 
-class MainScreen extends StatefulWidget {
-  MainScreen({super.key});
+class MainScreen extends ConsumerStatefulWidget {
+  const MainScreen({super.key});
 
   @override
-  State<MainScreen> createState() => _MainScreenState();
+  ConsumerState createState() => _MainScreenState();
 }
 
-class _MainScreenState extends State<MainScreen> {
+class _MainScreenState extends ConsumerState<MainScreen> {
   final apiClient = ApiClient();
-  int _selectedIndex = 0;
   List<Widget> list = [
     HomeScreen(),
-    MyStockScreen(),
-    SearchScreen(),
-    AlarmScreen(),
+    const MyStockScreen(),
+    const SearchScreen(),
+    const AlarmScreen(),
     NewScreen(),
   ];
 
   void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
+    ref.read(mainViewmodelProvider.notifier).changeScreen(index);
   }
 
   @override
   Widget build(BuildContext context) {
+    final viewmodel = ref.watch(mainViewmodelProvider);
     return Scaffold(
         appBar: AppBar(
-          title: Text("내 알람"),
-          actions: [IconButton(onPressed: () {}, icon: Icon(Icons.settings))],
+          title: const Text("내 알람"),
+          actions: [
+            IconButton(onPressed: () {}, icon: const Icon(Icons.settings))
+          ],
         ),
         bottomNavigationBar: BottomNavigationBar(
           unselectedItemColor: Colors.grey,
           selectedItemColor: Colors.lightGreen,
-          items: [
-            BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-            BottomNavigationBarItem(icon: Icon(Icons.person), label: "My"),
-            BottomNavigationBarItem(icon: Icon(Icons.search), label: "Search"),
-            BottomNavigationBarItem(icon: Icon(Icons.alarm), label: "Alarm"),
-            BottomNavigationBarItem(icon: Icon(Icons.newspaper), label: "News"),
+          items: const [
+            BottomNavigationBarItem(
+                icon: Icon(Icons.home), label: "Home"),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.person), label: "My"),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.search), label: "Search"),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.alarm), label: "Alarm"),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.newspaper), label: "News"),
           ],
-          currentIndex: _selectedIndex,
+          currentIndex: viewmodel.currentIndex,
           onTap: _onItemTapped,
         ),
-        body: list[_selectedIndex]);
-  }
-
-  Widget symbolCard(List<Quote> data, int idx) {
-    return Card(
-      child: Row(
-        children: [
-          Text("${symbolList[idx]}"),
-          Column(
-            children: [
-              Text("현재가 : ${data[idx].currentPrice}달러"),
-              Text("오늘최고가 : ${data[idx].highPriceOfDay}달러"),
-              Text("오늘최저가 : ${data[idx].lowPriceOfDay}달러"),
-            ],
-          )
-        ],
-      ),
-    );
+        body: list[viewmodel.currentIndex]);
   }
 }
