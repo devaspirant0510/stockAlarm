@@ -32,6 +32,8 @@ utils/Env.g.dart
 .pub/
 /build/
 
+/lib/utils/env.g.dart
+
 # Symbolication related
 app.*.symbols
 

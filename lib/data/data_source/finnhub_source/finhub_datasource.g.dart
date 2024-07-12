@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'remote_datasource.dart';
+part of 'finhub_datasource.dart';
 
 // **************************************************************************
 // RetrofitGenerator
@@ -8,12 +8,12 @@ part of 'remote_datasource.dart';
 
 // ignore_for_file: unnecessary_brace_in_string_interps,no_leading_underscores_for_local_identifiers
 
-class _RemoteDataSource implements RemoteDataSource {
-  _RemoteDataSource(
+class _FinhubDatasource implements FinhubDatasource {
+  _FinhubDatasource(
     this._dio, {
     this.baseUrl,
   }) {
-    baseUrl ??= 'https://www.alphavantage.co/';
+    baseUrl ??= 'https://finnhub.io/api/v1/';
   }
 
   final Dio _dio;
@@ -21,24 +21,24 @@ class _RemoteDataSource implements RemoteDataSource {
   String? baseUrl;
 
   @override
-  Future<QuoteResponse> getQuoteByName({
-    required String symbols,
-    required String apiKey,
+  Future<StockProfile> getStockProfileBySymbol({
+    String apiKey = Env.finnhubKey,
+    required String symbol,
   }) async {
     final _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{r'symbols': symbols};
-    final _headers = <String, dynamic>{r'x-api-key': apiKey};
+    final queryParameters = <String, dynamic>{r'symbol': symbol};
+    final _headers = <String, dynamic>{r'X-Finnhub-Token': apiKey};
     _headers.removeWhere((k, v) => v == null);
     const Map<String, dynamic>? _data = null;
     final _result = await _dio
-        .fetch<Map<String, dynamic>>(_setStreamType<QuoteResponse>(Options(
+        .fetch<Map<String, dynamic>>(_setStreamType<StockProfile>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
             .compose(
               _dio.options,
-              'v6/finance/quote',
+              'stock/profile2',
               queryParameters: queryParameters,
               data: _data,
             )
@@ -47,25 +47,29 @@ class _RemoteDataSource implements RemoteDataSource {
               _dio.options.baseUrl,
               baseUrl,
             ))));
-    final value = QuoteResponse.fromJson(_result.data!);
+    final value = StockProfile.fromJson(_result.data!);
     return value;
   }
 
   @override
-  Future<TopMetadata> getTopMetaData({required String apiKey}) async {
+  Future<Quote> getQuoteBySymbol({
+    String apiKey = Env.finnhubKey,
+    required String symbol,
+  }) async {
     final _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{r'apikey': apiKey};
-    final _headers = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{r'symbol': symbol};
+    final _headers = <String, dynamic>{r'X-Finnhub-Token': apiKey};
+    _headers.removeWhere((k, v) => v == null);
     const Map<String, dynamic>? _data = null;
-    final _result = await _dio
-        .fetch<Map<String, dynamic>>(_setStreamType<TopMetadata>(Options(
+    final _result =
+        await _dio.fetch<Map<String, dynamic>>(_setStreamType<Quote>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
             .compose(
               _dio.options,
-              'query?function=TOP_GAINERS_LOSERS',
+              'quote',
               queryParameters: queryParameters,
               data: _data,
             )
@@ -74,7 +78,7 @@ class _RemoteDataSource implements RemoteDataSource {
               _dio.options.baseUrl,
               baseUrl,
             ))));
-    final value = TopMetadata.fromJson(_result.data!);
+    final value = Quote.fromJson(_result.data!);
     return value;
   }
 

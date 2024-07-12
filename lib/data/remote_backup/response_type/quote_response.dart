@@ -1,4 +1,4 @@
-import 'package:bm_app/data/remote/quote.dart';
+import 'package:bm_app/data/remote_backup/quote.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'quote_response.freezed.dart';

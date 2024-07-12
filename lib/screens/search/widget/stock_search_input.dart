@@ -21,10 +21,6 @@ class StockSearchInput extends StatelessWidget {
         ),
         ElevatedButton(
             onPressed: () async {
-              print(textController.text);
-              final data = await apiClient.getQueryWithSymbol(textController.text);
-              context.read<SearchProvider>().setSearchResult(data.result);
-              print(data);
             },
             child: Text("검색"))
       ],

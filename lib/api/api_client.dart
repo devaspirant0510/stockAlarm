@@ -1,12 +1,13 @@
 import 'dart:convert';
 
 import 'package:bm_app/api/remote_api.dart';
-import 'package:bm_app/data/remote/market_news.dart';
-import 'package:bm_app/data/remote/quote.dart';
-import 'package:bm_app/data/remote/response_type/quote_response.dart';
-import 'package:bm_app/data/remote/symbol_lookup.dart';
 import 'package:dio/dio.dart';
 import 'package:http/http.dart' as http;
+
+import '../data/remote_backup/market_news.dart';
+import '../data/remote_backup/quote.dart';
+import '../data/remote_backup/response_type/quote_response.dart';
+import '../data/remote_backup/symbol_lookup.dart';
 
 class CustomOption extends BaseOptions {}
 

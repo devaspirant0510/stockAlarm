@@ -1,8 +1,8 @@
-import 'package:bm_app/data/remote/market_news.dart';
-import 'package:bm_app/data/remote/quote.dart';
 
-import '../data/remote/response_type/quote_response.dart';
-import '../data/remote/symbol_lookup.dart';
+import '../data/remote_backup/market_news.dart';
+import '../data/remote_backup/quote.dart';
+import '../data/remote_backup/response_type/quote_response.dart';
+import '../data/remote_backup/symbol_lookup.dart';
 
 abstract class RemoteApi {
   Future<Quote> getOneSymbol(String symbol);

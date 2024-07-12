@@ -1,8 +1,8 @@
 import 'package:bm_app/api/api_client.dart';
 import 'package:bm_app/common/utils.dart';
-import 'package:bm_app/data/remote/quote.dart';
 import 'package:bm_app/screens/alarm/alarm_screen.dart';
 import 'package:bm_app/screens/main/generate_viewmodels.dart';
+import 'package:bm_app/screens/my/my_screen.dart';
 import 'package:bm_app/screens/news/news_screen.dart';
 import 'package:bm_app/screens/search/search_screen.dart';
 import 'package:bm_app/screens/search/widget/stock_search_input.dart';
@@ -23,7 +23,7 @@ class _MainScreenState extends ConsumerState<MainScreen> {
   final apiClient = ApiClient();
   List<Widget> list = [
     HomeScreen(),
-    const MyStockScreen(),
+    const MyScreen(),
     const SearchScreen(),
     const AlarmScreen(),
     NewScreen(),

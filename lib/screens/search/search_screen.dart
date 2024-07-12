@@ -10,8 +10,6 @@ class SearchScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        StockSearchInput(),
-        Expanded(child: SearchResult()),
       ],
     );
   }
