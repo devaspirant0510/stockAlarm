@@ -6,12 +6,12 @@ part of 'viewmodel_states.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$homeViewmodelHash() => r'e9e9b47f02d5b5ea5ee650f8eb8c5577bb233268';
+String _$homeViewmodelHash() => r'5eec3ab23e540454fc78b52004bf128f92ec8f94';
 
 /// See also [HomeViewmodel].
 @ProviderFor(HomeViewmodel)
 final homeViewmodelProvider =
-    AutoDisposeAsyncNotifierProvider<HomeViewmodel, HomeState>.internal(
+    AsyncNotifierProvider<HomeViewmodel, HomeState>.internal(
   HomeViewmodel.new,
   name: r'homeViewmodelProvider',
   debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
@@ -21,13 +21,13 @@ final homeViewmodelProvider =
   allTransitiveDependencies: null,
 );
 
-typedef _$HomeViewmodel = AutoDisposeAsyncNotifier<HomeState>;
-String _$myViewmodelHash() => r'90b74de0a126dd5912ddfe6dc9497c7ff9272e89';
+typedef _$HomeViewmodel = AsyncNotifier<HomeState>;
+String _$myViewmodelHash() => r'e6168519c24b12696704f99dcb1f636aa1a4e1a8';
 
 /// See also [MyViewmodel].
 @ProviderFor(MyViewmodel)
 final myViewmodelProvider =
-    AutoDisposeAsyncNotifierProvider<MyViewmodel, void>.internal(
+    AutoDisposeNotifierProvider<MyViewmodel, MyState>.internal(
   MyViewmodel.new,
   name: r'myViewmodelProvider',
   debugGetCreateSourceHash:
@@ -36,6 +36,22 @@ final myViewmodelProvider =
   allTransitiveDependencies: null,
 );
 
-typedef _$MyViewmodel = AutoDisposeAsyncNotifier<void>;
+typedef _$MyViewmodel = AutoDisposeNotifier<MyState>;
+String _$searchViewModelHash() => r'336a57b6a01985edcc9a21fd21861a7d76d1ab78';
+
+/// See also [SearchViewModel].
+@ProviderFor(SearchViewModel)
+final searchViewModelProvider =
+    AutoDisposeNotifierProvider<SearchViewModel, SearchState>.internal(
+  SearchViewModel.new,
+  name: r'searchViewModelProvider',
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$searchViewModelHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
+);
+
+typedef _$SearchViewModel = AutoDisposeNotifier<SearchState>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member

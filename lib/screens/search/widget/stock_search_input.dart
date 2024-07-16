@@ -1,17 +1,20 @@
-import 'package:bm_app/api/api_client.dart';
-import 'package:bm_app/domain/search_provider.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:bm_app/domain/usecase/usecase.dart';
+import 'package:bm_app/screens/viewmodel_states.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class StockSearchInput extends StatelessWidget {
-  StockSearchInput({super.key});
+class StockSearchInput extends ConsumerStatefulWidget {
+  const StockSearchInput({super.key});
 
-  final apiClient = ApiClient();
+  @override
+  ConsumerState createState() => _StockSearchInputState();
+}
+
+class _StockSearchInputState extends ConsumerState<StockSearchInput> {
+  TextEditingController textController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
-    TextEditingController textController = TextEditingController();
     return Row(
       children: [
         Expanded(
@@ -20,9 +23,18 @@ class StockSearchInput extends StatelessWidget {
           ),
         ),
         ElevatedButton(
-            onPressed: () async {
-            },
-            child: Text("검색"))
+          onPressed: () async {
+            if(textController.text.trim().isEmpty){
+              ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("검색어를 입력해주세요")));
+              return;
+            }
+            ref.read(searchViewModelProvider.notifier).onClickSearchButton(textController.text.trim());
+          },
+
+          child: Text(
+            "검색",
+          ),
+        )
       ],
     );
   }

@@ -8,5 +8,7 @@ part 'top_metadata.dart';
 part 'stock_profile.dart';
 part 'quote.dart';
 part 'favorite_stock.dart';
+part 'stock_search.dart';
+part 'stock_search_result.dart';
 
 

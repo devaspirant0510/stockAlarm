@@ -104,12 +104,66 @@ _$FavortieStockImpl _$$FavortieStockImplFromJson(Map<String, dynamic> json) =>
     _$FavortieStockImpl(
       id: json['id'] as int,
       symbol: json['symbol'] as String,
-      isAlarm: json['is_alarm'] as bool,
+      desc: json['desc'] as String,
+      profileUrl: json['profile_url'] as String? ?? null,
+      isAlarm: json['is_alarm'] as int,
     );
 
 Map<String, dynamic> _$$FavortieStockImplToJson(_$FavortieStockImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'symbol': instance.symbol,
+      'desc': instance.desc,
+      'profile_url': instance.profileUrl,
       'is_alarm': instance.isAlarm,
+    };
+
+_$StockSearchImpl _$$StockSearchImplFromJson(Map<String, dynamic> json) =>
+    _$StockSearchImpl(
+      active: json['active'] as bool,
+      cik: json['cik'] as String? ?? "",
+      compositeFigi: json['composite_figi'] as String? ?? "",
+      currencyName: json['currency_name'] as String,
+      lastUpdatedUtc: DateTime.parse(json['last_updated_utc'] as String),
+      locale: json['locale'] as String,
+      market: json['market'] as String,
+      name: json['name'] as String,
+      primaryExchange: json['primary_exchange'] as String,
+      shareClassFigi: json['share_class_figi'] as String? ?? "",
+      ticker: json['ticker'] as String,
+      type: json['type'] as String? ?? "",
+    );
+
+Map<String, dynamic> _$$StockSearchImplToJson(_$StockSearchImpl instance) =>
+    <String, dynamic>{
+      'active': instance.active,
+      'cik': instance.cik,
+      'composite_figi': instance.compositeFigi,
+      'currency_name': instance.currencyName,
+      'last_updated_utc': instance.lastUpdatedUtc.toIso8601String(),
+      'locale': instance.locale,
+      'market': instance.market,
+      'name': instance.name,
+      'primary_exchange': instance.primaryExchange,
+      'share_class_figi': instance.shareClassFigi,
+      'ticker': instance.ticker,
+      'type': instance.type,
+    };
+
+_$StockSearchResultImpl _$$StockSearchResultImplFromJson(
+        Map<String, dynamic> json) =>
+    _$StockSearchResultImpl(
+      count: json['count'] as int? ?? 0,
+      results: (json['results'] as List<dynamic>)
+          .map((e) => StockSearch.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      status: json['status'] as String? ?? "a",
+    );
+
+Map<String, dynamic> _$$StockSearchResultImplToJson(
+        _$StockSearchResultImpl instance) =>
+    <String, dynamic>{
+      'count': instance.count,
+      'results': instance.results,
+      'status': instance.status,
     };

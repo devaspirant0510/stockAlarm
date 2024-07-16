@@ -8,3 +8,5 @@ import '../../data/entity/entity.dart';
 
 part 'usecase.g.dart';
 part './home_usecase.dart';
+part './search_usecase.dart';
+part './my_usecase.dart';

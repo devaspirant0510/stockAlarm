@@ -1183,8 +1183,11 @@ FavoriteStock _$FavoriteStockFromJson(Map<String, dynamic> json) {
 mixin _$FavoriteStock {
   int get id => throw _privateConstructorUsedError;
   String get symbol => throw _privateConstructorUsedError;
+  String get desc => throw _privateConstructorUsedError;
+  @JsonKey(name: "profile_url")
+  String? get profileUrl => throw _privateConstructorUsedError;
   @JsonKey(name: "is_alarm")
-  bool get isAlarm => throw _privateConstructorUsedError;
+  int get isAlarm => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -1198,7 +1201,12 @@ abstract class $FavoriteStockCopyWith<$Res> {
           FavoriteStock value, $Res Function(FavoriteStock) then) =
       _$FavoriteStockCopyWithImpl<$Res, FavoriteStock>;
   @useResult
-  $Res call({int id, String symbol, @JsonKey(name: "is_alarm") bool isAlarm});
+  $Res call(
+      {int id,
+      String symbol,
+      String desc,
+      @JsonKey(name: "profile_url") String? profileUrl,
+      @JsonKey(name: "is_alarm") int isAlarm});
 }
 
 /// @nodoc
@@ -1216,6 +1224,8 @@ class _$FavoriteStockCopyWithImpl<$Res, $Val extends FavoriteStock>
   $Res call({
     Object? id = null,
     Object? symbol = null,
+    Object? desc = null,
+    Object? profileUrl = freezed,
     Object? isAlarm = null,
   }) {
     return _then(_value.copyWith(
@@ -1227,10 +1237,18 @@ class _$FavoriteStockCopyWithImpl<$Res, $Val extends FavoriteStock>
           ? _value.symbol
           : symbol // ignore: cast_nullable_to_non_nullable
               as String,
+      desc: null == desc
+          ? _value.desc
+          : desc // ignore: cast_nullable_to_non_nullable
+              as String,
+      profileUrl: freezed == profileUrl
+          ? _value.profileUrl
+          : profileUrl // ignore: cast_nullable_to_non_nullable
+              as String?,
       isAlarm: null == isAlarm
           ? _value.isAlarm
           : isAlarm // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as int,
     ) as $Val);
   }
 }
@@ -1243,7 +1261,12 @@ abstract class _$$FavortieStockImplCopyWith<$Res>
       __$$FavortieStockImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int id, String symbol, @JsonKey(name: "is_alarm") bool isAlarm});
+  $Res call(
+      {int id,
+      String symbol,
+      String desc,
+      @JsonKey(name: "profile_url") String? profileUrl,
+      @JsonKey(name: "is_alarm") int isAlarm});
 }
 
 /// @nodoc
@@ -1259,6 +1282,8 @@ class __$$FavortieStockImplCopyWithImpl<$Res>
   $Res call({
     Object? id = null,
     Object? symbol = null,
+    Object? desc = null,
+    Object? profileUrl = freezed,
     Object? isAlarm = null,
   }) {
     return _then(_$FavortieStockImpl(
@@ -1270,10 +1295,18 @@ class __$$FavortieStockImplCopyWithImpl<$Res>
           ? _value.symbol
           : symbol // ignore: cast_nullable_to_non_nullable
               as String,
+      desc: null == desc
+          ? _value.desc
+          : desc // ignore: cast_nullable_to_non_nullable
+              as String,
+      profileUrl: freezed == profileUrl
+          ? _value.profileUrl
+          : profileUrl // ignore: cast_nullable_to_non_nullable
+              as String?,
       isAlarm: null == isAlarm
           ? _value.isAlarm
           : isAlarm // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as int,
     ));
   }
 }
@@ -1284,6 +1317,8 @@ class _$FavortieStockImpl implements _FavortieStock {
   const _$FavortieStockImpl(
       {required this.id,
       required this.symbol,
+      required this.desc,
+      @JsonKey(name: "profile_url") this.profileUrl = null,
       @JsonKey(name: "is_alarm") required this.isAlarm});
 
   factory _$FavortieStockImpl.fromJson(Map<String, dynamic> json) =>
@@ -1294,12 +1329,17 @@ class _$FavortieStockImpl implements _FavortieStock {
   @override
   final String symbol;
   @override
+  final String desc;
+  @override
+  @JsonKey(name: "profile_url")
+  final String? profileUrl;
+  @override
   @JsonKey(name: "is_alarm")
-  final bool isAlarm;
+  final int isAlarm;
 
   @override
   String toString() {
-    return 'FavoriteStock(id: $id, symbol: $symbol, isAlarm: $isAlarm)';
+    return 'FavoriteStock(id: $id, symbol: $symbol, desc: $desc, profileUrl: $profileUrl, isAlarm: $isAlarm)';
   }
 
   @override
@@ -1309,12 +1349,16 @@ class _$FavortieStockImpl implements _FavortieStock {
             other is _$FavortieStockImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.symbol, symbol) || other.symbol == symbol) &&
+            (identical(other.desc, desc) || other.desc == desc) &&
+            (identical(other.profileUrl, profileUrl) ||
+                other.profileUrl == profileUrl) &&
             (identical(other.isAlarm, isAlarm) || other.isAlarm == isAlarm));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, id, symbol, isAlarm);
+  int get hashCode =>
+      Object.hash(runtimeType, id, symbol, desc, profileUrl, isAlarm);
 
   @JsonKey(ignore: true)
   @override
@@ -1334,7 +1378,9 @@ abstract class _FavortieStock implements FavoriteStock {
   const factory _FavortieStock(
           {required final int id,
           required final String symbol,
-          @JsonKey(name: "is_alarm") required final bool isAlarm}) =
+          required final String desc,
+          @JsonKey(name: "profile_url") final String? profileUrl,
+          @JsonKey(name: "is_alarm") required final int isAlarm}) =
       _$FavortieStockImpl;
 
   factory _FavortieStock.fromJson(Map<String, dynamic> json) =
@@ -1345,10 +1391,595 @@ abstract class _FavortieStock implements FavoriteStock {
   @override
   String get symbol;
   @override
+  String get desc;
+  @override
+  @JsonKey(name: "profile_url")
+  String? get profileUrl;
+  @override
   @JsonKey(name: "is_alarm")
-  bool get isAlarm;
+  int get isAlarm;
   @override
   @JsonKey(ignore: true)
   _$$FavortieStockImplCopyWith<_$FavortieStockImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+StockSearch _$StockSearchFromJson(Map<String, dynamic> json) {
+  return _StockSearch.fromJson(json);
+}
+
+/// @nodoc
+mixin _$StockSearch {
+  bool get active => throw _privateConstructorUsedError;
+  String get cik => throw _privateConstructorUsedError;
+  @JsonKey(name: 'composite_figi')
+  String get compositeFigi => throw _privateConstructorUsedError;
+  @JsonKey(name: 'currency_name')
+  String get currencyName => throw _privateConstructorUsedError;
+  @JsonKey(name: 'last_updated_utc')
+  DateTime get lastUpdatedUtc => throw _privateConstructorUsedError;
+  String get locale => throw _privateConstructorUsedError;
+  String get market => throw _privateConstructorUsedError;
+  String get name => throw _privateConstructorUsedError;
+  @JsonKey(name: 'primary_exchange')
+  String get primaryExchange => throw _privateConstructorUsedError;
+  @JsonKey(name: 'share_class_figi')
+  String get shareClassFigi => throw _privateConstructorUsedError;
+  String get ticker => throw _privateConstructorUsedError;
+  String get type => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $StockSearchCopyWith<StockSearch> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $StockSearchCopyWith<$Res> {
+  factory $StockSearchCopyWith(
+          StockSearch value, $Res Function(StockSearch) then) =
+      _$StockSearchCopyWithImpl<$Res, StockSearch>;
+  @useResult
+  $Res call(
+      {bool active,
+      String cik,
+      @JsonKey(name: 'composite_figi') String compositeFigi,
+      @JsonKey(name: 'currency_name') String currencyName,
+      @JsonKey(name: 'last_updated_utc') DateTime lastUpdatedUtc,
+      String locale,
+      String market,
+      String name,
+      @JsonKey(name: 'primary_exchange') String primaryExchange,
+      @JsonKey(name: 'share_class_figi') String shareClassFigi,
+      String ticker,
+      String type});
+}
+
+/// @nodoc
+class _$StockSearchCopyWithImpl<$Res, $Val extends StockSearch>
+    implements $StockSearchCopyWith<$Res> {
+  _$StockSearchCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? active = null,
+    Object? cik = null,
+    Object? compositeFigi = null,
+    Object? currencyName = null,
+    Object? lastUpdatedUtc = null,
+    Object? locale = null,
+    Object? market = null,
+    Object? name = null,
+    Object? primaryExchange = null,
+    Object? shareClassFigi = null,
+    Object? ticker = null,
+    Object? type = null,
+  }) {
+    return _then(_value.copyWith(
+      active: null == active
+          ? _value.active
+          : active // ignore: cast_nullable_to_non_nullable
+              as bool,
+      cik: null == cik
+          ? _value.cik
+          : cik // ignore: cast_nullable_to_non_nullable
+              as String,
+      compositeFigi: null == compositeFigi
+          ? _value.compositeFigi
+          : compositeFigi // ignore: cast_nullable_to_non_nullable
+              as String,
+      currencyName: null == currencyName
+          ? _value.currencyName
+          : currencyName // ignore: cast_nullable_to_non_nullable
+              as String,
+      lastUpdatedUtc: null == lastUpdatedUtc
+          ? _value.lastUpdatedUtc
+          : lastUpdatedUtc // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      locale: null == locale
+          ? _value.locale
+          : locale // ignore: cast_nullable_to_non_nullable
+              as String,
+      market: null == market
+          ? _value.market
+          : market // ignore: cast_nullable_to_non_nullable
+              as String,
+      name: null == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      primaryExchange: null == primaryExchange
+          ? _value.primaryExchange
+          : primaryExchange // ignore: cast_nullable_to_non_nullable
+              as String,
+      shareClassFigi: null == shareClassFigi
+          ? _value.shareClassFigi
+          : shareClassFigi // ignore: cast_nullable_to_non_nullable
+              as String,
+      ticker: null == ticker
+          ? _value.ticker
+          : ticker // ignore: cast_nullable_to_non_nullable
+              as String,
+      type: null == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as String,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$StockSearchImplCopyWith<$Res>
+    implements $StockSearchCopyWith<$Res> {
+  factory _$$StockSearchImplCopyWith(
+          _$StockSearchImpl value, $Res Function(_$StockSearchImpl) then) =
+      __$$StockSearchImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {bool active,
+      String cik,
+      @JsonKey(name: 'composite_figi') String compositeFigi,
+      @JsonKey(name: 'currency_name') String currencyName,
+      @JsonKey(name: 'last_updated_utc') DateTime lastUpdatedUtc,
+      String locale,
+      String market,
+      String name,
+      @JsonKey(name: 'primary_exchange') String primaryExchange,
+      @JsonKey(name: 'share_class_figi') String shareClassFigi,
+      String ticker,
+      String type});
+}
+
+/// @nodoc
+class __$$StockSearchImplCopyWithImpl<$Res>
+    extends _$StockSearchCopyWithImpl<$Res, _$StockSearchImpl>
+    implements _$$StockSearchImplCopyWith<$Res> {
+  __$$StockSearchImplCopyWithImpl(
+      _$StockSearchImpl _value, $Res Function(_$StockSearchImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? active = null,
+    Object? cik = null,
+    Object? compositeFigi = null,
+    Object? currencyName = null,
+    Object? lastUpdatedUtc = null,
+    Object? locale = null,
+    Object? market = null,
+    Object? name = null,
+    Object? primaryExchange = null,
+    Object? shareClassFigi = null,
+    Object? ticker = null,
+    Object? type = null,
+  }) {
+    return _then(_$StockSearchImpl(
+      active: null == active
+          ? _value.active
+          : active // ignore: cast_nullable_to_non_nullable
+              as bool,
+      cik: null == cik
+          ? _value.cik
+          : cik // ignore: cast_nullable_to_non_nullable
+              as String,
+      compositeFigi: null == compositeFigi
+          ? _value.compositeFigi
+          : compositeFigi // ignore: cast_nullable_to_non_nullable
+              as String,
+      currencyName: null == currencyName
+          ? _value.currencyName
+          : currencyName // ignore: cast_nullable_to_non_nullable
+              as String,
+      lastUpdatedUtc: null == lastUpdatedUtc
+          ? _value.lastUpdatedUtc
+          : lastUpdatedUtc // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      locale: null == locale
+          ? _value.locale
+          : locale // ignore: cast_nullable_to_non_nullable
+              as String,
+      market: null == market
+          ? _value.market
+          : market // ignore: cast_nullable_to_non_nullable
+              as String,
+      name: null == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      primaryExchange: null == primaryExchange
+          ? _value.primaryExchange
+          : primaryExchange // ignore: cast_nullable_to_non_nullable
+              as String,
+      shareClassFigi: null == shareClassFigi
+          ? _value.shareClassFigi
+          : shareClassFigi // ignore: cast_nullable_to_non_nullable
+              as String,
+      ticker: null == ticker
+          ? _value.ticker
+          : ticker // ignore: cast_nullable_to_non_nullable
+              as String,
+      type: null == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$StockSearchImpl implements _StockSearch {
+  const _$StockSearchImpl(
+      {required this.active,
+      this.cik = "",
+      @JsonKey(name: 'composite_figi') this.compositeFigi = "",
+      @JsonKey(name: 'currency_name') required this.currencyName,
+      @JsonKey(name: 'last_updated_utc') required this.lastUpdatedUtc,
+      required this.locale,
+      required this.market,
+      required this.name,
+      @JsonKey(name: 'primary_exchange') required this.primaryExchange,
+      @JsonKey(name: 'share_class_figi') this.shareClassFigi = "",
+      required this.ticker,
+      this.type = ""});
+
+  factory _$StockSearchImpl.fromJson(Map<String, dynamic> json) =>
+      _$$StockSearchImplFromJson(json);
+
+  @override
+  final bool active;
+  @override
+  @JsonKey()
+  final String cik;
+  @override
+  @JsonKey(name: 'composite_figi')
+  final String compositeFigi;
+  @override
+  @JsonKey(name: 'currency_name')
+  final String currencyName;
+  @override
+  @JsonKey(name: 'last_updated_utc')
+  final DateTime lastUpdatedUtc;
+  @override
+  final String locale;
+  @override
+  final String market;
+  @override
+  final String name;
+  @override
+  @JsonKey(name: 'primary_exchange')
+  final String primaryExchange;
+  @override
+  @JsonKey(name: 'share_class_figi')
+  final String shareClassFigi;
+  @override
+  final String ticker;
+  @override
+  @JsonKey()
+  final String type;
+
+  @override
+  String toString() {
+    return 'StockSearch(active: $active, cik: $cik, compositeFigi: $compositeFigi, currencyName: $currencyName, lastUpdatedUtc: $lastUpdatedUtc, locale: $locale, market: $market, name: $name, primaryExchange: $primaryExchange, shareClassFigi: $shareClassFigi, ticker: $ticker, type: $type)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$StockSearchImpl &&
+            (identical(other.active, active) || other.active == active) &&
+            (identical(other.cik, cik) || other.cik == cik) &&
+            (identical(other.compositeFigi, compositeFigi) ||
+                other.compositeFigi == compositeFigi) &&
+            (identical(other.currencyName, currencyName) ||
+                other.currencyName == currencyName) &&
+            (identical(other.lastUpdatedUtc, lastUpdatedUtc) ||
+                other.lastUpdatedUtc == lastUpdatedUtc) &&
+            (identical(other.locale, locale) || other.locale == locale) &&
+            (identical(other.market, market) || other.market == market) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.primaryExchange, primaryExchange) ||
+                other.primaryExchange == primaryExchange) &&
+            (identical(other.shareClassFigi, shareClassFigi) ||
+                other.shareClassFigi == shareClassFigi) &&
+            (identical(other.ticker, ticker) || other.ticker == ticker) &&
+            (identical(other.type, type) || other.type == type));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      active,
+      cik,
+      compositeFigi,
+      currencyName,
+      lastUpdatedUtc,
+      locale,
+      market,
+      name,
+      primaryExchange,
+      shareClassFigi,
+      ticker,
+      type);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$StockSearchImplCopyWith<_$StockSearchImpl> get copyWith =>
+      __$$StockSearchImplCopyWithImpl<_$StockSearchImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$StockSearchImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _StockSearch implements StockSearch {
+  const factory _StockSearch(
+      {required final bool active,
+      final String cik,
+      @JsonKey(name: 'composite_figi') final String compositeFigi,
+      @JsonKey(name: 'currency_name') required final String currencyName,
+      @JsonKey(name: 'last_updated_utc') required final DateTime lastUpdatedUtc,
+      required final String locale,
+      required final String market,
+      required final String name,
+      @JsonKey(name: 'primary_exchange') required final String primaryExchange,
+      @JsonKey(name: 'share_class_figi') final String shareClassFigi,
+      required final String ticker,
+      final String type}) = _$StockSearchImpl;
+
+  factory _StockSearch.fromJson(Map<String, dynamic> json) =
+      _$StockSearchImpl.fromJson;
+
+  @override
+  bool get active;
+  @override
+  String get cik;
+  @override
+  @JsonKey(name: 'composite_figi')
+  String get compositeFigi;
+  @override
+  @JsonKey(name: 'currency_name')
+  String get currencyName;
+  @override
+  @JsonKey(name: 'last_updated_utc')
+  DateTime get lastUpdatedUtc;
+  @override
+  String get locale;
+  @override
+  String get market;
+  @override
+  String get name;
+  @override
+  @JsonKey(name: 'primary_exchange')
+  String get primaryExchange;
+  @override
+  @JsonKey(name: 'share_class_figi')
+  String get shareClassFigi;
+  @override
+  String get ticker;
+  @override
+  String get type;
+  @override
+  @JsonKey(ignore: true)
+  _$$StockSearchImplCopyWith<_$StockSearchImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+StockSearchResult _$StockSearchResultFromJson(Map<String, dynamic> json) {
+  return _StockSearchResult.fromJson(json);
+}
+
+/// @nodoc
+mixin _$StockSearchResult {
+  int get count => throw _privateConstructorUsedError;
+  List<StockSearch> get results => throw _privateConstructorUsedError;
+  String get status => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $StockSearchResultCopyWith<StockSearchResult> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $StockSearchResultCopyWith<$Res> {
+  factory $StockSearchResultCopyWith(
+          StockSearchResult value, $Res Function(StockSearchResult) then) =
+      _$StockSearchResultCopyWithImpl<$Res, StockSearchResult>;
+  @useResult
+  $Res call({int count, List<StockSearch> results, String status});
+}
+
+/// @nodoc
+class _$StockSearchResultCopyWithImpl<$Res, $Val extends StockSearchResult>
+    implements $StockSearchResultCopyWith<$Res> {
+  _$StockSearchResultCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? count = null,
+    Object? results = null,
+    Object? status = null,
+  }) {
+    return _then(_value.copyWith(
+      count: null == count
+          ? _value.count
+          : count // ignore: cast_nullable_to_non_nullable
+              as int,
+      results: null == results
+          ? _value.results
+          : results // ignore: cast_nullable_to_non_nullable
+              as List<StockSearch>,
+      status: null == status
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as String,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$StockSearchResultImplCopyWith<$Res>
+    implements $StockSearchResultCopyWith<$Res> {
+  factory _$$StockSearchResultImplCopyWith(_$StockSearchResultImpl value,
+          $Res Function(_$StockSearchResultImpl) then) =
+      __$$StockSearchResultImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({int count, List<StockSearch> results, String status});
+}
+
+/// @nodoc
+class __$$StockSearchResultImplCopyWithImpl<$Res>
+    extends _$StockSearchResultCopyWithImpl<$Res, _$StockSearchResultImpl>
+    implements _$$StockSearchResultImplCopyWith<$Res> {
+  __$$StockSearchResultImplCopyWithImpl(_$StockSearchResultImpl _value,
+      $Res Function(_$StockSearchResultImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? count = null,
+    Object? results = null,
+    Object? status = null,
+  }) {
+    return _then(_$StockSearchResultImpl(
+      count: null == count
+          ? _value.count
+          : count // ignore: cast_nullable_to_non_nullable
+              as int,
+      results: null == results
+          ? _value._results
+          : results // ignore: cast_nullable_to_non_nullable
+              as List<StockSearch>,
+      status: null == status
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$StockSearchResultImpl implements _StockSearchResult {
+  const _$StockSearchResultImpl(
+      {this.count = 0,
+      required final List<StockSearch> results,
+      this.status = "a"})
+      : _results = results;
+
+  factory _$StockSearchResultImpl.fromJson(Map<String, dynamic> json) =>
+      _$$StockSearchResultImplFromJson(json);
+
+  @override
+  @JsonKey()
+  final int count;
+  final List<StockSearch> _results;
+  @override
+  List<StockSearch> get results {
+    if (_results is EqualUnmodifiableListView) return _results;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_results);
+  }
+
+  @override
+  @JsonKey()
+  final String status;
+
+  @override
+  String toString() {
+    return 'StockSearchResult(count: $count, results: $results, status: $status)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$StockSearchResultImpl &&
+            (identical(other.count, count) || other.count == count) &&
+            const DeepCollectionEquality().equals(other._results, _results) &&
+            (identical(other.status, status) || other.status == status));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, count,
+      const DeepCollectionEquality().hash(_results), status);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$StockSearchResultImplCopyWith<_$StockSearchResultImpl> get copyWith =>
+      __$$StockSearchResultImplCopyWithImpl<_$StockSearchResultImpl>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$StockSearchResultImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _StockSearchResult implements StockSearchResult {
+  const factory _StockSearchResult(
+      {final int count,
+      required final List<StockSearch> results,
+      final String status}) = _$StockSearchResultImpl;
+
+  factory _StockSearchResult.fromJson(Map<String, dynamic> json) =
+      _$StockSearchResultImpl.fromJson;
+
+  @override
+  int get count;
+  @override
+  List<StockSearch> get results;
+  @override
+  String get status;
+  @override
+  @JsonKey(ignore: true)
+  _$$StockSearchResultImplCopyWith<_$StockSearchResultImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

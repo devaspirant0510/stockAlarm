@@ -412,3 +412,150 @@ abstract class _PreviewStockModel implements PreviewStockModel {
   _$$PreviewStockModelImplCopyWith<_$PreviewStockModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
+
+/// @nodoc
+mixin _$SearchItemModel {
+  String get ticker => throw _privateConstructorUsedError;
+  set ticker(String value) => throw _privateConstructorUsedError;
+  String get name => throw _privateConstructorUsedError;
+  set name(String value) => throw _privateConstructorUsedError;
+  bool get isAdded => throw _privateConstructorUsedError;
+  set isAdded(bool value) => throw _privateConstructorUsedError;
+
+  @JsonKey(ignore: true)
+  $SearchItemModelCopyWith<SearchItemModel> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $SearchItemModelCopyWith<$Res> {
+  factory $SearchItemModelCopyWith(
+          SearchItemModel value, $Res Function(SearchItemModel) then) =
+      _$SearchItemModelCopyWithImpl<$Res, SearchItemModel>;
+  @useResult
+  $Res call({String ticker, String name, bool isAdded});
+}
+
+/// @nodoc
+class _$SearchItemModelCopyWithImpl<$Res, $Val extends SearchItemModel>
+    implements $SearchItemModelCopyWith<$Res> {
+  _$SearchItemModelCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? ticker = null,
+    Object? name = null,
+    Object? isAdded = null,
+  }) {
+    return _then(_value.copyWith(
+      ticker: null == ticker
+          ? _value.ticker
+          : ticker // ignore: cast_nullable_to_non_nullable
+              as String,
+      name: null == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      isAdded: null == isAdded
+          ? _value.isAdded
+          : isAdded // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$SearchItemModelImplCopyWith<$Res>
+    implements $SearchItemModelCopyWith<$Res> {
+  factory _$$SearchItemModelImplCopyWith(_$SearchItemModelImpl value,
+          $Res Function(_$SearchItemModelImpl) then) =
+      __$$SearchItemModelImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String ticker, String name, bool isAdded});
+}
+
+/// @nodoc
+class __$$SearchItemModelImplCopyWithImpl<$Res>
+    extends _$SearchItemModelCopyWithImpl<$Res, _$SearchItemModelImpl>
+    implements _$$SearchItemModelImplCopyWith<$Res> {
+  __$$SearchItemModelImplCopyWithImpl(
+      _$SearchItemModelImpl _value, $Res Function(_$SearchItemModelImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? ticker = null,
+    Object? name = null,
+    Object? isAdded = null,
+  }) {
+    return _then(_$SearchItemModelImpl(
+      ticker: null == ticker
+          ? _value.ticker
+          : ticker // ignore: cast_nullable_to_non_nullable
+              as String,
+      name: null == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      isAdded: null == isAdded
+          ? _value.isAdded
+          : isAdded // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$SearchItemModelImpl implements _SearchItemModel {
+  _$SearchItemModelImpl(
+      {required this.ticker, required this.name, required this.isAdded});
+
+  @override
+  String ticker;
+  @override
+  String name;
+  @override
+  bool isAdded;
+
+  @override
+  String toString() {
+    return 'SearchItemModel(ticker: $ticker, name: $name, isAdded: $isAdded)';
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SearchItemModelImplCopyWith<_$SearchItemModelImpl> get copyWith =>
+      __$$SearchItemModelImplCopyWithImpl<_$SearchItemModelImpl>(
+          this, _$identity);
+}
+
+abstract class _SearchItemModel implements SearchItemModel {
+  factory _SearchItemModel(
+      {required String ticker,
+      required String name,
+      required bool isAdded}) = _$SearchItemModelImpl;
+
+  @override
+  String get ticker;
+  set ticker(String value);
+  @override
+  String get name;
+  set name(String value);
+  @override
+  bool get isAdded;
+  set isAdded(bool value);
+  @override
+  @JsonKey(ignore: true)
+  _$$SearchItemModelImplCopyWith<_$SearchItemModelImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}

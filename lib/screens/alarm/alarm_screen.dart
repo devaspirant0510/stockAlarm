@@ -2,10 +2,16 @@ import 'dart:io';
 
 import 'package:alarm/alarm.dart';
 import 'package:alarm/model/alarm_settings.dart';
+import 'package:android_alarm_manager_plus/android_alarm_manager_plus.dart';
+import 'package:audioplayers/audioplayers.dart';
+import 'package:bm_app/data/repository/repository_impl.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:permission_handler/permission_handler.dart';
+
+import '../../common/sql_manager.dart';
 
 class AlarmScreen extends StatefulWidget {
   const AlarmScreen({super.key});
@@ -16,11 +22,26 @@ class AlarmScreen extends StatefulWidget {
 
 class _AlarmScreenState extends State<AlarmScreen> {
   String path = "";
+  late FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin;
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
-    WidgetsBinding.instance.addPostFrameCallback((timeStamp) async {
+    flutterLocalNotificationsPlugin = FlutterLocalNotificationsPlugin();
+    const AndroidInitializationSettings initializationSettingsAndroid =
+    AndroidInitializationSettings('@mipmap/ic_launcher');
+    final InitializationSettings initializationSettings =
+    InitializationSettings(android: initializationSettingsAndroid);
+    flutterLocalNotificationsPlugin.initialize(initializationSettings);WidgetsBinding.instance.addPostFrameCallback((timeStamp) async {
+      final int alarmId = 0;
+      await AndroidAlarmManager.periodic(
+        const Duration(days: 7),
+        alarmId,
+        _alarmCallback,
+        startAt: DateTime.now().add(Duration(seconds: 10)), // 테스트를 위해 10초 후 설정
+        exact: true,
+        wakeup: true,
+      );
       var status = await Permission.storage.status;
       File file = File('/storage/emulated/0/Android/data/seungho.devxeg.bm_app/files/a.wav');
       if (file.existsSync()) {
@@ -42,37 +63,59 @@ class _AlarmScreenState extends State<AlarmScreen> {
       }
     },);
   }
-
+  static Future<void> _alarmCallback() async {
+    print('Alarm fired!');
+    FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
+    FlutterLocalNotificationsPlugin();
+    const AndroidNotificationDetails androidPlatformChannelSpecifics =
+    AndroidNotificationDetails(
+      'your channel id',
+      'your channel name',
+      importance: Importance.max,
+      priority: Priority.high,
+      fullScreenIntent: true,
+    );
+    const NotificationDetails platformChannelSpecifics = NotificationDetails(
+        android: androidPlatformChannelSpecifics);
+    await flutterLocalNotificationsPlugin.show(
+      0,
+      'Weekly Alarm',
+      'This is your weekly alarm notification',
+      platformChannelSpecifics,
+      payload: 'item x',
+    );
+  }
+  @pragma('vm:entry-point')
+  static Future<void> backgroundTask() async {
+    print("백그라운드 작업 수행 중");
+    final musicDirectory = Directory('/storage/emulated/0/Music');
+    await SQLiteManager.init();
+    print(await pureRepo.getAllFavoriteStock());
+    print("log $musicDirectory");
+    print(await pureRepo.getStockPriceBySymbol("MSFT"));
+    // 여기에 원하는 백그라운드 작업 수행 로직을 작성
+  }
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         ElevatedButton(
           onPressed: ()async {
-            DateTime dateTime = DateTime(2024,6,9,23,32,10);
-            print("vkdldldl"+ path);
-            final directory = await getExternalStorageDirectory();
-            final musicDirectory = Directory('/storage/emulated/0/Music');
-            print("log $musicDirectory");
-
-            final alarmSettings = AlarmSettings(
-              id: 42,
-              dateTime: dateTime,
-              assetAudioPath: "${musicDirectory.path}/a.wav",
-              loopAudio: true,
-              vibrate: true,
-              volume: 0.8,
-              fadeDuration: 3.0,
-              notificationTitle: 'This is the title',
-              notificationBody: 'This is the body',
-              enableNotificationOnKill: true,
+            AndroidAlarmManager.oneShot(
+              const Duration(seconds: 5),
+              0,
+              backgroundTask,
+              exact: true,
+              wakeup: true,
             );
-            await Alarm.set(alarmSettings: alarmSettings);
-            print("a");
           },
           child: Text("a"),
         ),
         ElevatedButton(onPressed: (){
+          FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
+          FlutterLocalNotificationsPlugin();
+          flutterLocalNotificationsPlugin.resolvePlatformSpecificImplementation<
+              AndroidFlutterLocalNotificationsPlugin>()?.requestNotificationsPermission();
           Alarm.stop(42);
 
         }, child: Text("cancel")),

@@ -14,4 +14,6 @@ part './home/home_viewmodel.dart';
 
 part './my/my_state.dart';
 part './my/my_viewmodel.dart';
+part './search/search_state.dart';
+part './search/search_viewmodel.dart';
 
