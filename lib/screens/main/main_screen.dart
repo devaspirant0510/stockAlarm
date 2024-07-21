@@ -4,7 +4,9 @@ import 'package:bm_app/screens/my/my_screen.dart';
 import 'package:bm_app/screens/news/news_screen.dart';
 import 'package:bm_app/screens/search/search_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 
 import '../home/home_screen.dart';
 
@@ -16,6 +18,7 @@ class MainScreen extends ConsumerStatefulWidget {
 }
 
 class _MainScreenState extends ConsumerState<MainScreen> {
+  static const platform = MethodChannel("seungho.devxeg.bm_app/alarm");
   List<Widget> list = [
     HomeScreen(),
     const MyScreen(),
@@ -24,10 +27,24 @@ class _MainScreenState extends ConsumerState<MainScreen> {
     NewScreen(),
   ];
 
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback(
+          (timeStamp) async {
+        platform.setMethodCallHandler((call) async{
+          if(call.method=="receiveData"){
+            print(call.method);
+            context.pushReplacementNamed("t");
+          }
+        },);
+      },
+    );
+  }
   void _onItemTapped(int index) {
     ref.read(mainViewmodelProvider.notifier).changeScreen(index);
   }
-
   @override
   Widget build(BuildContext context) {
     final viewmodel = ref.watch(mainViewmodelProvider);
@@ -35,7 +52,9 @@ class _MainScreenState extends ConsumerState<MainScreen> {
       appBar: AppBar(
         title: const Text("내 알람"),
         actions: [
-          IconButton(onPressed: () {}, icon: const Icon(Icons.settings))
+          IconButton(onPressed: () {
+            context.pushNamed("t");
+          }, icon: const Icon(Icons.settings))
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(

@@ -16,30 +16,45 @@ class MyScreen extends ConsumerWidget {
           viewmodel.favoriteStocks.when(
             data: (data) {
               return Column(children: [
-                Container(
-                  child: Row(
-                    children: [
-                      Text(data[0].symbol),
-                      Text(data[0].desc),
-                    ],
+                if (data.isNotEmpty)
+                  Container(
+                    child: Row(
+                      children: [
+                        Text(data[0].symbol),
+                        Text(data[0].desc),
+                      ],
+                    ),
                   ),
-                ),
-                Container(
-                  child: Row(
-                    children: [
-                      Text(data[1].symbol),
-                      Text(data[1].desc),
-                    ],
+                if (data.length > 1)
+                  Container(
+                    child: Row(
+                      children: [
+                        if (data[1].profileUrl != null)
+                          Image.network(
+                            data[1].profileUrl!,
+                            width: 40,
+                            height: 40,
+                          ),
+                        Text(data[1].symbol),
+                        Text(data[1].desc),
+                      ],
+                    ),
                   ),
-                ),
-                Container(
-                  child: Row(
-                    children: [
-                      Text(data[2].symbol),
-                      Text(data[2].desc),
-                    ],
-                  ),
-                )
+                if (data.length > 2)
+                  Container(
+                    child: Row(
+                      children: [
+                        if (data[2].profileUrl != null)
+                          Image.network(
+                            data[2].profileUrl!,
+                            width: 40,
+                            height: 40,
+                          ),
+                        Text(data[2].symbol),
+                        Text(data[2].desc),
+                      ],
+                    ),
+                  )
               ]);
             },
             error: (err, stackTrace) {
