@@ -1,11 +1,14 @@
 package seungho.devxeg.bm_app
 
 import android.app.AlarmManager
+import android.app.NotificationManager
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
+import android.net.Uri
 import android.os.Build
 import android.os.Bundle
+import android.provider.Settings
 import android.util.Log
 import android.view.WindowManager
 import android.widget.Toast
@@ -14,18 +17,46 @@ import io.flutter.embedding.engine.FlutterEngine
 import io.flutter.plugin.common.MethodChannel
 
 public class MainActivity : FlutterActivity() {
+    private fun checkPermission() {
+        val notificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+
+        // Android 14 이상에서만 사용할 수 있음
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
+            Toast.makeText(applicationContext,notificationManager.canUseFullScreenIntent().toString(),Toast.LENGTH_LONG).show()
+            if (!notificationManager.canUseFullScreenIntent()) {
+                // 전체 화면 인텐트를 사용할 수 없는 경우 설정 페이지로 이동
+                val intent = Intent(Settings.ACTION_MANAGE_APP_USE_FULL_SCREEN_INTENT)
+                intent.data = Uri.parse("package:$packageName")
+                startActivity(intent)
+            } else {
+                // 전체 화면 인텐트를 사용할 수 있는 경우 필요한 작업 수행
+            }
+        }
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            if (!Settings.canDrawOverlays(this)) {
+                // Request the overlay permission
+                val intent = Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION, Uri.parse("package:$packageName"))
+                startActivity(intent)
+            }
+        }
+    }
     private lateinit var channel: MethodChannel
-    private val CHANNEL = "seungho.devxeg.bm_app/alarm"
+    private val CHANNEL = "alarmChannel"
+
     override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
         super.configureFlutterEngine(flutterEngine)
+
+//        checkVPermission()
         channel = MethodChannel(
             flutterEngine.dartExecutor.binaryMessenger,
             CHANNEL
         )
         Log.e("native", "main activty oncreate")
+        android.widget.Toast.makeText(applicationContext, intent.action, Toast.LENGTH_SHORT).show()
         if (intent.action == "lock") {
             Toast.makeText(applicationContext,"send invoke native",Toast.LENGTH_SHORT).show()
-            channel.invokeMethod("receiveData","lock")
+            val getId = intent.getIntExtra("id",-1)
+            channel.invokeMethod("receiveData",getId)
 
         }
         window.addFlags(
@@ -36,24 +67,66 @@ public class MainActivity : FlutterActivity() {
         )
 
         channel.setMethodCallHandler { call, result ->
-            if (call.method == "setAlarm") {
-                val requestId = 1
-                var triggerAtMillis: Long = System.currentTimeMillis() + 4 * 1000
+            if (call.method == "alarmQueue") {
+                val time = call.argument<Long>("alarmTime")
+                val stocks = call.argument<String>("stocks")
+                val id = call.argument<Int>("id")
+                Toast.makeText(applicationContext,time.toString(),Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext,id.toString(),Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext,stocks,Toast.LENGTH_SHORT).show()
                 val alarmManager = getSystemService(Context.ALARM_SERVICE) as AlarmManager
                 val intent = Intent(this, AlarmReceiver::class.java)
+                android.widget.Toast.makeText(applicationContext, "activity id $id", Toast.LENGTH_SHORT).show()
+                intent.putExtra("id",id)
                 val pendingIntent = PendingIntent.getBroadcast(
                     this,
-                    requestId,
+                    4,
                     intent,
                     PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
                 )
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                     alarmManager.setExactAndAllowWhileIdle(
                         AlarmManager.RTC_WAKEUP,
-                        triggerAtMillis,
+                        time!!,
                         pendingIntent
                     )
                 }
+                result.success("alarm queue success")
+
+            }
+            else if (call.method == "setAlarm") {
+                val alarmManager = getSystemService(Context.ALARM_SERVICE) as AlarmManager
+                val intent = Intent(this, AlarmReceiver::class.java)
+                val alarmIntent =
+                    PendingIntent.getBroadcast(this, 3, intent, PendingIntent.FLAG_IMMUTABLE)
+                Toast.makeText(applicationContext,Build.VERSION.SDK_INT.toString(),Toast.LENGTH_SHORT).show()
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                    alarmManager.setExactAndAllowWhileIdle(
+                        AlarmManager.RTC_WAKEUP,
+                        System.currentTimeMillis() + 1000,
+                        alarmIntent
+                    )
+                }
+//                android.widget.Toast.makeText(applicationContext, "adsfasdf", Toast.LENGTH_SHORT).show()
+//                val requestId = 1
+//                var triggerAtMillis: Long = System.currentTimeMillis()
+//                val alarmManager = getSystemService(Context.ALARM_SERVICE) as AlarmManager
+//                val intent = Intent(this, AlarmReceiver::class.java)
+//                val pendingIntent = PendingIntent.getBroadcast(
+//                    this,
+//                    requestId,
+//                    intent,
+//                     PendingIntent.FLAG_IMMUTABLE
+//                )
+//                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+//                    Toast.makeText(applicationContext,"alarmmanger setting",Toast.LENGTH_SHORT).show()
+//                    alarmManager.setExactAndAllowWhileIdle(
+//                        AlarmManager.RTC_WAKEUP,
+//                        System.currentTimeMillis() + 1000,
+//                        pendingIntent
+//                    )
+//                }
+                result.success("a");
             }
         }
     }

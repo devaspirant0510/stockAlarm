@@ -1,41 +1,31 @@
 import 'dart:io';
 
-import 'package:alarm/alarm.dart';
-import 'package:alarm/model/alarm_settings.dart';
-import 'package:android_alarm_manager_plus/android_alarm_manager_plus.dart';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:bm_app/data/repository/repository_impl.dart';
+import 'package:bm_app/screens/alarm/widgets/alarm_item.dart';
+import 'package:bm_app/screens/alarm/widgets/alarm_setting_view.dart';
+import 'package:bm_app/screens/viewmodel_states.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:permission_handler/permission_handler.dart';
+import 'package:provider/provider.dart';
 
 import '../../common/sql_manager.dart';
 import '../../main.dart';
 
-
-class AlarmScreen extends StatefulWidget {
+class AlarmScreen extends ConsumerStatefulWidget {
   const AlarmScreen({super.key});
 
   @override
-  State<AlarmScreen> createState() => _AlarmScreenState();
+  ConsumerState createState() => _AlarmScreenState();
 }
 
-class _AlarmScreenState extends State<AlarmScreen> {
+class _AlarmScreenState extends ConsumerState<AlarmScreen> {
   String path = "";
-  static const platform = MethodChannel("seungho.devxeg.bm_app/alarm");
-  
-  late FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin;
-
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-  }
-
-
+  static const platform = MethodChannel("alarmChannel");
 
   @pragma('vm:entry-point')
   static Future<void> backgroundTask() async {
@@ -45,47 +35,65 @@ class _AlarmScreenState extends State<AlarmScreen> {
     print(await pureRepo.getAllFavoriteStock());
     print("log $musicDirectory");
     final msft = await pureRepo.getStockPriceBySymbol("MSFT");
-    FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
-    FlutterLocalNotificationsPlugin();
-    const AndroidNotificationDetails androidPlatformChannelSpecifics =
-    AndroidNotificationDetails(
-      'your channel id',
-      'your channel name',
-      importance: Importance.max,
-      priority: Priority.high,
-      fullScreenIntent: true,
-    );
-    const NotificationDetails platformChannelSpecifics = NotificationDetails(
-        android: androidPlatformChannelSpecifics);
-    await flutterLocalNotificationsPlugin.show(
-      0,
-      'Weekly Alarm',
-      'This is your weekly alarm notification',
-      platformChannelSpecifics,
-      payload: 'item x',
-    );
 
 // 여기에 원하는 백그라운드 작업 수행 로직을 작성
   }
+
   @override
   Widget build(BuildContext context) {
+    final viewmodel = ref.watch(alarmViewmodelProvider);
+    return Column(
+      children: [
+        Row(
+          children: [
+            const Text("내 알림보기"),
+            ElevatedButton(
+                onPressed: () {
+                  showModalBottomSheet(
+                    context: context,
+                    builder: (context) {
+                      return const AlarmSettingView();
+                    },
+                  );
+                },
+                child: const Text("알림추가하기"))
+          ],
+        ),
+        viewmodel.alarmList.when(
+          data: (data) {
+            print(data);
+            return Container(
+              height: 300,
+              child: ListView.builder(
+                itemCount: data.length,
+                itemBuilder: (context, index) {
+                  return AlarmItem(data: data[index]);
+                },
+              ),
+            );
+          },
+          error: (error, stackTrace) {
+            print(stackTrace);
+            return Text("error: $error");
+          },
+          loading: () => const CircularProgressIndicator(),
+        )
+      ],
+    );
+/*
     return Column(
       children: [
         ElevatedButton(
           onPressed: () async {
-            await platform.invokeMethod("setAlarm");
+            print("method");
+            final result = await platform.invokeMethod("setAlarm");
+
+            print(result);
           },
           child: Text("a"),
         ),
         ElevatedButton(
             onPressed: () {
-              FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
-                  FlutterLocalNotificationsPlugin();
-              flutterLocalNotificationsPlugin
-                  .resolvePlatformSpecificImplementation<
-                      AndroidFlutterLocalNotificationsPlugin>()
-                  ?.requestNotificationsPermission();
-              Alarm.stop(42);
             },
             child: Text("cancel")),
         ElevatedButton(
@@ -129,5 +137,6 @@ class _AlarmScreenState extends State<AlarmScreen> {
             child: Text("test tts"))
       ],
     );
+*/
   }
 }

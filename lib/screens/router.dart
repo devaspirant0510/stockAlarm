@@ -25,7 +25,11 @@ final router = GoRouter(
     GoRoute(
       path: "/t",
       name: "t",
-      builder: (context, state) => TestScreen(),
+      builder: (context, state) {
+        final id = state.extra as int?;
+
+        return TestScreen(id:id);
+        },
     )
   ],
 );

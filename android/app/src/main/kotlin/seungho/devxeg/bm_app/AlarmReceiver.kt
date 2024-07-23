@@ -16,10 +16,13 @@ import androidx.core.app.NotificationManagerCompat
 import androidx.core.content.ContextCompat.startActivity
 import io.flutter.embedding.android.FlutterActivity
 
-public class AlarmReceiver : BroadcastReceiver() {
+class AlarmReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context?, intent: Intent?) {
-        if (context != null) {
-            val serviceIntent = Intent(context, AlarmService::class.java)
+        if (context != null && intent!=null) {
+            val id = intent.getIntExtra("id",-1)
+            Toast.makeText(context,"broad cast $id",Toast.LENGTH_SHORT).show()
+            val serviceIntent = Intent(context, CustomAlarmService::class.java)
+            serviceIntent.putExtra("id",id)
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                 context.startForegroundService(serviceIntent)
             }else{

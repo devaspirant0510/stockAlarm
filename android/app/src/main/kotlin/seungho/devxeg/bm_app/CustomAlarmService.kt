@@ -1,17 +1,12 @@
 package seungho.devxeg.bm_app
 
-import android.Manifest
 import android.app.ActivityOptions
 import android.app.Notification
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.app.PendingIntent
 import android.app.Service
-import android.content.BroadcastReceiver
-import android.content.Context
 import android.content.Intent
-import android.content.IntentFilter
-import android.content.pm.PackageManager
 import android.content.pm.ServiceInfo
 import android.os.Build
 import android.os.Handler
@@ -19,14 +14,11 @@ import android.os.IBinder
 import android.os.Looper
 import android.os.PowerManager
 import android.os.PowerManager.WakeLock
-import android.util.Log
-import android.widget.Toast
 import androidx.annotation.RequiresApi
-import androidx.core.app.ActivityCompat
 import androidx.core.app.NotificationCompat
-import androidx.core.app.NotificationManagerCompat
+import android.widget.Toast
 
-class AlarmService : Service() {
+class CustomAlarmService : Service() {
     private lateinit var wakeLock: WakeLock
     override fun onCreate() {
         super.onCreate()
@@ -71,16 +63,18 @@ class AlarmService : Service() {
     @RequiresApi(Build.VERSION_CODES.UPSIDE_DOWN_CAKE)
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         startForegroundService()
-
+        val getId = intent?.getIntExtra("id",-1)
+        Toast.makeText(applicationContext, "service id $getId", Toast.LENGTH_SHORT).show()
         Handler(Looper.getMainLooper()).postDelayed(Runnable {
             wakeLock.acquire(10*60*1000L /*10 minutes*/);
-            startActivityInBackground() }, 1000)
+            startActivityInBackground(getId!!) }, 1000)
         return START_STICKY
     }
     @RequiresApi(Build.VERSION_CODES.UPSIDE_DOWN_CAKE)
-    private fun startActivityInBackground() {
+    private fun startActivityInBackground(id:Int) {
         val intent = Intent(this, MainActivity::class.java).apply {
             setAction("lock")
+            putExtra("id",id)
         }
         intent.addFlags(
             Intent.FLAG_ACTIVITY_NEW_TASK

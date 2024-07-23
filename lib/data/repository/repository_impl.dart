@@ -75,6 +75,21 @@ class RepositoryImpl implements RemoteRepository , LocalRepository{
     await localDatSource.insertFavoriteSymbol(data: data);
 
   }
+
+  @override
+  Future<List<AlarmQueue>> readAllAlarms() async {
+    return await localDatSource.loadGetAllAlarm();
+  }
+
+  @override
+  Future<int> saveAlarmQueue(AlarmQueue data) async {
+    return await localDatSource.saveNotification(data);
+  }
+
+  @override
+  Future<AlarmQueue> findOneAlarmQueueById(int id) async {
+    return await localDatSource.loadOneAlarm(id);
+  }
 }
 
 final repositoryProvider = Provider<RepositoryImpl>((ref) {

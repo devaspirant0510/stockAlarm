@@ -417,3 +417,297 @@ abstract class _SearchState implements SearchState {
   _$$SearchStateImplCopyWith<_$SearchStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
+
+/// @nodoc
+mixin _$AlarmState {
+  AsyncValue<List<AlarmQueue>> get alarmList =>
+      throw _privateConstructorUsedError;
+  AsyncValue<List<FavoriteStock>> get favoriteStocks =>
+      throw _privateConstructorUsedError;
+  DateTime? get inputDate => throw _privateConstructorUsedError;
+  TimeOfDay? get inputTime => throw _privateConstructorUsedError;
+  List<String>? get selectedStocks => throw _privateConstructorUsedError;
+  bool get isPendingSaveNoti => throw _privateConstructorUsedError;
+  bool get successSaveNoti => throw _privateConstructorUsedError;
+  String get errorSaveNoti => throw _privateConstructorUsedError;
+
+  @JsonKey(ignore: true)
+  $AlarmStateCopyWith<AlarmState> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $AlarmStateCopyWith<$Res> {
+  factory $AlarmStateCopyWith(
+          AlarmState value, $Res Function(AlarmState) then) =
+      _$AlarmStateCopyWithImpl<$Res, AlarmState>;
+  @useResult
+  $Res call(
+      {AsyncValue<List<AlarmQueue>> alarmList,
+      AsyncValue<List<FavoriteStock>> favoriteStocks,
+      DateTime? inputDate,
+      TimeOfDay? inputTime,
+      List<String>? selectedStocks,
+      bool isPendingSaveNoti,
+      bool successSaveNoti,
+      String errorSaveNoti});
+}
+
+/// @nodoc
+class _$AlarmStateCopyWithImpl<$Res, $Val extends AlarmState>
+    implements $AlarmStateCopyWith<$Res> {
+  _$AlarmStateCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? alarmList = null,
+    Object? favoriteStocks = null,
+    Object? inputDate = freezed,
+    Object? inputTime = freezed,
+    Object? selectedStocks = freezed,
+    Object? isPendingSaveNoti = null,
+    Object? successSaveNoti = null,
+    Object? errorSaveNoti = null,
+  }) {
+    return _then(_value.copyWith(
+      alarmList: null == alarmList
+          ? _value.alarmList
+          : alarmList // ignore: cast_nullable_to_non_nullable
+              as AsyncValue<List<AlarmQueue>>,
+      favoriteStocks: null == favoriteStocks
+          ? _value.favoriteStocks
+          : favoriteStocks // ignore: cast_nullable_to_non_nullable
+              as AsyncValue<List<FavoriteStock>>,
+      inputDate: freezed == inputDate
+          ? _value.inputDate
+          : inputDate // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      inputTime: freezed == inputTime
+          ? _value.inputTime
+          : inputTime // ignore: cast_nullable_to_non_nullable
+              as TimeOfDay?,
+      selectedStocks: freezed == selectedStocks
+          ? _value.selectedStocks
+          : selectedStocks // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
+      isPendingSaveNoti: null == isPendingSaveNoti
+          ? _value.isPendingSaveNoti
+          : isPendingSaveNoti // ignore: cast_nullable_to_non_nullable
+              as bool,
+      successSaveNoti: null == successSaveNoti
+          ? _value.successSaveNoti
+          : successSaveNoti // ignore: cast_nullable_to_non_nullable
+              as bool,
+      errorSaveNoti: null == errorSaveNoti
+          ? _value.errorSaveNoti
+          : errorSaveNoti // ignore: cast_nullable_to_non_nullable
+              as String,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$AlarmStateImplCopyWith<$Res>
+    implements $AlarmStateCopyWith<$Res> {
+  factory _$$AlarmStateImplCopyWith(
+          _$AlarmStateImpl value, $Res Function(_$AlarmStateImpl) then) =
+      __$$AlarmStateImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {AsyncValue<List<AlarmQueue>> alarmList,
+      AsyncValue<List<FavoriteStock>> favoriteStocks,
+      DateTime? inputDate,
+      TimeOfDay? inputTime,
+      List<String>? selectedStocks,
+      bool isPendingSaveNoti,
+      bool successSaveNoti,
+      String errorSaveNoti});
+}
+
+/// @nodoc
+class __$$AlarmStateImplCopyWithImpl<$Res>
+    extends _$AlarmStateCopyWithImpl<$Res, _$AlarmStateImpl>
+    implements _$$AlarmStateImplCopyWith<$Res> {
+  __$$AlarmStateImplCopyWithImpl(
+      _$AlarmStateImpl _value, $Res Function(_$AlarmStateImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? alarmList = null,
+    Object? favoriteStocks = null,
+    Object? inputDate = freezed,
+    Object? inputTime = freezed,
+    Object? selectedStocks = freezed,
+    Object? isPendingSaveNoti = null,
+    Object? successSaveNoti = null,
+    Object? errorSaveNoti = null,
+  }) {
+    return _then(_$AlarmStateImpl(
+      alarmList: null == alarmList
+          ? _value.alarmList
+          : alarmList // ignore: cast_nullable_to_non_nullable
+              as AsyncValue<List<AlarmQueue>>,
+      favoriteStocks: null == favoriteStocks
+          ? _value.favoriteStocks
+          : favoriteStocks // ignore: cast_nullable_to_non_nullable
+              as AsyncValue<List<FavoriteStock>>,
+      inputDate: freezed == inputDate
+          ? _value.inputDate
+          : inputDate // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      inputTime: freezed == inputTime
+          ? _value.inputTime
+          : inputTime // ignore: cast_nullable_to_non_nullable
+              as TimeOfDay?,
+      selectedStocks: freezed == selectedStocks
+          ? _value._selectedStocks
+          : selectedStocks // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
+      isPendingSaveNoti: null == isPendingSaveNoti
+          ? _value.isPendingSaveNoti
+          : isPendingSaveNoti // ignore: cast_nullable_to_non_nullable
+              as bool,
+      successSaveNoti: null == successSaveNoti
+          ? _value.successSaveNoti
+          : successSaveNoti // ignore: cast_nullable_to_non_nullable
+              as bool,
+      errorSaveNoti: null == errorSaveNoti
+          ? _value.errorSaveNoti
+          : errorSaveNoti // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$AlarmStateImpl implements _AlarmState {
+  const _$AlarmStateImpl(
+      {this.alarmList = const AsyncData([]),
+      this.favoriteStocks = const AsyncData([]),
+      this.inputDate,
+      this.inputTime,
+      final List<String>? selectedStocks,
+      this.isPendingSaveNoti = false,
+      this.successSaveNoti = false,
+      this.errorSaveNoti = ""})
+      : _selectedStocks = selectedStocks;
+
+  @override
+  @JsonKey()
+  final AsyncValue<List<AlarmQueue>> alarmList;
+  @override
+  @JsonKey()
+  final AsyncValue<List<FavoriteStock>> favoriteStocks;
+  @override
+  final DateTime? inputDate;
+  @override
+  final TimeOfDay? inputTime;
+  final List<String>? _selectedStocks;
+  @override
+  List<String>? get selectedStocks {
+    final value = _selectedStocks;
+    if (value == null) return null;
+    if (_selectedStocks is EqualUnmodifiableListView) return _selectedStocks;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  @JsonKey()
+  final bool isPendingSaveNoti;
+  @override
+  @JsonKey()
+  final bool successSaveNoti;
+  @override
+  @JsonKey()
+  final String errorSaveNoti;
+
+  @override
+  String toString() {
+    return 'AlarmState(alarmList: $alarmList, favoriteStocks: $favoriteStocks, inputDate: $inputDate, inputTime: $inputTime, selectedStocks: $selectedStocks, isPendingSaveNoti: $isPendingSaveNoti, successSaveNoti: $successSaveNoti, errorSaveNoti: $errorSaveNoti)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AlarmStateImpl &&
+            (identical(other.alarmList, alarmList) ||
+                other.alarmList == alarmList) &&
+            (identical(other.favoriteStocks, favoriteStocks) ||
+                other.favoriteStocks == favoriteStocks) &&
+            (identical(other.inputDate, inputDate) ||
+                other.inputDate == inputDate) &&
+            (identical(other.inputTime, inputTime) ||
+                other.inputTime == inputTime) &&
+            const DeepCollectionEquality()
+                .equals(other._selectedStocks, _selectedStocks) &&
+            (identical(other.isPendingSaveNoti, isPendingSaveNoti) ||
+                other.isPendingSaveNoti == isPendingSaveNoti) &&
+            (identical(other.successSaveNoti, successSaveNoti) ||
+                other.successSaveNoti == successSaveNoti) &&
+            (identical(other.errorSaveNoti, errorSaveNoti) ||
+                other.errorSaveNoti == errorSaveNoti));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      alarmList,
+      favoriteStocks,
+      inputDate,
+      inputTime,
+      const DeepCollectionEquality().hash(_selectedStocks),
+      isPendingSaveNoti,
+      successSaveNoti,
+      errorSaveNoti);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AlarmStateImplCopyWith<_$AlarmStateImpl> get copyWith =>
+      __$$AlarmStateImplCopyWithImpl<_$AlarmStateImpl>(this, _$identity);
+}
+
+abstract class _AlarmState implements AlarmState {
+  const factory _AlarmState(
+      {final AsyncValue<List<AlarmQueue>> alarmList,
+      final AsyncValue<List<FavoriteStock>> favoriteStocks,
+      final DateTime? inputDate,
+      final TimeOfDay? inputTime,
+      final List<String>? selectedStocks,
+      final bool isPendingSaveNoti,
+      final bool successSaveNoti,
+      final String errorSaveNoti}) = _$AlarmStateImpl;
+
+  @override
+  AsyncValue<List<AlarmQueue>> get alarmList;
+  @override
+  AsyncValue<List<FavoriteStock>> get favoriteStocks;
+  @override
+  DateTime? get inputDate;
+  @override
+  TimeOfDay? get inputTime;
+  @override
+  List<String>? get selectedStocks;
+  @override
+  bool get isPendingSaveNoti;
+  @override
+  bool get successSaveNoti;
+  @override
+  String get errorSaveNoti;
+  @override
+  @JsonKey(ignore: true)
+  _$$AlarmStateImplCopyWith<_$AlarmStateImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}

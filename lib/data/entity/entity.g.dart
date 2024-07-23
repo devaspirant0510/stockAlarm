@@ -167,3 +167,23 @@ Map<String, dynamic> _$$StockSearchResultImplToJson(
       'results': instance.results,
       'status': instance.status,
     };
+
+_$AlarmQueueImpl _$$AlarmQueueImplFromJson(Map<String, dynamic> json) =>
+    _$AlarmQueueImpl(
+      id: json['id'] as int?,
+      dateTime: json['date_time'] as int,
+      stocks: json['stocks'] as String,
+      latencyTime: json['latency_time'] as int,
+      createdTime: json['created_time'] as int,
+      isActive: json['is_active'] as int? ?? 1,
+    );
+
+Map<String, dynamic> _$$AlarmQueueImplToJson(_$AlarmQueueImpl instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'date_time': instance.dateTime,
+      'stocks': instance.stocks,
+      'latency_time': instance.latencyTime,
+      'created_time': instance.createdTime,
+      'is_active': instance.isActive,
+    };

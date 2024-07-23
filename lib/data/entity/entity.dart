@@ -10,5 +10,6 @@ part 'quote.dart';
 part 'favorite_stock.dart';
 part 'stock_search.dart';
 part 'stock_search_result.dart';
+part 'alarm_queue.dart';
 
 

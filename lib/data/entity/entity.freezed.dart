@@ -1983,3 +1983,260 @@ abstract class _StockSearchResult implements StockSearchResult {
   _$$StockSearchResultImplCopyWith<_$StockSearchResultImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
+
+AlarmQueue _$AlarmQueueFromJson(Map<String, dynamic> json) {
+  return _AlarmQueue.fromJson(json);
+}
+
+/// @nodoc
+mixin _$AlarmQueue {
+  int? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: "date_time")
+  int get dateTime => throw _privateConstructorUsedError;
+  String get stocks => throw _privateConstructorUsedError;
+  @JsonKey(name: "latency_time")
+  int get latencyTime => throw _privateConstructorUsedError;
+  @JsonKey(name: "created_time")
+  int get createdTime => throw _privateConstructorUsedError;
+  @JsonKey(name: "is_active")
+  int get isActive => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $AlarmQueueCopyWith<AlarmQueue> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $AlarmQueueCopyWith<$Res> {
+  factory $AlarmQueueCopyWith(
+          AlarmQueue value, $Res Function(AlarmQueue) then) =
+      _$AlarmQueueCopyWithImpl<$Res, AlarmQueue>;
+  @useResult
+  $Res call(
+      {int? id,
+      @JsonKey(name: "date_time") int dateTime,
+      String stocks,
+      @JsonKey(name: "latency_time") int latencyTime,
+      @JsonKey(name: "created_time") int createdTime,
+      @JsonKey(name: "is_active") int isActive});
+}
+
+/// @nodoc
+class _$AlarmQueueCopyWithImpl<$Res, $Val extends AlarmQueue>
+    implements $AlarmQueueCopyWith<$Res> {
+  _$AlarmQueueCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? dateTime = null,
+    Object? stocks = null,
+    Object? latencyTime = null,
+    Object? createdTime = null,
+    Object? isActive = null,
+  }) {
+    return _then(_value.copyWith(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int?,
+      dateTime: null == dateTime
+          ? _value.dateTime
+          : dateTime // ignore: cast_nullable_to_non_nullable
+              as int,
+      stocks: null == stocks
+          ? _value.stocks
+          : stocks // ignore: cast_nullable_to_non_nullable
+              as String,
+      latencyTime: null == latencyTime
+          ? _value.latencyTime
+          : latencyTime // ignore: cast_nullable_to_non_nullable
+              as int,
+      createdTime: null == createdTime
+          ? _value.createdTime
+          : createdTime // ignore: cast_nullable_to_non_nullable
+              as int,
+      isActive: null == isActive
+          ? _value.isActive
+          : isActive // ignore: cast_nullable_to_non_nullable
+              as int,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$AlarmQueueImplCopyWith<$Res>
+    implements $AlarmQueueCopyWith<$Res> {
+  factory _$$AlarmQueueImplCopyWith(
+          _$AlarmQueueImpl value, $Res Function(_$AlarmQueueImpl) then) =
+      __$$AlarmQueueImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {int? id,
+      @JsonKey(name: "date_time") int dateTime,
+      String stocks,
+      @JsonKey(name: "latency_time") int latencyTime,
+      @JsonKey(name: "created_time") int createdTime,
+      @JsonKey(name: "is_active") int isActive});
+}
+
+/// @nodoc
+class __$$AlarmQueueImplCopyWithImpl<$Res>
+    extends _$AlarmQueueCopyWithImpl<$Res, _$AlarmQueueImpl>
+    implements _$$AlarmQueueImplCopyWith<$Res> {
+  __$$AlarmQueueImplCopyWithImpl(
+      _$AlarmQueueImpl _value, $Res Function(_$AlarmQueueImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? dateTime = null,
+    Object? stocks = null,
+    Object? latencyTime = null,
+    Object? createdTime = null,
+    Object? isActive = null,
+  }) {
+    return _then(_$AlarmQueueImpl(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int?,
+      dateTime: null == dateTime
+          ? _value.dateTime
+          : dateTime // ignore: cast_nullable_to_non_nullable
+              as int,
+      stocks: null == stocks
+          ? _value.stocks
+          : stocks // ignore: cast_nullable_to_non_nullable
+              as String,
+      latencyTime: null == latencyTime
+          ? _value.latencyTime
+          : latencyTime // ignore: cast_nullable_to_non_nullable
+              as int,
+      createdTime: null == createdTime
+          ? _value.createdTime
+          : createdTime // ignore: cast_nullable_to_non_nullable
+              as int,
+      isActive: null == isActive
+          ? _value.isActive
+          : isActive // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$AlarmQueueImpl implements _AlarmQueue {
+  const _$AlarmQueueImpl(
+      {this.id,
+      @JsonKey(name: "date_time") required this.dateTime,
+      required this.stocks,
+      @JsonKey(name: "latency_time") required this.latencyTime,
+      @JsonKey(name: "created_time") required this.createdTime,
+      @JsonKey(name: "is_active") this.isActive = 1});
+
+  factory _$AlarmQueueImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AlarmQueueImplFromJson(json);
+
+  @override
+  final int? id;
+  @override
+  @JsonKey(name: "date_time")
+  final int dateTime;
+  @override
+  final String stocks;
+  @override
+  @JsonKey(name: "latency_time")
+  final int latencyTime;
+  @override
+  @JsonKey(name: "created_time")
+  final int createdTime;
+  @override
+  @JsonKey(name: "is_active")
+  final int isActive;
+
+  @override
+  String toString() {
+    return 'AlarmQueue(id: $id, dateTime: $dateTime, stocks: $stocks, latencyTime: $latencyTime, createdTime: $createdTime, isActive: $isActive)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AlarmQueueImpl &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.dateTime, dateTime) ||
+                other.dateTime == dateTime) &&
+            (identical(other.stocks, stocks) || other.stocks == stocks) &&
+            (identical(other.latencyTime, latencyTime) ||
+                other.latencyTime == latencyTime) &&
+            (identical(other.createdTime, createdTime) ||
+                other.createdTime == createdTime) &&
+            (identical(other.isActive, isActive) ||
+                other.isActive == isActive));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, id, dateTime, stocks, latencyTime, createdTime, isActive);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AlarmQueueImplCopyWith<_$AlarmQueueImpl> get copyWith =>
+      __$$AlarmQueueImplCopyWithImpl<_$AlarmQueueImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$AlarmQueueImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _AlarmQueue implements AlarmQueue {
+  const factory _AlarmQueue(
+      {final int? id,
+      @JsonKey(name: "date_time") required final int dateTime,
+      required final String stocks,
+      @JsonKey(name: "latency_time") required final int latencyTime,
+      @JsonKey(name: "created_time") required final int createdTime,
+      @JsonKey(name: "is_active") final int isActive}) = _$AlarmQueueImpl;
+
+  factory _AlarmQueue.fromJson(Map<String, dynamic> json) =
+      _$AlarmQueueImpl.fromJson;
+
+  @override
+  int? get id;
+  @override
+  @JsonKey(name: "date_time")
+  int get dateTime;
+  @override
+  String get stocks;
+  @override
+  @JsonKey(name: "latency_time")
+  int get latencyTime;
+  @override
+  @JsonKey(name: "created_time")
+  int get createdTime;
+  @override
+  @JsonKey(name: "is_active")
+  int get isActive;
+  @override
+  @JsonKey(ignore: true)
+  _$$AlarmQueueImplCopyWith<_$AlarmQueueImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}

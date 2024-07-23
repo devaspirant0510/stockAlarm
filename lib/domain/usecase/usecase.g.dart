@@ -339,5 +339,183 @@ final callLoadMyStocksProvider =
 );
 
 typedef CallLoadMyStocksRef = AutoDisposeFutureProviderRef<List<FavoriteStock>>;
+String _$callGetAllAlarmsHash() => r'b691122a54d3723e63e78f9167022d5bf2d502db';
+
+/// See also [callGetAllAlarms].
+@ProviderFor(callGetAllAlarms)
+final callGetAllAlarmsProvider =
+    AutoDisposeFutureProvider<List<AlarmQueue>>.internal(
+  callGetAllAlarms,
+  name: r'callGetAllAlarmsProvider',
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$callGetAllAlarmsHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
+);
+
+typedef CallGetAllAlarmsRef = AutoDisposeFutureProviderRef<List<AlarmQueue>>;
+String _$callSaveAlarmQueueHash() =>
+    r'31b0e2cc30a4f1a8c5537c180bbd88a49d56943c';
+
+/// See also [callSaveAlarmQueue].
+@ProviderFor(callSaveAlarmQueue)
+const callSaveAlarmQueueProvider = CallSaveAlarmQueueFamily();
+
+/// See also [callSaveAlarmQueue].
+class CallSaveAlarmQueueFamily extends Family<AsyncValue<AlarmQueue>> {
+  /// See also [callSaveAlarmQueue].
+  const CallSaveAlarmQueueFamily();
+
+  /// See also [callSaveAlarmQueue].
+  CallSaveAlarmQueueProvider call({
+    required DateTime datePicker,
+    required TimeOfDay timePicker,
+    required List<String> stocks,
+  }) {
+    return CallSaveAlarmQueueProvider(
+      datePicker: datePicker,
+      timePicker: timePicker,
+      stocks: stocks,
+    );
+  }
+
+  @override
+  CallSaveAlarmQueueProvider getProviderOverride(
+    covariant CallSaveAlarmQueueProvider provider,
+  ) {
+    return call(
+      datePicker: provider.datePicker,
+      timePicker: provider.timePicker,
+      stocks: provider.stocks,
+    );
+  }
+
+  static const Iterable<ProviderOrFamily>? _dependencies = null;
+
+  @override
+  Iterable<ProviderOrFamily>? get dependencies => _dependencies;
+
+  static const Iterable<ProviderOrFamily>? _allTransitiveDependencies = null;
+
+  @override
+  Iterable<ProviderOrFamily>? get allTransitiveDependencies =>
+      _allTransitiveDependencies;
+
+  @override
+  String? get name => r'callSaveAlarmQueueProvider';
+}
+
+/// See also [callSaveAlarmQueue].
+class CallSaveAlarmQueueProvider extends AutoDisposeFutureProvider<AlarmQueue> {
+  /// See also [callSaveAlarmQueue].
+  CallSaveAlarmQueueProvider({
+    required DateTime datePicker,
+    required TimeOfDay timePicker,
+    required List<String> stocks,
+  }) : this._internal(
+          (ref) => callSaveAlarmQueue(
+            ref as CallSaveAlarmQueueRef,
+            datePicker: datePicker,
+            timePicker: timePicker,
+            stocks: stocks,
+          ),
+          from: callSaveAlarmQueueProvider,
+          name: r'callSaveAlarmQueueProvider',
+          debugGetCreateSourceHash:
+              const bool.fromEnvironment('dart.vm.product')
+                  ? null
+                  : _$callSaveAlarmQueueHash,
+          dependencies: CallSaveAlarmQueueFamily._dependencies,
+          allTransitiveDependencies:
+              CallSaveAlarmQueueFamily._allTransitiveDependencies,
+          datePicker: datePicker,
+          timePicker: timePicker,
+          stocks: stocks,
+        );
+
+  CallSaveAlarmQueueProvider._internal(
+    super._createNotifier, {
+    required super.name,
+    required super.dependencies,
+    required super.allTransitiveDependencies,
+    required super.debugGetCreateSourceHash,
+    required super.from,
+    required this.datePicker,
+    required this.timePicker,
+    required this.stocks,
+  }) : super.internal();
+
+  final DateTime datePicker;
+  final TimeOfDay timePicker;
+  final List<String> stocks;
+
+  @override
+  Override overrideWith(
+    FutureOr<AlarmQueue> Function(CallSaveAlarmQueueRef provider) create,
+  ) {
+    return ProviderOverride(
+      origin: this,
+      override: CallSaveAlarmQueueProvider._internal(
+        (ref) => create(ref as CallSaveAlarmQueueRef),
+        from: from,
+        name: null,
+        dependencies: null,
+        allTransitiveDependencies: null,
+        debugGetCreateSourceHash: null,
+        datePicker: datePicker,
+        timePicker: timePicker,
+        stocks: stocks,
+      ),
+    );
+  }
+
+  @override
+  AutoDisposeFutureProviderElement<AlarmQueue> createElement() {
+    return _CallSaveAlarmQueueProviderElement(this);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return other is CallSaveAlarmQueueProvider &&
+        other.datePicker == datePicker &&
+        other.timePicker == timePicker &&
+        other.stocks == stocks;
+  }
+
+  @override
+  int get hashCode {
+    var hash = _SystemHash.combine(0, runtimeType.hashCode);
+    hash = _SystemHash.combine(hash, datePicker.hashCode);
+    hash = _SystemHash.combine(hash, timePicker.hashCode);
+    hash = _SystemHash.combine(hash, stocks.hashCode);
+
+    return _SystemHash.finish(hash);
+  }
+}
+
+mixin CallSaveAlarmQueueRef on AutoDisposeFutureProviderRef<AlarmQueue> {
+  /// The parameter `datePicker` of this provider.
+  DateTime get datePicker;
+
+  /// The parameter `timePicker` of this provider.
+  TimeOfDay get timePicker;
+
+  /// The parameter `stocks` of this provider.
+  List<String> get stocks;
+}
+
+class _CallSaveAlarmQueueProviderElement
+    extends AutoDisposeFutureProviderElement<AlarmQueue>
+    with CallSaveAlarmQueueRef {
+  _CallSaveAlarmQueueProviderElement(super.provider);
+
+  @override
+  DateTime get datePicker => (origin as CallSaveAlarmQueueProvider).datePicker;
+  @override
+  TimeOfDay get timePicker => (origin as CallSaveAlarmQueueProvider).timePicker;
+  @override
+  List<String> get stocks => (origin as CallSaveAlarmQueueProvider).stocks;
+}
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member

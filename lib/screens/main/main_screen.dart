@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:permission_handler/permission_handler.dart';
 
 import '../home/home_screen.dart';
 
@@ -18,7 +19,7 @@ class MainScreen extends ConsumerStatefulWidget {
 }
 
 class _MainScreenState extends ConsumerState<MainScreen> {
-  static const platform = MethodChannel("seungho.devxeg.bm_app/alarm");
+  static const platform = MethodChannel("alarmChannel");
   List<Widget> list = [
     HomeScreen(),
     const MyScreen(),
@@ -31,20 +32,46 @@ class _MainScreenState extends ConsumerState<MainScreen> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    WidgetsBinding.instance.addPostFrameCallback(
-          (timeStamp) async {
-        platform.setMethodCallHandler((call) async{
-          if(call.method=="receiveData"){
-            print(call.method);
-            context.pushReplacementNamed("t");
-          }
-        },);
+    platform.setMethodCallHandler(
+          (call) async {
+        print("chaneel ${call.method}");
+        if (call.method == "receiveData") {
+          print(call.method);
+          final id = call.arguments as int;
+          context.pushReplacementNamed("t",extra: id);
+        }
       },
     );
+    WidgetsBinding.instance.addPostFrameCallback(
+      (timeStamp) async {
+        final statuses = await [
+          Permission.manageExternalStorage,
+          Permission.audio, // 이미지, 비디오, 오디오 접근 권한,
+          Permission.systemAlertWindow,
+          Permission.scheduleExactAlarm,
+          Permission.notification
+        ].request();
+
+        if (statuses[Permission.manageExternalStorage]!.isGranted ||
+            statuses[Permission.mediaLibrary]!.isGranted ||
+            statuses[Permission.systemAlertWindow]!.isGranted ||
+            statuses[Permission.scheduleExactAlarm]!.isGranted ||
+            statuses[Permission.notification]!.isGranted) {
+          // 권한이 허용된 경우
+          print("권한이 허용되었습니다.");
+        } else {
+          // 권한이 거부된 경우
+          print("권한이 거부되었습니다.");
+        }
+      },
+    );
+
   }
+
   void _onItemTapped(int index) {
     ref.read(mainViewmodelProvider.notifier).changeScreen(index);
   }
+
   @override
   Widget build(BuildContext context) {
     final viewmodel = ref.watch(mainViewmodelProvider);
@@ -52,9 +79,11 @@ class _MainScreenState extends ConsumerState<MainScreen> {
       appBar: AppBar(
         title: const Text("내 알람"),
         actions: [
-          IconButton(onPressed: () {
-            context.pushNamed("t");
-          }, icon: const Icon(Icons.settings))
+          IconButton(
+              onPressed: () {
+                context.pushNamed("t");
+              },
+              icon: const Icon(Icons.settings))
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(

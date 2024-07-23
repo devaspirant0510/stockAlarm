@@ -53,5 +53,21 @@ final searchViewModelProvider =
 );
 
 typedef _$SearchViewModel = AutoDisposeNotifier<SearchState>;
+String _$alarmViewmodelHash() => r'2fd2f95084b6a55fe3d0bfeacdb71903e4982b95';
+
+/// See also [AlarmViewmodel].
+@ProviderFor(AlarmViewmodel)
+final alarmViewmodelProvider =
+    AutoDisposeNotifierProvider<AlarmViewmodel, AlarmState>.internal(
+  AlarmViewmodel.new,
+  name: r'alarmViewmodelProvider',
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$alarmViewmodelHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
+);
+
+typedef _$AlarmViewmodel = AutoDisposeNotifier<AlarmState>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
