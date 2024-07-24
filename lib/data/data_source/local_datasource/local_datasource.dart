@@ -15,9 +15,10 @@ class LocalDatSource {
   }
 
   Future<AlarmQueue> loadOneAlarm(int id) async {
-    print(id);
+    print("ds loadone alarm $id");
     List<Map<String, dynamic>> result =
         await db.rawQuery("SELECT * FROM alarm_queue where id=? limit 1", [id]);
+    print("ds loadone alarm $result");
     return AlarmQueue.fromJson(result.first);
   }
 
@@ -26,10 +27,9 @@ class LocalDatSource {
       final a = await db.transaction(
             (txn) async {
             var result = await txn.rawInsert(
-                "INSERT INTO alarm_queue(date_time,stocks,latency_time,created_time,is_active) VALUES(?,?,?,?,?)",
-                [data.dateTime, data.stocks, data.latencyTime, data.createdTime,data.isActive]);
+                "INSERT INTO alarm_queue(date_time,stocks,stock_names,latency_time,created_time,is_active) VALUES(?,?,?,?,?,?)",
+                [data.dateTime, data.stocks,data.stockNames, data.latencyTime, data.createdTime,data.isActive]);
             return result;
-
         },
       );
       return a;
@@ -53,12 +53,6 @@ class LocalDatSource {
       return false;
     }
     return true;
-
-    // await database.transaction((txn) async {
-    //   var result = txn.rawInsert(
-    //       "INSERT INTO stage_info(id,stage) VALUES(?,?)", [id, stage]);
-    //   print(result);
-    // });
   }
 
   Future<void> insertFavoriteSymbol({required SearchItemModel data}) async {

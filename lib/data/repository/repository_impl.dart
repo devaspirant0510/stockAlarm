@@ -88,7 +88,11 @@ class RepositoryImpl implements RemoteRepository , LocalRepository{
 
   @override
   Future<AlarmQueue> findOneAlarmQueueById(int id) async {
-    return await localDatSource.loadOneAlarm(id);
+    try{
+      return await localDatSource.loadOneAlarm(id);
+    }catch(e){
+      throw e;
+    }
   }
 }
 

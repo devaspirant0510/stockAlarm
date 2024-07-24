@@ -23,3 +23,6 @@ part './search/search_viewmodel.dart';
 part './alarm/alarm_state.dart';
 part './alarm/alarm_viewmodel.dart';
 
+part './lock/lock_viewmodel.dart';
+part './lock/lock_state.dart';
+

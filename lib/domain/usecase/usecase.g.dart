@@ -356,7 +356,7 @@ final callGetAllAlarmsProvider =
 
 typedef CallGetAllAlarmsRef = AutoDisposeFutureProviderRef<List<AlarmQueue>>;
 String _$callSaveAlarmQueueHash() =>
-    r'31b0e2cc30a4f1a8c5537c180bbd88a49d56943c';
+    r'3c15f1dc6cc3ee3cd1920846e64e98c979ff85ff';
 
 /// See also [callSaveAlarmQueue].
 @ProviderFor(callSaveAlarmQueue)
@@ -372,11 +372,13 @@ class CallSaveAlarmQueueFamily extends Family<AsyncValue<AlarmQueue>> {
     required DateTime datePicker,
     required TimeOfDay timePicker,
     required List<String> stocks,
+    required List<String> stockNames,
   }) {
     return CallSaveAlarmQueueProvider(
       datePicker: datePicker,
       timePicker: timePicker,
       stocks: stocks,
+      stockNames: stockNames,
     );
   }
 
@@ -388,6 +390,7 @@ class CallSaveAlarmQueueFamily extends Family<AsyncValue<AlarmQueue>> {
       datePicker: provider.datePicker,
       timePicker: provider.timePicker,
       stocks: provider.stocks,
+      stockNames: provider.stockNames,
     );
   }
 
@@ -413,12 +416,14 @@ class CallSaveAlarmQueueProvider extends AutoDisposeFutureProvider<AlarmQueue> {
     required DateTime datePicker,
     required TimeOfDay timePicker,
     required List<String> stocks,
+    required List<String> stockNames,
   }) : this._internal(
           (ref) => callSaveAlarmQueue(
             ref as CallSaveAlarmQueueRef,
             datePicker: datePicker,
             timePicker: timePicker,
             stocks: stocks,
+            stockNames: stockNames,
           ),
           from: callSaveAlarmQueueProvider,
           name: r'callSaveAlarmQueueProvider',
@@ -432,6 +437,7 @@ class CallSaveAlarmQueueProvider extends AutoDisposeFutureProvider<AlarmQueue> {
           datePicker: datePicker,
           timePicker: timePicker,
           stocks: stocks,
+          stockNames: stockNames,
         );
 
   CallSaveAlarmQueueProvider._internal(
@@ -444,11 +450,13 @@ class CallSaveAlarmQueueProvider extends AutoDisposeFutureProvider<AlarmQueue> {
     required this.datePicker,
     required this.timePicker,
     required this.stocks,
+    required this.stockNames,
   }) : super.internal();
 
   final DateTime datePicker;
   final TimeOfDay timePicker;
   final List<String> stocks;
+  final List<String> stockNames;
 
   @override
   Override overrideWith(
@@ -466,6 +474,7 @@ class CallSaveAlarmQueueProvider extends AutoDisposeFutureProvider<AlarmQueue> {
         datePicker: datePicker,
         timePicker: timePicker,
         stocks: stocks,
+        stockNames: stockNames,
       ),
     );
   }
@@ -480,7 +489,8 @@ class CallSaveAlarmQueueProvider extends AutoDisposeFutureProvider<AlarmQueue> {
     return other is CallSaveAlarmQueueProvider &&
         other.datePicker == datePicker &&
         other.timePicker == timePicker &&
-        other.stocks == stocks;
+        other.stocks == stocks &&
+        other.stockNames == stockNames;
   }
 
   @override
@@ -489,6 +499,7 @@ class CallSaveAlarmQueueProvider extends AutoDisposeFutureProvider<AlarmQueue> {
     hash = _SystemHash.combine(hash, datePicker.hashCode);
     hash = _SystemHash.combine(hash, timePicker.hashCode);
     hash = _SystemHash.combine(hash, stocks.hashCode);
+    hash = _SystemHash.combine(hash, stockNames.hashCode);
 
     return _SystemHash.finish(hash);
   }
@@ -503,6 +514,9 @@ mixin CallSaveAlarmQueueRef on AutoDisposeFutureProviderRef<AlarmQueue> {
 
   /// The parameter `stocks` of this provider.
   List<String> get stocks;
+
+  /// The parameter `stockNames` of this provider.
+  List<String> get stockNames;
 }
 
 class _CallSaveAlarmQueueProviderElement
@@ -516,6 +530,138 @@ class _CallSaveAlarmQueueProviderElement
   TimeOfDay get timePicker => (origin as CallSaveAlarmQueueProvider).timePicker;
   @override
   List<String> get stocks => (origin as CallSaveAlarmQueueProvider).stocks;
+  @override
+  List<String> get stockNames =>
+      (origin as CallSaveAlarmQueueProvider).stockNames;
+}
+
+String _$callGetOneAlarmHash() => r'a3ad3e112a0bd8a39944c95e0aed1383fee32caa';
+
+/// See also [callGetOneAlarm].
+@ProviderFor(callGetOneAlarm)
+const callGetOneAlarmProvider = CallGetOneAlarmFamily();
+
+/// See also [callGetOneAlarm].
+class CallGetOneAlarmFamily extends Family<AsyncValue<AlarmQueue>> {
+  /// See also [callGetOneAlarm].
+  const CallGetOneAlarmFamily();
+
+  /// See also [callGetOneAlarm].
+  CallGetOneAlarmProvider call({
+    required int id,
+  }) {
+    return CallGetOneAlarmProvider(
+      id: id,
+    );
+  }
+
+  @override
+  CallGetOneAlarmProvider getProviderOverride(
+    covariant CallGetOneAlarmProvider provider,
+  ) {
+    return call(
+      id: provider.id,
+    );
+  }
+
+  static const Iterable<ProviderOrFamily>? _dependencies = null;
+
+  @override
+  Iterable<ProviderOrFamily>? get dependencies => _dependencies;
+
+  static const Iterable<ProviderOrFamily>? _allTransitiveDependencies = null;
+
+  @override
+  Iterable<ProviderOrFamily>? get allTransitiveDependencies =>
+      _allTransitiveDependencies;
+
+  @override
+  String? get name => r'callGetOneAlarmProvider';
+}
+
+/// See also [callGetOneAlarm].
+class CallGetOneAlarmProvider extends AutoDisposeFutureProvider<AlarmQueue> {
+  /// See also [callGetOneAlarm].
+  CallGetOneAlarmProvider({
+    required int id,
+  }) : this._internal(
+          (ref) => callGetOneAlarm(
+            ref as CallGetOneAlarmRef,
+            id: id,
+          ),
+          from: callGetOneAlarmProvider,
+          name: r'callGetOneAlarmProvider',
+          debugGetCreateSourceHash:
+              const bool.fromEnvironment('dart.vm.product')
+                  ? null
+                  : _$callGetOneAlarmHash,
+          dependencies: CallGetOneAlarmFamily._dependencies,
+          allTransitiveDependencies:
+              CallGetOneAlarmFamily._allTransitiveDependencies,
+          id: id,
+        );
+
+  CallGetOneAlarmProvider._internal(
+    super._createNotifier, {
+    required super.name,
+    required super.dependencies,
+    required super.allTransitiveDependencies,
+    required super.debugGetCreateSourceHash,
+    required super.from,
+    required this.id,
+  }) : super.internal();
+
+  final int id;
+
+  @override
+  Override overrideWith(
+    FutureOr<AlarmQueue> Function(CallGetOneAlarmRef provider) create,
+  ) {
+    return ProviderOverride(
+      origin: this,
+      override: CallGetOneAlarmProvider._internal(
+        (ref) => create(ref as CallGetOneAlarmRef),
+        from: from,
+        name: null,
+        dependencies: null,
+        allTransitiveDependencies: null,
+        debugGetCreateSourceHash: null,
+        id: id,
+      ),
+    );
+  }
+
+  @override
+  AutoDisposeFutureProviderElement<AlarmQueue> createElement() {
+    return _CallGetOneAlarmProviderElement(this);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return other is CallGetOneAlarmProvider && other.id == id;
+  }
+
+  @override
+  int get hashCode {
+    var hash = _SystemHash.combine(0, runtimeType.hashCode);
+    hash = _SystemHash.combine(hash, id.hashCode);
+
+    return _SystemHash.finish(hash);
+  }
+}
+
+mixin CallGetOneAlarmRef on AutoDisposeFutureProviderRef<AlarmQueue> {
+  /// The parameter `id` of this provider.
+  int get id;
+}
+
+class _CallGetOneAlarmProviderElement
+    extends AutoDisposeFutureProviderElement<AlarmQueue>
+    with CallGetOneAlarmRef {
+  _CallGetOneAlarmProviderElement(super.provider);
+
+  @override
+  int get id => (origin as CallGetOneAlarmProvider).id;
 }
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member

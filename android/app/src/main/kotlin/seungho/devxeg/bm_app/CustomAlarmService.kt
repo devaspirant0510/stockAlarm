@@ -28,7 +28,7 @@ class CustomAlarmService : Service() {
             "MyApp::MyWakelockTag"
         )
     }
-    private fun startForegroundService() {
+    private fun customStartForegroundService(id:Int) {
         val channelId = "channel_id"
         val channelName = "Default Channel"
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
@@ -42,7 +42,7 @@ class CustomAlarmService : Service() {
             MainActivity::class.java
         )
         val pendingIntent = PendingIntent.getActivity(
-            this, 2,
+            this, id,
             intent, PendingIntent.FLAG_IMMUTABLE
         )
         val notification: Notification = NotificationCompat.Builder(this, channelId)
@@ -57,17 +57,17 @@ class CustomAlarmService : Service() {
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
             notification.flags = Notification.FLAG_NO_CLEAR
-            startForeground(2, notification, ServiceInfo.FOREGROUND_SERVICE_TYPE_DATA_SYNC)
+            startForeground(id, notification, ServiceInfo.FOREGROUND_SERVICE_TYPE_DATA_SYNC)
         }
     }
     @RequiresApi(Build.VERSION_CODES.UPSIDE_DOWN_CAKE)
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
-        startForegroundService()
         val getId = intent?.getIntExtra("id",-1)
+        customStartForegroundService(getId!!)
         Toast.makeText(applicationContext, "service id $getId", Toast.LENGTH_SHORT).show()
         Handler(Looper.getMainLooper()).postDelayed(Runnable {
             wakeLock.acquire(10*60*1000L /*10 minutes*/);
-            startActivityInBackground(getId!!) }, 1000)
+            startActivityInBackground(getId) }, 1000)
         return START_STICKY
     }
     @RequiresApi(Build.VERSION_CODES.UPSIDE_DOWN_CAKE)

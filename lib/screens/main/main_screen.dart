@@ -37,7 +37,9 @@ class _MainScreenState extends ConsumerState<MainScreen> {
         print("chaneel ${call.method}");
         if (call.method == "receiveData") {
           print(call.method);
+          print(call.arguments);
           final id = call.arguments as int;
+          print("native get id :$id");
           context.pushReplacementNamed("t",extra: id);
         }
       },

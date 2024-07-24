@@ -7,6 +7,8 @@ class AlarmQueue with _$AlarmQueue {
     @JsonKey(name:"date_time")
     required int dateTime,
     required String stocks,
+    @JsonKey(name:"stock_names")
+    required String stockNames,
     @JsonKey(name:"latency_time")
     required int latencyTime,
     @JsonKey(name:"created_time")

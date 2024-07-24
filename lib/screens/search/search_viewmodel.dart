@@ -25,7 +25,7 @@ class SearchViewModel extends _$SearchViewModel {
     state = state.copyWith(
         searchResult: state.searchResult?.map((e) {
       if (e.ticker == data.ticker) {
-        return e.copyWith(isAdded: true);
+        return e.copyWith(isAdded: true,name: e.name.replaceAll(",", "").split(" ").first);
       }
       return e;
     }).toList());

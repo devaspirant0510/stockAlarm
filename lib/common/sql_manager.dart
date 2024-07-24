@@ -26,6 +26,7 @@ class SQLiteManager {
         id INTEGER PRIMARY KEY,
         date_time INTEGER NOT NULL,
         stocks TEXT NOT NULL,
+        stock_names TEXT NOT NULL,
         latency_time INTEGER NOT NULL,
         created_time INTEGER NOT NULL,
         is_active INTEGER NOT NULL

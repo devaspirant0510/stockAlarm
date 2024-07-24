@@ -54,8 +54,8 @@ public class MainActivity : FlutterActivity() {
         Log.e("native", "main activty oncreate")
         android.widget.Toast.makeText(applicationContext, intent.action, Toast.LENGTH_SHORT).show()
         if (intent.action == "lock") {
-            Toast.makeText(applicationContext,"send invoke native",Toast.LENGTH_SHORT).show()
             val getId = intent.getIntExtra("id",-1)
+            Toast.makeText(applicationContext,"send invoke native $getId",Toast.LENGTH_SHORT).show()
             channel.invokeMethod("receiveData",getId)
 
         }
@@ -80,7 +80,7 @@ public class MainActivity : FlutterActivity() {
                 intent.putExtra("id",id)
                 val pendingIntent = PendingIntent.getBroadcast(
                     this,
-                    4,
+                    id!!,
                     intent,
                     PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
                 )

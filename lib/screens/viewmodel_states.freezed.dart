@@ -424,9 +424,11 @@ mixin _$AlarmState {
       throw _privateConstructorUsedError;
   AsyncValue<List<FavoriteStock>> get favoriteStocks =>
       throw _privateConstructorUsedError;
+  List<bool> get checkedStocks => throw _privateConstructorUsedError;
   DateTime? get inputDate => throw _privateConstructorUsedError;
   TimeOfDay? get inputTime => throw _privateConstructorUsedError;
   List<String>? get selectedStocks => throw _privateConstructorUsedError;
+  List<String>? get selectedStockNames => throw _privateConstructorUsedError;
   bool get isPendingSaveNoti => throw _privateConstructorUsedError;
   bool get successSaveNoti => throw _privateConstructorUsedError;
   String get errorSaveNoti => throw _privateConstructorUsedError;
@@ -445,9 +447,11 @@ abstract class $AlarmStateCopyWith<$Res> {
   $Res call(
       {AsyncValue<List<AlarmQueue>> alarmList,
       AsyncValue<List<FavoriteStock>> favoriteStocks,
+      List<bool> checkedStocks,
       DateTime? inputDate,
       TimeOfDay? inputTime,
       List<String>? selectedStocks,
+      List<String>? selectedStockNames,
       bool isPendingSaveNoti,
       bool successSaveNoti,
       String errorSaveNoti});
@@ -468,9 +472,11 @@ class _$AlarmStateCopyWithImpl<$Res, $Val extends AlarmState>
   $Res call({
     Object? alarmList = null,
     Object? favoriteStocks = null,
+    Object? checkedStocks = null,
     Object? inputDate = freezed,
     Object? inputTime = freezed,
     Object? selectedStocks = freezed,
+    Object? selectedStockNames = freezed,
     Object? isPendingSaveNoti = null,
     Object? successSaveNoti = null,
     Object? errorSaveNoti = null,
@@ -484,6 +490,10 @@ class _$AlarmStateCopyWithImpl<$Res, $Val extends AlarmState>
           ? _value.favoriteStocks
           : favoriteStocks // ignore: cast_nullable_to_non_nullable
               as AsyncValue<List<FavoriteStock>>,
+      checkedStocks: null == checkedStocks
+          ? _value.checkedStocks
+          : checkedStocks // ignore: cast_nullable_to_non_nullable
+              as List<bool>,
       inputDate: freezed == inputDate
           ? _value.inputDate
           : inputDate // ignore: cast_nullable_to_non_nullable
@@ -495,6 +505,10 @@ class _$AlarmStateCopyWithImpl<$Res, $Val extends AlarmState>
       selectedStocks: freezed == selectedStocks
           ? _value.selectedStocks
           : selectedStocks // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
+      selectedStockNames: freezed == selectedStockNames
+          ? _value.selectedStockNames
+          : selectedStockNames // ignore: cast_nullable_to_non_nullable
               as List<String>?,
       isPendingSaveNoti: null == isPendingSaveNoti
           ? _value.isPendingSaveNoti
@@ -523,9 +537,11 @@ abstract class _$$AlarmStateImplCopyWith<$Res>
   $Res call(
       {AsyncValue<List<AlarmQueue>> alarmList,
       AsyncValue<List<FavoriteStock>> favoriteStocks,
+      List<bool> checkedStocks,
       DateTime? inputDate,
       TimeOfDay? inputTime,
       List<String>? selectedStocks,
+      List<String>? selectedStockNames,
       bool isPendingSaveNoti,
       bool successSaveNoti,
       String errorSaveNoti});
@@ -544,9 +560,11 @@ class __$$AlarmStateImplCopyWithImpl<$Res>
   $Res call({
     Object? alarmList = null,
     Object? favoriteStocks = null,
+    Object? checkedStocks = null,
     Object? inputDate = freezed,
     Object? inputTime = freezed,
     Object? selectedStocks = freezed,
+    Object? selectedStockNames = freezed,
     Object? isPendingSaveNoti = null,
     Object? successSaveNoti = null,
     Object? errorSaveNoti = null,
@@ -560,6 +578,10 @@ class __$$AlarmStateImplCopyWithImpl<$Res>
           ? _value.favoriteStocks
           : favoriteStocks // ignore: cast_nullable_to_non_nullable
               as AsyncValue<List<FavoriteStock>>,
+      checkedStocks: null == checkedStocks
+          ? _value._checkedStocks
+          : checkedStocks // ignore: cast_nullable_to_non_nullable
+              as List<bool>,
       inputDate: freezed == inputDate
           ? _value.inputDate
           : inputDate // ignore: cast_nullable_to_non_nullable
@@ -571,6 +593,10 @@ class __$$AlarmStateImplCopyWithImpl<$Res>
       selectedStocks: freezed == selectedStocks
           ? _value._selectedStocks
           : selectedStocks // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
+      selectedStockNames: freezed == selectedStockNames
+          ? _value._selectedStockNames
+          : selectedStockNames // ignore: cast_nullable_to_non_nullable
               as List<String>?,
       isPendingSaveNoti: null == isPendingSaveNoti
           ? _value.isPendingSaveNoti
@@ -594,13 +620,17 @@ class _$AlarmStateImpl implements _AlarmState {
   const _$AlarmStateImpl(
       {this.alarmList = const AsyncData([]),
       this.favoriteStocks = const AsyncData([]),
+      final List<bool> checkedStocks = const [],
       this.inputDate,
       this.inputTime,
       final List<String>? selectedStocks,
+      final List<String>? selectedStockNames,
       this.isPendingSaveNoti = false,
       this.successSaveNoti = false,
       this.errorSaveNoti = ""})
-      : _selectedStocks = selectedStocks;
+      : _checkedStocks = checkedStocks,
+        _selectedStocks = selectedStocks,
+        _selectedStockNames = selectedStockNames;
 
   @override
   @JsonKey()
@@ -608,6 +638,15 @@ class _$AlarmStateImpl implements _AlarmState {
   @override
   @JsonKey()
   final AsyncValue<List<FavoriteStock>> favoriteStocks;
+  final List<bool> _checkedStocks;
+  @override
+  @JsonKey()
+  List<bool> get checkedStocks {
+    if (_checkedStocks is EqualUnmodifiableListView) return _checkedStocks;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_checkedStocks);
+  }
+
   @override
   final DateTime? inputDate;
   @override
@@ -618,6 +657,17 @@ class _$AlarmStateImpl implements _AlarmState {
     final value = _selectedStocks;
     if (value == null) return null;
     if (_selectedStocks is EqualUnmodifiableListView) return _selectedStocks;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<String>? _selectedStockNames;
+  @override
+  List<String>? get selectedStockNames {
+    final value = _selectedStockNames;
+    if (value == null) return null;
+    if (_selectedStockNames is EqualUnmodifiableListView)
+      return _selectedStockNames;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -634,7 +684,7 @@ class _$AlarmStateImpl implements _AlarmState {
 
   @override
   String toString() {
-    return 'AlarmState(alarmList: $alarmList, favoriteStocks: $favoriteStocks, inputDate: $inputDate, inputTime: $inputTime, selectedStocks: $selectedStocks, isPendingSaveNoti: $isPendingSaveNoti, successSaveNoti: $successSaveNoti, errorSaveNoti: $errorSaveNoti)';
+    return 'AlarmState(alarmList: $alarmList, favoriteStocks: $favoriteStocks, checkedStocks: $checkedStocks, inputDate: $inputDate, inputTime: $inputTime, selectedStocks: $selectedStocks, selectedStockNames: $selectedStockNames, isPendingSaveNoti: $isPendingSaveNoti, successSaveNoti: $successSaveNoti, errorSaveNoti: $errorSaveNoti)';
   }
 
   @override
@@ -646,12 +696,16 @@ class _$AlarmStateImpl implements _AlarmState {
                 other.alarmList == alarmList) &&
             (identical(other.favoriteStocks, favoriteStocks) ||
                 other.favoriteStocks == favoriteStocks) &&
+            const DeepCollectionEquality()
+                .equals(other._checkedStocks, _checkedStocks) &&
             (identical(other.inputDate, inputDate) ||
                 other.inputDate == inputDate) &&
             (identical(other.inputTime, inputTime) ||
                 other.inputTime == inputTime) &&
             const DeepCollectionEquality()
                 .equals(other._selectedStocks, _selectedStocks) &&
+            const DeepCollectionEquality()
+                .equals(other._selectedStockNames, _selectedStockNames) &&
             (identical(other.isPendingSaveNoti, isPendingSaveNoti) ||
                 other.isPendingSaveNoti == isPendingSaveNoti) &&
             (identical(other.successSaveNoti, successSaveNoti) ||
@@ -665,9 +719,11 @@ class _$AlarmStateImpl implements _AlarmState {
       runtimeType,
       alarmList,
       favoriteStocks,
+      const DeepCollectionEquality().hash(_checkedStocks),
       inputDate,
       inputTime,
       const DeepCollectionEquality().hash(_selectedStocks),
+      const DeepCollectionEquality().hash(_selectedStockNames),
       isPendingSaveNoti,
       successSaveNoti,
       errorSaveNoti);
@@ -683,9 +739,11 @@ abstract class _AlarmState implements AlarmState {
   const factory _AlarmState(
       {final AsyncValue<List<AlarmQueue>> alarmList,
       final AsyncValue<List<FavoriteStock>> favoriteStocks,
+      final List<bool> checkedStocks,
       final DateTime? inputDate,
       final TimeOfDay? inputTime,
       final List<String>? selectedStocks,
+      final List<String>? selectedStockNames,
       final bool isPendingSaveNoti,
       final bool successSaveNoti,
       final String errorSaveNoti}) = _$AlarmStateImpl;
@@ -695,11 +753,15 @@ abstract class _AlarmState implements AlarmState {
   @override
   AsyncValue<List<FavoriteStock>> get favoriteStocks;
   @override
+  List<bool> get checkedStocks;
+  @override
   DateTime? get inputDate;
   @override
   TimeOfDay? get inputTime;
   @override
   List<String>? get selectedStocks;
+  @override
+  List<String>? get selectedStockNames;
   @override
   bool get isPendingSaveNoti;
   @override
@@ -709,5 +771,139 @@ abstract class _AlarmState implements AlarmState {
   @override
   @JsonKey(ignore: true)
   _$$AlarmStateImplCopyWith<_$AlarmStateImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+mixin _$LockState {
+  AlarmQueue? get alarmData => throw _privateConstructorUsedError;
+
+  @JsonKey(ignore: true)
+  $LockStateCopyWith<LockState> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $LockStateCopyWith<$Res> {
+  factory $LockStateCopyWith(LockState value, $Res Function(LockState) then) =
+      _$LockStateCopyWithImpl<$Res, LockState>;
+  @useResult
+  $Res call({AlarmQueue? alarmData});
+
+  $AlarmQueueCopyWith<$Res>? get alarmData;
+}
+
+/// @nodoc
+class _$LockStateCopyWithImpl<$Res, $Val extends LockState>
+    implements $LockStateCopyWith<$Res> {
+  _$LockStateCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? alarmData = freezed,
+  }) {
+    return _then(_value.copyWith(
+      alarmData: freezed == alarmData
+          ? _value.alarmData
+          : alarmData // ignore: cast_nullable_to_non_nullable
+              as AlarmQueue?,
+    ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $AlarmQueueCopyWith<$Res>? get alarmData {
+    if (_value.alarmData == null) {
+      return null;
+    }
+
+    return $AlarmQueueCopyWith<$Res>(_value.alarmData!, (value) {
+      return _then(_value.copyWith(alarmData: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$LockStateImplCopyWith<$Res>
+    implements $LockStateCopyWith<$Res> {
+  factory _$$LockStateImplCopyWith(
+          _$LockStateImpl value, $Res Function(_$LockStateImpl) then) =
+      __$$LockStateImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({AlarmQueue? alarmData});
+
+  @override
+  $AlarmQueueCopyWith<$Res>? get alarmData;
+}
+
+/// @nodoc
+class __$$LockStateImplCopyWithImpl<$Res>
+    extends _$LockStateCopyWithImpl<$Res, _$LockStateImpl>
+    implements _$$LockStateImplCopyWith<$Res> {
+  __$$LockStateImplCopyWithImpl(
+      _$LockStateImpl _value, $Res Function(_$LockStateImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? alarmData = freezed,
+  }) {
+    return _then(_$LockStateImpl(
+      alarmData: freezed == alarmData
+          ? _value.alarmData
+          : alarmData // ignore: cast_nullable_to_non_nullable
+              as AlarmQueue?,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$LockStateImpl implements _LockState {
+  const _$LockStateImpl({this.alarmData});
+
+  @override
+  final AlarmQueue? alarmData;
+
+  @override
+  String toString() {
+    return 'LockState(alarmData: $alarmData)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$LockStateImpl &&
+            (identical(other.alarmData, alarmData) ||
+                other.alarmData == alarmData));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, alarmData);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$LockStateImplCopyWith<_$LockStateImpl> get copyWith =>
+      __$$LockStateImplCopyWithImpl<_$LockStateImpl>(this, _$identity);
+}
+
+abstract class _LockState implements LockState {
+  const factory _LockState({final AlarmQueue? alarmData}) = _$LockStateImpl;
+
+  @override
+  AlarmQueue? get alarmData;
+  @override
+  @JsonKey(ignore: true)
+  _$$LockStateImplCopyWith<_$LockStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

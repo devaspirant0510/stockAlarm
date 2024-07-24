@@ -1994,6 +1994,8 @@ mixin _$AlarmQueue {
   @JsonKey(name: "date_time")
   int get dateTime => throw _privateConstructorUsedError;
   String get stocks => throw _privateConstructorUsedError;
+  @JsonKey(name: "stock_names")
+  String get stockNames => throw _privateConstructorUsedError;
   @JsonKey(name: "latency_time")
   int get latencyTime => throw _privateConstructorUsedError;
   @JsonKey(name: "created_time")
@@ -2017,6 +2019,7 @@ abstract class $AlarmQueueCopyWith<$Res> {
       {int? id,
       @JsonKey(name: "date_time") int dateTime,
       String stocks,
+      @JsonKey(name: "stock_names") String stockNames,
       @JsonKey(name: "latency_time") int latencyTime,
       @JsonKey(name: "created_time") int createdTime,
       @JsonKey(name: "is_active") int isActive});
@@ -2038,6 +2041,7 @@ class _$AlarmQueueCopyWithImpl<$Res, $Val extends AlarmQueue>
     Object? id = freezed,
     Object? dateTime = null,
     Object? stocks = null,
+    Object? stockNames = null,
     Object? latencyTime = null,
     Object? createdTime = null,
     Object? isActive = null,
@@ -2054,6 +2058,10 @@ class _$AlarmQueueCopyWithImpl<$Res, $Val extends AlarmQueue>
       stocks: null == stocks
           ? _value.stocks
           : stocks // ignore: cast_nullable_to_non_nullable
+              as String,
+      stockNames: null == stockNames
+          ? _value.stockNames
+          : stockNames // ignore: cast_nullable_to_non_nullable
               as String,
       latencyTime: null == latencyTime
           ? _value.latencyTime
@@ -2083,6 +2091,7 @@ abstract class _$$AlarmQueueImplCopyWith<$Res>
       {int? id,
       @JsonKey(name: "date_time") int dateTime,
       String stocks,
+      @JsonKey(name: "stock_names") String stockNames,
       @JsonKey(name: "latency_time") int latencyTime,
       @JsonKey(name: "created_time") int createdTime,
       @JsonKey(name: "is_active") int isActive});
@@ -2102,6 +2111,7 @@ class __$$AlarmQueueImplCopyWithImpl<$Res>
     Object? id = freezed,
     Object? dateTime = null,
     Object? stocks = null,
+    Object? stockNames = null,
     Object? latencyTime = null,
     Object? createdTime = null,
     Object? isActive = null,
@@ -2118,6 +2128,10 @@ class __$$AlarmQueueImplCopyWithImpl<$Res>
       stocks: null == stocks
           ? _value.stocks
           : stocks // ignore: cast_nullable_to_non_nullable
+              as String,
+      stockNames: null == stockNames
+          ? _value.stockNames
+          : stockNames // ignore: cast_nullable_to_non_nullable
               as String,
       latencyTime: null == latencyTime
           ? _value.latencyTime
@@ -2142,6 +2156,7 @@ class _$AlarmQueueImpl implements _AlarmQueue {
       {this.id,
       @JsonKey(name: "date_time") required this.dateTime,
       required this.stocks,
+      @JsonKey(name: "stock_names") required this.stockNames,
       @JsonKey(name: "latency_time") required this.latencyTime,
       @JsonKey(name: "created_time") required this.createdTime,
       @JsonKey(name: "is_active") this.isActive = 1});
@@ -2157,6 +2172,9 @@ class _$AlarmQueueImpl implements _AlarmQueue {
   @override
   final String stocks;
   @override
+  @JsonKey(name: "stock_names")
+  final String stockNames;
+  @override
   @JsonKey(name: "latency_time")
   final int latencyTime;
   @override
@@ -2168,7 +2186,7 @@ class _$AlarmQueueImpl implements _AlarmQueue {
 
   @override
   String toString() {
-    return 'AlarmQueue(id: $id, dateTime: $dateTime, stocks: $stocks, latencyTime: $latencyTime, createdTime: $createdTime, isActive: $isActive)';
+    return 'AlarmQueue(id: $id, dateTime: $dateTime, stocks: $stocks, stockNames: $stockNames, latencyTime: $latencyTime, createdTime: $createdTime, isActive: $isActive)';
   }
 
   @override
@@ -2180,6 +2198,8 @@ class _$AlarmQueueImpl implements _AlarmQueue {
             (identical(other.dateTime, dateTime) ||
                 other.dateTime == dateTime) &&
             (identical(other.stocks, stocks) || other.stocks == stocks) &&
+            (identical(other.stockNames, stockNames) ||
+                other.stockNames == stockNames) &&
             (identical(other.latencyTime, latencyTime) ||
                 other.latencyTime == latencyTime) &&
             (identical(other.createdTime, createdTime) ||
@@ -2190,8 +2210,8 @@ class _$AlarmQueueImpl implements _AlarmQueue {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, id, dateTime, stocks, latencyTime, createdTime, isActive);
+  int get hashCode => Object.hash(runtimeType, id, dateTime, stocks, stockNames,
+      latencyTime, createdTime, isActive);
 
   @JsonKey(ignore: true)
   @override
@@ -2212,6 +2232,7 @@ abstract class _AlarmQueue implements AlarmQueue {
       {final int? id,
       @JsonKey(name: "date_time") required final int dateTime,
       required final String stocks,
+      @JsonKey(name: "stock_names") required final String stockNames,
       @JsonKey(name: "latency_time") required final int latencyTime,
       @JsonKey(name: "created_time") required final int createdTime,
       @JsonKey(name: "is_active") final int isActive}) = _$AlarmQueueImpl;
@@ -2226,6 +2247,9 @@ abstract class _AlarmQueue implements AlarmQueue {
   int get dateTime;
   @override
   String get stocks;
+  @override
+  @JsonKey(name: "stock_names")
+  String get stockNames;
   @override
   @JsonKey(name: "latency_time")
   int get latencyTime;

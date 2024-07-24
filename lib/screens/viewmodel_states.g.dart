@@ -53,7 +53,7 @@ final searchViewModelProvider =
 );
 
 typedef _$SearchViewModel = AutoDisposeNotifier<SearchState>;
-String _$alarmViewmodelHash() => r'2fd2f95084b6a55fe3d0bfeacdb71903e4982b95';
+String _$alarmViewmodelHash() => r'a20fcf2f2c7a52667f3a72d12c2382777ff99221';
 
 /// See also [AlarmViewmodel].
 @ProviderFor(AlarmViewmodel)
@@ -69,5 +69,169 @@ final alarmViewmodelProvider =
 );
 
 typedef _$AlarmViewmodel = AutoDisposeNotifier<AlarmState>;
+String _$lockViewmodelHash() => r'1b3db74f7f78657ec1d0a19cab7eff6f65546d7f';
+
+/// Copied from Dart SDK
+class _SystemHash {
+  _SystemHash._();
+
+  static int combine(int hash, int value) {
+    // ignore: parameter_assignments
+    hash = 0x1fffffff & (hash + value);
+    // ignore: parameter_assignments
+    hash = 0x1fffffff & (hash + ((0x0007ffff & hash) << 10));
+    return hash ^ (hash >> 6);
+  }
+
+  static int finish(int hash) {
+    // ignore: parameter_assignments
+    hash = 0x1fffffff & (hash + ((0x03ffffff & hash) << 3));
+    // ignore: parameter_assignments
+    hash = hash ^ (hash >> 11);
+    return 0x1fffffff & (hash + ((0x00003fff & hash) << 15));
+  }
+}
+
+abstract class _$LockViewmodel
+    extends BuildlessAutoDisposeAsyncNotifier<LockState> {
+  late final int alarmId;
+
+  FutureOr<LockState> build(
+    int alarmId,
+  );
+}
+
+/// See also [LockViewmodel].
+@ProviderFor(LockViewmodel)
+const lockViewmodelProvider = LockViewmodelFamily();
+
+/// See also [LockViewmodel].
+class LockViewmodelFamily extends Family<AsyncValue<LockState>> {
+  /// See also [LockViewmodel].
+  const LockViewmodelFamily();
+
+  /// See also [LockViewmodel].
+  LockViewmodelProvider call(
+    int alarmId,
+  ) {
+    return LockViewmodelProvider(
+      alarmId,
+    );
+  }
+
+  @override
+  LockViewmodelProvider getProviderOverride(
+    covariant LockViewmodelProvider provider,
+  ) {
+    return call(
+      provider.alarmId,
+    );
+  }
+
+  static const Iterable<ProviderOrFamily>? _dependencies = null;
+
+  @override
+  Iterable<ProviderOrFamily>? get dependencies => _dependencies;
+
+  static const Iterable<ProviderOrFamily>? _allTransitiveDependencies = null;
+
+  @override
+  Iterable<ProviderOrFamily>? get allTransitiveDependencies =>
+      _allTransitiveDependencies;
+
+  @override
+  String? get name => r'lockViewmodelProvider';
+}
+
+/// See also [LockViewmodel].
+class LockViewmodelProvider
+    extends AutoDisposeAsyncNotifierProviderImpl<LockViewmodel, LockState> {
+  /// See also [LockViewmodel].
+  LockViewmodelProvider(
+    int alarmId,
+  ) : this._internal(
+          () => LockViewmodel()..alarmId = alarmId,
+          from: lockViewmodelProvider,
+          name: r'lockViewmodelProvider',
+          debugGetCreateSourceHash:
+              const bool.fromEnvironment('dart.vm.product')
+                  ? null
+                  : _$lockViewmodelHash,
+          dependencies: LockViewmodelFamily._dependencies,
+          allTransitiveDependencies:
+              LockViewmodelFamily._allTransitiveDependencies,
+          alarmId: alarmId,
+        );
+
+  LockViewmodelProvider._internal(
+    super._createNotifier, {
+    required super.name,
+    required super.dependencies,
+    required super.allTransitiveDependencies,
+    required super.debugGetCreateSourceHash,
+    required super.from,
+    required this.alarmId,
+  }) : super.internal();
+
+  final int alarmId;
+
+  @override
+  FutureOr<LockState> runNotifierBuild(
+    covariant LockViewmodel notifier,
+  ) {
+    return notifier.build(
+      alarmId,
+    );
+  }
+
+  @override
+  Override overrideWith(LockViewmodel Function() create) {
+    return ProviderOverride(
+      origin: this,
+      override: LockViewmodelProvider._internal(
+        () => create()..alarmId = alarmId,
+        from: from,
+        name: null,
+        dependencies: null,
+        allTransitiveDependencies: null,
+        debugGetCreateSourceHash: null,
+        alarmId: alarmId,
+      ),
+    );
+  }
+
+  @override
+  AutoDisposeAsyncNotifierProviderElement<LockViewmodel, LockState>
+      createElement() {
+    return _LockViewmodelProviderElement(this);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return other is LockViewmodelProvider && other.alarmId == alarmId;
+  }
+
+  @override
+  int get hashCode {
+    var hash = _SystemHash.combine(0, runtimeType.hashCode);
+    hash = _SystemHash.combine(hash, alarmId.hashCode);
+
+    return _SystemHash.finish(hash);
+  }
+}
+
+mixin LockViewmodelRef on AutoDisposeAsyncNotifierProviderRef<LockState> {
+  /// The parameter `alarmId` of this provider.
+  int get alarmId;
+}
+
+class _LockViewmodelProviderElement
+    extends AutoDisposeAsyncNotifierProviderElement<LockViewmodel, LockState>
+    with LockViewmodelRef {
+  _LockViewmodelProviderElement(super.provider);
+
+  @override
+  int get alarmId => (origin as LockViewmodelProvider).alarmId;
+}
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
