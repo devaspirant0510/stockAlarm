@@ -6,6 +6,7 @@ class SearchItemModel with _$SearchItemModel {
   factory SearchItemModel({
     required String ticker,
     required String name,
-    required bool isAdded
+    required bool isAdded,
+    required String imageUrl,
 }) = _SearchItemModel;
 }

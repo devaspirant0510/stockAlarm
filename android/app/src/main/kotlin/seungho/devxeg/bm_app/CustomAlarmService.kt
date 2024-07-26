@@ -40,19 +40,21 @@ class CustomAlarmService : Service() {
         val intent = Intent(
             this,
             MainActivity::class.java
-        )
+        ).apply {
+            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        }
         val pendingIntent = PendingIntent.getActivity(
-            this, id,
+            this, 1,
             intent, PendingIntent.FLAG_IMMUTABLE
         )
         val notification: Notification = NotificationCompat.Builder(this, channelId)
             .setOngoing(true)
-            .setContentTitle("Foreground Service")
-            .setContentText("Service is running in the foreground")
+            .setContentTitle("톡톡 알람")
+            .setContentText("알람이 울립니다.")
             .setSmallIcon(android.R.mipmap.sym_def_app_icon)
             .setPriority(NotificationCompat.PRIORITY_HIGH)
             .setContentIntent(pendingIntent)
-            .addAction(android.R.drawable.ic_menu_add,"gowp",pendingIntent)
+            .addAction(android.R.drawable.ic_menu_add,"앱 켜기",pendingIntent)
             .build()
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
@@ -64,7 +66,6 @@ class CustomAlarmService : Service() {
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         val getId = intent?.getIntExtra("id",-1)
         customStartForegroundService(getId!!)
-        Toast.makeText(applicationContext, "service id $getId", Toast.LENGTH_SHORT).show()
         Handler(Looper.getMainLooper()).postDelayed(Runnable {
             wakeLock.acquire(10*60*1000L /*10 minutes*/);
             startActivityInBackground(getId) }, 1000)

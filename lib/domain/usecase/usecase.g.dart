@@ -41,7 +41,7 @@ final callPopularTradedProvider =
 
 typedef CallPopularTradedRef = AutoDisposeFutureProviderRef<List<StockModel>>;
 String _$callLoadAllSearchDataHash() =>
-    r'1ebef6c9a32f69cf5afb634c1d48b125ed0a0d56';
+    r'6d7413488c3928ff19eb0e827d1b33ff56feff0e';
 
 /// Copied from Dart SDK
 class _SystemHash {
@@ -195,7 +195,7 @@ class _CallLoadAllSearchDataProviderElement
   String get query => (origin as CallLoadAllSearchDataProvider).query;
 }
 
-String _$addFavoriteStockHash() => r'96deb84c63766017692fb13f7a041f9c102bd291';
+String _$addFavoriteStockHash() => r'88df7dbf10bad9c136c9c31296b8fda8e197f9c3';
 
 /// See also [addFavoriteStock].
 @ProviderFor(addFavoriteStock)
@@ -339,6 +339,139 @@ final callLoadMyStocksProvider =
 );
 
 typedef CallLoadMyStocksRef = AutoDisposeFutureProviderRef<List<FavoriteStock>>;
+String _$callGetOneQuotePriceBySymbolHash() =>
+    r'f1b242904562c6983284f98ca95a7bcafd9b8e8b';
+
+/// See also [callGetOneQuotePriceBySymbol].
+@ProviderFor(callGetOneQuotePriceBySymbol)
+const callGetOneQuotePriceBySymbolProvider =
+    CallGetOneQuotePriceBySymbolFamily();
+
+/// See also [callGetOneQuotePriceBySymbol].
+class CallGetOneQuotePriceBySymbolFamily extends Family<AsyncValue<Quote>> {
+  /// See also [callGetOneQuotePriceBySymbol].
+  const CallGetOneQuotePriceBySymbolFamily();
+
+  /// See also [callGetOneQuotePriceBySymbol].
+  CallGetOneQuotePriceBySymbolProvider call({
+    required String symbol,
+  }) {
+    return CallGetOneQuotePriceBySymbolProvider(
+      symbol: symbol,
+    );
+  }
+
+  @override
+  CallGetOneQuotePriceBySymbolProvider getProviderOverride(
+    covariant CallGetOneQuotePriceBySymbolProvider provider,
+  ) {
+    return call(
+      symbol: provider.symbol,
+    );
+  }
+
+  static const Iterable<ProviderOrFamily>? _dependencies = null;
+
+  @override
+  Iterable<ProviderOrFamily>? get dependencies => _dependencies;
+
+  static const Iterable<ProviderOrFamily>? _allTransitiveDependencies = null;
+
+  @override
+  Iterable<ProviderOrFamily>? get allTransitiveDependencies =>
+      _allTransitiveDependencies;
+
+  @override
+  String? get name => r'callGetOneQuotePriceBySymbolProvider';
+}
+
+/// See also [callGetOneQuotePriceBySymbol].
+class CallGetOneQuotePriceBySymbolProvider
+    extends AutoDisposeFutureProvider<Quote> {
+  /// See also [callGetOneQuotePriceBySymbol].
+  CallGetOneQuotePriceBySymbolProvider({
+    required String symbol,
+  }) : this._internal(
+          (ref) => callGetOneQuotePriceBySymbol(
+            ref as CallGetOneQuotePriceBySymbolRef,
+            symbol: symbol,
+          ),
+          from: callGetOneQuotePriceBySymbolProvider,
+          name: r'callGetOneQuotePriceBySymbolProvider',
+          debugGetCreateSourceHash:
+              const bool.fromEnvironment('dart.vm.product')
+                  ? null
+                  : _$callGetOneQuotePriceBySymbolHash,
+          dependencies: CallGetOneQuotePriceBySymbolFamily._dependencies,
+          allTransitiveDependencies:
+              CallGetOneQuotePriceBySymbolFamily._allTransitiveDependencies,
+          symbol: symbol,
+        );
+
+  CallGetOneQuotePriceBySymbolProvider._internal(
+    super._createNotifier, {
+    required super.name,
+    required super.dependencies,
+    required super.allTransitiveDependencies,
+    required super.debugGetCreateSourceHash,
+    required super.from,
+    required this.symbol,
+  }) : super.internal();
+
+  final String symbol;
+
+  @override
+  Override overrideWith(
+    FutureOr<Quote> Function(CallGetOneQuotePriceBySymbolRef provider) create,
+  ) {
+    return ProviderOverride(
+      origin: this,
+      override: CallGetOneQuotePriceBySymbolProvider._internal(
+        (ref) => create(ref as CallGetOneQuotePriceBySymbolRef),
+        from: from,
+        name: null,
+        dependencies: null,
+        allTransitiveDependencies: null,
+        debugGetCreateSourceHash: null,
+        symbol: symbol,
+      ),
+    );
+  }
+
+  @override
+  AutoDisposeFutureProviderElement<Quote> createElement() {
+    return _CallGetOneQuotePriceBySymbolProviderElement(this);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return other is CallGetOneQuotePriceBySymbolProvider &&
+        other.symbol == symbol;
+  }
+
+  @override
+  int get hashCode {
+    var hash = _SystemHash.combine(0, runtimeType.hashCode);
+    hash = _SystemHash.combine(hash, symbol.hashCode);
+
+    return _SystemHash.finish(hash);
+  }
+}
+
+mixin CallGetOneQuotePriceBySymbolRef on AutoDisposeFutureProviderRef<Quote> {
+  /// The parameter `symbol` of this provider.
+  String get symbol;
+}
+
+class _CallGetOneQuotePriceBySymbolProviderElement
+    extends AutoDisposeFutureProviderElement<Quote>
+    with CallGetOneQuotePriceBySymbolRef {
+  _CallGetOneQuotePriceBySymbolProviderElement(super.provider);
+
+  @override
+  String get symbol => (origin as CallGetOneQuotePriceBySymbolProvider).symbol;
+}
+
 String _$callGetAllAlarmsHash() => r'b691122a54d3723e63e78f9167022d5bf2d502db';
 
 /// See also [callGetAllAlarms].

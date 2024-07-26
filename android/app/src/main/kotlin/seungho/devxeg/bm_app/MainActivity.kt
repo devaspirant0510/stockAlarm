@@ -22,7 +22,6 @@ public class MainActivity : FlutterActivity() {
 
         // Android 14 이상에서만 사용할 수 있음
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
-            Toast.makeText(applicationContext,notificationManager.canUseFullScreenIntent().toString(),Toast.LENGTH_LONG).show()
             if (!notificationManager.canUseFullScreenIntent()) {
                 // 전체 화면 인텐트를 사용할 수 없는 경우 설정 페이지로 이동
                 val intent = Intent(Settings.ACTION_MANAGE_APP_USE_FULL_SCREEN_INTENT)
@@ -52,31 +51,24 @@ public class MainActivity : FlutterActivity() {
             CHANNEL
         )
         Log.e("native", "main activty oncreate")
-        android.widget.Toast.makeText(applicationContext, intent.action, Toast.LENGTH_SHORT).show()
         if (intent.action == "lock") {
+            window.addFlags(
+                WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON
+                        or WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD
+                        or WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED
+                        or WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON
+            )
             val getId = intent.getIntExtra("id",-1)
-            Toast.makeText(applicationContext,"send invoke native $getId",Toast.LENGTH_SHORT).show()
             channel.invokeMethod("receiveData",getId)
 
         }
-        window.addFlags(
-            WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON
-                    or WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD
-                    or WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED
-                    or WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON
-        )
-
         channel.setMethodCallHandler { call, result ->
             if (call.method == "alarmQueue") {
                 val time = call.argument<Long>("alarmTime")
                 val stocks = call.argument<String>("stocks")
                 val id = call.argument<Int>("id")
-                Toast.makeText(applicationContext,time.toString(),Toast.LENGTH_SHORT).show()
-                Toast.makeText(applicationContext,id.toString(),Toast.LENGTH_SHORT).show()
-                Toast.makeText(applicationContext,stocks,Toast.LENGTH_SHORT).show()
                 val alarmManager = getSystemService(Context.ALARM_SERVICE) as AlarmManager
                 val intent = Intent(this, AlarmReceiver::class.java)
-                android.widget.Toast.makeText(applicationContext, "activity id $id", Toast.LENGTH_SHORT).show()
                 intent.putExtra("id",id)
                 val pendingIntent = PendingIntent.getBroadcast(
                     this,
@@ -99,7 +91,6 @@ public class MainActivity : FlutterActivity() {
                 val intent = Intent(this, AlarmReceiver::class.java)
                 val alarmIntent =
                     PendingIntent.getBroadcast(this, 3, intent, PendingIntent.FLAG_IMMUTABLE)
-                Toast.makeText(applicationContext,Build.VERSION.SDK_INT.toString(),Toast.LENGTH_SHORT).show()
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                     alarmManager.setExactAndAllowWhileIdle(
                         AlarmManager.RTC_WAKEUP,

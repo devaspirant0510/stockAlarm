@@ -9,6 +9,10 @@ class MyViewmodel extends _$MyViewmodel {
     loadAllFavoriteStocks();
     return state;
   }
+  Future<Quote> getStockPriceBySymbol({required String symbol}) async {
+    final result = await ref.read(callGetOneQuotePriceBySymbolProvider(symbol: symbol).future);
+    return result;
+  }
 
   Future<void> loadAllFavoriteStocks() async {
     state = state.copyWith(

@@ -41,6 +41,7 @@ class LocalDatSource {
   Future<List<FavoriteStock>> localGetAll() async {
     List<Map<String, dynamic>> result =
         await db.rawQuery("SELECT * FROM favorite_stocks");
+    print("db $result");
     return result.map((e) => FavoriteStock.fromJson(e)).toList();
   }
 
@@ -60,7 +61,7 @@ class LocalDatSource {
       (txn) async {
         var result = await txn.rawInsert(
             "INSERT INTO favorite_stocks(symbol,desc,image_url,is_alarm) VALUES(?,?,?,?)",
-            [data.ticker, data.name, "", true]);
+            [data.ticker, data.name, data.imageUrl, true]);
         print(result);
       },
     );

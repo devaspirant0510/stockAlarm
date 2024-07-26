@@ -105,7 +105,7 @@ _$FavortieStockImpl _$$FavortieStockImplFromJson(Map<String, dynamic> json) =>
       id: json['id'] as int,
       symbol: json['symbol'] as String,
       desc: json['desc'] as String,
-      profileUrl: json['profile_url'] as String? ?? null,
+      profileUrl: json['image_url'] as String? ?? null,
       isAlarm: json['is_alarm'] as int,
     );
 
@@ -114,7 +114,7 @@ Map<String, dynamic> _$$FavortieStockImplToJson(_$FavortieStockImpl instance) =>
       'id': instance.id,
       'symbol': instance.symbol,
       'desc': instance.desc,
-      'profile_url': instance.profileUrl,
+      'image_url': instance.profileUrl,
       'is_alarm': instance.isAlarm,
     };
 
@@ -188,4 +188,36 @@ Map<String, dynamic> _$$AlarmQueueImplToJson(_$AlarmQueueImpl instance) =>
       'latency_time': instance.latencyTime,
       'created_time': instance.createdTime,
       'is_active': instance.isActive,
+    };
+
+_$TradeResponseImpl _$$TradeResponseImplFromJson(Map<String, dynamic> json) =>
+    _$TradeResponseImpl(
+      data: (json['data'] as List<dynamic>)
+          .map((e) => TradeData.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      type: json['type'] as String,
+    );
+
+Map<String, dynamic> _$$TradeResponseImplToJson(_$TradeResponseImpl instance) =>
+    <String, dynamic>{
+      'data': instance.data,
+      'type': instance.type,
+    };
+
+_$TradeDataImpl _$$TradeDataImplFromJson(Map<String, dynamic> json) =>
+    _$TradeDataImpl(
+      c: (json['c'] as List<dynamic>).map((e) => e as String).toList(),
+      p: (json['p'] as num).toDouble(),
+      s: json['s'] as String,
+      t: json['t'] as int,
+      v: json['v'] as int,
+    );
+
+Map<String, dynamic> _$$TradeDataImplToJson(_$TradeDataImpl instance) =>
+    <String, dynamic>{
+      'c': instance.c,
+      'p': instance.p,
+      's': instance.s,
+      't': instance.t,
+      'v': instance.v,
     };

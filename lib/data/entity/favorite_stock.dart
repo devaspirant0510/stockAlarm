@@ -6,7 +6,7 @@ class FavoriteStock with _$FavoriteStock {
     required int id,
     required String symbol,
     required String desc,
-    @JsonKey(name: "profile_url") @Default(null) String? profileUrl,
+    @JsonKey(name: "image_url") @Default(null) String? profileUrl,
     @JsonKey(name: "is_alarm") required int isAlarm,
   }) = _FavortieStock;
 

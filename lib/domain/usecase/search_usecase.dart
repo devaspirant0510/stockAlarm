@@ -15,6 +15,7 @@ Future<List<SearchItemModel>> callLoadAllSearchData(
         ticker: item.ticker,
         name: item.name,
         isAdded: isAdded,
+        imageUrl: ''
       ),
     );
   }
@@ -24,8 +25,11 @@ Future<List<SearchItemModel>> callLoadAllSearchData(
 @Riverpod(keepAlive: false)
 Future<void> addFavoriteStock(AddFavoriteStockRef ref,{required SearchItemModel data}) async {
   final a = await ref.read(repositoryProvider).findBySymbol(data.ticker);
+  final profile = await ref.read(repositoryProvider).getStockProfileBySymbol(data.ticker);
+  final stockName = data.name.contains(',') ? data.name.split(',').first : data.name.split(' ').first;
+  print("profile stock info $profile");
   if(!a){
-    await ref.read(repositoryProvider).addFavoriteStock(SearchItemModel(ticker: data.ticker, name: data.name, isAdded: false));
+    await ref.read(repositoryProvider).addFavoriteStock(SearchItemModel(ticker: data.ticker, name: stockName, isAdded: false,imageUrl: profile.logo));
   }
   print(a);
   return;

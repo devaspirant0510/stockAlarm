@@ -11,7 +11,14 @@ import '../../../domain/model/models.dart';
 
 class SearchResult extends ConsumerWidget {
   List<SearchItemModel>? data;
-  SearchResult({super.key,this.data});
+
+  SearchResult({super.key, this.data});
+
+  void onClickAddFavoriteStock(WidgetRef ref, int index) {
+    ref
+        .read(searchViewModelProvider.notifier)
+        .onClickAddStockButton(data![index]);
+  }
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -29,7 +36,7 @@ class SearchResult extends ConsumerWidget {
             widget: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Expanded(flex:1,child: Text(data![index].ticker)),
+                Expanded(flex: 1, child: Text(data![index].ticker)),
                 Spacer(),
                 Expanded(
                     flex: 4,
@@ -39,14 +46,22 @@ class SearchResult extends ConsumerWidget {
                       maxLines: 1,
                     )),
                 Spacer(),
-                Expanded(flex:1,child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    IconButton(onPressed:(){
-                      ref.read(searchViewModelProvider.notifier).onClickAddStockButton(data![index]);
-                    },icon: data![index].isAdded?Icon(Icons.star_outlined):Icon(Icons.star_border,color: Colors.black,),),
-                  ],
-                ))
+                Expanded(
+                    flex: 1,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        IconButton(
+                          onPressed: () => onClickAddFavoriteStock(ref, index),
+                          icon: data![index].isAdded
+                              ? Icon(Icons.star_outlined)
+                              : Icon(
+                                  Icons.star_border,
+                                  color: Colors.black,
+                                ),
+                        ),
+                      ],
+                    ))
               ],
             ),
           );

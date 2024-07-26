@@ -421,6 +421,8 @@ mixin _$SearchItemModel {
   set name(String value) => throw _privateConstructorUsedError;
   bool get isAdded => throw _privateConstructorUsedError;
   set isAdded(bool value) => throw _privateConstructorUsedError;
+  String get imageUrl => throw _privateConstructorUsedError;
+  set imageUrl(String value) => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $SearchItemModelCopyWith<SearchItemModel> get copyWith =>
@@ -433,7 +435,7 @@ abstract class $SearchItemModelCopyWith<$Res> {
           SearchItemModel value, $Res Function(SearchItemModel) then) =
       _$SearchItemModelCopyWithImpl<$Res, SearchItemModel>;
   @useResult
-  $Res call({String ticker, String name, bool isAdded});
+  $Res call({String ticker, String name, bool isAdded, String imageUrl});
 }
 
 /// @nodoc
@@ -452,6 +454,7 @@ class _$SearchItemModelCopyWithImpl<$Res, $Val extends SearchItemModel>
     Object? ticker = null,
     Object? name = null,
     Object? isAdded = null,
+    Object? imageUrl = null,
   }) {
     return _then(_value.copyWith(
       ticker: null == ticker
@@ -466,6 +469,10 @@ class _$SearchItemModelCopyWithImpl<$Res, $Val extends SearchItemModel>
           ? _value.isAdded
           : isAdded // ignore: cast_nullable_to_non_nullable
               as bool,
+      imageUrl: null == imageUrl
+          ? _value.imageUrl
+          : imageUrl // ignore: cast_nullable_to_non_nullable
+              as String,
     ) as $Val);
   }
 }
@@ -478,7 +485,7 @@ abstract class _$$SearchItemModelImplCopyWith<$Res>
       __$$SearchItemModelImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String ticker, String name, bool isAdded});
+  $Res call({String ticker, String name, bool isAdded, String imageUrl});
 }
 
 /// @nodoc
@@ -495,6 +502,7 @@ class __$$SearchItemModelImplCopyWithImpl<$Res>
     Object? ticker = null,
     Object? name = null,
     Object? isAdded = null,
+    Object? imageUrl = null,
   }) {
     return _then(_$SearchItemModelImpl(
       ticker: null == ticker
@@ -509,6 +517,10 @@ class __$$SearchItemModelImplCopyWithImpl<$Res>
           ? _value.isAdded
           : isAdded // ignore: cast_nullable_to_non_nullable
               as bool,
+      imageUrl: null == imageUrl
+          ? _value.imageUrl
+          : imageUrl // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -517,7 +529,10 @@ class __$$SearchItemModelImplCopyWithImpl<$Res>
 
 class _$SearchItemModelImpl implements _SearchItemModel {
   _$SearchItemModelImpl(
-      {required this.ticker, required this.name, required this.isAdded});
+      {required this.ticker,
+      required this.name,
+      required this.isAdded,
+      required this.imageUrl});
 
   @override
   String ticker;
@@ -525,10 +540,12 @@ class _$SearchItemModelImpl implements _SearchItemModel {
   String name;
   @override
   bool isAdded;
+  @override
+  String imageUrl;
 
   @override
   String toString() {
-    return 'SearchItemModel(ticker: $ticker, name: $name, isAdded: $isAdded)';
+    return 'SearchItemModel(ticker: $ticker, name: $name, isAdded: $isAdded, imageUrl: $imageUrl)';
   }
 
   @JsonKey(ignore: true)
@@ -543,7 +560,8 @@ abstract class _SearchItemModel implements SearchItemModel {
   factory _SearchItemModel(
       {required String ticker,
       required String name,
-      required bool isAdded}) = _$SearchItemModelImpl;
+      required bool isAdded,
+      required String imageUrl}) = _$SearchItemModelImpl;
 
   @override
   String get ticker;
@@ -554,6 +572,9 @@ abstract class _SearchItemModel implements SearchItemModel {
   @override
   bool get isAdded;
   set isAdded(bool value);
+  @override
+  String get imageUrl;
+  set imageUrl(String value);
   @override
   @JsonKey(ignore: true)
   _$$SearchItemModelImplCopyWith<_$SearchItemModelImpl> get copyWith =>

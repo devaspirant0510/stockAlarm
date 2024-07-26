@@ -22,7 +22,7 @@ final homeViewmodelProvider =
 );
 
 typedef _$HomeViewmodel = AsyncNotifier<HomeState>;
-String _$myViewmodelHash() => r'e6168519c24b12696704f99dcb1f636aa1a4e1a8';
+String _$myViewmodelHash() => r'3b91eebd18915710793775ef4204290aa47f56c9';
 
 /// See also [MyViewmodel].
 @ProviderFor(MyViewmodel)
@@ -37,7 +37,7 @@ final myViewmodelProvider =
 );
 
 typedef _$MyViewmodel = AutoDisposeNotifier<MyState>;
-String _$searchViewModelHash() => r'336a57b6a01985edcc9a21fd21861a7d76d1ab78';
+String _$searchViewModelHash() => r'610ec662902fed5177e92ace3bcdec40f3f90576';
 
 /// See also [SearchViewModel].
 @ProviderFor(SearchViewModel)
@@ -53,7 +53,7 @@ final searchViewModelProvider =
 );
 
 typedef _$SearchViewModel = AutoDisposeNotifier<SearchState>;
-String _$alarmViewmodelHash() => r'a20fcf2f2c7a52667f3a72d12c2382777ff99221';
+String _$alarmViewmodelHash() => r'4ba2f1276ba3703e04febdec78941e9040df6f17';
 
 /// See also [AlarmViewmodel].
 @ProviderFor(AlarmViewmodel)
@@ -69,7 +69,7 @@ final alarmViewmodelProvider =
 );
 
 typedef _$AlarmViewmodel = AutoDisposeNotifier<AlarmState>;
-String _$lockViewmodelHash() => r'1b3db74f7f78657ec1d0a19cab7eff6f65546d7f';
+String _$lockViewmodelHash() => r'fd02a2d3bb2a8331031a16c9349b950c6af93261';
 
 /// Copied from Dart SDK
 class _SystemHash {

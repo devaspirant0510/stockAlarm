@@ -14,7 +14,12 @@ class TopPopularStock extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return Column(
       children: [
-        Text("인기 주식"),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Text("인기 주식",style: TextStyle(fontSize: 20),),
+          ],
+        ),
         Container(
           height: 600,
           child: ListView.builder(

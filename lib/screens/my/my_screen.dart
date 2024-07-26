@@ -1,60 +1,67 @@
-import 'package:bm_app/data/repository/repository_impl.dart';
+import 'dart:convert';
+
+import 'package:bm_app/screens/my/widget/stock_price_item.dart';
 import 'package:bm_app/screens/viewmodel_states.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class MyScreen extends ConsumerWidget {
+import '../../data/entity/entity.dart';
+import '../../domain/usecase/websocket.dart';
+
+class MyScreen extends ConsumerStatefulWidget {
   const MyScreen({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  ConsumerState createState() => _MyScreenState();
+}
+
+class _MyScreenState extends ConsumerState<MyScreen> {
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    // Map<String, dynamic> data = {
+    //   'type': 'subscribe',
+    //   'symbol': 'AAPL'
+    // };
+    // String jsonString = jsonEncode(data);
+    //
+    //
+    // ref.read(webSocketProvider).sink.add(jsonString);
+  }
+  @override
+  Widget build(BuildContext context) {
     final viewmodel = ref.watch(myViewmodelProvider);
+    // final messageAsyncValue = ref.watch(messageProvider);
     return Container(
       child: Column(
         children: [
           Text("관심주식"),
+          // messageAsyncValue.when(data: (data) {
+          //   try{
+          //     Map<String, dynamic> jsonMap = jsonDecode(data);
+          //
+          //     // JSON을 TradeResponse 객체로 변환
+          //     TradeResponse tradeResponse = TradeResponse.fromJson(jsonMap);
+          //     print(tradeResponse);
+          //     return Row(children: [Text("애플주가"),Text(tradeResponse.data.first.p.toString())],);
+          //
+          //   }catch(e){
+          //     return Text(e.toString());
+          //   }
+          //   }, error: (error, stackTrace) => Text(error.toString()), loading: ()=>Text("loading")),
           viewmodel.favoriteStocks.when(
             data: (data) {
+              print(data);
               return Column(children: [
                 if (data.isNotEmpty)
-                  Container(
-                    child: Row(
-                      children: [
-                        Text(data[0].symbol),
-                        Text(data[0].desc),
-                      ],
-                    ),
-                  ),
+                  StockPriceItem(stock: data[0]),
                 if (data.length > 1)
-                  Container(
-                    child: Row(
-                      children: [
-                        if (data[1].profileUrl != null)
-                          Image.network(
-                            data[1].profileUrl!,
-                            width: 40,
-                            height: 40,
-                          ),
-                        Text(data[1].symbol),
-                        Text(data[1].desc),
-                      ],
-                    ),
-                  ),
+                  StockPriceItem(stock: data[1]),
                 if (data.length > 2)
-                  Container(
-                    child: Row(
-                      children: [
-                        if (data[2].profileUrl != null)
-                          Image.network(
-                            data[2].profileUrl!,
-                            width: 40,
-                            height: 40,
-                          ),
-                        Text(data[2].symbol),
-                        Text(data[2].desc),
-                      ],
-                    ),
-                  )
+                  StockPriceItem(stock: data[2]),
+                if (data.length > 3)
+                  StockPriceItem(stock: data[3]),
               ]);
             },
             error: (err, stackTrace) {
@@ -68,3 +75,4 @@ class MyScreen extends ConsumerWidget {
     );
   }
 }
+

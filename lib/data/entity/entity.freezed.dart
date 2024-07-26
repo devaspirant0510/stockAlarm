@@ -1184,7 +1184,7 @@ mixin _$FavoriteStock {
   int get id => throw _privateConstructorUsedError;
   String get symbol => throw _privateConstructorUsedError;
   String get desc => throw _privateConstructorUsedError;
-  @JsonKey(name: "profile_url")
+  @JsonKey(name: "image_url")
   String? get profileUrl => throw _privateConstructorUsedError;
   @JsonKey(name: "is_alarm")
   int get isAlarm => throw _privateConstructorUsedError;
@@ -1205,7 +1205,7 @@ abstract class $FavoriteStockCopyWith<$Res> {
       {int id,
       String symbol,
       String desc,
-      @JsonKey(name: "profile_url") String? profileUrl,
+      @JsonKey(name: "image_url") String? profileUrl,
       @JsonKey(name: "is_alarm") int isAlarm});
 }
 
@@ -1265,7 +1265,7 @@ abstract class _$$FavortieStockImplCopyWith<$Res>
       {int id,
       String symbol,
       String desc,
-      @JsonKey(name: "profile_url") String? profileUrl,
+      @JsonKey(name: "image_url") String? profileUrl,
       @JsonKey(name: "is_alarm") int isAlarm});
 }
 
@@ -1318,7 +1318,7 @@ class _$FavortieStockImpl implements _FavortieStock {
       {required this.id,
       required this.symbol,
       required this.desc,
-      @JsonKey(name: "profile_url") this.profileUrl = null,
+      @JsonKey(name: "image_url") this.profileUrl = null,
       @JsonKey(name: "is_alarm") required this.isAlarm});
 
   factory _$FavortieStockImpl.fromJson(Map<String, dynamic> json) =>
@@ -1331,7 +1331,7 @@ class _$FavortieStockImpl implements _FavortieStock {
   @override
   final String desc;
   @override
-  @JsonKey(name: "profile_url")
+  @JsonKey(name: "image_url")
   final String? profileUrl;
   @override
   @JsonKey(name: "is_alarm")
@@ -1379,7 +1379,7 @@ abstract class _FavortieStock implements FavoriteStock {
           {required final int id,
           required final String symbol,
           required final String desc,
-          @JsonKey(name: "profile_url") final String? profileUrl,
+          @JsonKey(name: "image_url") final String? profileUrl,
           @JsonKey(name: "is_alarm") required final int isAlarm}) =
       _$FavortieStockImpl;
 
@@ -1393,7 +1393,7 @@ abstract class _FavortieStock implements FavoriteStock {
   @override
   String get desc;
   @override
-  @JsonKey(name: "profile_url")
+  @JsonKey(name: "image_url")
   String? get profileUrl;
   @override
   @JsonKey(name: "is_alarm")
@@ -2262,5 +2262,384 @@ abstract class _AlarmQueue implements AlarmQueue {
   @override
   @JsonKey(ignore: true)
   _$$AlarmQueueImplCopyWith<_$AlarmQueueImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+TradeResponse _$TradeResponseFromJson(Map<String, dynamic> json) {
+  return _TradeResponse.fromJson(json);
+}
+
+/// @nodoc
+mixin _$TradeResponse {
+  List<TradeData> get data => throw _privateConstructorUsedError;
+  String get type => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $TradeResponseCopyWith<TradeResponse> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $TradeResponseCopyWith<$Res> {
+  factory $TradeResponseCopyWith(
+          TradeResponse value, $Res Function(TradeResponse) then) =
+      _$TradeResponseCopyWithImpl<$Res, TradeResponse>;
+  @useResult
+  $Res call({List<TradeData> data, String type});
+}
+
+/// @nodoc
+class _$TradeResponseCopyWithImpl<$Res, $Val extends TradeResponse>
+    implements $TradeResponseCopyWith<$Res> {
+  _$TradeResponseCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? data = null,
+    Object? type = null,
+  }) {
+    return _then(_value.copyWith(
+      data: null == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as List<TradeData>,
+      type: null == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as String,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$TradeResponseImplCopyWith<$Res>
+    implements $TradeResponseCopyWith<$Res> {
+  factory _$$TradeResponseImplCopyWith(
+          _$TradeResponseImpl value, $Res Function(_$TradeResponseImpl) then) =
+      __$$TradeResponseImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({List<TradeData> data, String type});
+}
+
+/// @nodoc
+class __$$TradeResponseImplCopyWithImpl<$Res>
+    extends _$TradeResponseCopyWithImpl<$Res, _$TradeResponseImpl>
+    implements _$$TradeResponseImplCopyWith<$Res> {
+  __$$TradeResponseImplCopyWithImpl(
+      _$TradeResponseImpl _value, $Res Function(_$TradeResponseImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? data = null,
+    Object? type = null,
+  }) {
+    return _then(_$TradeResponseImpl(
+      data: null == data
+          ? _value._data
+          : data // ignore: cast_nullable_to_non_nullable
+              as List<TradeData>,
+      type: null == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$TradeResponseImpl implements _TradeResponse {
+  _$TradeResponseImpl({required final List<TradeData> data, required this.type})
+      : _data = data;
+
+  factory _$TradeResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$TradeResponseImplFromJson(json);
+
+  final List<TradeData> _data;
+  @override
+  List<TradeData> get data {
+    if (_data is EqualUnmodifiableListView) return _data;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_data);
+  }
+
+  @override
+  final String type;
+
+  @override
+  String toString() {
+    return 'TradeResponse(data: $data, type: $type)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$TradeResponseImpl &&
+            const DeepCollectionEquality().equals(other._data, _data) &&
+            (identical(other.type, type) || other.type == type));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(_data), type);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$TradeResponseImplCopyWith<_$TradeResponseImpl> get copyWith =>
+      __$$TradeResponseImplCopyWithImpl<_$TradeResponseImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$TradeResponseImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _TradeResponse implements TradeResponse {
+  factory _TradeResponse(
+      {required final List<TradeData> data,
+      required final String type}) = _$TradeResponseImpl;
+
+  factory _TradeResponse.fromJson(Map<String, dynamic> json) =
+      _$TradeResponseImpl.fromJson;
+
+  @override
+  List<TradeData> get data;
+  @override
+  String get type;
+  @override
+  @JsonKey(ignore: true)
+  _$$TradeResponseImplCopyWith<_$TradeResponseImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+TradeData _$TradeDataFromJson(Map<String, dynamic> json) {
+  return _TradeData.fromJson(json);
+}
+
+/// @nodoc
+mixin _$TradeData {
+  List<String> get c => throw _privateConstructorUsedError;
+  double get p => throw _privateConstructorUsedError;
+  String get s => throw _privateConstructorUsedError;
+  int get t => throw _privateConstructorUsedError;
+  int get v => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $TradeDataCopyWith<TradeData> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $TradeDataCopyWith<$Res> {
+  factory $TradeDataCopyWith(TradeData value, $Res Function(TradeData) then) =
+      _$TradeDataCopyWithImpl<$Res, TradeData>;
+  @useResult
+  $Res call({List<String> c, double p, String s, int t, int v});
+}
+
+/// @nodoc
+class _$TradeDataCopyWithImpl<$Res, $Val extends TradeData>
+    implements $TradeDataCopyWith<$Res> {
+  _$TradeDataCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? c = null,
+    Object? p = null,
+    Object? s = null,
+    Object? t = null,
+    Object? v = null,
+  }) {
+    return _then(_value.copyWith(
+      c: null == c
+          ? _value.c
+          : c // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      p: null == p
+          ? _value.p
+          : p // ignore: cast_nullable_to_non_nullable
+              as double,
+      s: null == s
+          ? _value.s
+          : s // ignore: cast_nullable_to_non_nullable
+              as String,
+      t: null == t
+          ? _value.t
+          : t // ignore: cast_nullable_to_non_nullable
+              as int,
+      v: null == v
+          ? _value.v
+          : v // ignore: cast_nullable_to_non_nullable
+              as int,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$TradeDataImplCopyWith<$Res>
+    implements $TradeDataCopyWith<$Res> {
+  factory _$$TradeDataImplCopyWith(
+          _$TradeDataImpl value, $Res Function(_$TradeDataImpl) then) =
+      __$$TradeDataImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({List<String> c, double p, String s, int t, int v});
+}
+
+/// @nodoc
+class __$$TradeDataImplCopyWithImpl<$Res>
+    extends _$TradeDataCopyWithImpl<$Res, _$TradeDataImpl>
+    implements _$$TradeDataImplCopyWith<$Res> {
+  __$$TradeDataImplCopyWithImpl(
+      _$TradeDataImpl _value, $Res Function(_$TradeDataImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? c = null,
+    Object? p = null,
+    Object? s = null,
+    Object? t = null,
+    Object? v = null,
+  }) {
+    return _then(_$TradeDataImpl(
+      c: null == c
+          ? _value._c
+          : c // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      p: null == p
+          ? _value.p
+          : p // ignore: cast_nullable_to_non_nullable
+              as double,
+      s: null == s
+          ? _value.s
+          : s // ignore: cast_nullable_to_non_nullable
+              as String,
+      t: null == t
+          ? _value.t
+          : t // ignore: cast_nullable_to_non_nullable
+              as int,
+      v: null == v
+          ? _value.v
+          : v // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$TradeDataImpl implements _TradeData {
+  _$TradeDataImpl(
+      {required final List<String> c,
+      required this.p,
+      required this.s,
+      required this.t,
+      required this.v})
+      : _c = c;
+
+  factory _$TradeDataImpl.fromJson(Map<String, dynamic> json) =>
+      _$$TradeDataImplFromJson(json);
+
+  final List<String> _c;
+  @override
+  List<String> get c {
+    if (_c is EqualUnmodifiableListView) return _c;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_c);
+  }
+
+  @override
+  final double p;
+  @override
+  final String s;
+  @override
+  final int t;
+  @override
+  final int v;
+
+  @override
+  String toString() {
+    return 'TradeData(c: $c, p: $p, s: $s, t: $t, v: $v)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$TradeDataImpl &&
+            const DeepCollectionEquality().equals(other._c, _c) &&
+            (identical(other.p, p) || other.p == p) &&
+            (identical(other.s, s) || other.s == s) &&
+            (identical(other.t, t) || other.t == t) &&
+            (identical(other.v, v) || other.v == v));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(_c), p, s, t, v);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$TradeDataImplCopyWith<_$TradeDataImpl> get copyWith =>
+      __$$TradeDataImplCopyWithImpl<_$TradeDataImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$TradeDataImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _TradeData implements TradeData {
+  factory _TradeData(
+      {required final List<String> c,
+      required final double p,
+      required final String s,
+      required final int t,
+      required final int v}) = _$TradeDataImpl;
+
+  factory _TradeData.fromJson(Map<String, dynamic> json) =
+      _$TradeDataImpl.fromJson;
+
+  @override
+  List<String> get c;
+  @override
+  double get p;
+  @override
+  String get s;
+  @override
+  int get t;
+  @override
+  int get v;
+  @override
+  @JsonKey(ignore: true)
+  _$$TradeDataImplCopyWith<_$TradeDataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

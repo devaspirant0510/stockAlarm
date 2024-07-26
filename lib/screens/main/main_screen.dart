@@ -79,7 +79,7 @@ class _MainScreenState extends ConsumerState<MainScreen> {
     final viewmodel = ref.watch(mainViewmodelProvider);
     return Scaffold(
       appBar: AppBar(
-        title: const Text("내 알람"),
+        title: const Text("톡톡알람"),
         actions: [
           IconButton(
               onPressed: () {
