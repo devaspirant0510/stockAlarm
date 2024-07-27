@@ -2643,3 +2643,698 @@ abstract class _TradeData implements TradeData {
   _$$TradeDataImplCopyWith<_$TradeDataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
+
+ChartEntity _$ChartEntityFromJson(Map<String, dynamic> json) {
+  return _ChartEntity.fromJson(json);
+}
+
+/// @nodoc
+mixin _$ChartEntity {
+  @JsonKey(name: 'Meta Data')
+  MetaData get metaData => throw _privateConstructorUsedError;
+  @JsonKey(name: 'Time Series (5min)')
+  Map<String, TimeSeriesData> get timeSeries =>
+      throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ChartEntityCopyWith<ChartEntity> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ChartEntityCopyWith<$Res> {
+  factory $ChartEntityCopyWith(
+          ChartEntity value, $Res Function(ChartEntity) then) =
+      _$ChartEntityCopyWithImpl<$Res, ChartEntity>;
+  @useResult
+  $Res call(
+      {@JsonKey(name: 'Meta Data') MetaData metaData,
+      @JsonKey(name: 'Time Series (5min)')
+      Map<String, TimeSeriesData> timeSeries});
+
+  $MetaDataCopyWith<$Res> get metaData;
+}
+
+/// @nodoc
+class _$ChartEntityCopyWithImpl<$Res, $Val extends ChartEntity>
+    implements $ChartEntityCopyWith<$Res> {
+  _$ChartEntityCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? metaData = null,
+    Object? timeSeries = null,
+  }) {
+    return _then(_value.copyWith(
+      metaData: null == metaData
+          ? _value.metaData
+          : metaData // ignore: cast_nullable_to_non_nullable
+              as MetaData,
+      timeSeries: null == timeSeries
+          ? _value.timeSeries
+          : timeSeries // ignore: cast_nullable_to_non_nullable
+              as Map<String, TimeSeriesData>,
+    ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $MetaDataCopyWith<$Res> get metaData {
+    return $MetaDataCopyWith<$Res>(_value.metaData, (value) {
+      return _then(_value.copyWith(metaData: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$ChartEntityImplCopyWith<$Res>
+    implements $ChartEntityCopyWith<$Res> {
+  factory _$$ChartEntityImplCopyWith(
+          _$ChartEntityImpl value, $Res Function(_$ChartEntityImpl) then) =
+      __$$ChartEntityImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {@JsonKey(name: 'Meta Data') MetaData metaData,
+      @JsonKey(name: 'Time Series (5min)')
+      Map<String, TimeSeriesData> timeSeries});
+
+  @override
+  $MetaDataCopyWith<$Res> get metaData;
+}
+
+/// @nodoc
+class __$$ChartEntityImplCopyWithImpl<$Res>
+    extends _$ChartEntityCopyWithImpl<$Res, _$ChartEntityImpl>
+    implements _$$ChartEntityImplCopyWith<$Res> {
+  __$$ChartEntityImplCopyWithImpl(
+      _$ChartEntityImpl _value, $Res Function(_$ChartEntityImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? metaData = null,
+    Object? timeSeries = null,
+  }) {
+    return _then(_$ChartEntityImpl(
+      metaData: null == metaData
+          ? _value.metaData
+          : metaData // ignore: cast_nullable_to_non_nullable
+              as MetaData,
+      timeSeries: null == timeSeries
+          ? _value._timeSeries
+          : timeSeries // ignore: cast_nullable_to_non_nullable
+              as Map<String, TimeSeriesData>,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$ChartEntityImpl implements _ChartEntity {
+  const _$ChartEntityImpl(
+      {@JsonKey(name: 'Meta Data') required this.metaData,
+      @JsonKey(name: 'Time Series (5min)')
+      required final Map<String, TimeSeriesData> timeSeries})
+      : _timeSeries = timeSeries;
+
+  factory _$ChartEntityImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ChartEntityImplFromJson(json);
+
+  @override
+  @JsonKey(name: 'Meta Data')
+  final MetaData metaData;
+  final Map<String, TimeSeriesData> _timeSeries;
+  @override
+  @JsonKey(name: 'Time Series (5min)')
+  Map<String, TimeSeriesData> get timeSeries {
+    if (_timeSeries is EqualUnmodifiableMapView) return _timeSeries;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(_timeSeries);
+  }
+
+  @override
+  String toString() {
+    return 'ChartEntity(metaData: $metaData, timeSeries: $timeSeries)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ChartEntityImpl &&
+            (identical(other.metaData, metaData) ||
+                other.metaData == metaData) &&
+            const DeepCollectionEquality()
+                .equals(other._timeSeries, _timeSeries));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, metaData, const DeepCollectionEquality().hash(_timeSeries));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ChartEntityImplCopyWith<_$ChartEntityImpl> get copyWith =>
+      __$$ChartEntityImplCopyWithImpl<_$ChartEntityImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$ChartEntityImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _ChartEntity implements ChartEntity {
+  const factory _ChartEntity(
+          {@JsonKey(name: 'Meta Data') required final MetaData metaData,
+          @JsonKey(name: 'Time Series (5min)')
+          required final Map<String, TimeSeriesData> timeSeries}) =
+      _$ChartEntityImpl;
+
+  factory _ChartEntity.fromJson(Map<String, dynamic> json) =
+      _$ChartEntityImpl.fromJson;
+
+  @override
+  @JsonKey(name: 'Meta Data')
+  MetaData get metaData;
+  @override
+  @JsonKey(name: 'Time Series (5min)')
+  Map<String, TimeSeriesData> get timeSeries;
+  @override
+  @JsonKey(ignore: true)
+  _$$ChartEntityImplCopyWith<_$ChartEntityImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+MetaData _$MetaDataFromJson(Map<String, dynamic> json) {
+  return _MetaData.fromJson(json);
+}
+
+/// @nodoc
+mixin _$MetaData {
+  @JsonKey(name: '1. Information')
+  String get information => throw _privateConstructorUsedError;
+  @JsonKey(name: '2. Symbol')
+  String get symbol => throw _privateConstructorUsedError;
+  @JsonKey(name: '3. Last Refreshed')
+  String get lastRefreshed => throw _privateConstructorUsedError;
+  @JsonKey(name: '4. Interval')
+  String get interval => throw _privateConstructorUsedError;
+  @JsonKey(name: '5. Output Size')
+  String get outputSize => throw _privateConstructorUsedError;
+  @JsonKey(name: '6. Time Zone')
+  String get timeZone => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $MetaDataCopyWith<MetaData> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $MetaDataCopyWith<$Res> {
+  factory $MetaDataCopyWith(MetaData value, $Res Function(MetaData) then) =
+      _$MetaDataCopyWithImpl<$Res, MetaData>;
+  @useResult
+  $Res call(
+      {@JsonKey(name: '1. Information') String information,
+      @JsonKey(name: '2. Symbol') String symbol,
+      @JsonKey(name: '3. Last Refreshed') String lastRefreshed,
+      @JsonKey(name: '4. Interval') String interval,
+      @JsonKey(name: '5. Output Size') String outputSize,
+      @JsonKey(name: '6. Time Zone') String timeZone});
+}
+
+/// @nodoc
+class _$MetaDataCopyWithImpl<$Res, $Val extends MetaData>
+    implements $MetaDataCopyWith<$Res> {
+  _$MetaDataCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? information = null,
+    Object? symbol = null,
+    Object? lastRefreshed = null,
+    Object? interval = null,
+    Object? outputSize = null,
+    Object? timeZone = null,
+  }) {
+    return _then(_value.copyWith(
+      information: null == information
+          ? _value.information
+          : information // ignore: cast_nullable_to_non_nullable
+              as String,
+      symbol: null == symbol
+          ? _value.symbol
+          : symbol // ignore: cast_nullable_to_non_nullable
+              as String,
+      lastRefreshed: null == lastRefreshed
+          ? _value.lastRefreshed
+          : lastRefreshed // ignore: cast_nullable_to_non_nullable
+              as String,
+      interval: null == interval
+          ? _value.interval
+          : interval // ignore: cast_nullable_to_non_nullable
+              as String,
+      outputSize: null == outputSize
+          ? _value.outputSize
+          : outputSize // ignore: cast_nullable_to_non_nullable
+              as String,
+      timeZone: null == timeZone
+          ? _value.timeZone
+          : timeZone // ignore: cast_nullable_to_non_nullable
+              as String,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$MetaDataImplCopyWith<$Res>
+    implements $MetaDataCopyWith<$Res> {
+  factory _$$MetaDataImplCopyWith(
+          _$MetaDataImpl value, $Res Function(_$MetaDataImpl) then) =
+      __$$MetaDataImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {@JsonKey(name: '1. Information') String information,
+      @JsonKey(name: '2. Symbol') String symbol,
+      @JsonKey(name: '3. Last Refreshed') String lastRefreshed,
+      @JsonKey(name: '4. Interval') String interval,
+      @JsonKey(name: '5. Output Size') String outputSize,
+      @JsonKey(name: '6. Time Zone') String timeZone});
+}
+
+/// @nodoc
+class __$$MetaDataImplCopyWithImpl<$Res>
+    extends _$MetaDataCopyWithImpl<$Res, _$MetaDataImpl>
+    implements _$$MetaDataImplCopyWith<$Res> {
+  __$$MetaDataImplCopyWithImpl(
+      _$MetaDataImpl _value, $Res Function(_$MetaDataImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? information = null,
+    Object? symbol = null,
+    Object? lastRefreshed = null,
+    Object? interval = null,
+    Object? outputSize = null,
+    Object? timeZone = null,
+  }) {
+    return _then(_$MetaDataImpl(
+      information: null == information
+          ? _value.information
+          : information // ignore: cast_nullable_to_non_nullable
+              as String,
+      symbol: null == symbol
+          ? _value.symbol
+          : symbol // ignore: cast_nullable_to_non_nullable
+              as String,
+      lastRefreshed: null == lastRefreshed
+          ? _value.lastRefreshed
+          : lastRefreshed // ignore: cast_nullable_to_non_nullable
+              as String,
+      interval: null == interval
+          ? _value.interval
+          : interval // ignore: cast_nullable_to_non_nullable
+              as String,
+      outputSize: null == outputSize
+          ? _value.outputSize
+          : outputSize // ignore: cast_nullable_to_non_nullable
+              as String,
+      timeZone: null == timeZone
+          ? _value.timeZone
+          : timeZone // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$MetaDataImpl implements _MetaData {
+  const _$MetaDataImpl(
+      {@JsonKey(name: '1. Information') required this.information,
+      @JsonKey(name: '2. Symbol') required this.symbol,
+      @JsonKey(name: '3. Last Refreshed') required this.lastRefreshed,
+      @JsonKey(name: '4. Interval') required this.interval,
+      @JsonKey(name: '5. Output Size') required this.outputSize,
+      @JsonKey(name: '6. Time Zone') required this.timeZone});
+
+  factory _$MetaDataImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MetaDataImplFromJson(json);
+
+  @override
+  @JsonKey(name: '1. Information')
+  final String information;
+  @override
+  @JsonKey(name: '2. Symbol')
+  final String symbol;
+  @override
+  @JsonKey(name: '3. Last Refreshed')
+  final String lastRefreshed;
+  @override
+  @JsonKey(name: '4. Interval')
+  final String interval;
+  @override
+  @JsonKey(name: '5. Output Size')
+  final String outputSize;
+  @override
+  @JsonKey(name: '6. Time Zone')
+  final String timeZone;
+
+  @override
+  String toString() {
+    return 'MetaData(information: $information, symbol: $symbol, lastRefreshed: $lastRefreshed, interval: $interval, outputSize: $outputSize, timeZone: $timeZone)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$MetaDataImpl &&
+            (identical(other.information, information) ||
+                other.information == information) &&
+            (identical(other.symbol, symbol) || other.symbol == symbol) &&
+            (identical(other.lastRefreshed, lastRefreshed) ||
+                other.lastRefreshed == lastRefreshed) &&
+            (identical(other.interval, interval) ||
+                other.interval == interval) &&
+            (identical(other.outputSize, outputSize) ||
+                other.outputSize == outputSize) &&
+            (identical(other.timeZone, timeZone) ||
+                other.timeZone == timeZone));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, information, symbol,
+      lastRefreshed, interval, outputSize, timeZone);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$MetaDataImplCopyWith<_$MetaDataImpl> get copyWith =>
+      __$$MetaDataImplCopyWithImpl<_$MetaDataImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$MetaDataImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _MetaData implements MetaData {
+  const factory _MetaData(
+      {@JsonKey(name: '1. Information') required final String information,
+      @JsonKey(name: '2. Symbol') required final String symbol,
+      @JsonKey(name: '3. Last Refreshed') required final String lastRefreshed,
+      @JsonKey(name: '4. Interval') required final String interval,
+      @JsonKey(name: '5. Output Size') required final String outputSize,
+      @JsonKey(name: '6. Time Zone')
+      required final String timeZone}) = _$MetaDataImpl;
+
+  factory _MetaData.fromJson(Map<String, dynamic> json) =
+      _$MetaDataImpl.fromJson;
+
+  @override
+  @JsonKey(name: '1. Information')
+  String get information;
+  @override
+  @JsonKey(name: '2. Symbol')
+  String get symbol;
+  @override
+  @JsonKey(name: '3. Last Refreshed')
+  String get lastRefreshed;
+  @override
+  @JsonKey(name: '4. Interval')
+  String get interval;
+  @override
+  @JsonKey(name: '5. Output Size')
+  String get outputSize;
+  @override
+  @JsonKey(name: '6. Time Zone')
+  String get timeZone;
+  @override
+  @JsonKey(ignore: true)
+  _$$MetaDataImplCopyWith<_$MetaDataImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+TimeSeriesData _$TimeSeriesDataFromJson(Map<String, dynamic> json) {
+  return _TimeSeriesData.fromJson(json);
+}
+
+/// @nodoc
+mixin _$TimeSeriesData {
+  @JsonKey(name: '1. open')
+  String get open => throw _privateConstructorUsedError;
+  @JsonKey(name: '2. high')
+  String get high => throw _privateConstructorUsedError;
+  @JsonKey(name: '3. low')
+  String get low => throw _privateConstructorUsedError;
+  @JsonKey(name: '4. close')
+  String get close => throw _privateConstructorUsedError;
+  @JsonKey(name: '5. volume')
+  String get volume => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $TimeSeriesDataCopyWith<TimeSeriesData> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $TimeSeriesDataCopyWith<$Res> {
+  factory $TimeSeriesDataCopyWith(
+          TimeSeriesData value, $Res Function(TimeSeriesData) then) =
+      _$TimeSeriesDataCopyWithImpl<$Res, TimeSeriesData>;
+  @useResult
+  $Res call(
+      {@JsonKey(name: '1. open') String open,
+      @JsonKey(name: '2. high') String high,
+      @JsonKey(name: '3. low') String low,
+      @JsonKey(name: '4. close') String close,
+      @JsonKey(name: '5. volume') String volume});
+}
+
+/// @nodoc
+class _$TimeSeriesDataCopyWithImpl<$Res, $Val extends TimeSeriesData>
+    implements $TimeSeriesDataCopyWith<$Res> {
+  _$TimeSeriesDataCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? open = null,
+    Object? high = null,
+    Object? low = null,
+    Object? close = null,
+    Object? volume = null,
+  }) {
+    return _then(_value.copyWith(
+      open: null == open
+          ? _value.open
+          : open // ignore: cast_nullable_to_non_nullable
+              as String,
+      high: null == high
+          ? _value.high
+          : high // ignore: cast_nullable_to_non_nullable
+              as String,
+      low: null == low
+          ? _value.low
+          : low // ignore: cast_nullable_to_non_nullable
+              as String,
+      close: null == close
+          ? _value.close
+          : close // ignore: cast_nullable_to_non_nullable
+              as String,
+      volume: null == volume
+          ? _value.volume
+          : volume // ignore: cast_nullable_to_non_nullable
+              as String,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$TimeSeriesDataImplCopyWith<$Res>
+    implements $TimeSeriesDataCopyWith<$Res> {
+  factory _$$TimeSeriesDataImplCopyWith(_$TimeSeriesDataImpl value,
+          $Res Function(_$TimeSeriesDataImpl) then) =
+      __$$TimeSeriesDataImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {@JsonKey(name: '1. open') String open,
+      @JsonKey(name: '2. high') String high,
+      @JsonKey(name: '3. low') String low,
+      @JsonKey(name: '4. close') String close,
+      @JsonKey(name: '5. volume') String volume});
+}
+
+/// @nodoc
+class __$$TimeSeriesDataImplCopyWithImpl<$Res>
+    extends _$TimeSeriesDataCopyWithImpl<$Res, _$TimeSeriesDataImpl>
+    implements _$$TimeSeriesDataImplCopyWith<$Res> {
+  __$$TimeSeriesDataImplCopyWithImpl(
+      _$TimeSeriesDataImpl _value, $Res Function(_$TimeSeriesDataImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? open = null,
+    Object? high = null,
+    Object? low = null,
+    Object? close = null,
+    Object? volume = null,
+  }) {
+    return _then(_$TimeSeriesDataImpl(
+      open: null == open
+          ? _value.open
+          : open // ignore: cast_nullable_to_non_nullable
+              as String,
+      high: null == high
+          ? _value.high
+          : high // ignore: cast_nullable_to_non_nullable
+              as String,
+      low: null == low
+          ? _value.low
+          : low // ignore: cast_nullable_to_non_nullable
+              as String,
+      close: null == close
+          ? _value.close
+          : close // ignore: cast_nullable_to_non_nullable
+              as String,
+      volume: null == volume
+          ? _value.volume
+          : volume // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$TimeSeriesDataImpl implements _TimeSeriesData {
+  const _$TimeSeriesDataImpl(
+      {@JsonKey(name: '1. open') required this.open,
+      @JsonKey(name: '2. high') required this.high,
+      @JsonKey(name: '3. low') required this.low,
+      @JsonKey(name: '4. close') required this.close,
+      @JsonKey(name: '5. volume') required this.volume});
+
+  factory _$TimeSeriesDataImpl.fromJson(Map<String, dynamic> json) =>
+      _$$TimeSeriesDataImplFromJson(json);
+
+  @override
+  @JsonKey(name: '1. open')
+  final String open;
+  @override
+  @JsonKey(name: '2. high')
+  final String high;
+  @override
+  @JsonKey(name: '3. low')
+  final String low;
+  @override
+  @JsonKey(name: '4. close')
+  final String close;
+  @override
+  @JsonKey(name: '5. volume')
+  final String volume;
+
+  @override
+  String toString() {
+    return 'TimeSeriesData(open: $open, high: $high, low: $low, close: $close, volume: $volume)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$TimeSeriesDataImpl &&
+            (identical(other.open, open) || other.open == open) &&
+            (identical(other.high, high) || other.high == high) &&
+            (identical(other.low, low) || other.low == low) &&
+            (identical(other.close, close) || other.close == close) &&
+            (identical(other.volume, volume) || other.volume == volume));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, open, high, low, close, volume);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$TimeSeriesDataImplCopyWith<_$TimeSeriesDataImpl> get copyWith =>
+      __$$TimeSeriesDataImplCopyWithImpl<_$TimeSeriesDataImpl>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$TimeSeriesDataImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _TimeSeriesData implements TimeSeriesData {
+  const factory _TimeSeriesData(
+          {@JsonKey(name: '1. open') required final String open,
+          @JsonKey(name: '2. high') required final String high,
+          @JsonKey(name: '3. low') required final String low,
+          @JsonKey(name: '4. close') required final String close,
+          @JsonKey(name: '5. volume') required final String volume}) =
+      _$TimeSeriesDataImpl;
+
+  factory _TimeSeriesData.fromJson(Map<String, dynamic> json) =
+      _$TimeSeriesDataImpl.fromJson;
+
+  @override
+  @JsonKey(name: '1. open')
+  String get open;
+  @override
+  @JsonKey(name: '2. high')
+  String get high;
+  @override
+  @JsonKey(name: '3. low')
+  String get low;
+  @override
+  @JsonKey(name: '4. close')
+  String get close;
+  @override
+  @JsonKey(name: '5. volume')
+  String get volume;
+  @override
+  @JsonKey(ignore: true)
+  _$$TimeSeriesDataImplCopyWith<_$TimeSeriesDataImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}

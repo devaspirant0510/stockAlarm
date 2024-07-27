@@ -907,3 +907,158 @@ abstract class _LockState implements LockState {
   _$$LockStateImplCopyWith<_$LockStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
+
+/// @nodoc
+mixin _$StockState {
+  StockProfile? get stockProfile => throw _privateConstructorUsedError;
+  AsyncValue<ChartEntity> get chart => throw _privateConstructorUsedError;
+
+  @JsonKey(ignore: true)
+  $StockStateCopyWith<StockState> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $StockStateCopyWith<$Res> {
+  factory $StockStateCopyWith(
+          StockState value, $Res Function(StockState) then) =
+      _$StockStateCopyWithImpl<$Res, StockState>;
+  @useResult
+  $Res call({StockProfile? stockProfile, AsyncValue<ChartEntity> chart});
+
+  $StockProfileCopyWith<$Res>? get stockProfile;
+}
+
+/// @nodoc
+class _$StockStateCopyWithImpl<$Res, $Val extends StockState>
+    implements $StockStateCopyWith<$Res> {
+  _$StockStateCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? stockProfile = freezed,
+    Object? chart = null,
+  }) {
+    return _then(_value.copyWith(
+      stockProfile: freezed == stockProfile
+          ? _value.stockProfile
+          : stockProfile // ignore: cast_nullable_to_non_nullable
+              as StockProfile?,
+      chart: null == chart
+          ? _value.chart
+          : chart // ignore: cast_nullable_to_non_nullable
+              as AsyncValue<ChartEntity>,
+    ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $StockProfileCopyWith<$Res>? get stockProfile {
+    if (_value.stockProfile == null) {
+      return null;
+    }
+
+    return $StockProfileCopyWith<$Res>(_value.stockProfile!, (value) {
+      return _then(_value.copyWith(stockProfile: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$StockStateImplCopyWith<$Res>
+    implements $StockStateCopyWith<$Res> {
+  factory _$$StockStateImplCopyWith(
+          _$StockStateImpl value, $Res Function(_$StockStateImpl) then) =
+      __$$StockStateImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({StockProfile? stockProfile, AsyncValue<ChartEntity> chart});
+
+  @override
+  $StockProfileCopyWith<$Res>? get stockProfile;
+}
+
+/// @nodoc
+class __$$StockStateImplCopyWithImpl<$Res>
+    extends _$StockStateCopyWithImpl<$Res, _$StockStateImpl>
+    implements _$$StockStateImplCopyWith<$Res> {
+  __$$StockStateImplCopyWithImpl(
+      _$StockStateImpl _value, $Res Function(_$StockStateImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? stockProfile = freezed,
+    Object? chart = null,
+  }) {
+    return _then(_$StockStateImpl(
+      stockProfile: freezed == stockProfile
+          ? _value.stockProfile
+          : stockProfile // ignore: cast_nullable_to_non_nullable
+              as StockProfile?,
+      chart: null == chart
+          ? _value.chart
+          : chart // ignore: cast_nullable_to_non_nullable
+              as AsyncValue<ChartEntity>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$StockStateImpl implements _StockState {
+  const _$StockStateImpl(
+      {this.stockProfile, this.chart = const AsyncValue.loading()});
+
+  @override
+  final StockProfile? stockProfile;
+  @override
+  @JsonKey()
+  final AsyncValue<ChartEntity> chart;
+
+  @override
+  String toString() {
+    return 'StockState(stockProfile: $stockProfile, chart: $chart)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$StockStateImpl &&
+            (identical(other.stockProfile, stockProfile) ||
+                other.stockProfile == stockProfile) &&
+            (identical(other.chart, chart) || other.chart == chart));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, stockProfile, chart);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$StockStateImplCopyWith<_$StockStateImpl> get copyWith =>
+      __$$StockStateImplCopyWithImpl<_$StockStateImpl>(this, _$identity);
+}
+
+abstract class _StockState implements StockState {
+  const factory _StockState(
+      {final StockProfile? stockProfile,
+      final AsyncValue<ChartEntity> chart}) = _$StockStateImpl;
+
+  @override
+  StockProfile? get stockProfile;
+  @override
+  AsyncValue<ChartEntity> get chart;
+  @override
+  @JsonKey(ignore: true)
+  _$$StockStateImplCopyWith<_$StockStateImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}

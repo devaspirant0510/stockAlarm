@@ -22,7 +22,7 @@ final homeViewmodelProvider =
 );
 
 typedef _$HomeViewmodel = AsyncNotifier<HomeState>;
-String _$myViewmodelHash() => r'3b91eebd18915710793775ef4204290aa47f56c9';
+String _$myViewmodelHash() => r'7dcc1c21ea66657ddae7d62bc2c898e5841371c6';
 
 /// See also [MyViewmodel].
 @ProviderFor(MyViewmodel)
@@ -232,6 +232,150 @@ class _LockViewmodelProviderElement
 
   @override
   int get alarmId => (origin as LockViewmodelProvider).alarmId;
+}
+
+String _$stockViewmodelHash() => r'ca181a912c9be81bff52e73f586a92c312d212d8';
+
+abstract class _$StockViewmodel
+    extends BuildlessAutoDisposeAsyncNotifier<StockState> {
+  late final String symbol;
+
+  FutureOr<StockState> build(
+    String symbol,
+  );
+}
+
+/// See also [StockViewmodel].
+@ProviderFor(StockViewmodel)
+const stockViewmodelProvider = StockViewmodelFamily();
+
+/// See also [StockViewmodel].
+class StockViewmodelFamily extends Family<AsyncValue<StockState>> {
+  /// See also [StockViewmodel].
+  const StockViewmodelFamily();
+
+  /// See also [StockViewmodel].
+  StockViewmodelProvider call(
+    String symbol,
+  ) {
+    return StockViewmodelProvider(
+      symbol,
+    );
+  }
+
+  @override
+  StockViewmodelProvider getProviderOverride(
+    covariant StockViewmodelProvider provider,
+  ) {
+    return call(
+      provider.symbol,
+    );
+  }
+
+  static const Iterable<ProviderOrFamily>? _dependencies = null;
+
+  @override
+  Iterable<ProviderOrFamily>? get dependencies => _dependencies;
+
+  static const Iterable<ProviderOrFamily>? _allTransitiveDependencies = null;
+
+  @override
+  Iterable<ProviderOrFamily>? get allTransitiveDependencies =>
+      _allTransitiveDependencies;
+
+  @override
+  String? get name => r'stockViewmodelProvider';
+}
+
+/// See also [StockViewmodel].
+class StockViewmodelProvider
+    extends AutoDisposeAsyncNotifierProviderImpl<StockViewmodel, StockState> {
+  /// See also [StockViewmodel].
+  StockViewmodelProvider(
+    String symbol,
+  ) : this._internal(
+          () => StockViewmodel()..symbol = symbol,
+          from: stockViewmodelProvider,
+          name: r'stockViewmodelProvider',
+          debugGetCreateSourceHash:
+              const bool.fromEnvironment('dart.vm.product')
+                  ? null
+                  : _$stockViewmodelHash,
+          dependencies: StockViewmodelFamily._dependencies,
+          allTransitiveDependencies:
+              StockViewmodelFamily._allTransitiveDependencies,
+          symbol: symbol,
+        );
+
+  StockViewmodelProvider._internal(
+    super._createNotifier, {
+    required super.name,
+    required super.dependencies,
+    required super.allTransitiveDependencies,
+    required super.debugGetCreateSourceHash,
+    required super.from,
+    required this.symbol,
+  }) : super.internal();
+
+  final String symbol;
+
+  @override
+  FutureOr<StockState> runNotifierBuild(
+    covariant StockViewmodel notifier,
+  ) {
+    return notifier.build(
+      symbol,
+    );
+  }
+
+  @override
+  Override overrideWith(StockViewmodel Function() create) {
+    return ProviderOverride(
+      origin: this,
+      override: StockViewmodelProvider._internal(
+        () => create()..symbol = symbol,
+        from: from,
+        name: null,
+        dependencies: null,
+        allTransitiveDependencies: null,
+        debugGetCreateSourceHash: null,
+        symbol: symbol,
+      ),
+    );
+  }
+
+  @override
+  AutoDisposeAsyncNotifierProviderElement<StockViewmodel, StockState>
+      createElement() {
+    return _StockViewmodelProviderElement(this);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return other is StockViewmodelProvider && other.symbol == symbol;
+  }
+
+  @override
+  int get hashCode {
+    var hash = _SystemHash.combine(0, runtimeType.hashCode);
+    hash = _SystemHash.combine(hash, symbol.hashCode);
+
+    return _SystemHash.finish(hash);
+  }
+}
+
+mixin StockViewmodelRef on AutoDisposeAsyncNotifierProviderRef<StockState> {
+  /// The parameter `symbol` of this provider.
+  String get symbol;
+}
+
+class _StockViewmodelProviderElement
+    extends AutoDisposeAsyncNotifierProviderElement<StockViewmodel, StockState>
+    with StockViewmodelRef {
+  _StockViewmodelProviderElement(super.provider);
+
+  @override
+  String get symbol => (origin as StockViewmodelProvider).symbol;
 }
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member

@@ -6,4 +6,5 @@ abstract class RemoteRepository{
   Future<Quote> getStockPriceBySymbol(String symbol);
   Future<List<FavoriteStock>> getAllFavoriteStock();
   Future<StockSearchResult> getAllSearchStock(String query);
+  Future<ChartEntity> getChartDataBySymbol(String symbol);
 }

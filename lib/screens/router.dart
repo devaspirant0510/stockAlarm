@@ -1,6 +1,7 @@
 import 'package:bm_app/screens/lock/lock_screen.dart';
 import 'package:bm_app/screens/main/main_screen.dart';
 import 'package:bm_app/screens/news/news_screen.dart';
+import 'package:bm_app/screens/stock/stock_screen.dart';
 import 'package:bm_app/screens/test/test_screen.dart';
 import 'package:go_router/go_router.dart';
 
@@ -31,12 +32,24 @@ final router = GoRouter(
       builder: (context, state) {
         final id = state.extra as int?;
         print("router id :$id");
-        if(id==null){
+        if (id == null) {
           return TestScreen();
         }
         print("router id :$id");
-        return LockScreen(id:id);
-        },
+        return LockScreen(id: id);
+      },
+    ),
+    GoRoute(
+      path: "/stock",
+      name: "stock",
+      builder: (context, state) {
+        final symbol = state.extra as String?;
+        if(symbol==null){
+          // TODO : error 스크린 만들기
+          return TestScreen();
+        }
+        return StockScreen(symbol: symbol,);
+      },
     )
   ],
 );

@@ -1,3 +1,4 @@
+import 'package:bm_app/utils/env.dart';
 import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
 
@@ -18,4 +19,23 @@ abstract class RemoteDataSource {
 
   @GET("query?function=TOP_GAINERS_LOSERS")
   Future<TopMetadata> getTopMetaData({@Query("apikey") required String apiKey});
+
+  @GET("query")
+  Future<ChartEntity> getIntradayDataBySymbol({
+    @Query("symbol") required String symbol,
+    @Query("function") String function="TIME_SERIES_INTRADAY",
+    @Query("interval") String interval="5min",
+    @Query("apikey") String apikey=Env.apiKey,
+    @Query("adjusted") bool adjusted=true,// 분할및 병합 가격 자동 조정(true), 원가 그대로 적용(false)
+    @Query("extended_hours") bool extendedHours=true, // 프리장도 보여줄 여부
+  });
+
+  @GET("query")
+  Future<void> getDailyDataBySymbol();
+
+  @GET("query")
+  Future<void> getWeeklyDataBySymbol();
+
+  @GET("query")
+  Future<void> getMonthlyDataBySymbol();
 }

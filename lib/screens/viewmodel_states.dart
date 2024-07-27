@@ -27,3 +27,6 @@ part './alarm/alarm_viewmodel.dart';
 part './lock/lock_viewmodel.dart';
 part './lock/lock_state.dart';
 
+part './stock/stock_state.dart';
+part './stock/stock_viewmodel.dart';
+

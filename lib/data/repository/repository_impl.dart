@@ -94,6 +94,11 @@ class RepositoryImpl implements RemoteRepository , LocalRepository{
       throw e;
     }
   }
+
+  @override
+  Future<ChartEntity> getChartDataBySymbol(String symbol) {
+    return dataSource.getIntradayDataBySymbol(symbol: symbol);
+  }
 }
 
 final repositoryProvider = Provider<RepositoryImpl>((ref) {
