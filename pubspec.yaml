@@ -58,6 +58,7 @@ dependencies:
   audioplayers: ^6.0.0
   web_socket_channel: ^3.0.1
   skeletonizer: ^1.4.1+1
+  fl_chart: ^0.68.0
 
 dev_dependencies:
   flutter_test:
