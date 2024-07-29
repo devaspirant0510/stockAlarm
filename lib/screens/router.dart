@@ -24,7 +24,7 @@ final router = GoRouter(
     GoRoute(
       path: "/news",
       name: "news",
-      builder: (context, state) => NewScreen(),
+      builder: (context, state) => NewsScreen(),
     ),
     GoRoute(
       path: "/t",

@@ -7,18 +7,20 @@ import 'package:dio/dio.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../utils/env.dart';
+import '../data_source/deepsearch_source/deepsearch_datasource.dart';
 import '../data_source/finnhub_source/finhub_datasource.dart';
 import '../data_source/local_datasource/local_datasource.dart';
 import '../data_source/polygon_source/polygon_datasource.dart';
 
-class RepositoryImpl implements RemoteRepository , LocalRepository{
+class RepositoryImpl implements RemoteRepository, LocalRepository {
   RemoteDataSource dataSource;
   FinhubDatasource finhubDatasource;
   LocalDatSource localDatSource;
   PolygonDatasource polygonDataSource;
+  DeepSearchDataSource deepSearchDataSource;
 
   RepositoryImpl(this.dataSource, this.finhubDatasource, this.localDatSource,
-      this.polygonDataSource) {}
+      this.polygonDataSource, this.deepSearchDataSource) {}
 
   @override
   Future<TopMetadata> getTopGainersEtcMetadata() async {
@@ -71,9 +73,8 @@ class RepositoryImpl implements RemoteRepository , LocalRepository{
   }
 
   @override
-  Future<void> addFavoriteStock(SearchItemModel data) async{
+  Future<void> addFavoriteStock(SearchItemModel data) async {
     await localDatSource.insertFavoriteSymbol(data: data);
-
   }
 
   @override
@@ -88,9 +89,9 @@ class RepositoryImpl implements RemoteRepository , LocalRepository{
 
   @override
   Future<AlarmQueue> findOneAlarmQueueById(int id) async {
-    try{
+    try {
       return await localDatSource.loadOneAlarm(id);
-    }catch(e){
+    } catch (e) {
       throw e;
     }
   }
@@ -105,15 +106,26 @@ class RepositoryImpl implements RemoteRepository , LocalRepository{
     // TODO : alphaventage 네트워크당 일일 요청량 25회 yhapi 로 마이그레이션
     return dataSource.getDailyDataBySymbol(symbol: symbol);
   }
+
+  @override
+  Future<NewsEntity> getAllDomesticArticle() {
+    return deepSearchDataSource.getAllDomesticArticle();
+  }
+
+  @override
+  Future<NewsEntity> getAllGlobalArticle() {
+    return deepSearchDataSource.getAllGlobalArticle();
+  }
 }
 
 final repositoryProvider = Provider<RepositoryImpl>((ref) {
   Dio dio = Dio();
   return RepositoryImpl(
-    RemoteDataSource(dio),
-    FinhubDatasource(dio),
-    LocalDatSource(),
-    PolygonDatasource(dio),
+      RemoteDataSource(dio),
+      FinhubDatasource(dio),
+      LocalDatSource(),
+      PolygonDatasource(dio),
+      DeepSearchDataSource(dio)
   );
 });
 
@@ -124,4 +136,5 @@ final pureRepo = RepositoryImpl(
     FinhubDatasource(dio),
     LocalDatSource(),
     PolygonDatasource(dio),
-    );
+    DeepSearchDataSource(dio)
+);

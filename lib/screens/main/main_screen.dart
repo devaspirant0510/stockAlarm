@@ -25,7 +25,7 @@ class _MainScreenState extends ConsumerState<MainScreen> {
     const MyScreen(),
     SearchScreen(),
     const AlarmScreen(),
-    NewScreen(),
+    NewsScreen(),
   ];
 
   @override

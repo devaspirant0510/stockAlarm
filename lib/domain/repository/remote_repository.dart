@@ -8,4 +8,6 @@ abstract class RemoteRepository{
   Future<StockSearchResult> getAllSearchStock(String query);
   Future<ChartEntity> getChartDataBySymbol(String symbol);
   Future<ChartEntity> getDailyChartDataBySymbol(String symbol);
+  Future<NewsEntity> getAllDomesticArticle();
+  Future<NewsEntity> getAllGlobalArticle();
 }

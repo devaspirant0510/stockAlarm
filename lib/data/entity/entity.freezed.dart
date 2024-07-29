@@ -3338,3 +3338,1726 @@ abstract class _TimeSeriesData implements TimeSeriesData {
   _$$TimeSeriesDataImplCopyWith<_$TimeSeriesDataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
+
+NewsEntity _$NewsEntityFromJson(Map<String, dynamic> json) {
+  return _NewsEntity.fromJson(json);
+}
+
+/// @nodoc
+mixin _$NewsEntity {
+  Detail get detail => throw _privateConstructorUsedError;
+  @JsonKey(name: 'total_items')
+  int get totalItems => throw _privateConstructorUsedError;
+  @JsonKey(name: 'total_pages')
+  int get totalPages => throw _privateConstructorUsedError;
+  int get page => throw _privateConstructorUsedError;
+  @JsonKey(name: 'page_size')
+  int get pageSize => throw _privateConstructorUsedError;
+  List<NewsItem> get data => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $NewsEntityCopyWith<NewsEntity> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $NewsEntityCopyWith<$Res> {
+  factory $NewsEntityCopyWith(
+          NewsEntity value, $Res Function(NewsEntity) then) =
+      _$NewsEntityCopyWithImpl<$Res, NewsEntity>;
+  @useResult
+  $Res call(
+      {Detail detail,
+      @JsonKey(name: 'total_items') int totalItems,
+      @JsonKey(name: 'total_pages') int totalPages,
+      int page,
+      @JsonKey(name: 'page_size') int pageSize,
+      List<NewsItem> data});
+
+  $DetailCopyWith<$Res> get detail;
+}
+
+/// @nodoc
+class _$NewsEntityCopyWithImpl<$Res, $Val extends NewsEntity>
+    implements $NewsEntityCopyWith<$Res> {
+  _$NewsEntityCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? detail = null,
+    Object? totalItems = null,
+    Object? totalPages = null,
+    Object? page = null,
+    Object? pageSize = null,
+    Object? data = null,
+  }) {
+    return _then(_value.copyWith(
+      detail: null == detail
+          ? _value.detail
+          : detail // ignore: cast_nullable_to_non_nullable
+              as Detail,
+      totalItems: null == totalItems
+          ? _value.totalItems
+          : totalItems // ignore: cast_nullable_to_non_nullable
+              as int,
+      totalPages: null == totalPages
+          ? _value.totalPages
+          : totalPages // ignore: cast_nullable_to_non_nullable
+              as int,
+      page: null == page
+          ? _value.page
+          : page // ignore: cast_nullable_to_non_nullable
+              as int,
+      pageSize: null == pageSize
+          ? _value.pageSize
+          : pageSize // ignore: cast_nullable_to_non_nullable
+              as int,
+      data: null == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as List<NewsItem>,
+    ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $DetailCopyWith<$Res> get detail {
+    return $DetailCopyWith<$Res>(_value.detail, (value) {
+      return _then(_value.copyWith(detail: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$NewsEntityImplCopyWith<$Res>
+    implements $NewsEntityCopyWith<$Res> {
+  factory _$$NewsEntityImplCopyWith(
+          _$NewsEntityImpl value, $Res Function(_$NewsEntityImpl) then) =
+      __$$NewsEntityImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {Detail detail,
+      @JsonKey(name: 'total_items') int totalItems,
+      @JsonKey(name: 'total_pages') int totalPages,
+      int page,
+      @JsonKey(name: 'page_size') int pageSize,
+      List<NewsItem> data});
+
+  @override
+  $DetailCopyWith<$Res> get detail;
+}
+
+/// @nodoc
+class __$$NewsEntityImplCopyWithImpl<$Res>
+    extends _$NewsEntityCopyWithImpl<$Res, _$NewsEntityImpl>
+    implements _$$NewsEntityImplCopyWith<$Res> {
+  __$$NewsEntityImplCopyWithImpl(
+      _$NewsEntityImpl _value, $Res Function(_$NewsEntityImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? detail = null,
+    Object? totalItems = null,
+    Object? totalPages = null,
+    Object? page = null,
+    Object? pageSize = null,
+    Object? data = null,
+  }) {
+    return _then(_$NewsEntityImpl(
+      detail: null == detail
+          ? _value.detail
+          : detail // ignore: cast_nullable_to_non_nullable
+              as Detail,
+      totalItems: null == totalItems
+          ? _value.totalItems
+          : totalItems // ignore: cast_nullable_to_non_nullable
+              as int,
+      totalPages: null == totalPages
+          ? _value.totalPages
+          : totalPages // ignore: cast_nullable_to_non_nullable
+              as int,
+      page: null == page
+          ? _value.page
+          : page // ignore: cast_nullable_to_non_nullable
+              as int,
+      pageSize: null == pageSize
+          ? _value.pageSize
+          : pageSize // ignore: cast_nullable_to_non_nullable
+              as int,
+      data: null == data
+          ? _value._data
+          : data // ignore: cast_nullable_to_non_nullable
+              as List<NewsItem>,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$NewsEntityImpl implements _NewsEntity {
+  const _$NewsEntityImpl(
+      {required this.detail,
+      @JsonKey(name: 'total_items') required this.totalItems,
+      @JsonKey(name: 'total_pages') required this.totalPages,
+      required this.page,
+      @JsonKey(name: 'page_size') required this.pageSize,
+      required final List<NewsItem> data})
+      : _data = data;
+
+  factory _$NewsEntityImpl.fromJson(Map<String, dynamic> json) =>
+      _$$NewsEntityImplFromJson(json);
+
+  @override
+  final Detail detail;
+  @override
+  @JsonKey(name: 'total_items')
+  final int totalItems;
+  @override
+  @JsonKey(name: 'total_pages')
+  final int totalPages;
+  @override
+  final int page;
+  @override
+  @JsonKey(name: 'page_size')
+  final int pageSize;
+  final List<NewsItem> _data;
+  @override
+  List<NewsItem> get data {
+    if (_data is EqualUnmodifiableListView) return _data;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_data);
+  }
+
+  @override
+  String toString() {
+    return 'NewsEntity(detail: $detail, totalItems: $totalItems, totalPages: $totalPages, page: $page, pageSize: $pageSize, data: $data)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$NewsEntityImpl &&
+            (identical(other.detail, detail) || other.detail == detail) &&
+            (identical(other.totalItems, totalItems) ||
+                other.totalItems == totalItems) &&
+            (identical(other.totalPages, totalPages) ||
+                other.totalPages == totalPages) &&
+            (identical(other.page, page) || other.page == page) &&
+            (identical(other.pageSize, pageSize) ||
+                other.pageSize == pageSize) &&
+            const DeepCollectionEquality().equals(other._data, _data));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, detail, totalItems, totalPages,
+      page, pageSize, const DeepCollectionEquality().hash(_data));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$NewsEntityImplCopyWith<_$NewsEntityImpl> get copyWith =>
+      __$$NewsEntityImplCopyWithImpl<_$NewsEntityImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$NewsEntityImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _NewsEntity implements NewsEntity {
+  const factory _NewsEntity(
+      {required final Detail detail,
+      @JsonKey(name: 'total_items') required final int totalItems,
+      @JsonKey(name: 'total_pages') required final int totalPages,
+      required final int page,
+      @JsonKey(name: 'page_size') required final int pageSize,
+      required final List<NewsItem> data}) = _$NewsEntityImpl;
+
+  factory _NewsEntity.fromJson(Map<String, dynamic> json) =
+      _$NewsEntityImpl.fromJson;
+
+  @override
+  Detail get detail;
+  @override
+  @JsonKey(name: 'total_items')
+  int get totalItems;
+  @override
+  @JsonKey(name: 'total_pages')
+  int get totalPages;
+  @override
+  int get page;
+  @override
+  @JsonKey(name: 'page_size')
+  int get pageSize;
+  @override
+  List<NewsItem> get data;
+  @override
+  @JsonKey(ignore: true)
+  _$$NewsEntityImplCopyWith<_$NewsEntityImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+Detail _$DetailFromJson(Map<String, dynamic> json) {
+  return _Detail.fromJson(json);
+}
+
+/// @nodoc
+mixin _$Detail {
+  String get message => throw _privateConstructorUsedError;
+  String get code => throw _privateConstructorUsedError;
+  bool get ok => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $DetailCopyWith<Detail> get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $DetailCopyWith<$Res> {
+  factory $DetailCopyWith(Detail value, $Res Function(Detail) then) =
+      _$DetailCopyWithImpl<$Res, Detail>;
+  @useResult
+  $Res call({String message, String code, bool ok});
+}
+
+/// @nodoc
+class _$DetailCopyWithImpl<$Res, $Val extends Detail>
+    implements $DetailCopyWith<$Res> {
+  _$DetailCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? message = null,
+    Object? code = null,
+    Object? ok = null,
+  }) {
+    return _then(_value.copyWith(
+      message: null == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+      code: null == code
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as String,
+      ok: null == ok
+          ? _value.ok
+          : ok // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$DetailImplCopyWith<$Res> implements $DetailCopyWith<$Res> {
+  factory _$$DetailImplCopyWith(
+          _$DetailImpl value, $Res Function(_$DetailImpl) then) =
+      __$$DetailImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String message, String code, bool ok});
+}
+
+/// @nodoc
+class __$$DetailImplCopyWithImpl<$Res>
+    extends _$DetailCopyWithImpl<$Res, _$DetailImpl>
+    implements _$$DetailImplCopyWith<$Res> {
+  __$$DetailImplCopyWithImpl(
+      _$DetailImpl _value, $Res Function(_$DetailImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? message = null,
+    Object? code = null,
+    Object? ok = null,
+  }) {
+    return _then(_$DetailImpl(
+      message: null == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+      code: null == code
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as String,
+      ok: null == ok
+          ? _value.ok
+          : ok // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$DetailImpl implements _Detail {
+  const _$DetailImpl(
+      {required this.message, required this.code, required this.ok});
+
+  factory _$DetailImpl.fromJson(Map<String, dynamic> json) =>
+      _$$DetailImplFromJson(json);
+
+  @override
+  final String message;
+  @override
+  final String code;
+  @override
+  final bool ok;
+
+  @override
+  String toString() {
+    return 'Detail(message: $message, code: $code, ok: $ok)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$DetailImpl &&
+            (identical(other.message, message) || other.message == message) &&
+            (identical(other.code, code) || other.code == code) &&
+            (identical(other.ok, ok) || other.ok == ok));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, message, code, ok);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$DetailImplCopyWith<_$DetailImpl> get copyWith =>
+      __$$DetailImplCopyWithImpl<_$DetailImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$DetailImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _Detail implements Detail {
+  const factory _Detail(
+      {required final String message,
+      required final String code,
+      required final bool ok}) = _$DetailImpl;
+
+  factory _Detail.fromJson(Map<String, dynamic> json) = _$DetailImpl.fromJson;
+
+  @override
+  String get message;
+  @override
+  String get code;
+  @override
+  bool get ok;
+  @override
+  @JsonKey(ignore: true)
+  _$$DetailImplCopyWith<_$DetailImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+NewsItem _$NewsItemFromJson(Map<String, dynamic> json) {
+  return _NewsItem.fromJson(json);
+}
+
+/// @nodoc
+mixin _$NewsItem {
+  String get id => throw _privateConstructorUsedError;
+  List<String> get sections => throw _privateConstructorUsedError;
+  String get title => throw _privateConstructorUsedError;
+  String get publisher => throw _privateConstructorUsedError;
+  String get author => throw _privateConstructorUsedError;
+  String get summary => throw _privateConstructorUsedError;
+  @JsonKey(name: "image_url")
+  String get imageUrl => throw _privateConstructorUsedError;
+  @JsonKey(name: "content_url")
+  String get contentUrl => throw _privateConstructorUsedError;
+  EsG? get esg => throw _privateConstructorUsedError;
+  List<Company>? get companies => throw _privateConstructorUsedError;
+  List<Entity>? get entities => throw _privateConstructorUsedError;
+  @JsonKey(name: "published_at")
+  String get publishedAt => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $NewsItemCopyWith<NewsItem> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $NewsItemCopyWith<$Res> {
+  factory $NewsItemCopyWith(NewsItem value, $Res Function(NewsItem) then) =
+      _$NewsItemCopyWithImpl<$Res, NewsItem>;
+  @useResult
+  $Res call(
+      {String id,
+      List<String> sections,
+      String title,
+      String publisher,
+      String author,
+      String summary,
+      @JsonKey(name: "image_url") String imageUrl,
+      @JsonKey(name: "content_url") String contentUrl,
+      EsG? esg,
+      List<Company>? companies,
+      List<Entity>? entities,
+      @JsonKey(name: "published_at") String publishedAt});
+
+  $EsGCopyWith<$Res>? get esg;
+}
+
+/// @nodoc
+class _$NewsItemCopyWithImpl<$Res, $Val extends NewsItem>
+    implements $NewsItemCopyWith<$Res> {
+  _$NewsItemCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = null,
+    Object? sections = null,
+    Object? title = null,
+    Object? publisher = null,
+    Object? author = null,
+    Object? summary = null,
+    Object? imageUrl = null,
+    Object? contentUrl = null,
+    Object? esg = freezed,
+    Object? companies = freezed,
+    Object? entities = freezed,
+    Object? publishedAt = null,
+  }) {
+    return _then(_value.copyWith(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      sections: null == sections
+          ? _value.sections
+          : sections // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      title: null == title
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String,
+      publisher: null == publisher
+          ? _value.publisher
+          : publisher // ignore: cast_nullable_to_non_nullable
+              as String,
+      author: null == author
+          ? _value.author
+          : author // ignore: cast_nullable_to_non_nullable
+              as String,
+      summary: null == summary
+          ? _value.summary
+          : summary // ignore: cast_nullable_to_non_nullable
+              as String,
+      imageUrl: null == imageUrl
+          ? _value.imageUrl
+          : imageUrl // ignore: cast_nullable_to_non_nullable
+              as String,
+      contentUrl: null == contentUrl
+          ? _value.contentUrl
+          : contentUrl // ignore: cast_nullable_to_non_nullable
+              as String,
+      esg: freezed == esg
+          ? _value.esg
+          : esg // ignore: cast_nullable_to_non_nullable
+              as EsG?,
+      companies: freezed == companies
+          ? _value.companies
+          : companies // ignore: cast_nullable_to_non_nullable
+              as List<Company>?,
+      entities: freezed == entities
+          ? _value.entities
+          : entities // ignore: cast_nullable_to_non_nullable
+              as List<Entity>?,
+      publishedAt: null == publishedAt
+          ? _value.publishedAt
+          : publishedAt // ignore: cast_nullable_to_non_nullable
+              as String,
+    ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $EsGCopyWith<$Res>? get esg {
+    if (_value.esg == null) {
+      return null;
+    }
+
+    return $EsGCopyWith<$Res>(_value.esg!, (value) {
+      return _then(_value.copyWith(esg: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$NewsItemImplCopyWith<$Res>
+    implements $NewsItemCopyWith<$Res> {
+  factory _$$NewsItemImplCopyWith(
+          _$NewsItemImpl value, $Res Function(_$NewsItemImpl) then) =
+      __$$NewsItemImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {String id,
+      List<String> sections,
+      String title,
+      String publisher,
+      String author,
+      String summary,
+      @JsonKey(name: "image_url") String imageUrl,
+      @JsonKey(name: "content_url") String contentUrl,
+      EsG? esg,
+      List<Company>? companies,
+      List<Entity>? entities,
+      @JsonKey(name: "published_at") String publishedAt});
+
+  @override
+  $EsGCopyWith<$Res>? get esg;
+}
+
+/// @nodoc
+class __$$NewsItemImplCopyWithImpl<$Res>
+    extends _$NewsItemCopyWithImpl<$Res, _$NewsItemImpl>
+    implements _$$NewsItemImplCopyWith<$Res> {
+  __$$NewsItemImplCopyWithImpl(
+      _$NewsItemImpl _value, $Res Function(_$NewsItemImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = null,
+    Object? sections = null,
+    Object? title = null,
+    Object? publisher = null,
+    Object? author = null,
+    Object? summary = null,
+    Object? imageUrl = null,
+    Object? contentUrl = null,
+    Object? esg = freezed,
+    Object? companies = freezed,
+    Object? entities = freezed,
+    Object? publishedAt = null,
+  }) {
+    return _then(_$NewsItemImpl(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      sections: null == sections
+          ? _value._sections
+          : sections // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      title: null == title
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String,
+      publisher: null == publisher
+          ? _value.publisher
+          : publisher // ignore: cast_nullable_to_non_nullable
+              as String,
+      author: null == author
+          ? _value.author
+          : author // ignore: cast_nullable_to_non_nullable
+              as String,
+      summary: null == summary
+          ? _value.summary
+          : summary // ignore: cast_nullable_to_non_nullable
+              as String,
+      imageUrl: null == imageUrl
+          ? _value.imageUrl
+          : imageUrl // ignore: cast_nullable_to_non_nullable
+              as String,
+      contentUrl: null == contentUrl
+          ? _value.contentUrl
+          : contentUrl // ignore: cast_nullable_to_non_nullable
+              as String,
+      esg: freezed == esg
+          ? _value.esg
+          : esg // ignore: cast_nullable_to_non_nullable
+              as EsG?,
+      companies: freezed == companies
+          ? _value._companies
+          : companies // ignore: cast_nullable_to_non_nullable
+              as List<Company>?,
+      entities: freezed == entities
+          ? _value._entities
+          : entities // ignore: cast_nullable_to_non_nullable
+              as List<Entity>?,
+      publishedAt: null == publishedAt
+          ? _value.publishedAt
+          : publishedAt // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$NewsItemImpl implements _NewsItem {
+  const _$NewsItemImpl(
+      {required this.id,
+      required final List<String> sections,
+      required this.title,
+      required this.publisher,
+      required this.author,
+      required this.summary,
+      @JsonKey(name: "image_url") required this.imageUrl,
+      @JsonKey(name: "content_url") required this.contentUrl,
+      this.esg,
+      final List<Company>? companies,
+      final List<Entity>? entities,
+      @JsonKey(name: "published_at") required this.publishedAt})
+      : _sections = sections,
+        _companies = companies,
+        _entities = entities;
+
+  factory _$NewsItemImpl.fromJson(Map<String, dynamic> json) =>
+      _$$NewsItemImplFromJson(json);
+
+  @override
+  final String id;
+  final List<String> _sections;
+  @override
+  List<String> get sections {
+    if (_sections is EqualUnmodifiableListView) return _sections;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_sections);
+  }
+
+  @override
+  final String title;
+  @override
+  final String publisher;
+  @override
+  final String author;
+  @override
+  final String summary;
+  @override
+  @JsonKey(name: "image_url")
+  final String imageUrl;
+  @override
+  @JsonKey(name: "content_url")
+  final String contentUrl;
+  @override
+  final EsG? esg;
+  final List<Company>? _companies;
+  @override
+  List<Company>? get companies {
+    final value = _companies;
+    if (value == null) return null;
+    if (_companies is EqualUnmodifiableListView) return _companies;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Entity>? _entities;
+  @override
+  List<Entity>? get entities {
+    final value = _entities;
+    if (value == null) return null;
+    if (_entities is EqualUnmodifiableListView) return _entities;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  @JsonKey(name: "published_at")
+  final String publishedAt;
+
+  @override
+  String toString() {
+    return 'NewsItem(id: $id, sections: $sections, title: $title, publisher: $publisher, author: $author, summary: $summary, imageUrl: $imageUrl, contentUrl: $contentUrl, esg: $esg, companies: $companies, entities: $entities, publishedAt: $publishedAt)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$NewsItemImpl &&
+            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality().equals(other._sections, _sections) &&
+            (identical(other.title, title) || other.title == title) &&
+            (identical(other.publisher, publisher) ||
+                other.publisher == publisher) &&
+            (identical(other.author, author) || other.author == author) &&
+            (identical(other.summary, summary) || other.summary == summary) &&
+            (identical(other.imageUrl, imageUrl) ||
+                other.imageUrl == imageUrl) &&
+            (identical(other.contentUrl, contentUrl) ||
+                other.contentUrl == contentUrl) &&
+            (identical(other.esg, esg) || other.esg == esg) &&
+            const DeepCollectionEquality()
+                .equals(other._companies, _companies) &&
+            const DeepCollectionEquality().equals(other._entities, _entities) &&
+            (identical(other.publishedAt, publishedAt) ||
+                other.publishedAt == publishedAt));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      const DeepCollectionEquality().hash(_sections),
+      title,
+      publisher,
+      author,
+      summary,
+      imageUrl,
+      contentUrl,
+      esg,
+      const DeepCollectionEquality().hash(_companies),
+      const DeepCollectionEquality().hash(_entities),
+      publishedAt);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$NewsItemImplCopyWith<_$NewsItemImpl> get copyWith =>
+      __$$NewsItemImplCopyWithImpl<_$NewsItemImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$NewsItemImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _NewsItem implements NewsItem {
+  const factory _NewsItem(
+          {required final String id,
+          required final List<String> sections,
+          required final String title,
+          required final String publisher,
+          required final String author,
+          required final String summary,
+          @JsonKey(name: "image_url") required final String imageUrl,
+          @JsonKey(name: "content_url") required final String contentUrl,
+          final EsG? esg,
+          final List<Company>? companies,
+          final List<Entity>? entities,
+          @JsonKey(name: "published_at") required final String publishedAt}) =
+      _$NewsItemImpl;
+
+  factory _NewsItem.fromJson(Map<String, dynamic> json) =
+      _$NewsItemImpl.fromJson;
+
+  @override
+  String get id;
+  @override
+  List<String> get sections;
+  @override
+  String get title;
+  @override
+  String get publisher;
+  @override
+  String get author;
+  @override
+  String get summary;
+  @override
+  @JsonKey(name: "image_url")
+  String get imageUrl;
+  @override
+  @JsonKey(name: "content_url")
+  String get contentUrl;
+  @override
+  EsG? get esg;
+  @override
+  List<Company>? get companies;
+  @override
+  List<Entity>? get entities;
+  @override
+  @JsonKey(name: "published_at")
+  String get publishedAt;
+  @override
+  @JsonKey(ignore: true)
+  _$$NewsItemImplCopyWith<_$NewsItemImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+EsG _$EsGFromJson(Map<String, dynamic> json) {
+  return _EsG.fromJson(json);
+}
+
+/// @nodoc
+mixin _$EsG {
+  Category get category => throw _privateConstructorUsedError;
+  Polarity get polarity => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $EsGCopyWith<EsG> get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $EsGCopyWith<$Res> {
+  factory $EsGCopyWith(EsG value, $Res Function(EsG) then) =
+      _$EsGCopyWithImpl<$Res, EsG>;
+  @useResult
+  $Res call({Category category, Polarity polarity});
+
+  $CategoryCopyWith<$Res> get category;
+  $PolarityCopyWith<$Res> get polarity;
+}
+
+/// @nodoc
+class _$EsGCopyWithImpl<$Res, $Val extends EsG> implements $EsGCopyWith<$Res> {
+  _$EsGCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? category = null,
+    Object? polarity = null,
+  }) {
+    return _then(_value.copyWith(
+      category: null == category
+          ? _value.category
+          : category // ignore: cast_nullable_to_non_nullable
+              as Category,
+      polarity: null == polarity
+          ? _value.polarity
+          : polarity // ignore: cast_nullable_to_non_nullable
+              as Polarity,
+    ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CategoryCopyWith<$Res> get category {
+    return $CategoryCopyWith<$Res>(_value.category, (value) {
+      return _then(_value.copyWith(category: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $PolarityCopyWith<$Res> get polarity {
+    return $PolarityCopyWith<$Res>(_value.polarity, (value) {
+      return _then(_value.copyWith(polarity: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$EsGImplCopyWith<$Res> implements $EsGCopyWith<$Res> {
+  factory _$$EsGImplCopyWith(_$EsGImpl value, $Res Function(_$EsGImpl) then) =
+      __$$EsGImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({Category category, Polarity polarity});
+
+  @override
+  $CategoryCopyWith<$Res> get category;
+  @override
+  $PolarityCopyWith<$Res> get polarity;
+}
+
+/// @nodoc
+class __$$EsGImplCopyWithImpl<$Res> extends _$EsGCopyWithImpl<$Res, _$EsGImpl>
+    implements _$$EsGImplCopyWith<$Res> {
+  __$$EsGImplCopyWithImpl(_$EsGImpl _value, $Res Function(_$EsGImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? category = null,
+    Object? polarity = null,
+  }) {
+    return _then(_$EsGImpl(
+      category: null == category
+          ? _value.category
+          : category // ignore: cast_nullable_to_non_nullable
+              as Category,
+      polarity: null == polarity
+          ? _value.polarity
+          : polarity // ignore: cast_nullable_to_non_nullable
+              as Polarity,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$EsGImpl implements _EsG {
+  const _$EsGImpl({required this.category, required this.polarity});
+
+  factory _$EsGImpl.fromJson(Map<String, dynamic> json) =>
+      _$$EsGImplFromJson(json);
+
+  @override
+  final Category category;
+  @override
+  final Polarity polarity;
+
+  @override
+  String toString() {
+    return 'EsG(category: $category, polarity: $polarity)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$EsGImpl &&
+            (identical(other.category, category) ||
+                other.category == category) &&
+            (identical(other.polarity, polarity) ||
+                other.polarity == polarity));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, category, polarity);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$EsGImplCopyWith<_$EsGImpl> get copyWith =>
+      __$$EsGImplCopyWithImpl<_$EsGImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$EsGImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _EsG implements EsG {
+  const factory _EsG(
+      {required final Category category,
+      required final Polarity polarity}) = _$EsGImpl;
+
+  factory _EsG.fromJson(Map<String, dynamic> json) = _$EsGImpl.fromJson;
+
+  @override
+  Category get category;
+  @override
+  Polarity get polarity;
+  @override
+  @JsonKey(ignore: true)
+  _$$EsGImplCopyWith<_$EsGImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+Company _$CompanyFromJson(Map<String, dynamic> json) {
+  return _Company.fromJson(json);
+}
+
+/// @nodoc
+mixin _$Company {
+  String get name => throw _privateConstructorUsedError;
+  String get symbol => throw _privateConstructorUsedError;
+  String get exchange => throw _privateConstructorUsedError;
+  String? get sentiment => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $CompanyCopyWith<Company> get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $CompanyCopyWith<$Res> {
+  factory $CompanyCopyWith(Company value, $Res Function(Company) then) =
+      _$CompanyCopyWithImpl<$Res, Company>;
+  @useResult
+  $Res call({String name, String symbol, String exchange, String? sentiment});
+}
+
+/// @nodoc
+class _$CompanyCopyWithImpl<$Res, $Val extends Company>
+    implements $CompanyCopyWith<$Res> {
+  _$CompanyCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? name = null,
+    Object? symbol = null,
+    Object? exchange = null,
+    Object? sentiment = freezed,
+  }) {
+    return _then(_value.copyWith(
+      name: null == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      symbol: null == symbol
+          ? _value.symbol
+          : symbol // ignore: cast_nullable_to_non_nullable
+              as String,
+      exchange: null == exchange
+          ? _value.exchange
+          : exchange // ignore: cast_nullable_to_non_nullable
+              as String,
+      sentiment: freezed == sentiment
+          ? _value.sentiment
+          : sentiment // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$CompanyImplCopyWith<$Res> implements $CompanyCopyWith<$Res> {
+  factory _$$CompanyImplCopyWith(
+          _$CompanyImpl value, $Res Function(_$CompanyImpl) then) =
+      __$$CompanyImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String name, String symbol, String exchange, String? sentiment});
+}
+
+/// @nodoc
+class __$$CompanyImplCopyWithImpl<$Res>
+    extends _$CompanyCopyWithImpl<$Res, _$CompanyImpl>
+    implements _$$CompanyImplCopyWith<$Res> {
+  __$$CompanyImplCopyWithImpl(
+      _$CompanyImpl _value, $Res Function(_$CompanyImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? name = null,
+    Object? symbol = null,
+    Object? exchange = null,
+    Object? sentiment = freezed,
+  }) {
+    return _then(_$CompanyImpl(
+      name: null == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      symbol: null == symbol
+          ? _value.symbol
+          : symbol // ignore: cast_nullable_to_non_nullable
+              as String,
+      exchange: null == exchange
+          ? _value.exchange
+          : exchange // ignore: cast_nullable_to_non_nullable
+              as String,
+      sentiment: freezed == sentiment
+          ? _value.sentiment
+          : sentiment // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$CompanyImpl implements _Company {
+  const _$CompanyImpl(
+      {required this.name,
+      required this.symbol,
+      required this.exchange,
+      required this.sentiment});
+
+  factory _$CompanyImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CompanyImplFromJson(json);
+
+  @override
+  final String name;
+  @override
+  final String symbol;
+  @override
+  final String exchange;
+  @override
+  final String? sentiment;
+
+  @override
+  String toString() {
+    return 'Company(name: $name, symbol: $symbol, exchange: $exchange, sentiment: $sentiment)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$CompanyImpl &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.symbol, symbol) || other.symbol == symbol) &&
+            (identical(other.exchange, exchange) ||
+                other.exchange == exchange) &&
+            (identical(other.sentiment, sentiment) ||
+                other.sentiment == sentiment));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, name, symbol, exchange, sentiment);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$CompanyImplCopyWith<_$CompanyImpl> get copyWith =>
+      __$$CompanyImplCopyWithImpl<_$CompanyImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$CompanyImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _Company implements Company {
+  const factory _Company(
+      {required final String name,
+      required final String symbol,
+      required final String exchange,
+      required final String? sentiment}) = _$CompanyImpl;
+
+  factory _Company.fromJson(Map<String, dynamic> json) = _$CompanyImpl.fromJson;
+
+  @override
+  String get name;
+  @override
+  String get symbol;
+  @override
+  String get exchange;
+  @override
+  String? get sentiment;
+  @override
+  @JsonKey(ignore: true)
+  _$$CompanyImplCopyWith<_$CompanyImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+Category _$CategoryFromJson(Map<String, dynamic> json) {
+  return _Category.fromJson(json);
+}
+
+/// @nodoc
+mixin _$Category {
+  String get label => throw _privateConstructorUsedError;
+  String get name => throw _privateConstructorUsedError;
+  double get score => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $CategoryCopyWith<Category> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $CategoryCopyWith<$Res> {
+  factory $CategoryCopyWith(Category value, $Res Function(Category) then) =
+      _$CategoryCopyWithImpl<$Res, Category>;
+  @useResult
+  $Res call({String label, String name, double score});
+}
+
+/// @nodoc
+class _$CategoryCopyWithImpl<$Res, $Val extends Category>
+    implements $CategoryCopyWith<$Res> {
+  _$CategoryCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? label = null,
+    Object? name = null,
+    Object? score = null,
+  }) {
+    return _then(_value.copyWith(
+      label: null == label
+          ? _value.label
+          : label // ignore: cast_nullable_to_non_nullable
+              as String,
+      name: null == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      score: null == score
+          ? _value.score
+          : score // ignore: cast_nullable_to_non_nullable
+              as double,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$CategoryImplCopyWith<$Res>
+    implements $CategoryCopyWith<$Res> {
+  factory _$$CategoryImplCopyWith(
+          _$CategoryImpl value, $Res Function(_$CategoryImpl) then) =
+      __$$CategoryImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String label, String name, double score});
+}
+
+/// @nodoc
+class __$$CategoryImplCopyWithImpl<$Res>
+    extends _$CategoryCopyWithImpl<$Res, _$CategoryImpl>
+    implements _$$CategoryImplCopyWith<$Res> {
+  __$$CategoryImplCopyWithImpl(
+      _$CategoryImpl _value, $Res Function(_$CategoryImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? label = null,
+    Object? name = null,
+    Object? score = null,
+  }) {
+    return _then(_$CategoryImpl(
+      label: null == label
+          ? _value.label
+          : label // ignore: cast_nullable_to_non_nullable
+              as String,
+      name: null == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      score: null == score
+          ? _value.score
+          : score // ignore: cast_nullable_to_non_nullable
+              as double,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$CategoryImpl implements _Category {
+  const _$CategoryImpl(
+      {required this.label, required this.name, required this.score});
+
+  factory _$CategoryImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CategoryImplFromJson(json);
+
+  @override
+  final String label;
+  @override
+  final String name;
+  @override
+  final double score;
+
+  @override
+  String toString() {
+    return 'Category(label: $label, name: $name, score: $score)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$CategoryImpl &&
+            (identical(other.label, label) || other.label == label) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.score, score) || other.score == score));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, label, name, score);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$CategoryImplCopyWith<_$CategoryImpl> get copyWith =>
+      __$$CategoryImplCopyWithImpl<_$CategoryImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$CategoryImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _Category implements Category {
+  const factory _Category(
+      {required final String label,
+      required final String name,
+      required final double score}) = _$CategoryImpl;
+
+  factory _Category.fromJson(Map<String, dynamic> json) =
+      _$CategoryImpl.fromJson;
+
+  @override
+  String get label;
+  @override
+  String get name;
+  @override
+  double get score;
+  @override
+  @JsonKey(ignore: true)
+  _$$CategoryImplCopyWith<_$CategoryImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+Polarity _$PolarityFromJson(Map<String, dynamic> json) {
+  return _Polarity.fromJson(json);
+}
+
+/// @nodoc
+mixin _$Polarity {
+  String get label => throw _privateConstructorUsedError;
+  String get name => throw _privateConstructorUsedError;
+  double get score => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $PolarityCopyWith<Polarity> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $PolarityCopyWith<$Res> {
+  factory $PolarityCopyWith(Polarity value, $Res Function(Polarity) then) =
+      _$PolarityCopyWithImpl<$Res, Polarity>;
+  @useResult
+  $Res call({String label, String name, double score});
+}
+
+/// @nodoc
+class _$PolarityCopyWithImpl<$Res, $Val extends Polarity>
+    implements $PolarityCopyWith<$Res> {
+  _$PolarityCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? label = null,
+    Object? name = null,
+    Object? score = null,
+  }) {
+    return _then(_value.copyWith(
+      label: null == label
+          ? _value.label
+          : label // ignore: cast_nullable_to_non_nullable
+              as String,
+      name: null == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      score: null == score
+          ? _value.score
+          : score // ignore: cast_nullable_to_non_nullable
+              as double,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$PolarityImplCopyWith<$Res>
+    implements $PolarityCopyWith<$Res> {
+  factory _$$PolarityImplCopyWith(
+          _$PolarityImpl value, $Res Function(_$PolarityImpl) then) =
+      __$$PolarityImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String label, String name, double score});
+}
+
+/// @nodoc
+class __$$PolarityImplCopyWithImpl<$Res>
+    extends _$PolarityCopyWithImpl<$Res, _$PolarityImpl>
+    implements _$$PolarityImplCopyWith<$Res> {
+  __$$PolarityImplCopyWithImpl(
+      _$PolarityImpl _value, $Res Function(_$PolarityImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? label = null,
+    Object? name = null,
+    Object? score = null,
+  }) {
+    return _then(_$PolarityImpl(
+      label: null == label
+          ? _value.label
+          : label // ignore: cast_nullable_to_non_nullable
+              as String,
+      name: null == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      score: null == score
+          ? _value.score
+          : score // ignore: cast_nullable_to_non_nullable
+              as double,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$PolarityImpl implements _Polarity {
+  const _$PolarityImpl(
+      {required this.label, required this.name, required this.score});
+
+  factory _$PolarityImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PolarityImplFromJson(json);
+
+  @override
+  final String label;
+  @override
+  final String name;
+  @override
+  final double score;
+
+  @override
+  String toString() {
+    return 'Polarity(label: $label, name: $name, score: $score)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$PolarityImpl &&
+            (identical(other.label, label) || other.label == label) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.score, score) || other.score == score));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, label, name, score);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$PolarityImplCopyWith<_$PolarityImpl> get copyWith =>
+      __$$PolarityImplCopyWithImpl<_$PolarityImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$PolarityImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _Polarity implements Polarity {
+  const factory _Polarity(
+      {required final String label,
+      required final String name,
+      required final double score}) = _$PolarityImpl;
+
+  factory _Polarity.fromJson(Map<String, dynamic> json) =
+      _$PolarityImpl.fromJson;
+
+  @override
+  String get label;
+  @override
+  String get name;
+  @override
+  double get score;
+  @override
+  @JsonKey(ignore: true)
+  _$$PolarityImplCopyWith<_$PolarityImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+Entity _$EntityFromJson(Map<String, dynamic> json) {
+  return _Entity.fromJson(json);
+}
+
+/// @nodoc
+mixin _$Entity {
+  String get type => throw _privateConstructorUsedError;
+  String get name => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $EntityCopyWith<Entity> get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $EntityCopyWith<$Res> {
+  factory $EntityCopyWith(Entity value, $Res Function(Entity) then) =
+      _$EntityCopyWithImpl<$Res, Entity>;
+  @useResult
+  $Res call({String type, String name});
+}
+
+/// @nodoc
+class _$EntityCopyWithImpl<$Res, $Val extends Entity>
+    implements $EntityCopyWith<$Res> {
+  _$EntityCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? type = null,
+    Object? name = null,
+  }) {
+    return _then(_value.copyWith(
+      type: null == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as String,
+      name: null == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$EntityImplCopyWith<$Res> implements $EntityCopyWith<$Res> {
+  factory _$$EntityImplCopyWith(
+          _$EntityImpl value, $Res Function(_$EntityImpl) then) =
+      __$$EntityImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String type, String name});
+}
+
+/// @nodoc
+class __$$EntityImplCopyWithImpl<$Res>
+    extends _$EntityCopyWithImpl<$Res, _$EntityImpl>
+    implements _$$EntityImplCopyWith<$Res> {
+  __$$EntityImplCopyWithImpl(
+      _$EntityImpl _value, $Res Function(_$EntityImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? type = null,
+    Object? name = null,
+  }) {
+    return _then(_$EntityImpl(
+      type: null == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as String,
+      name: null == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$EntityImpl implements _Entity {
+  const _$EntityImpl({required this.type, required this.name});
+
+  factory _$EntityImpl.fromJson(Map<String, dynamic> json) =>
+      _$$EntityImplFromJson(json);
+
+  @override
+  final String type;
+  @override
+  final String name;
+
+  @override
+  String toString() {
+    return 'Entity(type: $type, name: $name)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$EntityImpl &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.name, name) || other.name == name));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, type, name);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$EntityImplCopyWith<_$EntityImpl> get copyWith =>
+      __$$EntityImplCopyWithImpl<_$EntityImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$EntityImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _Entity implements Entity {
+  const factory _Entity(
+      {required final String type, required final String name}) = _$EntityImpl;
+
+  factory _Entity.fromJson(Map<String, dynamic> json) = _$EntityImpl.fromJson;
+
+  @override
+  String get type;
+  @override
+  String get name;
+  @override
+  @JsonKey(ignore: true)
+  _$$EntityImplCopyWith<_$EntityImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}

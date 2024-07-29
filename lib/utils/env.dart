@@ -10,4 +10,6 @@ abstract class Env{
   static const String finnhubKey = _Env.finnhubKey;
   @EnviedField(varName: 'polygonApiKey')
   static const String polygonApiKey = _Env.polygonApiKey;
+  @EnviedField(varName: 'deepSearchApiKey')
+  static const String deepSearchApiKey = _Env.deepSearchApiKey;
 }

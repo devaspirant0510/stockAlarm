@@ -234,7 +234,7 @@ class _LockViewmodelProviderElement
   int get alarmId => (origin as LockViewmodelProvider).alarmId;
 }
 
-String _$stockViewmodelHash() => r'20e03d58688568cd78bffd931cf603cd1afa0876';
+String _$stockViewmodelHash() => r'd617794f7e6e183f34c469576734f5cc72ad4de0';
 
 abstract class _$StockViewmodel
     extends BuildlessAutoDisposeAsyncNotifier<StockState> {

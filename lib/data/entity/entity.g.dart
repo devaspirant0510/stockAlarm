@@ -275,3 +275,142 @@ Map<String, dynamic> _$$TimeSeriesDataImplToJson(
       '4. close': instance.close,
       '5. volume': instance.volume,
     };
+
+_$NewsEntityImpl _$$NewsEntityImplFromJson(Map<String, dynamic> json) =>
+    _$NewsEntityImpl(
+      detail: Detail.fromJson(json['detail'] as Map<String, dynamic>),
+      totalItems: json['total_items'] as int,
+      totalPages: json['total_pages'] as int,
+      page: json['page'] as int,
+      pageSize: json['page_size'] as int,
+      data: (json['data'] as List<dynamic>)
+          .map((e) => NewsItem.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
+
+Map<String, dynamic> _$$NewsEntityImplToJson(_$NewsEntityImpl instance) =>
+    <String, dynamic>{
+      'detail': instance.detail,
+      'total_items': instance.totalItems,
+      'total_pages': instance.totalPages,
+      'page': instance.page,
+      'page_size': instance.pageSize,
+      'data': instance.data,
+    };
+
+_$DetailImpl _$$DetailImplFromJson(Map<String, dynamic> json) => _$DetailImpl(
+      message: json['message'] as String,
+      code: json['code'] as String,
+      ok: json['ok'] as bool,
+    );
+
+Map<String, dynamic> _$$DetailImplToJson(_$DetailImpl instance) =>
+    <String, dynamic>{
+      'message': instance.message,
+      'code': instance.code,
+      'ok': instance.ok,
+    };
+
+_$NewsItemImpl _$$NewsItemImplFromJson(Map<String, dynamic> json) =>
+    _$NewsItemImpl(
+      id: json['id'] as String,
+      sections:
+          (json['sections'] as List<dynamic>).map((e) => e as String).toList(),
+      title: json['title'] as String,
+      publisher: json['publisher'] as String,
+      author: json['author'] as String,
+      summary: json['summary'] as String,
+      imageUrl: json['image_url'] as String,
+      contentUrl: json['content_url'] as String,
+      esg: json['esg'] == null
+          ? null
+          : EsG.fromJson(json['esg'] as Map<String, dynamic>),
+      companies: (json['companies'] as List<dynamic>?)
+          ?.map((e) => Company.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      entities: (json['entities'] as List<dynamic>?)
+          ?.map((e) => Entity.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      publishedAt: json['published_at'] as String,
+    );
+
+Map<String, dynamic> _$$NewsItemImplToJson(_$NewsItemImpl instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'sections': instance.sections,
+      'title': instance.title,
+      'publisher': instance.publisher,
+      'author': instance.author,
+      'summary': instance.summary,
+      'image_url': instance.imageUrl,
+      'content_url': instance.contentUrl,
+      'esg': instance.esg,
+      'companies': instance.companies,
+      'entities': instance.entities,
+      'published_at': instance.publishedAt,
+    };
+
+_$EsGImpl _$$EsGImplFromJson(Map<String, dynamic> json) => _$EsGImpl(
+      category: Category.fromJson(json['category'] as Map<String, dynamic>),
+      polarity: Polarity.fromJson(json['polarity'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$$EsGImplToJson(_$EsGImpl instance) => <String, dynamic>{
+      'category': instance.category,
+      'polarity': instance.polarity,
+    };
+
+_$CompanyImpl _$$CompanyImplFromJson(Map<String, dynamic> json) =>
+    _$CompanyImpl(
+      name: json['name'] as String,
+      symbol: json['symbol'] as String,
+      exchange: json['exchange'] as String,
+      sentiment: json['sentiment'] as String?,
+    );
+
+Map<String, dynamic> _$$CompanyImplToJson(_$CompanyImpl instance) =>
+    <String, dynamic>{
+      'name': instance.name,
+      'symbol': instance.symbol,
+      'exchange': instance.exchange,
+      'sentiment': instance.sentiment,
+    };
+
+_$CategoryImpl _$$CategoryImplFromJson(Map<String, dynamic> json) =>
+    _$CategoryImpl(
+      label: json['label'] as String,
+      name: json['name'] as String,
+      score: (json['score'] as num).toDouble(),
+    );
+
+Map<String, dynamic> _$$CategoryImplToJson(_$CategoryImpl instance) =>
+    <String, dynamic>{
+      'label': instance.label,
+      'name': instance.name,
+      'score': instance.score,
+    };
+
+_$PolarityImpl _$$PolarityImplFromJson(Map<String, dynamic> json) =>
+    _$PolarityImpl(
+      label: json['label'] as String,
+      name: json['name'] as String,
+      score: (json['score'] as num).toDouble(),
+    );
+
+Map<String, dynamic> _$$PolarityImplToJson(_$PolarityImpl instance) =>
+    <String, dynamic>{
+      'label': instance.label,
+      'name': instance.name,
+      'score': instance.score,
+    };
+
+_$EntityImpl _$$EntityImplFromJson(Map<String, dynamic> json) => _$EntityImpl(
+      type: json['type'] as String,
+      name: json['name'] as String,
+    );
+
+Map<String, dynamic> _$$EntityImplToJson(_$EntityImpl instance) =>
+    <String, dynamic>{
+      'type': instance.type,
+      'name': instance.name,
+    };

@@ -798,7 +798,7 @@ class _CallGetOneAlarmProviderElement
 }
 
 String _$callGetTodayChartDataHash() =>
-    r'ebe1088a95a1fc2e45609dc45d18c58258054114';
+    r'edd2d70395d859bad2d6a35f6e2324037cdaf7d6';
 
 /// See also [callGetTodayChartData].
 @ProviderFor(callGetTodayChartData)
