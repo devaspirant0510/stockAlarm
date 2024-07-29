@@ -796,5 +796,141 @@ class _CallGetOneAlarmProviderElement
   @override
   int get id => (origin as CallGetOneAlarmProvider).id;
 }
+
+String _$callGetTodayChartDataHash() =>
+    r'ebe1088a95a1fc2e45609dc45d18c58258054114';
+
+/// See also [callGetTodayChartData].
+@ProviderFor(callGetTodayChartData)
+const callGetTodayChartDataProvider = CallGetTodayChartDataFamily();
+
+/// See also [callGetTodayChartData].
+class CallGetTodayChartDataFamily
+    extends Family<AsyncValue<Map<String, TimeSeriesData>>> {
+  /// See also [callGetTodayChartData].
+  const CallGetTodayChartDataFamily();
+
+  /// See also [callGetTodayChartData].
+  CallGetTodayChartDataProvider call({
+    required String symbol,
+  }) {
+    return CallGetTodayChartDataProvider(
+      symbol: symbol,
+    );
+  }
+
+  @override
+  CallGetTodayChartDataProvider getProviderOverride(
+    covariant CallGetTodayChartDataProvider provider,
+  ) {
+    return call(
+      symbol: provider.symbol,
+    );
+  }
+
+  static const Iterable<ProviderOrFamily>? _dependencies = null;
+
+  @override
+  Iterable<ProviderOrFamily>? get dependencies => _dependencies;
+
+  static const Iterable<ProviderOrFamily>? _allTransitiveDependencies = null;
+
+  @override
+  Iterable<ProviderOrFamily>? get allTransitiveDependencies =>
+      _allTransitiveDependencies;
+
+  @override
+  String? get name => r'callGetTodayChartDataProvider';
+}
+
+/// See also [callGetTodayChartData].
+class CallGetTodayChartDataProvider
+    extends AutoDisposeFutureProvider<Map<String, TimeSeriesData>> {
+  /// See also [callGetTodayChartData].
+  CallGetTodayChartDataProvider({
+    required String symbol,
+  }) : this._internal(
+          (ref) => callGetTodayChartData(
+            ref as CallGetTodayChartDataRef,
+            symbol: symbol,
+          ),
+          from: callGetTodayChartDataProvider,
+          name: r'callGetTodayChartDataProvider',
+          debugGetCreateSourceHash:
+              const bool.fromEnvironment('dart.vm.product')
+                  ? null
+                  : _$callGetTodayChartDataHash,
+          dependencies: CallGetTodayChartDataFamily._dependencies,
+          allTransitiveDependencies:
+              CallGetTodayChartDataFamily._allTransitiveDependencies,
+          symbol: symbol,
+        );
+
+  CallGetTodayChartDataProvider._internal(
+    super._createNotifier, {
+    required super.name,
+    required super.dependencies,
+    required super.allTransitiveDependencies,
+    required super.debugGetCreateSourceHash,
+    required super.from,
+    required this.symbol,
+  }) : super.internal();
+
+  final String symbol;
+
+  @override
+  Override overrideWith(
+    FutureOr<Map<String, TimeSeriesData>> Function(
+            CallGetTodayChartDataRef provider)
+        create,
+  ) {
+    return ProviderOverride(
+      origin: this,
+      override: CallGetTodayChartDataProvider._internal(
+        (ref) => create(ref as CallGetTodayChartDataRef),
+        from: from,
+        name: null,
+        dependencies: null,
+        allTransitiveDependencies: null,
+        debugGetCreateSourceHash: null,
+        symbol: symbol,
+      ),
+    );
+  }
+
+  @override
+  AutoDisposeFutureProviderElement<Map<String, TimeSeriesData>>
+      createElement() {
+    return _CallGetTodayChartDataProviderElement(this);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return other is CallGetTodayChartDataProvider && other.symbol == symbol;
+  }
+
+  @override
+  int get hashCode {
+    var hash = _SystemHash.combine(0, runtimeType.hashCode);
+    hash = _SystemHash.combine(hash, symbol.hashCode);
+
+    return _SystemHash.finish(hash);
+  }
+}
+
+mixin CallGetTodayChartDataRef
+    on AutoDisposeFutureProviderRef<Map<String, TimeSeriesData>> {
+  /// The parameter `symbol` of this provider.
+  String get symbol;
+}
+
+class _CallGetTodayChartDataProviderElement
+    extends AutoDisposeFutureProviderElement<Map<String, TimeSeriesData>>
+    with CallGetTodayChartDataRef {
+  _CallGetTodayChartDataProviderElement(super.provider);
+
+  @override
+  String get symbol => (origin as CallGetTodayChartDataProvider).symbol;
+}
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member

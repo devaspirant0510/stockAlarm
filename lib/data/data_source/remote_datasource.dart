@@ -23,15 +23,25 @@ abstract class RemoteDataSource {
   @GET("query")
   Future<ChartEntity> getIntradayDataBySymbol({
     @Query("symbol") required String symbol,
-    @Query("function") String function="TIME_SERIES_INTRADAY",
-    @Query("interval") String interval="5min",
-    @Query("apikey") String apikey=Env.apiKey,
-    @Query("adjusted") bool adjusted=true,// 분할및 병합 가격 자동 조정(true), 원가 그대로 적용(false)
-    @Query("extended_hours") bool extendedHours=true, // 프리장도 보여줄 여부
+    @Query("function") String function = "TIME_SERIES_INTRADAY",
+    @Query("interval") String interval = "5min",
+    @Query("apikey") String apikey = Env.apiKey,
+    @Query("adjusted")
+    bool adjusted = true, // 분할및 병합 가격 자동 조정(true), 원가 그대로 적용(false)
+    @Query("extended_hours") bool extendedHours = false, // 프리장도 보여줄 여부,
+    @Query("outputsize")
+    String outputSize = "full", // compact 는 데이터 최적화 100개만 보여줌, compact 가 디폴트 값
   });
 
   @GET("query")
-  Future<void> getDailyDataBySymbol();
+  Future<ChartEntity> getDailyDataBySymbol({
+    @Query("symbol") required String symbol,
+    @Query("function") String function = "TIME_SERIES_DAILY",
+    @Query("apikey") String apikey = Env.apiKey,
+    @Query("extended_hours") bool extendedHours = false, // 프리장도 보여줄 여부,
+    @Query("outputsize")
+    String outputSize = "full", // compact 는 데이터 최적화 100개만 보여줌, compact 가 디폴트 값
+  });
 
   @GET("query")
   Future<void> getWeeklyDataBySymbol();

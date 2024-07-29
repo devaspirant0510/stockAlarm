@@ -5,6 +5,7 @@ import 'package:bm_app/screens/viewmodel_states.dart';
 import 'package:bm_app/widgets/atom/round_company_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 import 'package:skeletonizer/skeletonizer.dart';
 
 import '../../../domain/usecase/websocket.dart';
@@ -35,7 +36,11 @@ class _StockPriceItemState extends ConsumerState<StockPriceItem> {
   Widget build(BuildContext context) {
     final stockData = widget.stock;
     final messageAsyncValue = ref.watch(messageProvider);
-    return Container(
+    return InkWell(
+      onTap: (){
+        context.pushNamed("stock",extra: stockData.symbol);
+      }
+      ,
       child: Row(
         children: [
           RoundCompanyImage(

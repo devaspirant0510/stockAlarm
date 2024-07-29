@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 class NDateUtils{
   static String convertDateToString(DateTime date){
@@ -18,5 +19,13 @@ class NDateUtils{
     DateTime date = DateTime.fromMillisecondsSinceEpoch(milliseconds);
     TimeOfDay time = TimeOfDay(hour: date.hour, minute: date.minute);
     return convertTimeOfDayToString(time);
+  }
+  static DateTime parseDateTime(String dateString) {
+    DateFormat format = DateFormat('yyyy-MM-dd HH:mm:ss');
+    return format.parse(dateString);
+  }
+  static DateTime parseDateTimeWithTimeOffset(String dateString) {
+    DateFormat format = DateFormat('yyyy-MM-dd HH:mm:ss');
+    return format.parse(dateString).add(const Duration(hours: 13));
   }
 }

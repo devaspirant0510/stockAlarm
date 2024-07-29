@@ -85,7 +85,8 @@ class _RemoteDataSource implements RemoteDataSource {
     String interval = "5min",
     String apikey = Env.apiKey,
     bool adjusted = true,
-    bool extendedHours = true,
+    bool extendedHours = false,
+    String outputSize = "full",
   }) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{
@@ -95,6 +96,7 @@ class _RemoteDataSource implements RemoteDataSource {
       r'apikey': apikey,
       r'adjusted': adjusted,
       r'extended_hours': extendedHours,
+      r'outputsize': outputSize,
     };
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
@@ -120,27 +122,42 @@ class _RemoteDataSource implements RemoteDataSource {
   }
 
   @override
-  Future<void> getDailyDataBySymbol() async {
+  Future<ChartEntity> getDailyDataBySymbol({
+    required String symbol,
+    String function = "TIME_SERIES_DAILY",
+    String apikey = Env.apiKey,
+    bool extendedHours = false,
+    String outputSize = "full",
+  }) async {
     final _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{
+      r'symbol': symbol,
+      r'function': function,
+      r'apikey': apikey,
+      r'extended_hours': extendedHours,
+      r'outputsize': outputSize,
+    };
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    await _dio.fetch<void>(_setStreamType<void>(Options(
+    final _result = await _dio
+        .fetch<Map<String, dynamic>>(_setStreamType<ChartEntity>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
-        .compose(
-          _dio.options,
-          'query',
-          queryParameters: queryParameters,
-          data: _data,
-        )
-        .copyWith(
-            baseUrl: _combineBaseUrls(
-          _dio.options.baseUrl,
-          baseUrl,
-        ))));
+            .compose(
+              _dio.options,
+              'query',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
+    final value = ChartEntity.fromJson(_result.data!);
+    return value;
   }
 
   @override
