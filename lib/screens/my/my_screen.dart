@@ -15,6 +15,7 @@ class MyScreen extends ConsumerStatefulWidget {
   ConsumerState createState() => _MyScreenState();
 }
 
+// TODO : 주가 실시간 소켓정보 데이터 안가져올때 기존 데이터 입히기(간혹가다 데이터가 비어져있음 (주가데이터)
 class _MyScreenState extends ConsumerState<MyScreen> {
   @override
   void initState() {
