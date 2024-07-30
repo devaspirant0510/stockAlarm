@@ -28,4 +28,19 @@ class NDateUtils{
     DateFormat format = DateFormat('yyyy-MM-dd HH:mm:ss');
     return format.parse(dateString).add(const Duration(hours: 13));
   }
+  // 날짜를 상대 시간 표현으로 변환하는 함수
+  static String parseIsoTimeToTimeAgo(String isoString) {
+    DateTime date = DateTime.parse(isoString);
+    DateTime now = DateTime.now();
+    Duration difference = now.difference(date);
+    if (difference.inSeconds < 60) {
+      return '${difference.inSeconds}초 전';
+    } else if (difference.inMinutes < 60) {
+      return '${difference.inMinutes}분 전';
+    } else if (difference.inHours < 24) {
+      return '${difference.inHours}시간 전';
+    } else {
+      return '${difference.inDays}일 전';
+    }
+  }
 }

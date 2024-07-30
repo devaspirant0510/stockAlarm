@@ -1067,3 +1067,171 @@ abstract class _StockState implements StockState {
   _$$StockStateImplCopyWith<_$StockStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
+
+/// @nodoc
+mixin _$NewsState {
+  NewsEntity? get domesticNews => throw _privateConstructorUsedError;
+  NewsEntity? get globalNews => throw _privateConstructorUsedError;
+
+  @JsonKey(ignore: true)
+  $NewsStateCopyWith<NewsState> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $NewsStateCopyWith<$Res> {
+  factory $NewsStateCopyWith(NewsState value, $Res Function(NewsState) then) =
+      _$NewsStateCopyWithImpl<$Res, NewsState>;
+  @useResult
+  $Res call({NewsEntity? domesticNews, NewsEntity? globalNews});
+
+  $NewsEntityCopyWith<$Res>? get domesticNews;
+  $NewsEntityCopyWith<$Res>? get globalNews;
+}
+
+/// @nodoc
+class _$NewsStateCopyWithImpl<$Res, $Val extends NewsState>
+    implements $NewsStateCopyWith<$Res> {
+  _$NewsStateCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? domesticNews = freezed,
+    Object? globalNews = freezed,
+  }) {
+    return _then(_value.copyWith(
+      domesticNews: freezed == domesticNews
+          ? _value.domesticNews
+          : domesticNews // ignore: cast_nullable_to_non_nullable
+              as NewsEntity?,
+      globalNews: freezed == globalNews
+          ? _value.globalNews
+          : globalNews // ignore: cast_nullable_to_non_nullable
+              as NewsEntity?,
+    ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $NewsEntityCopyWith<$Res>? get domesticNews {
+    if (_value.domesticNews == null) {
+      return null;
+    }
+
+    return $NewsEntityCopyWith<$Res>(_value.domesticNews!, (value) {
+      return _then(_value.copyWith(domesticNews: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $NewsEntityCopyWith<$Res>? get globalNews {
+    if (_value.globalNews == null) {
+      return null;
+    }
+
+    return $NewsEntityCopyWith<$Res>(_value.globalNews!, (value) {
+      return _then(_value.copyWith(globalNews: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$NewsStateImplCopyWith<$Res>
+    implements $NewsStateCopyWith<$Res> {
+  factory _$$NewsStateImplCopyWith(
+          _$NewsStateImpl value, $Res Function(_$NewsStateImpl) then) =
+      __$$NewsStateImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({NewsEntity? domesticNews, NewsEntity? globalNews});
+
+  @override
+  $NewsEntityCopyWith<$Res>? get domesticNews;
+  @override
+  $NewsEntityCopyWith<$Res>? get globalNews;
+}
+
+/// @nodoc
+class __$$NewsStateImplCopyWithImpl<$Res>
+    extends _$NewsStateCopyWithImpl<$Res, _$NewsStateImpl>
+    implements _$$NewsStateImplCopyWith<$Res> {
+  __$$NewsStateImplCopyWithImpl(
+      _$NewsStateImpl _value, $Res Function(_$NewsStateImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? domesticNews = freezed,
+    Object? globalNews = freezed,
+  }) {
+    return _then(_$NewsStateImpl(
+      domesticNews: freezed == domesticNews
+          ? _value.domesticNews
+          : domesticNews // ignore: cast_nullable_to_non_nullable
+              as NewsEntity?,
+      globalNews: freezed == globalNews
+          ? _value.globalNews
+          : globalNews // ignore: cast_nullable_to_non_nullable
+              as NewsEntity?,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$NewsStateImpl implements _NewsState {
+  const _$NewsStateImpl({this.domesticNews, this.globalNews});
+
+  @override
+  final NewsEntity? domesticNews;
+  @override
+  final NewsEntity? globalNews;
+
+  @override
+  String toString() {
+    return 'NewsState(domesticNews: $domesticNews, globalNews: $globalNews)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$NewsStateImpl &&
+            (identical(other.domesticNews, domesticNews) ||
+                other.domesticNews == domesticNews) &&
+            (identical(other.globalNews, globalNews) ||
+                other.globalNews == globalNews));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, domesticNews, globalNews);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$NewsStateImplCopyWith<_$NewsStateImpl> get copyWith =>
+      __$$NewsStateImplCopyWithImpl<_$NewsStateImpl>(this, _$identity);
+}
+
+abstract class _NewsState implements NewsState {
+  const factory _NewsState(
+      {final NewsEntity? domesticNews,
+      final NewsEntity? globalNews}) = _$NewsStateImpl;
+
+  @override
+  NewsEntity? get domesticNews;
+  @override
+  NewsEntity? get globalNews;
+  @override
+  @JsonKey(ignore: true)
+  _$$NewsStateImplCopyWith<_$NewsStateImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}

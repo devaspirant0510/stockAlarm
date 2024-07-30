@@ -377,5 +377,22 @@ class _StockViewmodelProviderElement
   @override
   String get symbol => (origin as StockViewmodelProvider).symbol;
 }
+
+String _$newsViewmodelHash() => r'034992bf87ef66cf8c821fca2f4f3ec93c2f30d6';
+
+/// See also [NewsViewmodel].
+@ProviderFor(NewsViewmodel)
+final newsViewmodelProvider =
+    AutoDisposeAsyncNotifierProvider<NewsViewmodel, NewsState>.internal(
+  NewsViewmodel.new,
+  name: r'newsViewmodelProvider',
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$newsViewmodelHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
+);
+
+typedef _$NewsViewmodel = AutoDisposeAsyncNotifier<NewsState>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member

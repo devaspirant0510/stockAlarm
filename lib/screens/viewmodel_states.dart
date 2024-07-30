@@ -30,3 +30,6 @@ part './lock/lock_state.dart';
 part './stock/stock_state.dart';
 part './stock/stock_viewmodel.dart';
 
+part './news/news_state.dart';
+part './news/news_viewmodel.dart';
+

@@ -1,6 +1,8 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:bm_app/api/api_client.dart';
 import 'package:bm_app/data/repository/repository_impl.dart';
+import 'package:bm_app/screens/news/widgets/domestic_news_screen.dart';
+import 'package:bm_app/screens/news/widgets/global_news_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -15,19 +17,57 @@ class NewsScreen extends ConsumerStatefulWidget {
   ConsumerState createState() => _NewsScreenState();
 }
 
-class _NewsScreenState extends ConsumerState<NewsScreen> {
+class _NewsScreenState extends ConsumerState<NewsScreen>
+    with SingleTickerProviderStateMixin {
+  late TabController _tabController;
+  late PageController _pageController;
+
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
-    ref.read(repositoryProvider).getAllDomesticArticle().then((r){
+    _tabController = TabController(length: 2, vsync: this);
+    _pageController = PageController();
+    ref.read(repositoryProvider).getAllDomesticArticle().then((r) {
       print(r);
     });
   }
+
+  @override
+  void dispose() {
+    _tabController.dispose();
+    _pageController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Text('news'),
+      child: Column(
+        children: [
+          TabBar(
+            controller: _tabController,
+            onTap: (value) => _pageController.jumpToPage(value),
+            tabs: [
+              Tab(
+                text: "국내",
+              ),
+              Tab(
+                text: "해외",
+              ),
+            ],
+          ),
+          Expanded(
+            child: PageView(
+              controller: _pageController,
+              onPageChanged: (value) => _tabController.animateTo(value),
+              children: [
+                DomesticNewsScreen(),
+                GlobalNewsScreen()
+              ],
+            ),
+          )
+        ],
+      ),
     );
   }
 }
