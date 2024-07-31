@@ -284,11 +284,35 @@ _$NewsEntityImpl _$$NewsEntityImplFromJson(Map<String, dynamic> json) =>
       page: json['page'] as int,
       pageSize: json['page_size'] as int,
       data: (json['data'] as List<dynamic>)
-          .map((e) => NewsItem.fromJson(e as Map<String, dynamic>))
+          .map((e) => DomesticNewsEntity.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
 Map<String, dynamic> _$$NewsEntityImplToJson(_$NewsEntityImpl instance) =>
+    <String, dynamic>{
+      'detail': instance.detail,
+      'total_items': instance.totalItems,
+      'total_pages': instance.totalPages,
+      'page': instance.page,
+      'page_size': instance.pageSize,
+      'data': instance.data,
+    };
+
+_$GlobalNewsEntityImpl _$$GlobalNewsEntityImplFromJson(
+        Map<String, dynamic> json) =>
+    _$GlobalNewsEntityImpl(
+      detail: Detail.fromJson(json['detail'] as Map<String, dynamic>),
+      totalItems: json['total_items'] as int,
+      totalPages: json['total_pages'] as int,
+      page: json['page'] as int,
+      pageSize: json['page_size'] as int,
+      data: (json['data'] as List<dynamic>)
+          .map((e) => GlobalNewsItemEntity.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
+
+Map<String, dynamic> _$$GlobalNewsEntityImplToJson(
+        _$GlobalNewsEntityImpl instance) =>
     <String, dynamic>{
       'detail': instance.detail,
       'total_items': instance.totalItems,
@@ -311,16 +335,16 @@ Map<String, dynamic> _$$DetailImplToJson(_$DetailImpl instance) =>
       'ok': instance.ok,
     };
 
-_$NewsItemImpl _$$NewsItemImplFromJson(Map<String, dynamic> json) =>
-    _$NewsItemImpl(
-      id: json['id'] as String,
+_$DomesticNewsEntityImpl _$$DomesticNewsEntityImplFromJson(
+        Map<String, dynamic> json) =>
+    _$DomesticNewsEntityImpl(
       sections:
           (json['sections'] as List<dynamic>).map((e) => e as String).toList(),
       title: json['title'] as String,
       publisher: json['publisher'] as String,
       author: json['author'] as String,
       summary: json['summary'] as String,
-      imageUrl: json['image_url'] as String,
+      imageUrl: json['image_url'] as String?,
       contentUrl: json['content_url'] as String,
       esg: json['esg'] == null
           ? null
@@ -334,9 +358,9 @@ _$NewsItemImpl _$$NewsItemImplFromJson(Map<String, dynamic> json) =>
       publishedAt: json['published_at'] as String,
     );
 
-Map<String, dynamic> _$$NewsItemImplToJson(_$NewsItemImpl instance) =>
+Map<String, dynamic> _$$DomesticNewsEntityImplToJson(
+        _$DomesticNewsEntityImpl instance) =>
     <String, dynamic>{
-      'id': instance.id,
       'sections': instance.sections,
       'title': instance.title,
       'publisher': instance.publisher,
@@ -413,4 +437,59 @@ Map<String, dynamic> _$$EntityImplToJson(_$EntityImpl instance) =>
     <String, dynamic>{
       'type': instance.type,
       'name': instance.name,
+    };
+
+_$GlobalNewsItemEntityImpl _$$GlobalNewsItemEntityImplFromJson(
+        Map<String, dynamic> json) =>
+    _$GlobalNewsItemEntityImpl(
+      id: json['id'] as int,
+      title: json['title'] as String,
+      titleKo: json['title_ko'] as String,
+      summary: json['summary'] as String,
+      summaryKo: json['summary_ko'] as String,
+      imageUrl: json['image_url'] as String,
+      contentUrl: json['content_url'] as String,
+      publisher: json['publisher'] as String,
+      reason: json['reason'] as String?,
+      importance: json['importance'] as String?,
+      publishedAt: json['published_at'] as String,
+      sections:
+          (json['sections'] as List<dynamic>).map((e) => e as String).toList(),
+      esg: (json['esg'] as List<dynamic>)
+          .map((e) => ESG.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      companies: (json['companies'] as List<dynamic>)
+          .map((e) => Company.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
+
+Map<String, dynamic> _$$GlobalNewsItemEntityImplToJson(
+        _$GlobalNewsItemEntityImpl instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'title': instance.title,
+      'title_ko': instance.titleKo,
+      'summary': instance.summary,
+      'summary_ko': instance.summaryKo,
+      'image_url': instance.imageUrl,
+      'content_url': instance.contentUrl,
+      'publisher': instance.publisher,
+      'reason': instance.reason,
+      'importance': instance.importance,
+      'published_at': instance.publishedAt,
+      'sections': instance.sections,
+      'esg': instance.esg,
+      'companies': instance.companies,
+    };
+
+_$ESGImpl _$$ESGImplFromJson(Map<String, dynamic> json) => _$ESGImpl(
+      category: json['category'] as String,
+      score: (json['score'] as num).toDouble(),
+      confidenceScore: (json['confidence_score'] as num).toDouble(),
+    );
+
+Map<String, dynamic> _$$ESGImplToJson(_$ESGImpl instance) => <String, dynamic>{
+      'category': instance.category,
+      'score': instance.score,
+      'confidence_score': instance.confidenceScore,
     };

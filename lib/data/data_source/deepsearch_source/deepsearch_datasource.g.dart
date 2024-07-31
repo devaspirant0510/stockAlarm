@@ -23,7 +23,7 @@ class _DeepSearchDataSource implements DeepSearchDataSource {
   @override
   Future<NewsEntity> getAllDomesticArticle({
     String apiKey = Env.deepSearchApiKey,
-    String keyword = "인공지능 OR IT",
+    String keyword = "인공지능 OR 블록체인 OR 반도체",
   }) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{
@@ -54,9 +54,9 @@ class _DeepSearchDataSource implements DeepSearchDataSource {
   }
 
   @override
-  Future<NewsEntity> getAllGlobalArticle({
+  Future<GlobalNewsEntity> getAllGlobalArticle({
     String apiKey = Env.deepSearchApiKey,
-    String keyword = "인공지능 OR IT",
+    String keyword = "인공지능 OR 블록체인 OR 반도체",
   }) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{
@@ -66,7 +66,7 @@ class _DeepSearchDataSource implements DeepSearchDataSource {
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
     final _result = await _dio
-        .fetch<Map<String, dynamic>>(_setStreamType<NewsEntity>(Options(
+        .fetch<Map<String, dynamic>>(_setStreamType<GlobalNewsEntity>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
@@ -82,7 +82,40 @@ class _DeepSearchDataSource implements DeepSearchDataSource {
               _dio.options.baseUrl,
               baseUrl,
             ))));
-    final value = NewsEntity.fromJson(_result.data!);
+    final value = GlobalNewsEntity.fromJson(_result.data!);
+    return value;
+  }
+
+  @override
+  Future<GlobalNewsEntity> getAllTechStockArticle({
+    String apiKey = Env.deepSearchApiKey,
+    String symbols = "AAPL,MSFT,NVDA,META,TSLA,GOOGL,AMZN,NFLX,INTC,AMD",
+  }) async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{
+      r'api_key': apiKey,
+      r'symbols': symbols,
+    };
+    final _headers = <String, dynamic>{};
+    const Map<String, dynamic>? _data = null;
+    final _result = await _dio
+        .fetch<Map<String, dynamic>>(_setStreamType<GlobalNewsEntity>(Options(
+      method: 'GET',
+      headers: _headers,
+      extra: _extra,
+    )
+            .compose(
+              _dio.options,
+              'global-articles',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
+    final value = GlobalNewsEntity.fromJson(_result.data!);
     return value;
   }
 

@@ -18,6 +18,8 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$HomeState {
   List<StockModel> get mostTradedTicker => throw _privateConstructorUsedError;
   List<StockModel> get popularStocks => throw _privateConstructorUsedError;
+  AsyncValue<GlobalNewsEntity> get techNews =>
+      throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $HomeStateCopyWith<HomeState> get copyWith =>
@@ -30,7 +32,9 @@ abstract class $HomeStateCopyWith<$Res> {
       _$HomeStateCopyWithImpl<$Res, HomeState>;
   @useResult
   $Res call(
-      {List<StockModel> mostTradedTicker, List<StockModel> popularStocks});
+      {List<StockModel> mostTradedTicker,
+      List<StockModel> popularStocks,
+      AsyncValue<GlobalNewsEntity> techNews});
 }
 
 /// @nodoc
@@ -48,6 +52,7 @@ class _$HomeStateCopyWithImpl<$Res, $Val extends HomeState>
   $Res call({
     Object? mostTradedTicker = null,
     Object? popularStocks = null,
+    Object? techNews = null,
   }) {
     return _then(_value.copyWith(
       mostTradedTicker: null == mostTradedTicker
@@ -58,6 +63,10 @@ class _$HomeStateCopyWithImpl<$Res, $Val extends HomeState>
           ? _value.popularStocks
           : popularStocks // ignore: cast_nullable_to_non_nullable
               as List<StockModel>,
+      techNews: null == techNews
+          ? _value.techNews
+          : techNews // ignore: cast_nullable_to_non_nullable
+              as AsyncValue<GlobalNewsEntity>,
     ) as $Val);
   }
 }
@@ -71,7 +80,9 @@ abstract class _$$HomeStateImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {List<StockModel> mostTradedTicker, List<StockModel> popularStocks});
+      {List<StockModel> mostTradedTicker,
+      List<StockModel> popularStocks,
+      AsyncValue<GlobalNewsEntity> techNews});
 }
 
 /// @nodoc
@@ -87,6 +98,7 @@ class __$$HomeStateImplCopyWithImpl<$Res>
   $Res call({
     Object? mostTradedTicker = null,
     Object? popularStocks = null,
+    Object? techNews = null,
   }) {
     return _then(_$HomeStateImpl(
       mostTradedTicker: null == mostTradedTicker
@@ -97,6 +109,10 @@ class __$$HomeStateImplCopyWithImpl<$Res>
           ? _value._popularStocks
           : popularStocks // ignore: cast_nullable_to_non_nullable
               as List<StockModel>,
+      techNews: null == techNews
+          ? _value.techNews
+          : techNews // ignore: cast_nullable_to_non_nullable
+              as AsyncValue<GlobalNewsEntity>,
     ));
   }
 }
@@ -106,7 +122,8 @@ class __$$HomeStateImplCopyWithImpl<$Res>
 class _$HomeStateImpl implements _HomeState {
   const _$HomeStateImpl(
       {required final List<StockModel> mostTradedTicker,
-      required final List<StockModel> popularStocks})
+      required final List<StockModel> popularStocks,
+      this.techNews = const AsyncValue.loading()})
       : _mostTradedTicker = mostTradedTicker,
         _popularStocks = popularStocks;
 
@@ -128,8 +145,12 @@ class _$HomeStateImpl implements _HomeState {
   }
 
   @override
+  @JsonKey()
+  final AsyncValue<GlobalNewsEntity> techNews;
+
+  @override
   String toString() {
-    return 'HomeState(mostTradedTicker: $mostTradedTicker, popularStocks: $popularStocks)';
+    return 'HomeState(mostTradedTicker: $mostTradedTicker, popularStocks: $popularStocks, techNews: $techNews)';
   }
 
   @override
@@ -140,14 +161,17 @@ class _$HomeStateImpl implements _HomeState {
             const DeepCollectionEquality()
                 .equals(other._mostTradedTicker, _mostTradedTicker) &&
             const DeepCollectionEquality()
-                .equals(other._popularStocks, _popularStocks));
+                .equals(other._popularStocks, _popularStocks) &&
+            (identical(other.techNews, techNews) ||
+                other.techNews == techNews));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(_mostTradedTicker),
-      const DeepCollectionEquality().hash(_popularStocks));
+      const DeepCollectionEquality().hash(_popularStocks),
+      techNews);
 
   @JsonKey(ignore: true)
   @override
@@ -159,12 +183,15 @@ class _$HomeStateImpl implements _HomeState {
 abstract class _HomeState implements HomeState {
   const factory _HomeState(
       {required final List<StockModel> mostTradedTicker,
-      required final List<StockModel> popularStocks}) = _$HomeStateImpl;
+      required final List<StockModel> popularStocks,
+      final AsyncValue<GlobalNewsEntity> techNews}) = _$HomeStateImpl;
 
   @override
   List<StockModel> get mostTradedTicker;
   @override
   List<StockModel> get popularStocks;
+  @override
+  AsyncValue<GlobalNewsEntity> get techNews;
   @override
   @JsonKey(ignore: true)
   _$$HomeStateImplCopyWith<_$HomeStateImpl> get copyWith =>
@@ -1071,7 +1098,7 @@ abstract class _StockState implements StockState {
 /// @nodoc
 mixin _$NewsState {
   NewsEntity? get domesticNews => throw _privateConstructorUsedError;
-  NewsEntity? get globalNews => throw _privateConstructorUsedError;
+  GlobalNewsEntity? get globalNews => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $NewsStateCopyWith<NewsState> get copyWith =>
@@ -1083,10 +1110,10 @@ abstract class $NewsStateCopyWith<$Res> {
   factory $NewsStateCopyWith(NewsState value, $Res Function(NewsState) then) =
       _$NewsStateCopyWithImpl<$Res, NewsState>;
   @useResult
-  $Res call({NewsEntity? domesticNews, NewsEntity? globalNews});
+  $Res call({NewsEntity? domesticNews, GlobalNewsEntity? globalNews});
 
   $NewsEntityCopyWith<$Res>? get domesticNews;
-  $NewsEntityCopyWith<$Res>? get globalNews;
+  $GlobalNewsEntityCopyWith<$Res>? get globalNews;
 }
 
 /// @nodoc
@@ -1113,7 +1140,7 @@ class _$NewsStateCopyWithImpl<$Res, $Val extends NewsState>
       globalNews: freezed == globalNews
           ? _value.globalNews
           : globalNews // ignore: cast_nullable_to_non_nullable
-              as NewsEntity?,
+              as GlobalNewsEntity?,
     ) as $Val);
   }
 
@@ -1131,12 +1158,12 @@ class _$NewsStateCopyWithImpl<$Res, $Val extends NewsState>
 
   @override
   @pragma('vm:prefer-inline')
-  $NewsEntityCopyWith<$Res>? get globalNews {
+  $GlobalNewsEntityCopyWith<$Res>? get globalNews {
     if (_value.globalNews == null) {
       return null;
     }
 
-    return $NewsEntityCopyWith<$Res>(_value.globalNews!, (value) {
+    return $GlobalNewsEntityCopyWith<$Res>(_value.globalNews!, (value) {
       return _then(_value.copyWith(globalNews: value) as $Val);
     });
   }
@@ -1150,12 +1177,12 @@ abstract class _$$NewsStateImplCopyWith<$Res>
       __$$NewsStateImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({NewsEntity? domesticNews, NewsEntity? globalNews});
+  $Res call({NewsEntity? domesticNews, GlobalNewsEntity? globalNews});
 
   @override
   $NewsEntityCopyWith<$Res>? get domesticNews;
   @override
-  $NewsEntityCopyWith<$Res>? get globalNews;
+  $GlobalNewsEntityCopyWith<$Res>? get globalNews;
 }
 
 /// @nodoc
@@ -1180,7 +1207,7 @@ class __$$NewsStateImplCopyWithImpl<$Res>
       globalNews: freezed == globalNews
           ? _value.globalNews
           : globalNews // ignore: cast_nullable_to_non_nullable
-              as NewsEntity?,
+              as GlobalNewsEntity?,
     ));
   }
 }
@@ -1193,7 +1220,7 @@ class _$NewsStateImpl implements _NewsState {
   @override
   final NewsEntity? domesticNews;
   @override
-  final NewsEntity? globalNews;
+  final GlobalNewsEntity? globalNews;
 
   @override
   String toString() {
@@ -1224,12 +1251,12 @@ class _$NewsStateImpl implements _NewsState {
 abstract class _NewsState implements NewsState {
   const factory _NewsState(
       {final NewsEntity? domesticNews,
-      final NewsEntity? globalNews}) = _$NewsStateImpl;
+      final GlobalNewsEntity? globalNews}) = _$NewsStateImpl;
 
   @override
   NewsEntity? get domesticNews;
   @override
-  NewsEntity? get globalNews;
+  GlobalNewsEntity? get globalNews;
   @override
   @JsonKey(ignore: true)
   _$$NewsStateImplCopyWith<_$NewsStateImpl> get copyWith =>

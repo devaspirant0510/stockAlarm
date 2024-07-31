@@ -6,7 +6,7 @@ part of 'viewmodel_states.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$homeViewmodelHash() => r'5eec3ab23e540454fc78b52004bf128f92ec8f94';
+String _$homeViewmodelHash() => r'820f8978cda3b5a2e3711f22b5c7c84912e7e7d7';
 
 /// See also [HomeViewmodel].
 @ProviderFor(HomeViewmodel)
@@ -378,7 +378,7 @@ class _StockViewmodelProviderElement
   String get symbol => (origin as StockViewmodelProvider).symbol;
 }
 
-String _$newsViewmodelHash() => r'034992bf87ef66cf8c821fca2f4f3ec93c2f30d6';
+String _$newsViewmodelHash() => r'83131a9ee9de5d2e16fb3c3fc1bcd9a551fb570d';
 
 /// See also [NewsViewmodel].
 @ProviderFor(NewsViewmodel)

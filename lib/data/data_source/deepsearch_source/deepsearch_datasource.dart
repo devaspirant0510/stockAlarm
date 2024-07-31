@@ -14,12 +14,17 @@ abstract class DeepSearchDataSource {
   @GET("articles")
   Future<NewsEntity> getAllDomesticArticle({
     @Query("api_key") String apiKey = Env.deepSearchApiKey,
-    @Query("keyword") String keyword = "인공지능 OR IT",
+    @Query("keyword") String keyword = "인공지능 OR 블록체인 OR 반도체",
   });
 
   @GET("global-articles")
-  Future<NewsEntity> getAllGlobalArticle({
+  Future<GlobalNewsEntity> getAllGlobalArticle({
     @Query("api_key") String apiKey = Env.deepSearchApiKey,
-    @Query("keyword") String keyword = "인공지능 OR IT",
+    @Query("keyword") String keyword = "인공지능 OR 블록체인 OR 반도체",
   });
+  @GET("global-articles")
+  Future<GlobalNewsEntity> getAllTechStockArticle({
+    @Query("api_key") String apiKey = Env.deepSearchApiKey,
+    @Query("symbols") String symbols = "AAPL,MSFT,NVDA,META,TSLA,GOOGL,AMZN,NFLX,INTC,AMD"
+});
 }

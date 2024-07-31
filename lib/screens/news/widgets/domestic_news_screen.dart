@@ -46,6 +46,8 @@ class DomesticNewsScreen extends ConsumerWidget {
               );
             },
             error: (error, stackTrace) {
+              print(error);
+              print(stackTrace);
               return Text(error.toString());
             },
             loading: () => CircularProgressIndicator())

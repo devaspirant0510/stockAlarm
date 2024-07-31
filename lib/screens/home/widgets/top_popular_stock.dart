@@ -20,9 +20,9 @@ class TopPopularStock extends ConsumerWidget {
             Text("인기 주식",style: TextStyle(fontSize: 20),),
           ],
         ),
-        SizedBox(
-          height: 600,
+        Expanded(
           child: ListView.builder(
+            physics: NeverScrollableScrollPhysics(),
             itemCount: data.length,
             itemBuilder: (context, index) {
               return StockItem(model: data[index]);

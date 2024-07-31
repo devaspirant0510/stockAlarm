@@ -113,8 +113,13 @@ class RepositoryImpl implements RemoteRepository, LocalRepository {
   }
 
   @override
-  Future<NewsEntity> getAllGlobalArticle() {
+  Future<GlobalNewsEntity> getAllGlobalArticle() {
     return deepSearchDataSource.getAllGlobalArticle();
+  }
+
+  @override
+  Future<GlobalNewsEntity> getAllTechArticle() {
+    return deepSearchDataSource.getAllTechStockArticle();
   }
 }
 

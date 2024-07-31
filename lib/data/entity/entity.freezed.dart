@@ -3353,7 +3353,7 @@ mixin _$NewsEntity {
   int get page => throw _privateConstructorUsedError;
   @JsonKey(name: 'page_size')
   int get pageSize => throw _privateConstructorUsedError;
-  List<NewsItem> get data => throw _privateConstructorUsedError;
+  List<DomesticNewsEntity> get data => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -3373,7 +3373,7 @@ abstract class $NewsEntityCopyWith<$Res> {
       @JsonKey(name: 'total_pages') int totalPages,
       int page,
       @JsonKey(name: 'page_size') int pageSize,
-      List<NewsItem> data});
+      List<DomesticNewsEntity> data});
 
   $DetailCopyWith<$Res> get detail;
 }
@@ -3422,7 +3422,7 @@ class _$NewsEntityCopyWithImpl<$Res, $Val extends NewsEntity>
       data: null == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
-              as List<NewsItem>,
+              as List<DomesticNewsEntity>,
     ) as $Val);
   }
 
@@ -3449,7 +3449,7 @@ abstract class _$$NewsEntityImplCopyWith<$Res>
       @JsonKey(name: 'total_pages') int totalPages,
       int page,
       @JsonKey(name: 'page_size') int pageSize,
-      List<NewsItem> data});
+      List<DomesticNewsEntity> data});
 
   @override
   $DetailCopyWith<$Res> get detail;
@@ -3497,7 +3497,7 @@ class __$$NewsEntityImplCopyWithImpl<$Res>
       data: null == data
           ? _value._data
           : data // ignore: cast_nullable_to_non_nullable
-              as List<NewsItem>,
+              as List<DomesticNewsEntity>,
     ));
   }
 }
@@ -3511,7 +3511,7 @@ class _$NewsEntityImpl implements _NewsEntity {
       @JsonKey(name: 'total_pages') required this.totalPages,
       required this.page,
       @JsonKey(name: 'page_size') required this.pageSize,
-      required final List<NewsItem> data})
+      required final List<DomesticNewsEntity> data})
       : _data = data;
 
   factory _$NewsEntityImpl.fromJson(Map<String, dynamic> json) =>
@@ -3530,9 +3530,9 @@ class _$NewsEntityImpl implements _NewsEntity {
   @override
   @JsonKey(name: 'page_size')
   final int pageSize;
-  final List<NewsItem> _data;
+  final List<DomesticNewsEntity> _data;
   @override
-  List<NewsItem> get data {
+  List<DomesticNewsEntity> get data {
     if (_data is EqualUnmodifiableListView) return _data;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_data);
@@ -3585,7 +3585,7 @@ abstract class _NewsEntity implements NewsEntity {
       @JsonKey(name: 'total_pages') required final int totalPages,
       required final int page,
       @JsonKey(name: 'page_size') required final int pageSize,
-      required final List<NewsItem> data}) = _$NewsEntityImpl;
+      required final List<DomesticNewsEntity> data}) = _$NewsEntityImpl;
 
   factory _NewsEntity.fromJson(Map<String, dynamic> json) =
       _$NewsEntityImpl.fromJson;
@@ -3604,10 +3604,283 @@ abstract class _NewsEntity implements NewsEntity {
   @JsonKey(name: 'page_size')
   int get pageSize;
   @override
-  List<NewsItem> get data;
+  List<DomesticNewsEntity> get data;
   @override
   @JsonKey(ignore: true)
   _$$NewsEntityImplCopyWith<_$NewsEntityImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+GlobalNewsEntity _$GlobalNewsEntityFromJson(Map<String, dynamic> json) {
+  return _GlobalNewsEntity.fromJson(json);
+}
+
+/// @nodoc
+mixin _$GlobalNewsEntity {
+  Detail get detail => throw _privateConstructorUsedError;
+  @JsonKey(name: 'total_items')
+  int get totalItems => throw _privateConstructorUsedError;
+  @JsonKey(name: 'total_pages')
+  int get totalPages => throw _privateConstructorUsedError;
+  int get page => throw _privateConstructorUsedError;
+  @JsonKey(name: 'page_size')
+  int get pageSize => throw _privateConstructorUsedError;
+  List<GlobalNewsItemEntity> get data => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $GlobalNewsEntityCopyWith<GlobalNewsEntity> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $GlobalNewsEntityCopyWith<$Res> {
+  factory $GlobalNewsEntityCopyWith(
+          GlobalNewsEntity value, $Res Function(GlobalNewsEntity) then) =
+      _$GlobalNewsEntityCopyWithImpl<$Res, GlobalNewsEntity>;
+  @useResult
+  $Res call(
+      {Detail detail,
+      @JsonKey(name: 'total_items') int totalItems,
+      @JsonKey(name: 'total_pages') int totalPages,
+      int page,
+      @JsonKey(name: 'page_size') int pageSize,
+      List<GlobalNewsItemEntity> data});
+
+  $DetailCopyWith<$Res> get detail;
+}
+
+/// @nodoc
+class _$GlobalNewsEntityCopyWithImpl<$Res, $Val extends GlobalNewsEntity>
+    implements $GlobalNewsEntityCopyWith<$Res> {
+  _$GlobalNewsEntityCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? detail = null,
+    Object? totalItems = null,
+    Object? totalPages = null,
+    Object? page = null,
+    Object? pageSize = null,
+    Object? data = null,
+  }) {
+    return _then(_value.copyWith(
+      detail: null == detail
+          ? _value.detail
+          : detail // ignore: cast_nullable_to_non_nullable
+              as Detail,
+      totalItems: null == totalItems
+          ? _value.totalItems
+          : totalItems // ignore: cast_nullable_to_non_nullable
+              as int,
+      totalPages: null == totalPages
+          ? _value.totalPages
+          : totalPages // ignore: cast_nullable_to_non_nullable
+              as int,
+      page: null == page
+          ? _value.page
+          : page // ignore: cast_nullable_to_non_nullable
+              as int,
+      pageSize: null == pageSize
+          ? _value.pageSize
+          : pageSize // ignore: cast_nullable_to_non_nullable
+              as int,
+      data: null == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as List<GlobalNewsItemEntity>,
+    ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $DetailCopyWith<$Res> get detail {
+    return $DetailCopyWith<$Res>(_value.detail, (value) {
+      return _then(_value.copyWith(detail: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$GlobalNewsEntityImplCopyWith<$Res>
+    implements $GlobalNewsEntityCopyWith<$Res> {
+  factory _$$GlobalNewsEntityImplCopyWith(_$GlobalNewsEntityImpl value,
+          $Res Function(_$GlobalNewsEntityImpl) then) =
+      __$$GlobalNewsEntityImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {Detail detail,
+      @JsonKey(name: 'total_items') int totalItems,
+      @JsonKey(name: 'total_pages') int totalPages,
+      int page,
+      @JsonKey(name: 'page_size') int pageSize,
+      List<GlobalNewsItemEntity> data});
+
+  @override
+  $DetailCopyWith<$Res> get detail;
+}
+
+/// @nodoc
+class __$$GlobalNewsEntityImplCopyWithImpl<$Res>
+    extends _$GlobalNewsEntityCopyWithImpl<$Res, _$GlobalNewsEntityImpl>
+    implements _$$GlobalNewsEntityImplCopyWith<$Res> {
+  __$$GlobalNewsEntityImplCopyWithImpl(_$GlobalNewsEntityImpl _value,
+      $Res Function(_$GlobalNewsEntityImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? detail = null,
+    Object? totalItems = null,
+    Object? totalPages = null,
+    Object? page = null,
+    Object? pageSize = null,
+    Object? data = null,
+  }) {
+    return _then(_$GlobalNewsEntityImpl(
+      detail: null == detail
+          ? _value.detail
+          : detail // ignore: cast_nullable_to_non_nullable
+              as Detail,
+      totalItems: null == totalItems
+          ? _value.totalItems
+          : totalItems // ignore: cast_nullable_to_non_nullable
+              as int,
+      totalPages: null == totalPages
+          ? _value.totalPages
+          : totalPages // ignore: cast_nullable_to_non_nullable
+              as int,
+      page: null == page
+          ? _value.page
+          : page // ignore: cast_nullable_to_non_nullable
+              as int,
+      pageSize: null == pageSize
+          ? _value.pageSize
+          : pageSize // ignore: cast_nullable_to_non_nullable
+              as int,
+      data: null == data
+          ? _value._data
+          : data // ignore: cast_nullable_to_non_nullable
+              as List<GlobalNewsItemEntity>,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$GlobalNewsEntityImpl implements _GlobalNewsEntity {
+  const _$GlobalNewsEntityImpl(
+      {required this.detail,
+      @JsonKey(name: 'total_items') required this.totalItems,
+      @JsonKey(name: 'total_pages') required this.totalPages,
+      required this.page,
+      @JsonKey(name: 'page_size') required this.pageSize,
+      required final List<GlobalNewsItemEntity> data})
+      : _data = data;
+
+  factory _$GlobalNewsEntityImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GlobalNewsEntityImplFromJson(json);
+
+  @override
+  final Detail detail;
+  @override
+  @JsonKey(name: 'total_items')
+  final int totalItems;
+  @override
+  @JsonKey(name: 'total_pages')
+  final int totalPages;
+  @override
+  final int page;
+  @override
+  @JsonKey(name: 'page_size')
+  final int pageSize;
+  final List<GlobalNewsItemEntity> _data;
+  @override
+  List<GlobalNewsItemEntity> get data {
+    if (_data is EqualUnmodifiableListView) return _data;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_data);
+  }
+
+  @override
+  String toString() {
+    return 'GlobalNewsEntity(detail: $detail, totalItems: $totalItems, totalPages: $totalPages, page: $page, pageSize: $pageSize, data: $data)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GlobalNewsEntityImpl &&
+            (identical(other.detail, detail) || other.detail == detail) &&
+            (identical(other.totalItems, totalItems) ||
+                other.totalItems == totalItems) &&
+            (identical(other.totalPages, totalPages) ||
+                other.totalPages == totalPages) &&
+            (identical(other.page, page) || other.page == page) &&
+            (identical(other.pageSize, pageSize) ||
+                other.pageSize == pageSize) &&
+            const DeepCollectionEquality().equals(other._data, _data));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, detail, totalItems, totalPages,
+      page, pageSize, const DeepCollectionEquality().hash(_data));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$GlobalNewsEntityImplCopyWith<_$GlobalNewsEntityImpl> get copyWith =>
+      __$$GlobalNewsEntityImplCopyWithImpl<_$GlobalNewsEntityImpl>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$GlobalNewsEntityImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _GlobalNewsEntity implements GlobalNewsEntity {
+  const factory _GlobalNewsEntity(
+      {required final Detail detail,
+      @JsonKey(name: 'total_items') required final int totalItems,
+      @JsonKey(name: 'total_pages') required final int totalPages,
+      required final int page,
+      @JsonKey(name: 'page_size') required final int pageSize,
+      required final List<GlobalNewsItemEntity> data}) = _$GlobalNewsEntityImpl;
+
+  factory _GlobalNewsEntity.fromJson(Map<String, dynamic> json) =
+      _$GlobalNewsEntityImpl.fromJson;
+
+  @override
+  Detail get detail;
+  @override
+  @JsonKey(name: 'total_items')
+  int get totalItems;
+  @override
+  @JsonKey(name: 'total_pages')
+  int get totalPages;
+  @override
+  int get page;
+  @override
+  @JsonKey(name: 'page_size')
+  int get pageSize;
+  @override
+  List<GlobalNewsItemEntity> get data;
+  @override
+  @JsonKey(ignore: true)
+  _$$GlobalNewsEntityImplCopyWith<_$GlobalNewsEntityImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -3779,20 +4052,19 @@ abstract class _Detail implements Detail {
       throw _privateConstructorUsedError;
 }
 
-NewsItem _$NewsItemFromJson(Map<String, dynamic> json) {
-  return _NewsItem.fromJson(json);
+DomesticNewsEntity _$DomesticNewsEntityFromJson(Map<String, dynamic> json) {
+  return _DomesticNewsEntity.fromJson(json);
 }
 
 /// @nodoc
-mixin _$NewsItem {
-  String get id => throw _privateConstructorUsedError;
+mixin _$DomesticNewsEntity {
   List<String> get sections => throw _privateConstructorUsedError;
   String get title => throw _privateConstructorUsedError;
   String get publisher => throw _privateConstructorUsedError;
   String get author => throw _privateConstructorUsedError;
   String get summary => throw _privateConstructorUsedError;
   @JsonKey(name: "image_url")
-  String get imageUrl => throw _privateConstructorUsedError;
+  String? get imageUrl => throw _privateConstructorUsedError;
   @JsonKey(name: "content_url")
   String get contentUrl => throw _privateConstructorUsedError;
   EsG? get esg => throw _privateConstructorUsedError;
@@ -3803,23 +4075,23 @@ mixin _$NewsItem {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $NewsItemCopyWith<NewsItem> get copyWith =>
+  $DomesticNewsEntityCopyWith<DomesticNewsEntity> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $NewsItemCopyWith<$Res> {
-  factory $NewsItemCopyWith(NewsItem value, $Res Function(NewsItem) then) =
-      _$NewsItemCopyWithImpl<$Res, NewsItem>;
+abstract class $DomesticNewsEntityCopyWith<$Res> {
+  factory $DomesticNewsEntityCopyWith(
+          DomesticNewsEntity value, $Res Function(DomesticNewsEntity) then) =
+      _$DomesticNewsEntityCopyWithImpl<$Res, DomesticNewsEntity>;
   @useResult
   $Res call(
-      {String id,
-      List<String> sections,
+      {List<String> sections,
       String title,
       String publisher,
       String author,
       String summary,
-      @JsonKey(name: "image_url") String imageUrl,
+      @JsonKey(name: "image_url") String? imageUrl,
       @JsonKey(name: "content_url") String contentUrl,
       EsG? esg,
       List<Company>? companies,
@@ -3830,9 +4102,9 @@ abstract class $NewsItemCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$NewsItemCopyWithImpl<$Res, $Val extends NewsItem>
-    implements $NewsItemCopyWith<$Res> {
-  _$NewsItemCopyWithImpl(this._value, this._then);
+class _$DomesticNewsEntityCopyWithImpl<$Res, $Val extends DomesticNewsEntity>
+    implements $DomesticNewsEntityCopyWith<$Res> {
+  _$DomesticNewsEntityCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -3842,13 +4114,12 @@ class _$NewsItemCopyWithImpl<$Res, $Val extends NewsItem>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
     Object? sections = null,
     Object? title = null,
     Object? publisher = null,
     Object? author = null,
     Object? summary = null,
-    Object? imageUrl = null,
+    Object? imageUrl = freezed,
     Object? contentUrl = null,
     Object? esg = freezed,
     Object? companies = freezed,
@@ -3856,10 +4127,6 @@ class _$NewsItemCopyWithImpl<$Res, $Val extends NewsItem>
     Object? publishedAt = null,
   }) {
     return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
       sections: null == sections
           ? _value.sections
           : sections // ignore: cast_nullable_to_non_nullable
@@ -3880,10 +4147,10 @@ class _$NewsItemCopyWithImpl<$Res, $Val extends NewsItem>
           ? _value.summary
           : summary // ignore: cast_nullable_to_non_nullable
               as String,
-      imageUrl: null == imageUrl
+      imageUrl: freezed == imageUrl
           ? _value.imageUrl
           : imageUrl // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       contentUrl: null == contentUrl
           ? _value.contentUrl
           : contentUrl // ignore: cast_nullable_to_non_nullable
@@ -3921,21 +4188,20 @@ class _$NewsItemCopyWithImpl<$Res, $Val extends NewsItem>
 }
 
 /// @nodoc
-abstract class _$$NewsItemImplCopyWith<$Res>
-    implements $NewsItemCopyWith<$Res> {
-  factory _$$NewsItemImplCopyWith(
-          _$NewsItemImpl value, $Res Function(_$NewsItemImpl) then) =
-      __$$NewsItemImplCopyWithImpl<$Res>;
+abstract class _$$DomesticNewsEntityImplCopyWith<$Res>
+    implements $DomesticNewsEntityCopyWith<$Res> {
+  factory _$$DomesticNewsEntityImplCopyWith(_$DomesticNewsEntityImpl value,
+          $Res Function(_$DomesticNewsEntityImpl) then) =
+      __$$DomesticNewsEntityImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
-      {String id,
-      List<String> sections,
+      {List<String> sections,
       String title,
       String publisher,
       String author,
       String summary,
-      @JsonKey(name: "image_url") String imageUrl,
+      @JsonKey(name: "image_url") String? imageUrl,
       @JsonKey(name: "content_url") String contentUrl,
       EsG? esg,
       List<Company>? companies,
@@ -3947,34 +4213,29 @@ abstract class _$$NewsItemImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$NewsItemImplCopyWithImpl<$Res>
-    extends _$NewsItemCopyWithImpl<$Res, _$NewsItemImpl>
-    implements _$$NewsItemImplCopyWith<$Res> {
-  __$$NewsItemImplCopyWithImpl(
-      _$NewsItemImpl _value, $Res Function(_$NewsItemImpl) _then)
+class __$$DomesticNewsEntityImplCopyWithImpl<$Res>
+    extends _$DomesticNewsEntityCopyWithImpl<$Res, _$DomesticNewsEntityImpl>
+    implements _$$DomesticNewsEntityImplCopyWith<$Res> {
+  __$$DomesticNewsEntityImplCopyWithImpl(_$DomesticNewsEntityImpl _value,
+      $Res Function(_$DomesticNewsEntityImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
     Object? sections = null,
     Object? title = null,
     Object? publisher = null,
     Object? author = null,
     Object? summary = null,
-    Object? imageUrl = null,
+    Object? imageUrl = freezed,
     Object? contentUrl = null,
     Object? esg = freezed,
     Object? companies = freezed,
     Object? entities = freezed,
     Object? publishedAt = null,
   }) {
-    return _then(_$NewsItemImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
+    return _then(_$DomesticNewsEntityImpl(
       sections: null == sections
           ? _value._sections
           : sections // ignore: cast_nullable_to_non_nullable
@@ -3995,10 +4256,10 @@ class __$$NewsItemImplCopyWithImpl<$Res>
           ? _value.summary
           : summary // ignore: cast_nullable_to_non_nullable
               as String,
-      imageUrl: null == imageUrl
+      imageUrl: freezed == imageUrl
           ? _value.imageUrl
           : imageUrl // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       contentUrl: null == contentUrl
           ? _value.contentUrl
           : contentUrl // ignore: cast_nullable_to_non_nullable
@@ -4025,15 +4286,14 @@ class __$$NewsItemImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$NewsItemImpl implements _NewsItem {
-  const _$NewsItemImpl(
-      {required this.id,
-      required final List<String> sections,
+class _$DomesticNewsEntityImpl implements _DomesticNewsEntity {
+  const _$DomesticNewsEntityImpl(
+      {required final List<String> sections,
       required this.title,
       required this.publisher,
       required this.author,
       required this.summary,
-      @JsonKey(name: "image_url") required this.imageUrl,
+      @JsonKey(name: "image_url") this.imageUrl,
       @JsonKey(name: "content_url") required this.contentUrl,
       this.esg,
       final List<Company>? companies,
@@ -4043,11 +4303,9 @@ class _$NewsItemImpl implements _NewsItem {
         _companies = companies,
         _entities = entities;
 
-  factory _$NewsItemImpl.fromJson(Map<String, dynamic> json) =>
-      _$$NewsItemImplFromJson(json);
+  factory _$DomesticNewsEntityImpl.fromJson(Map<String, dynamic> json) =>
+      _$$DomesticNewsEntityImplFromJson(json);
 
-  @override
-  final String id;
   final List<String> _sections;
   @override
   List<String> get sections {
@@ -4066,7 +4324,7 @@ class _$NewsItemImpl implements _NewsItem {
   final String summary;
   @override
   @JsonKey(name: "image_url")
-  final String imageUrl;
+  final String? imageUrl;
   @override
   @JsonKey(name: "content_url")
   final String contentUrl;
@@ -4098,15 +4356,14 @@ class _$NewsItemImpl implements _NewsItem {
 
   @override
   String toString() {
-    return 'NewsItem(id: $id, sections: $sections, title: $title, publisher: $publisher, author: $author, summary: $summary, imageUrl: $imageUrl, contentUrl: $contentUrl, esg: $esg, companies: $companies, entities: $entities, publishedAt: $publishedAt)';
+    return 'DomesticNewsEntity(sections: $sections, title: $title, publisher: $publisher, author: $author, summary: $summary, imageUrl: $imageUrl, contentUrl: $contentUrl, esg: $esg, companies: $companies, entities: $entities, publishedAt: $publishedAt)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$NewsItemImpl &&
-            (identical(other.id, id) || other.id == id) &&
+            other is _$DomesticNewsEntityImpl &&
             const DeepCollectionEquality().equals(other._sections, _sections) &&
             (identical(other.title, title) || other.title == title) &&
             (identical(other.publisher, publisher) ||
@@ -4129,7 +4386,6 @@ class _$NewsItemImpl implements _NewsItem {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      id,
       const DeepCollectionEquality().hash(_sections),
       title,
       publisher,
@@ -4145,38 +4401,36 @@ class _$NewsItemImpl implements _NewsItem {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$NewsItemImplCopyWith<_$NewsItemImpl> get copyWith =>
-      __$$NewsItemImplCopyWithImpl<_$NewsItemImpl>(this, _$identity);
+  _$$DomesticNewsEntityImplCopyWith<_$DomesticNewsEntityImpl> get copyWith =>
+      __$$DomesticNewsEntityImplCopyWithImpl<_$DomesticNewsEntityImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$NewsItemImplToJson(
+    return _$$DomesticNewsEntityImplToJson(
       this,
     );
   }
 }
 
-abstract class _NewsItem implements NewsItem {
-  const factory _NewsItem(
-          {required final String id,
-          required final List<String> sections,
+abstract class _DomesticNewsEntity implements DomesticNewsEntity {
+  const factory _DomesticNewsEntity(
+          {required final List<String> sections,
           required final String title,
           required final String publisher,
           required final String author,
           required final String summary,
-          @JsonKey(name: "image_url") required final String imageUrl,
+          @JsonKey(name: "image_url") final String? imageUrl,
           @JsonKey(name: "content_url") required final String contentUrl,
           final EsG? esg,
           final List<Company>? companies,
           final List<Entity>? entities,
           @JsonKey(name: "published_at") required final String publishedAt}) =
-      _$NewsItemImpl;
+      _$DomesticNewsEntityImpl;
 
-  factory _NewsItem.fromJson(Map<String, dynamic> json) =
-      _$NewsItemImpl.fromJson;
+  factory _DomesticNewsEntity.fromJson(Map<String, dynamic> json) =
+      _$DomesticNewsEntityImpl.fromJson;
 
-  @override
-  String get id;
   @override
   List<String> get sections;
   @override
@@ -4189,7 +4443,7 @@ abstract class _NewsItem implements NewsItem {
   String get summary;
   @override
   @JsonKey(name: "image_url")
-  String get imageUrl;
+  String? get imageUrl;
   @override
   @JsonKey(name: "content_url")
   String get contentUrl;
@@ -4204,7 +4458,7 @@ abstract class _NewsItem implements NewsItem {
   String get publishedAt;
   @override
   @JsonKey(ignore: true)
-  _$$NewsItemImplCopyWith<_$NewsItemImpl> get copyWith =>
+  _$$DomesticNewsEntityImplCopyWith<_$DomesticNewsEntityImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -5059,5 +5313,644 @@ abstract class _Entity implements Entity {
   @override
   @JsonKey(ignore: true)
   _$$EntityImplCopyWith<_$EntityImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+GlobalNewsItemEntity _$GlobalNewsItemEntityFromJson(Map<String, dynamic> json) {
+  return _GlobalNewsItemEntity.fromJson(json);
+}
+
+/// @nodoc
+mixin _$GlobalNewsItemEntity {
+  int get id => throw _privateConstructorUsedError;
+  String get title => throw _privateConstructorUsedError;
+  @JsonKey(name: 'title_ko')
+  String get titleKo => throw _privateConstructorUsedError;
+  String get summary => throw _privateConstructorUsedError;
+  @JsonKey(name: 'summary_ko')
+  String get summaryKo => throw _privateConstructorUsedError;
+  @JsonKey(name: 'image_url')
+  String get imageUrl => throw _privateConstructorUsedError;
+  @JsonKey(name: 'content_url')
+  String get contentUrl => throw _privateConstructorUsedError;
+  String get publisher => throw _privateConstructorUsedError;
+  String? get reason => throw _privateConstructorUsedError;
+  String? get importance => throw _privateConstructorUsedError;
+  @JsonKey(name: 'published_at')
+  String get publishedAt => throw _privateConstructorUsedError;
+  List<String> get sections => throw _privateConstructorUsedError;
+  List<ESG> get esg => throw _privateConstructorUsedError;
+  List<Company> get companies => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $GlobalNewsItemEntityCopyWith<GlobalNewsItemEntity> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $GlobalNewsItemEntityCopyWith<$Res> {
+  factory $GlobalNewsItemEntityCopyWith(GlobalNewsItemEntity value,
+          $Res Function(GlobalNewsItemEntity) then) =
+      _$GlobalNewsItemEntityCopyWithImpl<$Res, GlobalNewsItemEntity>;
+  @useResult
+  $Res call(
+      {int id,
+      String title,
+      @JsonKey(name: 'title_ko') String titleKo,
+      String summary,
+      @JsonKey(name: 'summary_ko') String summaryKo,
+      @JsonKey(name: 'image_url') String imageUrl,
+      @JsonKey(name: 'content_url') String contentUrl,
+      String publisher,
+      String? reason,
+      String? importance,
+      @JsonKey(name: 'published_at') String publishedAt,
+      List<String> sections,
+      List<ESG> esg,
+      List<Company> companies});
+}
+
+/// @nodoc
+class _$GlobalNewsItemEntityCopyWithImpl<$Res,
+        $Val extends GlobalNewsItemEntity>
+    implements $GlobalNewsItemEntityCopyWith<$Res> {
+  _$GlobalNewsItemEntityCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = null,
+    Object? title = null,
+    Object? titleKo = null,
+    Object? summary = null,
+    Object? summaryKo = null,
+    Object? imageUrl = null,
+    Object? contentUrl = null,
+    Object? publisher = null,
+    Object? reason = freezed,
+    Object? importance = freezed,
+    Object? publishedAt = null,
+    Object? sections = null,
+    Object? esg = null,
+    Object? companies = null,
+  }) {
+    return _then(_value.copyWith(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      title: null == title
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String,
+      titleKo: null == titleKo
+          ? _value.titleKo
+          : titleKo // ignore: cast_nullable_to_non_nullable
+              as String,
+      summary: null == summary
+          ? _value.summary
+          : summary // ignore: cast_nullable_to_non_nullable
+              as String,
+      summaryKo: null == summaryKo
+          ? _value.summaryKo
+          : summaryKo // ignore: cast_nullable_to_non_nullable
+              as String,
+      imageUrl: null == imageUrl
+          ? _value.imageUrl
+          : imageUrl // ignore: cast_nullable_to_non_nullable
+              as String,
+      contentUrl: null == contentUrl
+          ? _value.contentUrl
+          : contentUrl // ignore: cast_nullable_to_non_nullable
+              as String,
+      publisher: null == publisher
+          ? _value.publisher
+          : publisher // ignore: cast_nullable_to_non_nullable
+              as String,
+      reason: freezed == reason
+          ? _value.reason
+          : reason // ignore: cast_nullable_to_non_nullable
+              as String?,
+      importance: freezed == importance
+          ? _value.importance
+          : importance // ignore: cast_nullable_to_non_nullable
+              as String?,
+      publishedAt: null == publishedAt
+          ? _value.publishedAt
+          : publishedAt // ignore: cast_nullable_to_non_nullable
+              as String,
+      sections: null == sections
+          ? _value.sections
+          : sections // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      esg: null == esg
+          ? _value.esg
+          : esg // ignore: cast_nullable_to_non_nullable
+              as List<ESG>,
+      companies: null == companies
+          ? _value.companies
+          : companies // ignore: cast_nullable_to_non_nullable
+              as List<Company>,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$GlobalNewsItemEntityImplCopyWith<$Res>
+    implements $GlobalNewsItemEntityCopyWith<$Res> {
+  factory _$$GlobalNewsItemEntityImplCopyWith(_$GlobalNewsItemEntityImpl value,
+          $Res Function(_$GlobalNewsItemEntityImpl) then) =
+      __$$GlobalNewsItemEntityImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {int id,
+      String title,
+      @JsonKey(name: 'title_ko') String titleKo,
+      String summary,
+      @JsonKey(name: 'summary_ko') String summaryKo,
+      @JsonKey(name: 'image_url') String imageUrl,
+      @JsonKey(name: 'content_url') String contentUrl,
+      String publisher,
+      String? reason,
+      String? importance,
+      @JsonKey(name: 'published_at') String publishedAt,
+      List<String> sections,
+      List<ESG> esg,
+      List<Company> companies});
+}
+
+/// @nodoc
+class __$$GlobalNewsItemEntityImplCopyWithImpl<$Res>
+    extends _$GlobalNewsItemEntityCopyWithImpl<$Res, _$GlobalNewsItemEntityImpl>
+    implements _$$GlobalNewsItemEntityImplCopyWith<$Res> {
+  __$$GlobalNewsItemEntityImplCopyWithImpl(_$GlobalNewsItemEntityImpl _value,
+      $Res Function(_$GlobalNewsItemEntityImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = null,
+    Object? title = null,
+    Object? titleKo = null,
+    Object? summary = null,
+    Object? summaryKo = null,
+    Object? imageUrl = null,
+    Object? contentUrl = null,
+    Object? publisher = null,
+    Object? reason = freezed,
+    Object? importance = freezed,
+    Object? publishedAt = null,
+    Object? sections = null,
+    Object? esg = null,
+    Object? companies = null,
+  }) {
+    return _then(_$GlobalNewsItemEntityImpl(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      title: null == title
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String,
+      titleKo: null == titleKo
+          ? _value.titleKo
+          : titleKo // ignore: cast_nullable_to_non_nullable
+              as String,
+      summary: null == summary
+          ? _value.summary
+          : summary // ignore: cast_nullable_to_non_nullable
+              as String,
+      summaryKo: null == summaryKo
+          ? _value.summaryKo
+          : summaryKo // ignore: cast_nullable_to_non_nullable
+              as String,
+      imageUrl: null == imageUrl
+          ? _value.imageUrl
+          : imageUrl // ignore: cast_nullable_to_non_nullable
+              as String,
+      contentUrl: null == contentUrl
+          ? _value.contentUrl
+          : contentUrl // ignore: cast_nullable_to_non_nullable
+              as String,
+      publisher: null == publisher
+          ? _value.publisher
+          : publisher // ignore: cast_nullable_to_non_nullable
+              as String,
+      reason: freezed == reason
+          ? _value.reason
+          : reason // ignore: cast_nullable_to_non_nullable
+              as String?,
+      importance: freezed == importance
+          ? _value.importance
+          : importance // ignore: cast_nullable_to_non_nullable
+              as String?,
+      publishedAt: null == publishedAt
+          ? _value.publishedAt
+          : publishedAt // ignore: cast_nullable_to_non_nullable
+              as String,
+      sections: null == sections
+          ? _value._sections
+          : sections // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      esg: null == esg
+          ? _value._esg
+          : esg // ignore: cast_nullable_to_non_nullable
+              as List<ESG>,
+      companies: null == companies
+          ? _value._companies
+          : companies // ignore: cast_nullable_to_non_nullable
+              as List<Company>,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$GlobalNewsItemEntityImpl implements _GlobalNewsItemEntity {
+  const _$GlobalNewsItemEntityImpl(
+      {required this.id,
+      required this.title,
+      @JsonKey(name: 'title_ko') required this.titleKo,
+      required this.summary,
+      @JsonKey(name: 'summary_ko') required this.summaryKo,
+      @JsonKey(name: 'image_url') required this.imageUrl,
+      @JsonKey(name: 'content_url') required this.contentUrl,
+      required this.publisher,
+      this.reason,
+      this.importance,
+      @JsonKey(name: 'published_at') required this.publishedAt,
+      required final List<String> sections,
+      required final List<ESG> esg,
+      required final List<Company> companies})
+      : _sections = sections,
+        _esg = esg,
+        _companies = companies;
+
+  factory _$GlobalNewsItemEntityImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GlobalNewsItemEntityImplFromJson(json);
+
+  @override
+  final int id;
+  @override
+  final String title;
+  @override
+  @JsonKey(name: 'title_ko')
+  final String titleKo;
+  @override
+  final String summary;
+  @override
+  @JsonKey(name: 'summary_ko')
+  final String summaryKo;
+  @override
+  @JsonKey(name: 'image_url')
+  final String imageUrl;
+  @override
+  @JsonKey(name: 'content_url')
+  final String contentUrl;
+  @override
+  final String publisher;
+  @override
+  final String? reason;
+  @override
+  final String? importance;
+  @override
+  @JsonKey(name: 'published_at')
+  final String publishedAt;
+  final List<String> _sections;
+  @override
+  List<String> get sections {
+    if (_sections is EqualUnmodifiableListView) return _sections;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_sections);
+  }
+
+  final List<ESG> _esg;
+  @override
+  List<ESG> get esg {
+    if (_esg is EqualUnmodifiableListView) return _esg;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_esg);
+  }
+
+  final List<Company> _companies;
+  @override
+  List<Company> get companies {
+    if (_companies is EqualUnmodifiableListView) return _companies;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_companies);
+  }
+
+  @override
+  String toString() {
+    return 'GlobalNewsItemEntity(id: $id, title: $title, titleKo: $titleKo, summary: $summary, summaryKo: $summaryKo, imageUrl: $imageUrl, contentUrl: $contentUrl, publisher: $publisher, reason: $reason, importance: $importance, publishedAt: $publishedAt, sections: $sections, esg: $esg, companies: $companies)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GlobalNewsItemEntityImpl &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.title, title) || other.title == title) &&
+            (identical(other.titleKo, titleKo) || other.titleKo == titleKo) &&
+            (identical(other.summary, summary) || other.summary == summary) &&
+            (identical(other.summaryKo, summaryKo) ||
+                other.summaryKo == summaryKo) &&
+            (identical(other.imageUrl, imageUrl) ||
+                other.imageUrl == imageUrl) &&
+            (identical(other.contentUrl, contentUrl) ||
+                other.contentUrl == contentUrl) &&
+            (identical(other.publisher, publisher) ||
+                other.publisher == publisher) &&
+            (identical(other.reason, reason) || other.reason == reason) &&
+            (identical(other.importance, importance) ||
+                other.importance == importance) &&
+            (identical(other.publishedAt, publishedAt) ||
+                other.publishedAt == publishedAt) &&
+            const DeepCollectionEquality().equals(other._sections, _sections) &&
+            const DeepCollectionEquality().equals(other._esg, _esg) &&
+            const DeepCollectionEquality()
+                .equals(other._companies, _companies));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      title,
+      titleKo,
+      summary,
+      summaryKo,
+      imageUrl,
+      contentUrl,
+      publisher,
+      reason,
+      importance,
+      publishedAt,
+      const DeepCollectionEquality().hash(_sections),
+      const DeepCollectionEquality().hash(_esg),
+      const DeepCollectionEquality().hash(_companies));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$GlobalNewsItemEntityImplCopyWith<_$GlobalNewsItemEntityImpl>
+      get copyWith =>
+          __$$GlobalNewsItemEntityImplCopyWithImpl<_$GlobalNewsItemEntityImpl>(
+              this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$GlobalNewsItemEntityImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _GlobalNewsItemEntity implements GlobalNewsItemEntity {
+  const factory _GlobalNewsItemEntity(
+      {required final int id,
+      required final String title,
+      @JsonKey(name: 'title_ko') required final String titleKo,
+      required final String summary,
+      @JsonKey(name: 'summary_ko') required final String summaryKo,
+      @JsonKey(name: 'image_url') required final String imageUrl,
+      @JsonKey(name: 'content_url') required final String contentUrl,
+      required final String publisher,
+      final String? reason,
+      final String? importance,
+      @JsonKey(name: 'published_at') required final String publishedAt,
+      required final List<String> sections,
+      required final List<ESG> esg,
+      required final List<Company> companies}) = _$GlobalNewsItemEntityImpl;
+
+  factory _GlobalNewsItemEntity.fromJson(Map<String, dynamic> json) =
+      _$GlobalNewsItemEntityImpl.fromJson;
+
+  @override
+  int get id;
+  @override
+  String get title;
+  @override
+  @JsonKey(name: 'title_ko')
+  String get titleKo;
+  @override
+  String get summary;
+  @override
+  @JsonKey(name: 'summary_ko')
+  String get summaryKo;
+  @override
+  @JsonKey(name: 'image_url')
+  String get imageUrl;
+  @override
+  @JsonKey(name: 'content_url')
+  String get contentUrl;
+  @override
+  String get publisher;
+  @override
+  String? get reason;
+  @override
+  String? get importance;
+  @override
+  @JsonKey(name: 'published_at')
+  String get publishedAt;
+  @override
+  List<String> get sections;
+  @override
+  List<ESG> get esg;
+  @override
+  List<Company> get companies;
+  @override
+  @JsonKey(ignore: true)
+  _$$GlobalNewsItemEntityImplCopyWith<_$GlobalNewsItemEntityImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+ESG _$ESGFromJson(Map<String, dynamic> json) {
+  return _ESG.fromJson(json);
+}
+
+/// @nodoc
+mixin _$ESG {
+  String get category => throw _privateConstructorUsedError;
+  double get score => throw _privateConstructorUsedError;
+  @JsonKey(name: 'confidence_score')
+  double get confidenceScore => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ESGCopyWith<ESG> get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ESGCopyWith<$Res> {
+  factory $ESGCopyWith(ESG value, $Res Function(ESG) then) =
+      _$ESGCopyWithImpl<$Res, ESG>;
+  @useResult
+  $Res call(
+      {String category,
+      double score,
+      @JsonKey(name: 'confidence_score') double confidenceScore});
+}
+
+/// @nodoc
+class _$ESGCopyWithImpl<$Res, $Val extends ESG> implements $ESGCopyWith<$Res> {
+  _$ESGCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? category = null,
+    Object? score = null,
+    Object? confidenceScore = null,
+  }) {
+    return _then(_value.copyWith(
+      category: null == category
+          ? _value.category
+          : category // ignore: cast_nullable_to_non_nullable
+              as String,
+      score: null == score
+          ? _value.score
+          : score // ignore: cast_nullable_to_non_nullable
+              as double,
+      confidenceScore: null == confidenceScore
+          ? _value.confidenceScore
+          : confidenceScore // ignore: cast_nullable_to_non_nullable
+              as double,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$ESGImplCopyWith<$Res> implements $ESGCopyWith<$Res> {
+  factory _$$ESGImplCopyWith(_$ESGImpl value, $Res Function(_$ESGImpl) then) =
+      __$$ESGImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {String category,
+      double score,
+      @JsonKey(name: 'confidence_score') double confidenceScore});
+}
+
+/// @nodoc
+class __$$ESGImplCopyWithImpl<$Res> extends _$ESGCopyWithImpl<$Res, _$ESGImpl>
+    implements _$$ESGImplCopyWith<$Res> {
+  __$$ESGImplCopyWithImpl(_$ESGImpl _value, $Res Function(_$ESGImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? category = null,
+    Object? score = null,
+    Object? confidenceScore = null,
+  }) {
+    return _then(_$ESGImpl(
+      category: null == category
+          ? _value.category
+          : category // ignore: cast_nullable_to_non_nullable
+              as String,
+      score: null == score
+          ? _value.score
+          : score // ignore: cast_nullable_to_non_nullable
+              as double,
+      confidenceScore: null == confidenceScore
+          ? _value.confidenceScore
+          : confidenceScore // ignore: cast_nullable_to_non_nullable
+              as double,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$ESGImpl implements _ESG {
+  const _$ESGImpl(
+      {required this.category,
+      required this.score,
+      @JsonKey(name: 'confidence_score') required this.confidenceScore});
+
+  factory _$ESGImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ESGImplFromJson(json);
+
+  @override
+  final String category;
+  @override
+  final double score;
+  @override
+  @JsonKey(name: 'confidence_score')
+  final double confidenceScore;
+
+  @override
+  String toString() {
+    return 'ESG(category: $category, score: $score, confidenceScore: $confidenceScore)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ESGImpl &&
+            (identical(other.category, category) ||
+                other.category == category) &&
+            (identical(other.score, score) || other.score == score) &&
+            (identical(other.confidenceScore, confidenceScore) ||
+                other.confidenceScore == confidenceScore));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, category, score, confidenceScore);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ESGImplCopyWith<_$ESGImpl> get copyWith =>
+      __$$ESGImplCopyWithImpl<_$ESGImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$ESGImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _ESG implements ESG {
+  const factory _ESG(
+      {required final String category,
+      required final double score,
+      @JsonKey(name: 'confidence_score')
+      required final double confidenceScore}) = _$ESGImpl;
+
+  factory _ESG.fromJson(Map<String, dynamic> json) = _$ESGImpl.fromJson;
+
+  @override
+  String get category;
+  @override
+  double get score;
+  @override
+  @JsonKey(name: 'confidence_score')
+  double get confidenceScore;
+  @override
+  @JsonKey(ignore: true)
+  _$$ESGImplCopyWith<_$ESGImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

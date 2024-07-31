@@ -4,6 +4,6 @@ part of '../viewmodel_states.dart';
 class NewsState with _$NewsState {
   const factory NewsState({
     NewsEntity? domesticNews,
-    NewsEntity? globalNews,
+    GlobalNewsEntity? globalNews,
   }) = _NewsState;
 }

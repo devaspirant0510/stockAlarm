@@ -5,7 +5,7 @@ import 'package:bm_app/widgets/atom/round_image.dart';
 import 'package:flutter/material.dart';
 
 class NewsMainCard extends StatelessWidget {
-  final NewsItem item;
+  final DomesticNewsEntity item;
   const NewsMainCard({super.key,required this.item});
 
   @override
@@ -14,7 +14,7 @@ class NewsMainCard extends StatelessWidget {
       margin: EdgeInsets.all(10),
       child: Column(
         children: [
-          RoundImage(url: item.imageUrl),
+          RoundImage(url: item.imageUrl!),
           SizedBox(height: 10,),
           Row(
             mainAxisAlignment: MainAxisAlignment.start,

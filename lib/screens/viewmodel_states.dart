@@ -5,7 +5,9 @@ import 'package:bm_app/domain/usecase/usecase.dart';
 import 'package:bm_app/screens/my/widget/stock_price_item.dart';
 import 'package:bm_app/utils/date_utils.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:riverpod/riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'viewmodel_states.g.dart';

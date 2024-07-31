@@ -5,7 +5,7 @@ import 'package:bm_app/widgets/atom/round_image.dart';
 import 'package:flutter/material.dart';
 
 class NewsCommonCard extends StatelessWidget {
-  final NewsItem item;
+  final DomesticNewsEntity item;
   const NewsCommonCard({super.key,required this.item});
 
   @override
@@ -28,7 +28,7 @@ class NewsCommonCard extends StatelessWidget {
               ],
             ),
           ),
-          RoundImage(url: item.imageUrl,imageHeight: 70,imageWidth: 70,size: 10,)
+          RoundImage(url: item.imageUrl!,imageHeight: 70,imageWidth: 70,size: 10,)
         ],
       ),
     );
