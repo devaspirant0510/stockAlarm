@@ -28,7 +28,7 @@ class NewsCommonCard extends StatelessWidget {
               ],
             ),
           ),
-          RoundImage(url: item.imageUrl!,imageHeight: 70,imageWidth: 70,size: 10,)
+          RoundImage(url: item.imageUrl,imageHeight: 70,imageWidth: 70,size: 10,)
         ],
       ),
     );

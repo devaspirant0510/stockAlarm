@@ -447,7 +447,7 @@ _$GlobalNewsItemEntityImpl _$$GlobalNewsItemEntityImplFromJson(
       titleKo: json['title_ko'] as String,
       summary: json['summary'] as String,
       summaryKo: json['summary_ko'] as String,
-      imageUrl: json['image_url'] as String,
+      imageUrl: json['image_url'] as String? ?? null,
       contentUrl: json['content_url'] as String,
       publisher: json['publisher'] as String,
       reason: json['reason'] as String?,

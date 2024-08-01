@@ -11,7 +11,8 @@ class GlobalNewsItemEntity with _$GlobalNewsItemEntity {
     @JsonKey(name: 'summary_ko')
     required String summaryKo,
     @JsonKey(name: 'image_url')
-    required String imageUrl,
+    @Default(null)
+    String? imageUrl,
     @JsonKey(name: 'content_url')
     required String contentUrl,
     required String publisher,

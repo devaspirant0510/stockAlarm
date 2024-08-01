@@ -5330,7 +5330,7 @@ mixin _$GlobalNewsItemEntity {
   @JsonKey(name: 'summary_ko')
   String get summaryKo => throw _privateConstructorUsedError;
   @JsonKey(name: 'image_url')
-  String get imageUrl => throw _privateConstructorUsedError;
+  String? get imageUrl => throw _privateConstructorUsedError;
   @JsonKey(name: 'content_url')
   String get contentUrl => throw _privateConstructorUsedError;
   String get publisher => throw _privateConstructorUsedError;
@@ -5360,7 +5360,7 @@ abstract class $GlobalNewsItemEntityCopyWith<$Res> {
       @JsonKey(name: 'title_ko') String titleKo,
       String summary,
       @JsonKey(name: 'summary_ko') String summaryKo,
-      @JsonKey(name: 'image_url') String imageUrl,
+      @JsonKey(name: 'image_url') String? imageUrl,
       @JsonKey(name: 'content_url') String contentUrl,
       String publisher,
       String? reason,
@@ -5390,7 +5390,7 @@ class _$GlobalNewsItemEntityCopyWithImpl<$Res,
     Object? titleKo = null,
     Object? summary = null,
     Object? summaryKo = null,
-    Object? imageUrl = null,
+    Object? imageUrl = freezed,
     Object? contentUrl = null,
     Object? publisher = null,
     Object? reason = freezed,
@@ -5421,10 +5421,10 @@ class _$GlobalNewsItemEntityCopyWithImpl<$Res,
           ? _value.summaryKo
           : summaryKo // ignore: cast_nullable_to_non_nullable
               as String,
-      imageUrl: null == imageUrl
+      imageUrl: freezed == imageUrl
           ? _value.imageUrl
           : imageUrl // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       contentUrl: null == contentUrl
           ? _value.contentUrl
           : contentUrl // ignore: cast_nullable_to_non_nullable
@@ -5475,7 +5475,7 @@ abstract class _$$GlobalNewsItemEntityImplCopyWith<$Res>
       @JsonKey(name: 'title_ko') String titleKo,
       String summary,
       @JsonKey(name: 'summary_ko') String summaryKo,
-      @JsonKey(name: 'image_url') String imageUrl,
+      @JsonKey(name: 'image_url') String? imageUrl,
       @JsonKey(name: 'content_url') String contentUrl,
       String publisher,
       String? reason,
@@ -5502,7 +5502,7 @@ class __$$GlobalNewsItemEntityImplCopyWithImpl<$Res>
     Object? titleKo = null,
     Object? summary = null,
     Object? summaryKo = null,
-    Object? imageUrl = null,
+    Object? imageUrl = freezed,
     Object? contentUrl = null,
     Object? publisher = null,
     Object? reason = freezed,
@@ -5533,10 +5533,10 @@ class __$$GlobalNewsItemEntityImplCopyWithImpl<$Res>
           ? _value.summaryKo
           : summaryKo // ignore: cast_nullable_to_non_nullable
               as String,
-      imageUrl: null == imageUrl
+      imageUrl: freezed == imageUrl
           ? _value.imageUrl
           : imageUrl // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       contentUrl: null == contentUrl
           ? _value.contentUrl
           : contentUrl // ignore: cast_nullable_to_non_nullable
@@ -5582,7 +5582,7 @@ class _$GlobalNewsItemEntityImpl implements _GlobalNewsItemEntity {
       @JsonKey(name: 'title_ko') required this.titleKo,
       required this.summary,
       @JsonKey(name: 'summary_ko') required this.summaryKo,
-      @JsonKey(name: 'image_url') required this.imageUrl,
+      @JsonKey(name: 'image_url') this.imageUrl = null,
       @JsonKey(name: 'content_url') required this.contentUrl,
       required this.publisher,
       this.reason,
@@ -5612,7 +5612,7 @@ class _$GlobalNewsItemEntityImpl implements _GlobalNewsItemEntity {
   final String summaryKo;
   @override
   @JsonKey(name: 'image_url')
-  final String imageUrl;
+  final String? imageUrl;
   @override
   @JsonKey(name: 'content_url')
   final String contentUrl;
@@ -5724,7 +5724,7 @@ abstract class _GlobalNewsItemEntity implements GlobalNewsItemEntity {
       @JsonKey(name: 'title_ko') required final String titleKo,
       required final String summary,
       @JsonKey(name: 'summary_ko') required final String summaryKo,
-      @JsonKey(name: 'image_url') required final String imageUrl,
+      @JsonKey(name: 'image_url') final String? imageUrl,
       @JsonKey(name: 'content_url') required final String contentUrl,
       required final String publisher,
       final String? reason,
@@ -5751,7 +5751,7 @@ abstract class _GlobalNewsItemEntity implements GlobalNewsItemEntity {
   String get summaryKo;
   @override
   @JsonKey(name: 'image_url')
-  String get imageUrl;
+  String? get imageUrl;
   @override
   @JsonKey(name: 'content_url')
   String get contentUrl;

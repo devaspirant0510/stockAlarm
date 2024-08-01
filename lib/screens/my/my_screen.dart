@@ -21,36 +21,19 @@ class _MyScreenState extends ConsumerState<MyScreen> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    // Map<String, dynamic> data = {
-    //   'type': 'subscribe',
-    //   'symbol': 'AAPL'
-    // };
-    // String jsonString = jsonEncode(data);
-    //
-    //
-    // ref.read(webSocketProvider).sink.add(jsonString);
   }
   @override
   Widget build(BuildContext context) {
     final viewmodel = ref.watch(myViewmodelProvider);
-    // final messageAsyncValue = ref.watch(messageProvider);
     return Container(
       child: Column(
         children: [
-          Text("관심주식"),
-          // messageAsyncValue.when(data: (data) {
-          //   try{
-          //     Map<String, dynamic> jsonMap = jsonDecode(data);
-          //
-          //     // JSON을 TradeResponse 객체로 변환
-          //     TradeResponse tradeResponse = TradeResponse.fromJson(jsonMap);
-          //     print(tradeResponse);
-          //     return Row(children: [Text("애플주가"),Text(tradeResponse.data.first.p.toString())],);
-          //
-          //   }catch(e){
-          //     return Text(e.toString());
-          //   }
-          //   }, error: (error, stackTrace) => Text(error.toString()), loading: ()=>Text("loading")),
+          Row(
+            children: [
+              Text("관심주식"),
+              ElevatedButton(onPressed: () {}, child: Text("전체보기"))
+            ],
+          ),
           viewmodel.favoriteStocks.when(
             data: (data) {
               print(data);
@@ -63,6 +46,8 @@ class _MyScreenState extends ConsumerState<MyScreen> {
                   StockPriceItem(stock: data[2]),
                 if (data.length > 3)
                   StockPriceItem(stock: data[3]),
+                if (data.length > 4)
+                  StockPriceItem(stock: data[4]),
               ]);
             },
             error: (err, stackTrace) {
