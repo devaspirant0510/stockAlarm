@@ -1,4 +1,5 @@
 import 'package:bm_app/data/data_source/remote_datasource.dart';
+import 'package:bm_app/data/data_source/yh_datasource/yh_datasource.dart';
 import 'package:bm_app/data/entity/entity.dart';
 import 'package:bm_app/domain/model/models.dart';
 import 'package:bm_app/domain/repository/local_repository.dart';
@@ -18,9 +19,10 @@ class RepositoryImpl implements RemoteRepository, LocalRepository {
   LocalDatSource localDatSource;
   PolygonDatasource polygonDataSource;
   DeepSearchDataSource deepSearchDataSource;
+  YhDatasource yhDatasource;
 
   RepositoryImpl(this.dataSource, this.finhubDatasource, this.localDatSource,
-      this.polygonDataSource, this.deepSearchDataSource) {}
+      this.polygonDataSource, this.deepSearchDataSource, this.yhDatasource);
 
   @override
   Future<TopMetadata> getTopGainersEtcMetadata() async {
@@ -121,16 +123,47 @@ class RepositoryImpl implements RemoteRepository, LocalRepository {
   Future<GlobalNewsEntity> getAllTechArticle() {
     return deepSearchDataSource.getAllTechStockArticle();
   }
+
+  @override
+  Future<YhChartData> getChartDataToday(String symbol) {
+    return yhDatasource.getChartDataBySymbolOnToday(symbol: symbol);
+  }
+
+  @override
+  Future<YhChartData> getChartDataTenYear(String symbol) {
+    return yhDatasource.getChartDataBySymbolOnTenYear(symbol: symbol);
+  }
+
+  @override
+  Future<YhChartData> getChartDataThreeMonth(String symbol) {
+    return yhDatasource.getChartDataBySymbolOnThreeMonth(symbol: symbol);
+  }
+
+  @override
+  Future<YhChartData> getChartDataWeek(String symbol) {
+    return yhDatasource.getChartDataBySymbolOnWeek(symbol: symbol);
+  }
+
+  @override
+  Future<YhChartData> getChartDataYear(String symbol) {
+    return yhDatasource.getChartDataBySymbolOnYear(symbol: symbol);
+  }
+
+  @override
+  Future<YhChartData> getChartDataYesterday(String symbol) {
+    return yhDatasource.getChartDataBySymbolOnYesterday(symbol: symbol);
+  }
 }
 
 final repositoryProvider = Provider<RepositoryImpl>((ref) {
   Dio dio = Dio();
   return RepositoryImpl(
-      RemoteDataSource(dio),
-      FinhubDatasource(dio),
-      LocalDatSource(),
-      PolygonDatasource(dio),
-      DeepSearchDataSource(dio)
+    RemoteDataSource(dio),
+    FinhubDatasource(dio),
+    LocalDatSource(),
+    PolygonDatasource(dio),
+    DeepSearchDataSource(dio),
+    YhDatasource(dio),
   );
 });
 
@@ -141,5 +174,6 @@ final pureRepo = RepositoryImpl(
     FinhubDatasource(dio),
     LocalDatSource(),
     PolygonDatasource(dio),
-    DeepSearchDataSource(dio)
+    DeepSearchDataSource(dio),
+    YhDatasource(dio),
 );

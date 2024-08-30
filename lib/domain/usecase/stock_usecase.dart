@@ -1,6 +1,34 @@
 part of 'usecase.dart';
 
 @riverpod
+Future<YhChartModel> callGetChartData(CallGetChartDataRef ref,{required String symbol}) async {
+  final result = await ref.read(repositoryProvider).getChartDataToday(symbol);
+  final timeStamp = result.chart.result.first.timestamp;
+  final quote = result.chart.result.first.indicators.quote.first;
+  final meta = result.chart.result.first.meta;
+  return YhChartModel(timestamp: timeStamp, quote: quote,meta: meta);
+}
+
+@riverpod
+Future<YhChartModel> callGetChartDataYesterday(
+    CallGetChartDataYesterdayRef ref,{required String symbol}) async {
+  final result = await ref.read(repositoryProvider).getChartDataYesterday(symbol);
+  final timeStamp = result.chart.result.first.timestamp;
+  final quote = result.chart.result.first.indicators.quote.first;
+  final meta = result.chart.result.first.meta;
+  return YhChartModel(timestamp: timeStamp, quote: quote,meta: meta);
+}
+
+@riverpod
+Future<YhChartModel> callGetChartDataWeek(CallGetChartDataWeekRef ref,{required String symbol}) async {
+  final result = await ref.read(repositoryProvider).getChartDataWeek(symbol);
+  final timeStamp = result.chart.result.first.timestamp;
+  final quote = result.chart.result.first.indicators.quote.first;
+  final meta = result.chart.result.first.meta;
+  return YhChartModel(timestamp: timeStamp, quote: quote,meta: meta);
+}
+
+@riverpod
 Future<Map<String, TimeSeriesData>> callGetTodayChartData(
     CallGetTodayChartDataRef ref,
     {required String symbol}) async {

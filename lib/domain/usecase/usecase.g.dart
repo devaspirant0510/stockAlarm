@@ -797,6 +797,399 @@ class _CallGetOneAlarmProviderElement
   int get id => (origin as CallGetOneAlarmProvider).id;
 }
 
+String _$callGetChartDataHash() => r'39b54eeef4d728347c16c07865054ad15c539809';
+
+/// See also [callGetChartData].
+@ProviderFor(callGetChartData)
+const callGetChartDataProvider = CallGetChartDataFamily();
+
+/// See also [callGetChartData].
+class CallGetChartDataFamily extends Family<AsyncValue<YhChartModel>> {
+  /// See also [callGetChartData].
+  const CallGetChartDataFamily();
+
+  /// See also [callGetChartData].
+  CallGetChartDataProvider call({
+    required String symbol,
+  }) {
+    return CallGetChartDataProvider(
+      symbol: symbol,
+    );
+  }
+
+  @override
+  CallGetChartDataProvider getProviderOverride(
+    covariant CallGetChartDataProvider provider,
+  ) {
+    return call(
+      symbol: provider.symbol,
+    );
+  }
+
+  static const Iterable<ProviderOrFamily>? _dependencies = null;
+
+  @override
+  Iterable<ProviderOrFamily>? get dependencies => _dependencies;
+
+  static const Iterable<ProviderOrFamily>? _allTransitiveDependencies = null;
+
+  @override
+  Iterable<ProviderOrFamily>? get allTransitiveDependencies =>
+      _allTransitiveDependencies;
+
+  @override
+  String? get name => r'callGetChartDataProvider';
+}
+
+/// See also [callGetChartData].
+class CallGetChartDataProvider extends AutoDisposeFutureProvider<YhChartModel> {
+  /// See also [callGetChartData].
+  CallGetChartDataProvider({
+    required String symbol,
+  }) : this._internal(
+          (ref) => callGetChartData(
+            ref as CallGetChartDataRef,
+            symbol: symbol,
+          ),
+          from: callGetChartDataProvider,
+          name: r'callGetChartDataProvider',
+          debugGetCreateSourceHash:
+              const bool.fromEnvironment('dart.vm.product')
+                  ? null
+                  : _$callGetChartDataHash,
+          dependencies: CallGetChartDataFamily._dependencies,
+          allTransitiveDependencies:
+              CallGetChartDataFamily._allTransitiveDependencies,
+          symbol: symbol,
+        );
+
+  CallGetChartDataProvider._internal(
+    super._createNotifier, {
+    required super.name,
+    required super.dependencies,
+    required super.allTransitiveDependencies,
+    required super.debugGetCreateSourceHash,
+    required super.from,
+    required this.symbol,
+  }) : super.internal();
+
+  final String symbol;
+
+  @override
+  Override overrideWith(
+    FutureOr<YhChartModel> Function(CallGetChartDataRef provider) create,
+  ) {
+    return ProviderOverride(
+      origin: this,
+      override: CallGetChartDataProvider._internal(
+        (ref) => create(ref as CallGetChartDataRef),
+        from: from,
+        name: null,
+        dependencies: null,
+        allTransitiveDependencies: null,
+        debugGetCreateSourceHash: null,
+        symbol: symbol,
+      ),
+    );
+  }
+
+  @override
+  AutoDisposeFutureProviderElement<YhChartModel> createElement() {
+    return _CallGetChartDataProviderElement(this);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return other is CallGetChartDataProvider && other.symbol == symbol;
+  }
+
+  @override
+  int get hashCode {
+    var hash = _SystemHash.combine(0, runtimeType.hashCode);
+    hash = _SystemHash.combine(hash, symbol.hashCode);
+
+    return _SystemHash.finish(hash);
+  }
+}
+
+mixin CallGetChartDataRef on AutoDisposeFutureProviderRef<YhChartModel> {
+  /// The parameter `symbol` of this provider.
+  String get symbol;
+}
+
+class _CallGetChartDataProviderElement
+    extends AutoDisposeFutureProviderElement<YhChartModel>
+    with CallGetChartDataRef {
+  _CallGetChartDataProviderElement(super.provider);
+
+  @override
+  String get symbol => (origin as CallGetChartDataProvider).symbol;
+}
+
+String _$callGetChartDataYesterdayHash() =>
+    r'91fa5d9bfca50c69a4d42df5d2f676d26f71f2e4';
+
+/// See also [callGetChartDataYesterday].
+@ProviderFor(callGetChartDataYesterday)
+const callGetChartDataYesterdayProvider = CallGetChartDataYesterdayFamily();
+
+/// See also [callGetChartDataYesterday].
+class CallGetChartDataYesterdayFamily extends Family<AsyncValue<YhChartModel>> {
+  /// See also [callGetChartDataYesterday].
+  const CallGetChartDataYesterdayFamily();
+
+  /// See also [callGetChartDataYesterday].
+  CallGetChartDataYesterdayProvider call({
+    required String symbol,
+  }) {
+    return CallGetChartDataYesterdayProvider(
+      symbol: symbol,
+    );
+  }
+
+  @override
+  CallGetChartDataYesterdayProvider getProviderOverride(
+    covariant CallGetChartDataYesterdayProvider provider,
+  ) {
+    return call(
+      symbol: provider.symbol,
+    );
+  }
+
+  static const Iterable<ProviderOrFamily>? _dependencies = null;
+
+  @override
+  Iterable<ProviderOrFamily>? get dependencies => _dependencies;
+
+  static const Iterable<ProviderOrFamily>? _allTransitiveDependencies = null;
+
+  @override
+  Iterable<ProviderOrFamily>? get allTransitiveDependencies =>
+      _allTransitiveDependencies;
+
+  @override
+  String? get name => r'callGetChartDataYesterdayProvider';
+}
+
+/// See also [callGetChartDataYesterday].
+class CallGetChartDataYesterdayProvider
+    extends AutoDisposeFutureProvider<YhChartModel> {
+  /// See also [callGetChartDataYesterday].
+  CallGetChartDataYesterdayProvider({
+    required String symbol,
+  }) : this._internal(
+          (ref) => callGetChartDataYesterday(
+            ref as CallGetChartDataYesterdayRef,
+            symbol: symbol,
+          ),
+          from: callGetChartDataYesterdayProvider,
+          name: r'callGetChartDataYesterdayProvider',
+          debugGetCreateSourceHash:
+              const bool.fromEnvironment('dart.vm.product')
+                  ? null
+                  : _$callGetChartDataYesterdayHash,
+          dependencies: CallGetChartDataYesterdayFamily._dependencies,
+          allTransitiveDependencies:
+              CallGetChartDataYesterdayFamily._allTransitiveDependencies,
+          symbol: symbol,
+        );
+
+  CallGetChartDataYesterdayProvider._internal(
+    super._createNotifier, {
+    required super.name,
+    required super.dependencies,
+    required super.allTransitiveDependencies,
+    required super.debugGetCreateSourceHash,
+    required super.from,
+    required this.symbol,
+  }) : super.internal();
+
+  final String symbol;
+
+  @override
+  Override overrideWith(
+    FutureOr<YhChartModel> Function(CallGetChartDataYesterdayRef provider)
+        create,
+  ) {
+    return ProviderOverride(
+      origin: this,
+      override: CallGetChartDataYesterdayProvider._internal(
+        (ref) => create(ref as CallGetChartDataYesterdayRef),
+        from: from,
+        name: null,
+        dependencies: null,
+        allTransitiveDependencies: null,
+        debugGetCreateSourceHash: null,
+        symbol: symbol,
+      ),
+    );
+  }
+
+  @override
+  AutoDisposeFutureProviderElement<YhChartModel> createElement() {
+    return _CallGetChartDataYesterdayProviderElement(this);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return other is CallGetChartDataYesterdayProvider && other.symbol == symbol;
+  }
+
+  @override
+  int get hashCode {
+    var hash = _SystemHash.combine(0, runtimeType.hashCode);
+    hash = _SystemHash.combine(hash, symbol.hashCode);
+
+    return _SystemHash.finish(hash);
+  }
+}
+
+mixin CallGetChartDataYesterdayRef
+    on AutoDisposeFutureProviderRef<YhChartModel> {
+  /// The parameter `symbol` of this provider.
+  String get symbol;
+}
+
+class _CallGetChartDataYesterdayProviderElement
+    extends AutoDisposeFutureProviderElement<YhChartModel>
+    with CallGetChartDataYesterdayRef {
+  _CallGetChartDataYesterdayProviderElement(super.provider);
+
+  @override
+  String get symbol => (origin as CallGetChartDataYesterdayProvider).symbol;
+}
+
+String _$callGetChartDataWeekHash() =>
+    r'8e646440130f872e628f5887f167534fa8fa7862';
+
+/// See also [callGetChartDataWeek].
+@ProviderFor(callGetChartDataWeek)
+const callGetChartDataWeekProvider = CallGetChartDataWeekFamily();
+
+/// See also [callGetChartDataWeek].
+class CallGetChartDataWeekFamily extends Family<AsyncValue<YhChartModel>> {
+  /// See also [callGetChartDataWeek].
+  const CallGetChartDataWeekFamily();
+
+  /// See also [callGetChartDataWeek].
+  CallGetChartDataWeekProvider call({
+    required String symbol,
+  }) {
+    return CallGetChartDataWeekProvider(
+      symbol: symbol,
+    );
+  }
+
+  @override
+  CallGetChartDataWeekProvider getProviderOverride(
+    covariant CallGetChartDataWeekProvider provider,
+  ) {
+    return call(
+      symbol: provider.symbol,
+    );
+  }
+
+  static const Iterable<ProviderOrFamily>? _dependencies = null;
+
+  @override
+  Iterable<ProviderOrFamily>? get dependencies => _dependencies;
+
+  static const Iterable<ProviderOrFamily>? _allTransitiveDependencies = null;
+
+  @override
+  Iterable<ProviderOrFamily>? get allTransitiveDependencies =>
+      _allTransitiveDependencies;
+
+  @override
+  String? get name => r'callGetChartDataWeekProvider';
+}
+
+/// See also [callGetChartDataWeek].
+class CallGetChartDataWeekProvider
+    extends AutoDisposeFutureProvider<YhChartModel> {
+  /// See also [callGetChartDataWeek].
+  CallGetChartDataWeekProvider({
+    required String symbol,
+  }) : this._internal(
+          (ref) => callGetChartDataWeek(
+            ref as CallGetChartDataWeekRef,
+            symbol: symbol,
+          ),
+          from: callGetChartDataWeekProvider,
+          name: r'callGetChartDataWeekProvider',
+          debugGetCreateSourceHash:
+              const bool.fromEnvironment('dart.vm.product')
+                  ? null
+                  : _$callGetChartDataWeekHash,
+          dependencies: CallGetChartDataWeekFamily._dependencies,
+          allTransitiveDependencies:
+              CallGetChartDataWeekFamily._allTransitiveDependencies,
+          symbol: symbol,
+        );
+
+  CallGetChartDataWeekProvider._internal(
+    super._createNotifier, {
+    required super.name,
+    required super.dependencies,
+    required super.allTransitiveDependencies,
+    required super.debugGetCreateSourceHash,
+    required super.from,
+    required this.symbol,
+  }) : super.internal();
+
+  final String symbol;
+
+  @override
+  Override overrideWith(
+    FutureOr<YhChartModel> Function(CallGetChartDataWeekRef provider) create,
+  ) {
+    return ProviderOverride(
+      origin: this,
+      override: CallGetChartDataWeekProvider._internal(
+        (ref) => create(ref as CallGetChartDataWeekRef),
+        from: from,
+        name: null,
+        dependencies: null,
+        allTransitiveDependencies: null,
+        debugGetCreateSourceHash: null,
+        symbol: symbol,
+      ),
+    );
+  }
+
+  @override
+  AutoDisposeFutureProviderElement<YhChartModel> createElement() {
+    return _CallGetChartDataWeekProviderElement(this);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return other is CallGetChartDataWeekProvider && other.symbol == symbol;
+  }
+
+  @override
+  int get hashCode {
+    var hash = _SystemHash.combine(0, runtimeType.hashCode);
+    hash = _SystemHash.combine(hash, symbol.hashCode);
+
+    return _SystemHash.finish(hash);
+  }
+}
+
+mixin CallGetChartDataWeekRef on AutoDisposeFutureProviderRef<YhChartModel> {
+  /// The parameter `symbol` of this provider.
+  String get symbol;
+}
+
+class _CallGetChartDataWeekProviderElement
+    extends AutoDisposeFutureProviderElement<YhChartModel>
+    with CallGetChartDataWeekRef {
+  _CallGetChartDataWeekProviderElement(super.provider);
+
+  @override
+  String get symbol => (origin as CallGetChartDataWeekProvider).symbol;
+}
+
 String _$callGetTodayChartDataHash() =>
     r'edd2d70395d859bad2d6a35f6e2324037cdaf7d6';
 

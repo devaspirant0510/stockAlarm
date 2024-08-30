@@ -580,3 +580,191 @@ abstract class _SearchItemModel implements SearchItemModel {
   _$$SearchItemModelImplCopyWith<_$SearchItemModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
+
+/// @nodoc
+mixin _$YhChartModel {
+  Meta get meta => throw _privateConstructorUsedError;
+  List<int> get timestamp => throw _privateConstructorUsedError;
+  YhQuote get quote => throw _privateConstructorUsedError;
+
+  @JsonKey(ignore: true)
+  $YhChartModelCopyWith<YhChartModel> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $YhChartModelCopyWith<$Res> {
+  factory $YhChartModelCopyWith(
+          YhChartModel value, $Res Function(YhChartModel) then) =
+      _$YhChartModelCopyWithImpl<$Res, YhChartModel>;
+  @useResult
+  $Res call({Meta meta, List<int> timestamp, YhQuote quote});
+
+  $MetaCopyWith<$Res> get meta;
+  $YhQuoteCopyWith<$Res> get quote;
+}
+
+/// @nodoc
+class _$YhChartModelCopyWithImpl<$Res, $Val extends YhChartModel>
+    implements $YhChartModelCopyWith<$Res> {
+  _$YhChartModelCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? meta = null,
+    Object? timestamp = null,
+    Object? quote = null,
+  }) {
+    return _then(_value.copyWith(
+      meta: null == meta
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta,
+      timestamp: null == timestamp
+          ? _value.timestamp
+          : timestamp // ignore: cast_nullable_to_non_nullable
+              as List<int>,
+      quote: null == quote
+          ? _value.quote
+          : quote // ignore: cast_nullable_to_non_nullable
+              as YhQuote,
+    ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $MetaCopyWith<$Res> get meta {
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $YhQuoteCopyWith<$Res> get quote {
+    return $YhQuoteCopyWith<$Res>(_value.quote, (value) {
+      return _then(_value.copyWith(quote: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$YhChartModelImplCopyWith<$Res>
+    implements $YhChartModelCopyWith<$Res> {
+  factory _$$YhChartModelImplCopyWith(
+          _$YhChartModelImpl value, $Res Function(_$YhChartModelImpl) then) =
+      __$$YhChartModelImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({Meta meta, List<int> timestamp, YhQuote quote});
+
+  @override
+  $MetaCopyWith<$Res> get meta;
+  @override
+  $YhQuoteCopyWith<$Res> get quote;
+}
+
+/// @nodoc
+class __$$YhChartModelImplCopyWithImpl<$Res>
+    extends _$YhChartModelCopyWithImpl<$Res, _$YhChartModelImpl>
+    implements _$$YhChartModelImplCopyWith<$Res> {
+  __$$YhChartModelImplCopyWithImpl(
+      _$YhChartModelImpl _value, $Res Function(_$YhChartModelImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? meta = null,
+    Object? timestamp = null,
+    Object? quote = null,
+  }) {
+    return _then(_$YhChartModelImpl(
+      meta: null == meta
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta,
+      timestamp: null == timestamp
+          ? _value._timestamp
+          : timestamp // ignore: cast_nullable_to_non_nullable
+              as List<int>,
+      quote: null == quote
+          ? _value.quote
+          : quote // ignore: cast_nullable_to_non_nullable
+              as YhQuote,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$YhChartModelImpl implements _YhChartModel {
+  _$YhChartModelImpl(
+      {required this.meta,
+      required final List<int> timestamp,
+      required this.quote})
+      : _timestamp = timestamp;
+
+  @override
+  final Meta meta;
+  final List<int> _timestamp;
+  @override
+  List<int> get timestamp {
+    if (_timestamp is EqualUnmodifiableListView) return _timestamp;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_timestamp);
+  }
+
+  @override
+  final YhQuote quote;
+
+  @override
+  String toString() {
+    return 'YhChartModel(meta: $meta, timestamp: $timestamp, quote: $quote)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$YhChartModelImpl &&
+            (identical(other.meta, meta) || other.meta == meta) &&
+            const DeepCollectionEquality()
+                .equals(other._timestamp, _timestamp) &&
+            (identical(other.quote, quote) || other.quote == quote));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, meta,
+      const DeepCollectionEquality().hash(_timestamp), quote);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$YhChartModelImplCopyWith<_$YhChartModelImpl> get copyWith =>
+      __$$YhChartModelImplCopyWithImpl<_$YhChartModelImpl>(this, _$identity);
+}
+
+abstract class _YhChartModel implements YhChartModel {
+  factory _YhChartModel(
+      {required final Meta meta,
+      required final List<int> timestamp,
+      required final YhQuote quote}) = _$YhChartModelImpl;
+
+  @override
+  Meta get meta;
+  @override
+  List<int> get timestamp;
+  @override
+  YhQuote get quote;
+  @override
+  @JsonKey(ignore: true)
+  _$$YhChartModelImplCopyWith<_$YhChartModelImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}

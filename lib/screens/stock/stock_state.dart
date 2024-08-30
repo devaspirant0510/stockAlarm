@@ -5,6 +5,7 @@ class StockState with _$StockState {
   const factory StockState({
     StockProfile? stockProfile,
     @Default(AsyncValue.loading())
-    AsyncValue<Map<String,TimeSeriesData>> chart,
-}) = _StockState;
+    AsyncValue<Map<String, TimeSeriesData>> chart,
+    @Default(AsyncValue.loading()) AsyncValue<YhChartModel> yhChartData,
+  }) = _StockState;
 }

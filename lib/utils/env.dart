@@ -12,4 +12,6 @@ abstract class Env{
   static const String polygonApiKey = _Env.polygonApiKey;
   @EnviedField(varName: 'deepSearchApiKey')
   static const String deepSearchApiKey = _Env.deepSearchApiKey;
+  @EnviedField(varName:'financeApiKey')
+  static const String financeApiKey = _Env.financeApiKey;
 }

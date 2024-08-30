@@ -5954,3 +5954,2294 @@ abstract class _ESG implements ESG {
   _$$ESGImplCopyWith<_$ESGImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
+
+YhChartData _$YhChartDataFromJson(Map<String, dynamic> json) {
+  return _YhChartData.fromJson(json);
+}
+
+/// @nodoc
+mixin _$YhChartData {
+  Chart get chart => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $YhChartDataCopyWith<YhChartData> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $YhChartDataCopyWith<$Res> {
+  factory $YhChartDataCopyWith(
+          YhChartData value, $Res Function(YhChartData) then) =
+      _$YhChartDataCopyWithImpl<$Res, YhChartData>;
+  @useResult
+  $Res call({Chart chart});
+
+  $ChartCopyWith<$Res> get chart;
+}
+
+/// @nodoc
+class _$YhChartDataCopyWithImpl<$Res, $Val extends YhChartData>
+    implements $YhChartDataCopyWith<$Res> {
+  _$YhChartDataCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? chart = null,
+  }) {
+    return _then(_value.copyWith(
+      chart: null == chart
+          ? _value.chart
+          : chart // ignore: cast_nullable_to_non_nullable
+              as Chart,
+    ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ChartCopyWith<$Res> get chart {
+    return $ChartCopyWith<$Res>(_value.chart, (value) {
+      return _then(_value.copyWith(chart: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$YhChartDataImplCopyWith<$Res>
+    implements $YhChartDataCopyWith<$Res> {
+  factory _$$YhChartDataImplCopyWith(
+          _$YhChartDataImpl value, $Res Function(_$YhChartDataImpl) then) =
+      __$$YhChartDataImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({Chart chart});
+
+  @override
+  $ChartCopyWith<$Res> get chart;
+}
+
+/// @nodoc
+class __$$YhChartDataImplCopyWithImpl<$Res>
+    extends _$YhChartDataCopyWithImpl<$Res, _$YhChartDataImpl>
+    implements _$$YhChartDataImplCopyWith<$Res> {
+  __$$YhChartDataImplCopyWithImpl(
+      _$YhChartDataImpl _value, $Res Function(_$YhChartDataImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? chart = null,
+  }) {
+    return _then(_$YhChartDataImpl(
+      chart: null == chart
+          ? _value.chart
+          : chart // ignore: cast_nullable_to_non_nullable
+              as Chart,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$YhChartDataImpl implements _YhChartData {
+  const _$YhChartDataImpl({required this.chart});
+
+  factory _$YhChartDataImpl.fromJson(Map<String, dynamic> json) =>
+      _$$YhChartDataImplFromJson(json);
+
+  @override
+  final Chart chart;
+
+  @override
+  String toString() {
+    return 'YhChartData(chart: $chart)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$YhChartDataImpl &&
+            (identical(other.chart, chart) || other.chart == chart));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, chart);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$YhChartDataImplCopyWith<_$YhChartDataImpl> get copyWith =>
+      __$$YhChartDataImplCopyWithImpl<_$YhChartDataImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$YhChartDataImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _YhChartData implements YhChartData {
+  const factory _YhChartData({required final Chart chart}) = _$YhChartDataImpl;
+
+  factory _YhChartData.fromJson(Map<String, dynamic> json) =
+      _$YhChartDataImpl.fromJson;
+
+  @override
+  Chart get chart;
+  @override
+  @JsonKey(ignore: true)
+  _$$YhChartDataImplCopyWith<_$YhChartDataImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+Chart _$ChartFromJson(Map<String, dynamic> json) {
+  return _Chart.fromJson(json);
+}
+
+/// @nodoc
+mixin _$Chart {
+  List<Result> get result => throw _privateConstructorUsedError;
+  dynamic get error => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ChartCopyWith<Chart> get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ChartCopyWith<$Res> {
+  factory $ChartCopyWith(Chart value, $Res Function(Chart) then) =
+      _$ChartCopyWithImpl<$Res, Chart>;
+  @useResult
+  $Res call({List<Result> result, dynamic error});
+}
+
+/// @nodoc
+class _$ChartCopyWithImpl<$Res, $Val extends Chart>
+    implements $ChartCopyWith<$Res> {
+  _$ChartCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? result = null,
+    Object? error = freezed,
+  }) {
+    return _then(_value.copyWith(
+      result: null == result
+          ? _value.result
+          : result // ignore: cast_nullable_to_non_nullable
+              as List<Result>,
+      error: freezed == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as dynamic,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$ChartImplCopyWith<$Res> implements $ChartCopyWith<$Res> {
+  factory _$$ChartImplCopyWith(
+          _$ChartImpl value, $Res Function(_$ChartImpl) then) =
+      __$$ChartImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({List<Result> result, dynamic error});
+}
+
+/// @nodoc
+class __$$ChartImplCopyWithImpl<$Res>
+    extends _$ChartCopyWithImpl<$Res, _$ChartImpl>
+    implements _$$ChartImplCopyWith<$Res> {
+  __$$ChartImplCopyWithImpl(
+      _$ChartImpl _value, $Res Function(_$ChartImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? result = null,
+    Object? error = freezed,
+  }) {
+    return _then(_$ChartImpl(
+      result: null == result
+          ? _value._result
+          : result // ignore: cast_nullable_to_non_nullable
+              as List<Result>,
+      error: freezed == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as dynamic,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$ChartImpl implements _Chart {
+  const _$ChartImpl({required final List<Result> result, this.error})
+      : _result = result;
+
+  factory _$ChartImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ChartImplFromJson(json);
+
+  final List<Result> _result;
+  @override
+  List<Result> get result {
+    if (_result is EqualUnmodifiableListView) return _result;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_result);
+  }
+
+  @override
+  final dynamic error;
+
+  @override
+  String toString() {
+    return 'Chart(result: $result, error: $error)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ChartImpl &&
+            const DeepCollectionEquality().equals(other._result, _result) &&
+            const DeepCollectionEquality().equals(other.error, error));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(_result),
+      const DeepCollectionEquality().hash(error));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ChartImplCopyWith<_$ChartImpl> get copyWith =>
+      __$$ChartImplCopyWithImpl<_$ChartImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$ChartImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _Chart implements Chart {
+  const factory _Chart(
+      {required final List<Result> result, final dynamic error}) = _$ChartImpl;
+
+  factory _Chart.fromJson(Map<String, dynamic> json) = _$ChartImpl.fromJson;
+
+  @override
+  List<Result> get result;
+  @override
+  dynamic get error;
+  @override
+  @JsonKey(ignore: true)
+  _$$ChartImplCopyWith<_$ChartImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+Result _$ResultFromJson(Map<String, dynamic> json) {
+  return _Result.fromJson(json);
+}
+
+/// @nodoc
+mixin _$Result {
+  Meta get meta => throw _privateConstructorUsedError;
+  List<int> get timestamp => throw _privateConstructorUsedError;
+  List<Comparison>? get comparisons => throw _privateConstructorUsedError;
+  Indicators get indicators => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ResultCopyWith<Result> get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ResultCopyWith<$Res> {
+  factory $ResultCopyWith(Result value, $Res Function(Result) then) =
+      _$ResultCopyWithImpl<$Res, Result>;
+  @useResult
+  $Res call(
+      {Meta meta,
+      List<int> timestamp,
+      List<Comparison>? comparisons,
+      Indicators indicators});
+
+  $MetaCopyWith<$Res> get meta;
+  $IndicatorsCopyWith<$Res> get indicators;
+}
+
+/// @nodoc
+class _$ResultCopyWithImpl<$Res, $Val extends Result>
+    implements $ResultCopyWith<$Res> {
+  _$ResultCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? meta = null,
+    Object? timestamp = null,
+    Object? comparisons = freezed,
+    Object? indicators = null,
+  }) {
+    return _then(_value.copyWith(
+      meta: null == meta
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta,
+      timestamp: null == timestamp
+          ? _value.timestamp
+          : timestamp // ignore: cast_nullable_to_non_nullable
+              as List<int>,
+      comparisons: freezed == comparisons
+          ? _value.comparisons
+          : comparisons // ignore: cast_nullable_to_non_nullable
+              as List<Comparison>?,
+      indicators: null == indicators
+          ? _value.indicators
+          : indicators // ignore: cast_nullable_to_non_nullable
+              as Indicators,
+    ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $MetaCopyWith<$Res> get meta {
+    return $MetaCopyWith<$Res>(_value.meta, (value) {
+      return _then(_value.copyWith(meta: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $IndicatorsCopyWith<$Res> get indicators {
+    return $IndicatorsCopyWith<$Res>(_value.indicators, (value) {
+      return _then(_value.copyWith(indicators: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$ResultImplCopyWith<$Res> implements $ResultCopyWith<$Res> {
+  factory _$$ResultImplCopyWith(
+          _$ResultImpl value, $Res Function(_$ResultImpl) then) =
+      __$$ResultImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {Meta meta,
+      List<int> timestamp,
+      List<Comparison>? comparisons,
+      Indicators indicators});
+
+  @override
+  $MetaCopyWith<$Res> get meta;
+  @override
+  $IndicatorsCopyWith<$Res> get indicators;
+}
+
+/// @nodoc
+class __$$ResultImplCopyWithImpl<$Res>
+    extends _$ResultCopyWithImpl<$Res, _$ResultImpl>
+    implements _$$ResultImplCopyWith<$Res> {
+  __$$ResultImplCopyWithImpl(
+      _$ResultImpl _value, $Res Function(_$ResultImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? meta = null,
+    Object? timestamp = null,
+    Object? comparisons = freezed,
+    Object? indicators = null,
+  }) {
+    return _then(_$ResultImpl(
+      meta: null == meta
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta,
+      timestamp: null == timestamp
+          ? _value._timestamp
+          : timestamp // ignore: cast_nullable_to_non_nullable
+              as List<int>,
+      comparisons: freezed == comparisons
+          ? _value._comparisons
+          : comparisons // ignore: cast_nullable_to_non_nullable
+              as List<Comparison>?,
+      indicators: null == indicators
+          ? _value.indicators
+          : indicators // ignore: cast_nullable_to_non_nullable
+              as Indicators,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$ResultImpl implements _Result {
+  const _$ResultImpl(
+      {required this.meta,
+      required final List<int> timestamp,
+      final List<Comparison>? comparisons,
+      required this.indicators})
+      : _timestamp = timestamp,
+        _comparisons = comparisons;
+
+  factory _$ResultImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ResultImplFromJson(json);
+
+  @override
+  final Meta meta;
+  final List<int> _timestamp;
+  @override
+  List<int> get timestamp {
+    if (_timestamp is EqualUnmodifiableListView) return _timestamp;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_timestamp);
+  }
+
+  final List<Comparison>? _comparisons;
+  @override
+  List<Comparison>? get comparisons {
+    final value = _comparisons;
+    if (value == null) return null;
+    if (_comparisons is EqualUnmodifiableListView) return _comparisons;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final Indicators indicators;
+
+  @override
+  String toString() {
+    return 'Result(meta: $meta, timestamp: $timestamp, comparisons: $comparisons, indicators: $indicators)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ResultImpl &&
+            (identical(other.meta, meta) || other.meta == meta) &&
+            const DeepCollectionEquality()
+                .equals(other._timestamp, _timestamp) &&
+            const DeepCollectionEquality()
+                .equals(other._comparisons, _comparisons) &&
+            (identical(other.indicators, indicators) ||
+                other.indicators == indicators));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      meta,
+      const DeepCollectionEquality().hash(_timestamp),
+      const DeepCollectionEquality().hash(_comparisons),
+      indicators);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ResultImplCopyWith<_$ResultImpl> get copyWith =>
+      __$$ResultImplCopyWithImpl<_$ResultImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$ResultImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _Result implements Result {
+  const factory _Result(
+      {required final Meta meta,
+      required final List<int> timestamp,
+      final List<Comparison>? comparisons,
+      required final Indicators indicators}) = _$ResultImpl;
+
+  factory _Result.fromJson(Map<String, dynamic> json) = _$ResultImpl.fromJson;
+
+  @override
+  Meta get meta;
+  @override
+  List<int> get timestamp;
+  @override
+  List<Comparison>? get comparisons;
+  @override
+  Indicators get indicators;
+  @override
+  @JsonKey(ignore: true)
+  _$$ResultImplCopyWith<_$ResultImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+Meta _$MetaFromJson(Map<String, dynamic> json) {
+  return _Meta.fromJson(json);
+}
+
+/// @nodoc
+mixin _$Meta {
+  String get currency => throw _privateConstructorUsedError;
+  String get symbol => throw _privateConstructorUsedError;
+  String get exchangeName => throw _privateConstructorUsedError;
+  String get instrumentType => throw _privateConstructorUsedError;
+  int get firstTradeDate => throw _privateConstructorUsedError;
+  int get regularMarketTime => throw _privateConstructorUsedError;
+  int get gmtoffset => throw _privateConstructorUsedError;
+  String get timezone => throw _privateConstructorUsedError;
+  String get exchangeTimezoneName => throw _privateConstructorUsedError;
+  double get regularMarketPrice => throw _privateConstructorUsedError;
+  double get chartPreviousClose => throw _privateConstructorUsedError;
+  int get priceHint => throw _privateConstructorUsedError;
+  CurrentTradingPeriod get currentTradingPeriod =>
+      throw _privateConstructorUsedError;
+  String get dataGranularity => throw _privateConstructorUsedError;
+  String get range => throw _privateConstructorUsedError;
+  List<String> get validRanges => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $MetaCopyWith<Meta> get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $MetaCopyWith<$Res> {
+  factory $MetaCopyWith(Meta value, $Res Function(Meta) then) =
+      _$MetaCopyWithImpl<$Res, Meta>;
+  @useResult
+  $Res call(
+      {String currency,
+      String symbol,
+      String exchangeName,
+      String instrumentType,
+      int firstTradeDate,
+      int regularMarketTime,
+      int gmtoffset,
+      String timezone,
+      String exchangeTimezoneName,
+      double regularMarketPrice,
+      double chartPreviousClose,
+      int priceHint,
+      CurrentTradingPeriod currentTradingPeriod,
+      String dataGranularity,
+      String range,
+      List<String> validRanges});
+
+  $CurrentTradingPeriodCopyWith<$Res> get currentTradingPeriod;
+}
+
+/// @nodoc
+class _$MetaCopyWithImpl<$Res, $Val extends Meta>
+    implements $MetaCopyWith<$Res> {
+  _$MetaCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? currency = null,
+    Object? symbol = null,
+    Object? exchangeName = null,
+    Object? instrumentType = null,
+    Object? firstTradeDate = null,
+    Object? regularMarketTime = null,
+    Object? gmtoffset = null,
+    Object? timezone = null,
+    Object? exchangeTimezoneName = null,
+    Object? regularMarketPrice = null,
+    Object? chartPreviousClose = null,
+    Object? priceHint = null,
+    Object? currentTradingPeriod = null,
+    Object? dataGranularity = null,
+    Object? range = null,
+    Object? validRanges = null,
+  }) {
+    return _then(_value.copyWith(
+      currency: null == currency
+          ? _value.currency
+          : currency // ignore: cast_nullable_to_non_nullable
+              as String,
+      symbol: null == symbol
+          ? _value.symbol
+          : symbol // ignore: cast_nullable_to_non_nullable
+              as String,
+      exchangeName: null == exchangeName
+          ? _value.exchangeName
+          : exchangeName // ignore: cast_nullable_to_non_nullable
+              as String,
+      instrumentType: null == instrumentType
+          ? _value.instrumentType
+          : instrumentType // ignore: cast_nullable_to_non_nullable
+              as String,
+      firstTradeDate: null == firstTradeDate
+          ? _value.firstTradeDate
+          : firstTradeDate // ignore: cast_nullable_to_non_nullable
+              as int,
+      regularMarketTime: null == regularMarketTime
+          ? _value.regularMarketTime
+          : regularMarketTime // ignore: cast_nullable_to_non_nullable
+              as int,
+      gmtoffset: null == gmtoffset
+          ? _value.gmtoffset
+          : gmtoffset // ignore: cast_nullable_to_non_nullable
+              as int,
+      timezone: null == timezone
+          ? _value.timezone
+          : timezone // ignore: cast_nullable_to_non_nullable
+              as String,
+      exchangeTimezoneName: null == exchangeTimezoneName
+          ? _value.exchangeTimezoneName
+          : exchangeTimezoneName // ignore: cast_nullable_to_non_nullable
+              as String,
+      regularMarketPrice: null == regularMarketPrice
+          ? _value.regularMarketPrice
+          : regularMarketPrice // ignore: cast_nullable_to_non_nullable
+              as double,
+      chartPreviousClose: null == chartPreviousClose
+          ? _value.chartPreviousClose
+          : chartPreviousClose // ignore: cast_nullable_to_non_nullable
+              as double,
+      priceHint: null == priceHint
+          ? _value.priceHint
+          : priceHint // ignore: cast_nullable_to_non_nullable
+              as int,
+      currentTradingPeriod: null == currentTradingPeriod
+          ? _value.currentTradingPeriod
+          : currentTradingPeriod // ignore: cast_nullable_to_non_nullable
+              as CurrentTradingPeriod,
+      dataGranularity: null == dataGranularity
+          ? _value.dataGranularity
+          : dataGranularity // ignore: cast_nullable_to_non_nullable
+              as String,
+      range: null == range
+          ? _value.range
+          : range // ignore: cast_nullable_to_non_nullable
+              as String,
+      validRanges: null == validRanges
+          ? _value.validRanges
+          : validRanges // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+    ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CurrentTradingPeriodCopyWith<$Res> get currentTradingPeriod {
+    return $CurrentTradingPeriodCopyWith<$Res>(_value.currentTradingPeriod,
+        (value) {
+      return _then(_value.copyWith(currentTradingPeriod: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$MetaImplCopyWith<$Res> implements $MetaCopyWith<$Res> {
+  factory _$$MetaImplCopyWith(
+          _$MetaImpl value, $Res Function(_$MetaImpl) then) =
+      __$$MetaImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {String currency,
+      String symbol,
+      String exchangeName,
+      String instrumentType,
+      int firstTradeDate,
+      int regularMarketTime,
+      int gmtoffset,
+      String timezone,
+      String exchangeTimezoneName,
+      double regularMarketPrice,
+      double chartPreviousClose,
+      int priceHint,
+      CurrentTradingPeriod currentTradingPeriod,
+      String dataGranularity,
+      String range,
+      List<String> validRanges});
+
+  @override
+  $CurrentTradingPeriodCopyWith<$Res> get currentTradingPeriod;
+}
+
+/// @nodoc
+class __$$MetaImplCopyWithImpl<$Res>
+    extends _$MetaCopyWithImpl<$Res, _$MetaImpl>
+    implements _$$MetaImplCopyWith<$Res> {
+  __$$MetaImplCopyWithImpl(_$MetaImpl _value, $Res Function(_$MetaImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? currency = null,
+    Object? symbol = null,
+    Object? exchangeName = null,
+    Object? instrumentType = null,
+    Object? firstTradeDate = null,
+    Object? regularMarketTime = null,
+    Object? gmtoffset = null,
+    Object? timezone = null,
+    Object? exchangeTimezoneName = null,
+    Object? regularMarketPrice = null,
+    Object? chartPreviousClose = null,
+    Object? priceHint = null,
+    Object? currentTradingPeriod = null,
+    Object? dataGranularity = null,
+    Object? range = null,
+    Object? validRanges = null,
+  }) {
+    return _then(_$MetaImpl(
+      currency: null == currency
+          ? _value.currency
+          : currency // ignore: cast_nullable_to_non_nullable
+              as String,
+      symbol: null == symbol
+          ? _value.symbol
+          : symbol // ignore: cast_nullable_to_non_nullable
+              as String,
+      exchangeName: null == exchangeName
+          ? _value.exchangeName
+          : exchangeName // ignore: cast_nullable_to_non_nullable
+              as String,
+      instrumentType: null == instrumentType
+          ? _value.instrumentType
+          : instrumentType // ignore: cast_nullable_to_non_nullable
+              as String,
+      firstTradeDate: null == firstTradeDate
+          ? _value.firstTradeDate
+          : firstTradeDate // ignore: cast_nullable_to_non_nullable
+              as int,
+      regularMarketTime: null == regularMarketTime
+          ? _value.regularMarketTime
+          : regularMarketTime // ignore: cast_nullable_to_non_nullable
+              as int,
+      gmtoffset: null == gmtoffset
+          ? _value.gmtoffset
+          : gmtoffset // ignore: cast_nullable_to_non_nullable
+              as int,
+      timezone: null == timezone
+          ? _value.timezone
+          : timezone // ignore: cast_nullable_to_non_nullable
+              as String,
+      exchangeTimezoneName: null == exchangeTimezoneName
+          ? _value.exchangeTimezoneName
+          : exchangeTimezoneName // ignore: cast_nullable_to_non_nullable
+              as String,
+      regularMarketPrice: null == regularMarketPrice
+          ? _value.regularMarketPrice
+          : regularMarketPrice // ignore: cast_nullable_to_non_nullable
+              as double,
+      chartPreviousClose: null == chartPreviousClose
+          ? _value.chartPreviousClose
+          : chartPreviousClose // ignore: cast_nullable_to_non_nullable
+              as double,
+      priceHint: null == priceHint
+          ? _value.priceHint
+          : priceHint // ignore: cast_nullable_to_non_nullable
+              as int,
+      currentTradingPeriod: null == currentTradingPeriod
+          ? _value.currentTradingPeriod
+          : currentTradingPeriod // ignore: cast_nullable_to_non_nullable
+              as CurrentTradingPeriod,
+      dataGranularity: null == dataGranularity
+          ? _value.dataGranularity
+          : dataGranularity // ignore: cast_nullable_to_non_nullable
+              as String,
+      range: null == range
+          ? _value.range
+          : range // ignore: cast_nullable_to_non_nullable
+              as String,
+      validRanges: null == validRanges
+          ? _value._validRanges
+          : validRanges // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$MetaImpl implements _Meta {
+  const _$MetaImpl(
+      {required this.currency,
+      required this.symbol,
+      required this.exchangeName,
+      required this.instrumentType,
+      required this.firstTradeDate,
+      required this.regularMarketTime,
+      required this.gmtoffset,
+      required this.timezone,
+      required this.exchangeTimezoneName,
+      required this.regularMarketPrice,
+      required this.chartPreviousClose,
+      required this.priceHint,
+      required this.currentTradingPeriod,
+      required this.dataGranularity,
+      required this.range,
+      required final List<String> validRanges})
+      : _validRanges = validRanges;
+
+  factory _$MetaImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MetaImplFromJson(json);
+
+  @override
+  final String currency;
+  @override
+  final String symbol;
+  @override
+  final String exchangeName;
+  @override
+  final String instrumentType;
+  @override
+  final int firstTradeDate;
+  @override
+  final int regularMarketTime;
+  @override
+  final int gmtoffset;
+  @override
+  final String timezone;
+  @override
+  final String exchangeTimezoneName;
+  @override
+  final double regularMarketPrice;
+  @override
+  final double chartPreviousClose;
+  @override
+  final int priceHint;
+  @override
+  final CurrentTradingPeriod currentTradingPeriod;
+  @override
+  final String dataGranularity;
+  @override
+  final String range;
+  final List<String> _validRanges;
+  @override
+  List<String> get validRanges {
+    if (_validRanges is EqualUnmodifiableListView) return _validRanges;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_validRanges);
+  }
+
+  @override
+  String toString() {
+    return 'Meta(currency: $currency, symbol: $symbol, exchangeName: $exchangeName, instrumentType: $instrumentType, firstTradeDate: $firstTradeDate, regularMarketTime: $regularMarketTime, gmtoffset: $gmtoffset, timezone: $timezone, exchangeTimezoneName: $exchangeTimezoneName, regularMarketPrice: $regularMarketPrice, chartPreviousClose: $chartPreviousClose, priceHint: $priceHint, currentTradingPeriod: $currentTradingPeriod, dataGranularity: $dataGranularity, range: $range, validRanges: $validRanges)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$MetaImpl &&
+            (identical(other.currency, currency) ||
+                other.currency == currency) &&
+            (identical(other.symbol, symbol) || other.symbol == symbol) &&
+            (identical(other.exchangeName, exchangeName) ||
+                other.exchangeName == exchangeName) &&
+            (identical(other.instrumentType, instrumentType) ||
+                other.instrumentType == instrumentType) &&
+            (identical(other.firstTradeDate, firstTradeDate) ||
+                other.firstTradeDate == firstTradeDate) &&
+            (identical(other.regularMarketTime, regularMarketTime) ||
+                other.regularMarketTime == regularMarketTime) &&
+            (identical(other.gmtoffset, gmtoffset) ||
+                other.gmtoffset == gmtoffset) &&
+            (identical(other.timezone, timezone) ||
+                other.timezone == timezone) &&
+            (identical(other.exchangeTimezoneName, exchangeTimezoneName) ||
+                other.exchangeTimezoneName == exchangeTimezoneName) &&
+            (identical(other.regularMarketPrice, regularMarketPrice) ||
+                other.regularMarketPrice == regularMarketPrice) &&
+            (identical(other.chartPreviousClose, chartPreviousClose) ||
+                other.chartPreviousClose == chartPreviousClose) &&
+            (identical(other.priceHint, priceHint) ||
+                other.priceHint == priceHint) &&
+            (identical(other.currentTradingPeriod, currentTradingPeriod) ||
+                other.currentTradingPeriod == currentTradingPeriod) &&
+            (identical(other.dataGranularity, dataGranularity) ||
+                other.dataGranularity == dataGranularity) &&
+            (identical(other.range, range) || other.range == range) &&
+            const DeepCollectionEquality()
+                .equals(other._validRanges, _validRanges));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      currency,
+      symbol,
+      exchangeName,
+      instrumentType,
+      firstTradeDate,
+      regularMarketTime,
+      gmtoffset,
+      timezone,
+      exchangeTimezoneName,
+      regularMarketPrice,
+      chartPreviousClose,
+      priceHint,
+      currentTradingPeriod,
+      dataGranularity,
+      range,
+      const DeepCollectionEquality().hash(_validRanges));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$MetaImplCopyWith<_$MetaImpl> get copyWith =>
+      __$$MetaImplCopyWithImpl<_$MetaImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$MetaImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _Meta implements Meta {
+  const factory _Meta(
+      {required final String currency,
+      required final String symbol,
+      required final String exchangeName,
+      required final String instrumentType,
+      required final int firstTradeDate,
+      required final int regularMarketTime,
+      required final int gmtoffset,
+      required final String timezone,
+      required final String exchangeTimezoneName,
+      required final double regularMarketPrice,
+      required final double chartPreviousClose,
+      required final int priceHint,
+      required final CurrentTradingPeriod currentTradingPeriod,
+      required final String dataGranularity,
+      required final String range,
+      required final List<String> validRanges}) = _$MetaImpl;
+
+  factory _Meta.fromJson(Map<String, dynamic> json) = _$MetaImpl.fromJson;
+
+  @override
+  String get currency;
+  @override
+  String get symbol;
+  @override
+  String get exchangeName;
+  @override
+  String get instrumentType;
+  @override
+  int get firstTradeDate;
+  @override
+  int get regularMarketTime;
+  @override
+  int get gmtoffset;
+  @override
+  String get timezone;
+  @override
+  String get exchangeTimezoneName;
+  @override
+  double get regularMarketPrice;
+  @override
+  double get chartPreviousClose;
+  @override
+  int get priceHint;
+  @override
+  CurrentTradingPeriod get currentTradingPeriod;
+  @override
+  String get dataGranularity;
+  @override
+  String get range;
+  @override
+  List<String> get validRanges;
+  @override
+  @JsonKey(ignore: true)
+  _$$MetaImplCopyWith<_$MetaImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+CurrentTradingPeriod _$CurrentTradingPeriodFromJson(Map<String, dynamic> json) {
+  return _CurrentTradingPeriod.fromJson(json);
+}
+
+/// @nodoc
+mixin _$CurrentTradingPeriod {
+  TradingSession get pre => throw _privateConstructorUsedError;
+  TradingSession get regular => throw _privateConstructorUsedError;
+  TradingSession get post => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $CurrentTradingPeriodCopyWith<CurrentTradingPeriod> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $CurrentTradingPeriodCopyWith<$Res> {
+  factory $CurrentTradingPeriodCopyWith(CurrentTradingPeriod value,
+          $Res Function(CurrentTradingPeriod) then) =
+      _$CurrentTradingPeriodCopyWithImpl<$Res, CurrentTradingPeriod>;
+  @useResult
+  $Res call({TradingSession pre, TradingSession regular, TradingSession post});
+
+  $TradingSessionCopyWith<$Res> get pre;
+  $TradingSessionCopyWith<$Res> get regular;
+  $TradingSessionCopyWith<$Res> get post;
+}
+
+/// @nodoc
+class _$CurrentTradingPeriodCopyWithImpl<$Res,
+        $Val extends CurrentTradingPeriod>
+    implements $CurrentTradingPeriodCopyWith<$Res> {
+  _$CurrentTradingPeriodCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? pre = null,
+    Object? regular = null,
+    Object? post = null,
+  }) {
+    return _then(_value.copyWith(
+      pre: null == pre
+          ? _value.pre
+          : pre // ignore: cast_nullable_to_non_nullable
+              as TradingSession,
+      regular: null == regular
+          ? _value.regular
+          : regular // ignore: cast_nullable_to_non_nullable
+              as TradingSession,
+      post: null == post
+          ? _value.post
+          : post // ignore: cast_nullable_to_non_nullable
+              as TradingSession,
+    ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $TradingSessionCopyWith<$Res> get pre {
+    return $TradingSessionCopyWith<$Res>(_value.pre, (value) {
+      return _then(_value.copyWith(pre: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $TradingSessionCopyWith<$Res> get regular {
+    return $TradingSessionCopyWith<$Res>(_value.regular, (value) {
+      return _then(_value.copyWith(regular: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $TradingSessionCopyWith<$Res> get post {
+    return $TradingSessionCopyWith<$Res>(_value.post, (value) {
+      return _then(_value.copyWith(post: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$CurrentTradingPeriodImplCopyWith<$Res>
+    implements $CurrentTradingPeriodCopyWith<$Res> {
+  factory _$$CurrentTradingPeriodImplCopyWith(_$CurrentTradingPeriodImpl value,
+          $Res Function(_$CurrentTradingPeriodImpl) then) =
+      __$$CurrentTradingPeriodImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({TradingSession pre, TradingSession regular, TradingSession post});
+
+  @override
+  $TradingSessionCopyWith<$Res> get pre;
+  @override
+  $TradingSessionCopyWith<$Res> get regular;
+  @override
+  $TradingSessionCopyWith<$Res> get post;
+}
+
+/// @nodoc
+class __$$CurrentTradingPeriodImplCopyWithImpl<$Res>
+    extends _$CurrentTradingPeriodCopyWithImpl<$Res, _$CurrentTradingPeriodImpl>
+    implements _$$CurrentTradingPeriodImplCopyWith<$Res> {
+  __$$CurrentTradingPeriodImplCopyWithImpl(_$CurrentTradingPeriodImpl _value,
+      $Res Function(_$CurrentTradingPeriodImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? pre = null,
+    Object? regular = null,
+    Object? post = null,
+  }) {
+    return _then(_$CurrentTradingPeriodImpl(
+      pre: null == pre
+          ? _value.pre
+          : pre // ignore: cast_nullable_to_non_nullable
+              as TradingSession,
+      regular: null == regular
+          ? _value.regular
+          : regular // ignore: cast_nullable_to_non_nullable
+              as TradingSession,
+      post: null == post
+          ? _value.post
+          : post // ignore: cast_nullable_to_non_nullable
+              as TradingSession,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$CurrentTradingPeriodImpl implements _CurrentTradingPeriod {
+  const _$CurrentTradingPeriodImpl(
+      {required this.pre, required this.regular, required this.post});
+
+  factory _$CurrentTradingPeriodImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CurrentTradingPeriodImplFromJson(json);
+
+  @override
+  final TradingSession pre;
+  @override
+  final TradingSession regular;
+  @override
+  final TradingSession post;
+
+  @override
+  String toString() {
+    return 'CurrentTradingPeriod(pre: $pre, regular: $regular, post: $post)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$CurrentTradingPeriodImpl &&
+            (identical(other.pre, pre) || other.pre == pre) &&
+            (identical(other.regular, regular) || other.regular == regular) &&
+            (identical(other.post, post) || other.post == post));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, pre, regular, post);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$CurrentTradingPeriodImplCopyWith<_$CurrentTradingPeriodImpl>
+      get copyWith =>
+          __$$CurrentTradingPeriodImplCopyWithImpl<_$CurrentTradingPeriodImpl>(
+              this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$CurrentTradingPeriodImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _CurrentTradingPeriod implements CurrentTradingPeriod {
+  const factory _CurrentTradingPeriod(
+      {required final TradingSession pre,
+      required final TradingSession regular,
+      required final TradingSession post}) = _$CurrentTradingPeriodImpl;
+
+  factory _CurrentTradingPeriod.fromJson(Map<String, dynamic> json) =
+      _$CurrentTradingPeriodImpl.fromJson;
+
+  @override
+  TradingSession get pre;
+  @override
+  TradingSession get regular;
+  @override
+  TradingSession get post;
+  @override
+  @JsonKey(ignore: true)
+  _$$CurrentTradingPeriodImplCopyWith<_$CurrentTradingPeriodImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+TradingSession _$TradingSessionFromJson(Map<String, dynamic> json) {
+  return _TradingSession.fromJson(json);
+}
+
+/// @nodoc
+mixin _$TradingSession {
+  String get timezone => throw _privateConstructorUsedError;
+  int get start => throw _privateConstructorUsedError;
+  int get end => throw _privateConstructorUsedError;
+  int get gmtoffset => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $TradingSessionCopyWith<TradingSession> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $TradingSessionCopyWith<$Res> {
+  factory $TradingSessionCopyWith(
+          TradingSession value, $Res Function(TradingSession) then) =
+      _$TradingSessionCopyWithImpl<$Res, TradingSession>;
+  @useResult
+  $Res call({String timezone, int start, int end, int gmtoffset});
+}
+
+/// @nodoc
+class _$TradingSessionCopyWithImpl<$Res, $Val extends TradingSession>
+    implements $TradingSessionCopyWith<$Res> {
+  _$TradingSessionCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? timezone = null,
+    Object? start = null,
+    Object? end = null,
+    Object? gmtoffset = null,
+  }) {
+    return _then(_value.copyWith(
+      timezone: null == timezone
+          ? _value.timezone
+          : timezone // ignore: cast_nullable_to_non_nullable
+              as String,
+      start: null == start
+          ? _value.start
+          : start // ignore: cast_nullable_to_non_nullable
+              as int,
+      end: null == end
+          ? _value.end
+          : end // ignore: cast_nullable_to_non_nullable
+              as int,
+      gmtoffset: null == gmtoffset
+          ? _value.gmtoffset
+          : gmtoffset // ignore: cast_nullable_to_non_nullable
+              as int,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$TradingSessionImplCopyWith<$Res>
+    implements $TradingSessionCopyWith<$Res> {
+  factory _$$TradingSessionImplCopyWith(_$TradingSessionImpl value,
+          $Res Function(_$TradingSessionImpl) then) =
+      __$$TradingSessionImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String timezone, int start, int end, int gmtoffset});
+}
+
+/// @nodoc
+class __$$TradingSessionImplCopyWithImpl<$Res>
+    extends _$TradingSessionCopyWithImpl<$Res, _$TradingSessionImpl>
+    implements _$$TradingSessionImplCopyWith<$Res> {
+  __$$TradingSessionImplCopyWithImpl(
+      _$TradingSessionImpl _value, $Res Function(_$TradingSessionImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? timezone = null,
+    Object? start = null,
+    Object? end = null,
+    Object? gmtoffset = null,
+  }) {
+    return _then(_$TradingSessionImpl(
+      timezone: null == timezone
+          ? _value.timezone
+          : timezone // ignore: cast_nullable_to_non_nullable
+              as String,
+      start: null == start
+          ? _value.start
+          : start // ignore: cast_nullable_to_non_nullable
+              as int,
+      end: null == end
+          ? _value.end
+          : end // ignore: cast_nullable_to_non_nullable
+              as int,
+      gmtoffset: null == gmtoffset
+          ? _value.gmtoffset
+          : gmtoffset // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$TradingSessionImpl implements _TradingSession {
+  const _$TradingSessionImpl(
+      {required this.timezone,
+      required this.start,
+      required this.end,
+      required this.gmtoffset});
+
+  factory _$TradingSessionImpl.fromJson(Map<String, dynamic> json) =>
+      _$$TradingSessionImplFromJson(json);
+
+  @override
+  final String timezone;
+  @override
+  final int start;
+  @override
+  final int end;
+  @override
+  final int gmtoffset;
+
+  @override
+  String toString() {
+    return 'TradingSession(timezone: $timezone, start: $start, end: $end, gmtoffset: $gmtoffset)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$TradingSessionImpl &&
+            (identical(other.timezone, timezone) ||
+                other.timezone == timezone) &&
+            (identical(other.start, start) || other.start == start) &&
+            (identical(other.end, end) || other.end == end) &&
+            (identical(other.gmtoffset, gmtoffset) ||
+                other.gmtoffset == gmtoffset));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, timezone, start, end, gmtoffset);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$TradingSessionImplCopyWith<_$TradingSessionImpl> get copyWith =>
+      __$$TradingSessionImplCopyWithImpl<_$TradingSessionImpl>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$TradingSessionImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _TradingSession implements TradingSession {
+  const factory _TradingSession(
+      {required final String timezone,
+      required final int start,
+      required final int end,
+      required final int gmtoffset}) = _$TradingSessionImpl;
+
+  factory _TradingSession.fromJson(Map<String, dynamic> json) =
+      _$TradingSessionImpl.fromJson;
+
+  @override
+  String get timezone;
+  @override
+  int get start;
+  @override
+  int get end;
+  @override
+  int get gmtoffset;
+  @override
+  @JsonKey(ignore: true)
+  _$$TradingSessionImplCopyWith<_$TradingSessionImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+Comparison _$ComparisonFromJson(Map<String, dynamic> json) {
+  return _Comparison.fromJson(json);
+}
+
+/// @nodoc
+mixin _$Comparison {
+  String get symbol => throw _privateConstructorUsedError;
+  List<double> get high => throw _privateConstructorUsedError;
+  List<double> get low => throw _privateConstructorUsedError;
+  double get chartPreviousClose => throw _privateConstructorUsedError;
+  List<double> get close => throw _privateConstructorUsedError;
+  List<double> get open => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ComparisonCopyWith<Comparison> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ComparisonCopyWith<$Res> {
+  factory $ComparisonCopyWith(
+          Comparison value, $Res Function(Comparison) then) =
+      _$ComparisonCopyWithImpl<$Res, Comparison>;
+  @useResult
+  $Res call(
+      {String symbol,
+      List<double> high,
+      List<double> low,
+      double chartPreviousClose,
+      List<double> close,
+      List<double> open});
+}
+
+/// @nodoc
+class _$ComparisonCopyWithImpl<$Res, $Val extends Comparison>
+    implements $ComparisonCopyWith<$Res> {
+  _$ComparisonCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? symbol = null,
+    Object? high = null,
+    Object? low = null,
+    Object? chartPreviousClose = null,
+    Object? close = null,
+    Object? open = null,
+  }) {
+    return _then(_value.copyWith(
+      symbol: null == symbol
+          ? _value.symbol
+          : symbol // ignore: cast_nullable_to_non_nullable
+              as String,
+      high: null == high
+          ? _value.high
+          : high // ignore: cast_nullable_to_non_nullable
+              as List<double>,
+      low: null == low
+          ? _value.low
+          : low // ignore: cast_nullable_to_non_nullable
+              as List<double>,
+      chartPreviousClose: null == chartPreviousClose
+          ? _value.chartPreviousClose
+          : chartPreviousClose // ignore: cast_nullable_to_non_nullable
+              as double,
+      close: null == close
+          ? _value.close
+          : close // ignore: cast_nullable_to_non_nullable
+              as List<double>,
+      open: null == open
+          ? _value.open
+          : open // ignore: cast_nullable_to_non_nullable
+              as List<double>,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$ComparisonImplCopyWith<$Res>
+    implements $ComparisonCopyWith<$Res> {
+  factory _$$ComparisonImplCopyWith(
+          _$ComparisonImpl value, $Res Function(_$ComparisonImpl) then) =
+      __$$ComparisonImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {String symbol,
+      List<double> high,
+      List<double> low,
+      double chartPreviousClose,
+      List<double> close,
+      List<double> open});
+}
+
+/// @nodoc
+class __$$ComparisonImplCopyWithImpl<$Res>
+    extends _$ComparisonCopyWithImpl<$Res, _$ComparisonImpl>
+    implements _$$ComparisonImplCopyWith<$Res> {
+  __$$ComparisonImplCopyWithImpl(
+      _$ComparisonImpl _value, $Res Function(_$ComparisonImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? symbol = null,
+    Object? high = null,
+    Object? low = null,
+    Object? chartPreviousClose = null,
+    Object? close = null,
+    Object? open = null,
+  }) {
+    return _then(_$ComparisonImpl(
+      symbol: null == symbol
+          ? _value.symbol
+          : symbol // ignore: cast_nullable_to_non_nullable
+              as String,
+      high: null == high
+          ? _value._high
+          : high // ignore: cast_nullable_to_non_nullable
+              as List<double>,
+      low: null == low
+          ? _value._low
+          : low // ignore: cast_nullable_to_non_nullable
+              as List<double>,
+      chartPreviousClose: null == chartPreviousClose
+          ? _value.chartPreviousClose
+          : chartPreviousClose // ignore: cast_nullable_to_non_nullable
+              as double,
+      close: null == close
+          ? _value._close
+          : close // ignore: cast_nullable_to_non_nullable
+              as List<double>,
+      open: null == open
+          ? _value._open
+          : open // ignore: cast_nullable_to_non_nullable
+              as List<double>,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$ComparisonImpl implements _Comparison {
+  const _$ComparisonImpl(
+      {required this.symbol,
+      required final List<double> high,
+      required final List<double> low,
+      required this.chartPreviousClose,
+      required final List<double> close,
+      required final List<double> open})
+      : _high = high,
+        _low = low,
+        _close = close,
+        _open = open;
+
+  factory _$ComparisonImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ComparisonImplFromJson(json);
+
+  @override
+  final String symbol;
+  final List<double> _high;
+  @override
+  List<double> get high {
+    if (_high is EqualUnmodifiableListView) return _high;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_high);
+  }
+
+  final List<double> _low;
+  @override
+  List<double> get low {
+    if (_low is EqualUnmodifiableListView) return _low;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_low);
+  }
+
+  @override
+  final double chartPreviousClose;
+  final List<double> _close;
+  @override
+  List<double> get close {
+    if (_close is EqualUnmodifiableListView) return _close;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_close);
+  }
+
+  final List<double> _open;
+  @override
+  List<double> get open {
+    if (_open is EqualUnmodifiableListView) return _open;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_open);
+  }
+
+  @override
+  String toString() {
+    return 'Comparison(symbol: $symbol, high: $high, low: $low, chartPreviousClose: $chartPreviousClose, close: $close, open: $open)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ComparisonImpl &&
+            (identical(other.symbol, symbol) || other.symbol == symbol) &&
+            const DeepCollectionEquality().equals(other._high, _high) &&
+            const DeepCollectionEquality().equals(other._low, _low) &&
+            (identical(other.chartPreviousClose, chartPreviousClose) ||
+                other.chartPreviousClose == chartPreviousClose) &&
+            const DeepCollectionEquality().equals(other._close, _close) &&
+            const DeepCollectionEquality().equals(other._open, _open));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      symbol,
+      const DeepCollectionEquality().hash(_high),
+      const DeepCollectionEquality().hash(_low),
+      chartPreviousClose,
+      const DeepCollectionEquality().hash(_close),
+      const DeepCollectionEquality().hash(_open));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ComparisonImplCopyWith<_$ComparisonImpl> get copyWith =>
+      __$$ComparisonImplCopyWithImpl<_$ComparisonImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$ComparisonImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _Comparison implements Comparison {
+  const factory _Comparison(
+      {required final String symbol,
+      required final List<double> high,
+      required final List<double> low,
+      required final double chartPreviousClose,
+      required final List<double> close,
+      required final List<double> open}) = _$ComparisonImpl;
+
+  factory _Comparison.fromJson(Map<String, dynamic> json) =
+      _$ComparisonImpl.fromJson;
+
+  @override
+  String get symbol;
+  @override
+  List<double> get high;
+  @override
+  List<double> get low;
+  @override
+  double get chartPreviousClose;
+  @override
+  List<double> get close;
+  @override
+  List<double> get open;
+  @override
+  @JsonKey(ignore: true)
+  _$$ComparisonImplCopyWith<_$ComparisonImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+Indicators _$IndicatorsFromJson(Map<String, dynamic> json) {
+  return _Indicators.fromJson(json);
+}
+
+/// @nodoc
+mixin _$Indicators {
+  List<YhQuote> get quote => throw _privateConstructorUsedError;
+  List<AdjClose>? get adjclose => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $IndicatorsCopyWith<Indicators> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $IndicatorsCopyWith<$Res> {
+  factory $IndicatorsCopyWith(
+          Indicators value, $Res Function(Indicators) then) =
+      _$IndicatorsCopyWithImpl<$Res, Indicators>;
+  @useResult
+  $Res call({List<YhQuote> quote, List<AdjClose>? adjclose});
+}
+
+/// @nodoc
+class _$IndicatorsCopyWithImpl<$Res, $Val extends Indicators>
+    implements $IndicatorsCopyWith<$Res> {
+  _$IndicatorsCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? quote = null,
+    Object? adjclose = freezed,
+  }) {
+    return _then(_value.copyWith(
+      quote: null == quote
+          ? _value.quote
+          : quote // ignore: cast_nullable_to_non_nullable
+              as List<YhQuote>,
+      adjclose: freezed == adjclose
+          ? _value.adjclose
+          : adjclose // ignore: cast_nullable_to_non_nullable
+              as List<AdjClose>?,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$IndicatorsImplCopyWith<$Res>
+    implements $IndicatorsCopyWith<$Res> {
+  factory _$$IndicatorsImplCopyWith(
+          _$IndicatorsImpl value, $Res Function(_$IndicatorsImpl) then) =
+      __$$IndicatorsImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({List<YhQuote> quote, List<AdjClose>? adjclose});
+}
+
+/// @nodoc
+class __$$IndicatorsImplCopyWithImpl<$Res>
+    extends _$IndicatorsCopyWithImpl<$Res, _$IndicatorsImpl>
+    implements _$$IndicatorsImplCopyWith<$Res> {
+  __$$IndicatorsImplCopyWithImpl(
+      _$IndicatorsImpl _value, $Res Function(_$IndicatorsImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? quote = null,
+    Object? adjclose = freezed,
+  }) {
+    return _then(_$IndicatorsImpl(
+      quote: null == quote
+          ? _value._quote
+          : quote // ignore: cast_nullable_to_non_nullable
+              as List<YhQuote>,
+      adjclose: freezed == adjclose
+          ? _value._adjclose
+          : adjclose // ignore: cast_nullable_to_non_nullable
+              as List<AdjClose>?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$IndicatorsImpl implements _Indicators {
+  const _$IndicatorsImpl(
+      {required final List<YhQuote> quote, final List<AdjClose>? adjclose})
+      : _quote = quote,
+        _adjclose = adjclose;
+
+  factory _$IndicatorsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$IndicatorsImplFromJson(json);
+
+  final List<YhQuote> _quote;
+  @override
+  List<YhQuote> get quote {
+    if (_quote is EqualUnmodifiableListView) return _quote;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_quote);
+  }
+
+  final List<AdjClose>? _adjclose;
+  @override
+  List<AdjClose>? get adjclose {
+    final value = _adjclose;
+    if (value == null) return null;
+    if (_adjclose is EqualUnmodifiableListView) return _adjclose;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  String toString() {
+    return 'Indicators(quote: $quote, adjclose: $adjclose)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$IndicatorsImpl &&
+            const DeepCollectionEquality().equals(other._quote, _quote) &&
+            const DeepCollectionEquality().equals(other._adjclose, _adjclose));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(_quote),
+      const DeepCollectionEquality().hash(_adjclose));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$IndicatorsImplCopyWith<_$IndicatorsImpl> get copyWith =>
+      __$$IndicatorsImplCopyWithImpl<_$IndicatorsImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$IndicatorsImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _Indicators implements Indicators {
+  const factory _Indicators(
+      {required final List<YhQuote> quote,
+      final List<AdjClose>? adjclose}) = _$IndicatorsImpl;
+
+  factory _Indicators.fromJson(Map<String, dynamic> json) =
+      _$IndicatorsImpl.fromJson;
+
+  @override
+  List<YhQuote> get quote;
+  @override
+  List<AdjClose>? get adjclose;
+  @override
+  @JsonKey(ignore: true)
+  _$$IndicatorsImplCopyWith<_$IndicatorsImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+YhQuote _$YhQuoteFromJson(Map<String, dynamic> json) {
+  return _YhQuote.fromJson(json);
+}
+
+/// @nodoc
+mixin _$YhQuote {
+  List<double?> get low => throw _privateConstructorUsedError;
+  List<double?> get high => throw _privateConstructorUsedError;
+  List<double?> get open => throw _privateConstructorUsedError;
+  List<double?> get close => throw _privateConstructorUsedError;
+  List<int?> get volume => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $YhQuoteCopyWith<YhQuote> get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $YhQuoteCopyWith<$Res> {
+  factory $YhQuoteCopyWith(YhQuote value, $Res Function(YhQuote) then) =
+      _$YhQuoteCopyWithImpl<$Res, YhQuote>;
+  @useResult
+  $Res call(
+      {List<double?> low,
+      List<double?> high,
+      List<double?> open,
+      List<double?> close,
+      List<int?> volume});
+}
+
+/// @nodoc
+class _$YhQuoteCopyWithImpl<$Res, $Val extends YhQuote>
+    implements $YhQuoteCopyWith<$Res> {
+  _$YhQuoteCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? low = null,
+    Object? high = null,
+    Object? open = null,
+    Object? close = null,
+    Object? volume = null,
+  }) {
+    return _then(_value.copyWith(
+      low: null == low
+          ? _value.low
+          : low // ignore: cast_nullable_to_non_nullable
+              as List<double?>,
+      high: null == high
+          ? _value.high
+          : high // ignore: cast_nullable_to_non_nullable
+              as List<double?>,
+      open: null == open
+          ? _value.open
+          : open // ignore: cast_nullable_to_non_nullable
+              as List<double?>,
+      close: null == close
+          ? _value.close
+          : close // ignore: cast_nullable_to_non_nullable
+              as List<double?>,
+      volume: null == volume
+          ? _value.volume
+          : volume // ignore: cast_nullable_to_non_nullable
+              as List<int?>,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$YhQuoteImplCopyWith<$Res> implements $YhQuoteCopyWith<$Res> {
+  factory _$$YhQuoteImplCopyWith(
+          _$YhQuoteImpl value, $Res Function(_$YhQuoteImpl) then) =
+      __$$YhQuoteImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {List<double?> low,
+      List<double?> high,
+      List<double?> open,
+      List<double?> close,
+      List<int?> volume});
+}
+
+/// @nodoc
+class __$$YhQuoteImplCopyWithImpl<$Res>
+    extends _$YhQuoteCopyWithImpl<$Res, _$YhQuoteImpl>
+    implements _$$YhQuoteImplCopyWith<$Res> {
+  __$$YhQuoteImplCopyWithImpl(
+      _$YhQuoteImpl _value, $Res Function(_$YhQuoteImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? low = null,
+    Object? high = null,
+    Object? open = null,
+    Object? close = null,
+    Object? volume = null,
+  }) {
+    return _then(_$YhQuoteImpl(
+      low: null == low
+          ? _value._low
+          : low // ignore: cast_nullable_to_non_nullable
+              as List<double?>,
+      high: null == high
+          ? _value._high
+          : high // ignore: cast_nullable_to_non_nullable
+              as List<double?>,
+      open: null == open
+          ? _value._open
+          : open // ignore: cast_nullable_to_non_nullable
+              as List<double?>,
+      close: null == close
+          ? _value._close
+          : close // ignore: cast_nullable_to_non_nullable
+              as List<double?>,
+      volume: null == volume
+          ? _value._volume
+          : volume // ignore: cast_nullable_to_non_nullable
+              as List<int?>,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$YhQuoteImpl implements _YhQuote {
+  const _$YhQuoteImpl(
+      {required final List<double?> low,
+      required final List<double?> high,
+      required final List<double?> open,
+      required final List<double?> close,
+      required final List<int?> volume})
+      : _low = low,
+        _high = high,
+        _open = open,
+        _close = close,
+        _volume = volume;
+
+  factory _$YhQuoteImpl.fromJson(Map<String, dynamic> json) =>
+      _$$YhQuoteImplFromJson(json);
+
+  final List<double?> _low;
+  @override
+  List<double?> get low {
+    if (_low is EqualUnmodifiableListView) return _low;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_low);
+  }
+
+  final List<double?> _high;
+  @override
+  List<double?> get high {
+    if (_high is EqualUnmodifiableListView) return _high;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_high);
+  }
+
+  final List<double?> _open;
+  @override
+  List<double?> get open {
+    if (_open is EqualUnmodifiableListView) return _open;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_open);
+  }
+
+  final List<double?> _close;
+  @override
+  List<double?> get close {
+    if (_close is EqualUnmodifiableListView) return _close;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_close);
+  }
+
+  final List<int?> _volume;
+  @override
+  List<int?> get volume {
+    if (_volume is EqualUnmodifiableListView) return _volume;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_volume);
+  }
+
+  @override
+  String toString() {
+    return 'YhQuote(low: $low, high: $high, open: $open, close: $close, volume: $volume)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$YhQuoteImpl &&
+            const DeepCollectionEquality().equals(other._low, _low) &&
+            const DeepCollectionEquality().equals(other._high, _high) &&
+            const DeepCollectionEquality().equals(other._open, _open) &&
+            const DeepCollectionEquality().equals(other._close, _close) &&
+            const DeepCollectionEquality().equals(other._volume, _volume));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(_low),
+      const DeepCollectionEquality().hash(_high),
+      const DeepCollectionEquality().hash(_open),
+      const DeepCollectionEquality().hash(_close),
+      const DeepCollectionEquality().hash(_volume));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$YhQuoteImplCopyWith<_$YhQuoteImpl> get copyWith =>
+      __$$YhQuoteImplCopyWithImpl<_$YhQuoteImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$YhQuoteImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _YhQuote implements YhQuote {
+  const factory _YhQuote(
+      {required final List<double?> low,
+      required final List<double?> high,
+      required final List<double?> open,
+      required final List<double?> close,
+      required final List<int?> volume}) = _$YhQuoteImpl;
+
+  factory _YhQuote.fromJson(Map<String, dynamic> json) = _$YhQuoteImpl.fromJson;
+
+  @override
+  List<double?> get low;
+  @override
+  List<double?> get high;
+  @override
+  List<double?> get open;
+  @override
+  List<double?> get close;
+  @override
+  List<int?> get volume;
+  @override
+  @JsonKey(ignore: true)
+  _$$YhQuoteImplCopyWith<_$YhQuoteImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+AdjClose _$AdjCloseFromJson(Map<String, dynamic> json) {
+  return _AdjClose.fromJson(json);
+}
+
+/// @nodoc
+mixin _$AdjClose {
+  List<double?> get adjclose => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $AdjCloseCopyWith<AdjClose> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $AdjCloseCopyWith<$Res> {
+  factory $AdjCloseCopyWith(AdjClose value, $Res Function(AdjClose) then) =
+      _$AdjCloseCopyWithImpl<$Res, AdjClose>;
+  @useResult
+  $Res call({List<double?> adjclose});
+}
+
+/// @nodoc
+class _$AdjCloseCopyWithImpl<$Res, $Val extends AdjClose>
+    implements $AdjCloseCopyWith<$Res> {
+  _$AdjCloseCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? adjclose = null,
+  }) {
+    return _then(_value.copyWith(
+      adjclose: null == adjclose
+          ? _value.adjclose
+          : adjclose // ignore: cast_nullable_to_non_nullable
+              as List<double?>,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$AdjCloseImplCopyWith<$Res>
+    implements $AdjCloseCopyWith<$Res> {
+  factory _$$AdjCloseImplCopyWith(
+          _$AdjCloseImpl value, $Res Function(_$AdjCloseImpl) then) =
+      __$$AdjCloseImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({List<double?> adjclose});
+}
+
+/// @nodoc
+class __$$AdjCloseImplCopyWithImpl<$Res>
+    extends _$AdjCloseCopyWithImpl<$Res, _$AdjCloseImpl>
+    implements _$$AdjCloseImplCopyWith<$Res> {
+  __$$AdjCloseImplCopyWithImpl(
+      _$AdjCloseImpl _value, $Res Function(_$AdjCloseImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? adjclose = null,
+  }) {
+    return _then(_$AdjCloseImpl(
+      adjclose: null == adjclose
+          ? _value._adjclose
+          : adjclose // ignore: cast_nullable_to_non_nullable
+              as List<double?>,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$AdjCloseImpl implements _AdjClose {
+  const _$AdjCloseImpl({required final List<double?> adjclose})
+      : _adjclose = adjclose;
+
+  factory _$AdjCloseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AdjCloseImplFromJson(json);
+
+  final List<double?> _adjclose;
+  @override
+  List<double?> get adjclose {
+    if (_adjclose is EqualUnmodifiableListView) return _adjclose;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_adjclose);
+  }
+
+  @override
+  String toString() {
+    return 'AdjClose(adjclose: $adjclose)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AdjCloseImpl &&
+            const DeepCollectionEquality().equals(other._adjclose, _adjclose));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_adjclose));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AdjCloseImplCopyWith<_$AdjCloseImpl> get copyWith =>
+      __$$AdjCloseImplCopyWithImpl<_$AdjCloseImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$AdjCloseImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _AdjClose implements AdjClose {
+  const factory _AdjClose({required final List<double?> adjclose}) =
+      _$AdjCloseImpl;
+
+  factory _AdjClose.fromJson(Map<String, dynamic> json) =
+      _$AdjCloseImpl.fromJson;
+
+  @override
+  List<double?> get adjclose;
+  @override
+  @JsonKey(ignore: true)
+  _$$AdjCloseImplCopyWith<_$AdjCloseImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}

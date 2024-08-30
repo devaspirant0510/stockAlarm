@@ -493,3 +493,202 @@ Map<String, dynamic> _$$ESGImplToJson(_$ESGImpl instance) => <String, dynamic>{
       'score': instance.score,
       'confidence_score': instance.confidenceScore,
     };
+
+_$YhChartDataImpl _$$YhChartDataImplFromJson(Map<String, dynamic> json) =>
+    _$YhChartDataImpl(
+      chart: Chart.fromJson(json['chart'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$$YhChartDataImplToJson(_$YhChartDataImpl instance) =>
+    <String, dynamic>{
+      'chart': instance.chart,
+    };
+
+_$ChartImpl _$$ChartImplFromJson(Map<String, dynamic> json) => _$ChartImpl(
+      result: (json['result'] as List<dynamic>)
+          .map((e) => Result.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      error: json['error'],
+    );
+
+Map<String, dynamic> _$$ChartImplToJson(_$ChartImpl instance) =>
+    <String, dynamic>{
+      'result': instance.result,
+      'error': instance.error,
+    };
+
+_$ResultImpl _$$ResultImplFromJson(Map<String, dynamic> json) => _$ResultImpl(
+      meta: Meta.fromJson(json['meta'] as Map<String, dynamic>),
+      timestamp:
+          (json['timestamp'] as List<dynamic>).map((e) => e as int).toList(),
+      comparisons: (json['comparisons'] as List<dynamic>?)
+          ?.map((e) => Comparison.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      indicators:
+          Indicators.fromJson(json['indicators'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$$ResultImplToJson(_$ResultImpl instance) =>
+    <String, dynamic>{
+      'meta': instance.meta,
+      'timestamp': instance.timestamp,
+      'comparisons': instance.comparisons,
+      'indicators': instance.indicators,
+    };
+
+_$MetaImpl _$$MetaImplFromJson(Map<String, dynamic> json) => _$MetaImpl(
+      currency: json['currency'] as String,
+      symbol: json['symbol'] as String,
+      exchangeName: json['exchangeName'] as String,
+      instrumentType: json['instrumentType'] as String,
+      firstTradeDate: json['firstTradeDate'] as int,
+      regularMarketTime: json['regularMarketTime'] as int,
+      gmtoffset: json['gmtoffset'] as int,
+      timezone: json['timezone'] as String,
+      exchangeTimezoneName: json['exchangeTimezoneName'] as String,
+      regularMarketPrice: (json['regularMarketPrice'] as num).toDouble(),
+      chartPreviousClose: (json['chartPreviousClose'] as num).toDouble(),
+      priceHint: json['priceHint'] as int,
+      currentTradingPeriod: CurrentTradingPeriod.fromJson(
+          json['currentTradingPeriod'] as Map<String, dynamic>),
+      dataGranularity: json['dataGranularity'] as String,
+      range: json['range'] as String,
+      validRanges: (json['validRanges'] as List<dynamic>)
+          .map((e) => e as String)
+          .toList(),
+    );
+
+Map<String, dynamic> _$$MetaImplToJson(_$MetaImpl instance) =>
+    <String, dynamic>{
+      'currency': instance.currency,
+      'symbol': instance.symbol,
+      'exchangeName': instance.exchangeName,
+      'instrumentType': instance.instrumentType,
+      'firstTradeDate': instance.firstTradeDate,
+      'regularMarketTime': instance.regularMarketTime,
+      'gmtoffset': instance.gmtoffset,
+      'timezone': instance.timezone,
+      'exchangeTimezoneName': instance.exchangeTimezoneName,
+      'regularMarketPrice': instance.regularMarketPrice,
+      'chartPreviousClose': instance.chartPreviousClose,
+      'priceHint': instance.priceHint,
+      'currentTradingPeriod': instance.currentTradingPeriod,
+      'dataGranularity': instance.dataGranularity,
+      'range': instance.range,
+      'validRanges': instance.validRanges,
+    };
+
+_$CurrentTradingPeriodImpl _$$CurrentTradingPeriodImplFromJson(
+        Map<String, dynamic> json) =>
+    _$CurrentTradingPeriodImpl(
+      pre: TradingSession.fromJson(json['pre'] as Map<String, dynamic>),
+      regular: TradingSession.fromJson(json['regular'] as Map<String, dynamic>),
+      post: TradingSession.fromJson(json['post'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$$CurrentTradingPeriodImplToJson(
+        _$CurrentTradingPeriodImpl instance) =>
+    <String, dynamic>{
+      'pre': instance.pre,
+      'regular': instance.regular,
+      'post': instance.post,
+    };
+
+_$TradingSessionImpl _$$TradingSessionImplFromJson(Map<String, dynamic> json) =>
+    _$TradingSessionImpl(
+      timezone: json['timezone'] as String,
+      start: json['start'] as int,
+      end: json['end'] as int,
+      gmtoffset: json['gmtoffset'] as int,
+    );
+
+Map<String, dynamic> _$$TradingSessionImplToJson(
+        _$TradingSessionImpl instance) =>
+    <String, dynamic>{
+      'timezone': instance.timezone,
+      'start': instance.start,
+      'end': instance.end,
+      'gmtoffset': instance.gmtoffset,
+    };
+
+_$ComparisonImpl _$$ComparisonImplFromJson(Map<String, dynamic> json) =>
+    _$ComparisonImpl(
+      symbol: json['symbol'] as String,
+      high: (json['high'] as List<dynamic>)
+          .map((e) => (e as num).toDouble())
+          .toList(),
+      low: (json['low'] as List<dynamic>)
+          .map((e) => (e as num).toDouble())
+          .toList(),
+      chartPreviousClose: (json['chartPreviousClose'] as num).toDouble(),
+      close: (json['close'] as List<dynamic>)
+          .map((e) => (e as num).toDouble())
+          .toList(),
+      open: (json['open'] as List<dynamic>)
+          .map((e) => (e as num).toDouble())
+          .toList(),
+    );
+
+Map<String, dynamic> _$$ComparisonImplToJson(_$ComparisonImpl instance) =>
+    <String, dynamic>{
+      'symbol': instance.symbol,
+      'high': instance.high,
+      'low': instance.low,
+      'chartPreviousClose': instance.chartPreviousClose,
+      'close': instance.close,
+      'open': instance.open,
+    };
+
+_$IndicatorsImpl _$$IndicatorsImplFromJson(Map<String, dynamic> json) =>
+    _$IndicatorsImpl(
+      quote: (json['quote'] as List<dynamic>)
+          .map((e) => YhQuote.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      adjclose: (json['adjclose'] as List<dynamic>?)
+          ?.map((e) => AdjClose.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
+
+Map<String, dynamic> _$$IndicatorsImplToJson(_$IndicatorsImpl instance) =>
+    <String, dynamic>{
+      'quote': instance.quote,
+      'adjclose': instance.adjclose,
+    };
+
+_$YhQuoteImpl _$$YhQuoteImplFromJson(Map<String, dynamic> json) =>
+    _$YhQuoteImpl(
+      low: (json['low'] as List<dynamic>)
+          .map((e) => (e as num?)?.toDouble())
+          .toList(),
+      high: (json['high'] as List<dynamic>)
+          .map((e) => (e as num?)?.toDouble())
+          .toList(),
+      open: (json['open'] as List<dynamic>)
+          .map((e) => (e as num?)?.toDouble())
+          .toList(),
+      close: (json['close'] as List<dynamic>)
+          .map((e) => (e as num?)?.toDouble())
+          .toList(),
+      volume: (json['volume'] as List<dynamic>).map((e) => e as int?).toList(),
+    );
+
+Map<String, dynamic> _$$YhQuoteImplToJson(_$YhQuoteImpl instance) =>
+    <String, dynamic>{
+      'low': instance.low,
+      'high': instance.high,
+      'open': instance.open,
+      'close': instance.close,
+      'volume': instance.volume,
+    };
+
+_$AdjCloseImpl _$$AdjCloseImplFromJson(Map<String, dynamic> json) =>
+    _$AdjCloseImpl(
+      adjclose: (json['adjclose'] as List<dynamic>)
+          .map((e) => (e as num?)?.toDouble())
+          .toList(),
+    );
+
+Map<String, dynamic> _$$AdjCloseImplToJson(_$AdjCloseImpl instance) =>
+    <String, dynamic>{
+      'adjclose': instance.adjclose,
+    };

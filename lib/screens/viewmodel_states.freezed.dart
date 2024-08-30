@@ -940,6 +940,8 @@ mixin _$StockState {
   StockProfile? get stockProfile => throw _privateConstructorUsedError;
   AsyncValue<Map<String, TimeSeriesData>> get chart =>
       throw _privateConstructorUsedError;
+  AsyncValue<YhChartModel> get yhChartData =>
+      throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $StockStateCopyWith<StockState> get copyWith =>
@@ -954,7 +956,8 @@ abstract class $StockStateCopyWith<$Res> {
   @useResult
   $Res call(
       {StockProfile? stockProfile,
-      AsyncValue<Map<String, TimeSeriesData>> chart});
+      AsyncValue<Map<String, TimeSeriesData>> chart,
+      AsyncValue<YhChartModel> yhChartData});
 
   $StockProfileCopyWith<$Res>? get stockProfile;
 }
@@ -974,6 +977,7 @@ class _$StockStateCopyWithImpl<$Res, $Val extends StockState>
   $Res call({
     Object? stockProfile = freezed,
     Object? chart = null,
+    Object? yhChartData = null,
   }) {
     return _then(_value.copyWith(
       stockProfile: freezed == stockProfile
@@ -984,6 +988,10 @@ class _$StockStateCopyWithImpl<$Res, $Val extends StockState>
           ? _value.chart
           : chart // ignore: cast_nullable_to_non_nullable
               as AsyncValue<Map<String, TimeSeriesData>>,
+      yhChartData: null == yhChartData
+          ? _value.yhChartData
+          : yhChartData // ignore: cast_nullable_to_non_nullable
+              as AsyncValue<YhChartModel>,
     ) as $Val);
   }
 
@@ -1010,7 +1018,8 @@ abstract class _$$StockStateImplCopyWith<$Res>
   @useResult
   $Res call(
       {StockProfile? stockProfile,
-      AsyncValue<Map<String, TimeSeriesData>> chart});
+      AsyncValue<Map<String, TimeSeriesData>> chart,
+      AsyncValue<YhChartModel> yhChartData});
 
   @override
   $StockProfileCopyWith<$Res>? get stockProfile;
@@ -1029,6 +1038,7 @@ class __$$StockStateImplCopyWithImpl<$Res>
   $Res call({
     Object? stockProfile = freezed,
     Object? chart = null,
+    Object? yhChartData = null,
   }) {
     return _then(_$StockStateImpl(
       stockProfile: freezed == stockProfile
@@ -1039,6 +1049,10 @@ class __$$StockStateImplCopyWithImpl<$Res>
           ? _value.chart
           : chart // ignore: cast_nullable_to_non_nullable
               as AsyncValue<Map<String, TimeSeriesData>>,
+      yhChartData: null == yhChartData
+          ? _value.yhChartData
+          : yhChartData // ignore: cast_nullable_to_non_nullable
+              as AsyncValue<YhChartModel>,
     ));
   }
 }
@@ -1047,17 +1061,22 @@ class __$$StockStateImplCopyWithImpl<$Res>
 
 class _$StockStateImpl implements _StockState {
   const _$StockStateImpl(
-      {this.stockProfile, this.chart = const AsyncValue.loading()});
+      {this.stockProfile,
+      this.chart = const AsyncValue.loading(),
+      this.yhChartData = const AsyncValue.loading()});
 
   @override
   final StockProfile? stockProfile;
   @override
   @JsonKey()
   final AsyncValue<Map<String, TimeSeriesData>> chart;
+  @override
+  @JsonKey()
+  final AsyncValue<YhChartModel> yhChartData;
 
   @override
   String toString() {
-    return 'StockState(stockProfile: $stockProfile, chart: $chart)';
+    return 'StockState(stockProfile: $stockProfile, chart: $chart, yhChartData: $yhChartData)';
   }
 
   @override
@@ -1067,11 +1086,14 @@ class _$StockStateImpl implements _StockState {
             other is _$StockStateImpl &&
             (identical(other.stockProfile, stockProfile) ||
                 other.stockProfile == stockProfile) &&
-            (identical(other.chart, chart) || other.chart == chart));
+            (identical(other.chart, chart) || other.chart == chart) &&
+            (identical(other.yhChartData, yhChartData) ||
+                other.yhChartData == yhChartData));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, stockProfile, chart);
+  int get hashCode =>
+      Object.hash(runtimeType, stockProfile, chart, yhChartData);
 
   @JsonKey(ignore: true)
   @override
@@ -1083,12 +1105,15 @@ class _$StockStateImpl implements _StockState {
 abstract class _StockState implements StockState {
   const factory _StockState(
       {final StockProfile? stockProfile,
-      final AsyncValue<Map<String, TimeSeriesData>> chart}) = _$StockStateImpl;
+      final AsyncValue<Map<String, TimeSeriesData>> chart,
+      final AsyncValue<YhChartModel> yhChartData}) = _$StockStateImpl;
 
   @override
   StockProfile? get stockProfile;
   @override
   AsyncValue<Map<String, TimeSeriesData>> get chart;
+  @override
+  AsyncValue<YhChartModel> get yhChartData;
   @override
   @JsonKey(ignore: true)
   _$$StockStateImplCopyWith<_$StockStateImpl> get copyWith =>
