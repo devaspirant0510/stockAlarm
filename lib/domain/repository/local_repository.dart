@@ -4,7 +4,10 @@ import 'package:bm_app/domain/model/models.dart';
 abstract class LocalRepository{
   Future<bool> findBySymbol(String symbol);
   Future<void> addFavoriteStock(SearchItemModel data);
+  Future<int> deleteBySymbol(int id);
   Future<List<AlarmQueue>> readAllAlarms();
   Future<int> saveAlarmQueue(AlarmQueue data);
   Future<AlarmQueue> findOneAlarmQueueById(int id);
+  Future<void> deleteAllAlarm();
+  Future<List<int>> getAllAlarmById();
 }

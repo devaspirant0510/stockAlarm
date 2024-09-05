@@ -44,12 +44,18 @@ final router = GoRouter(
       name: "stock",
       builder: (context, state) {
         final symbol = state.extra as String?;
-        if(symbol==null){
+        if (symbol == null) {
           // TODO : error 스크린 만들기
           return TestScreen();
         }
-        return StockScreen(symbol: symbol,);
+        return StockScreen(
+          symbol: symbol,
+        );
       },
-    )
+    ),
+    GoRoute(path: "/my-stock", name: "my-stock",
+    builder: (context, state) {
+      return MyStockScreen();
+    },)
   ],
 );

@@ -22,12 +22,12 @@ final homeViewmodelProvider =
 );
 
 typedef _$HomeViewmodel = AsyncNotifier<HomeState>;
-String _$myViewmodelHash() => r'7dcc1c21ea66657ddae7d62bc2c898e5841371c6';
+String _$myViewmodelHash() => r'd730a90d79658de13a1bd8d0c98ea364c516900f';
 
 /// See also [MyViewmodel].
 @ProviderFor(MyViewmodel)
 final myViewmodelProvider =
-    AutoDisposeNotifierProvider<MyViewmodel, MyState>.internal(
+    AutoDisposeAsyncNotifierProvider<MyViewmodel, MyState>.internal(
   MyViewmodel.new,
   name: r'myViewmodelProvider',
   debugGetCreateSourceHash:
@@ -36,7 +36,7 @@ final myViewmodelProvider =
   allTransitiveDependencies: null,
 );
 
-typedef _$MyViewmodel = AutoDisposeNotifier<MyState>;
+typedef _$MyViewmodel = AutoDisposeAsyncNotifier<MyState>;
 String _$searchViewModelHash() => r'610ec662902fed5177e92ace3bcdec40f3f90576';
 
 /// See also [SearchViewModel].
@@ -234,7 +234,7 @@ class _LockViewmodelProviderElement
   int get alarmId => (origin as LockViewmodelProvider).alarmId;
 }
 
-String _$stockViewmodelHash() => r'7207409a214854c9ae3b77a12eb8fb2120f9b1dd';
+String _$stockViewmodelHash() => r'8fbbc976eaeaef3ee6f112464d4f47f8d31d1c1e';
 
 abstract class _$StockViewmodel
     extends BuildlessAutoDisposeAsyncNotifier<StockState> {

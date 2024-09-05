@@ -8245,3 +8245,5474 @@ abstract class _AdjClose implements AdjClose {
   _$$AdjCloseImplCopyWith<_$AdjCloseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
+
+QuoteSummary _$QuoteSummaryFromJson(Map<String, dynamic> json) {
+  return _QuoteSummary.fromJson(json);
+}
+
+/// @nodoc
+mixin _$QuoteSummary {
+  QuoteSummaryResult get quoteSummary => throw _privateConstructorUsedError;
+  String? get error => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $QuoteSummaryCopyWith<QuoteSummary> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $QuoteSummaryCopyWith<$Res> {
+  factory $QuoteSummaryCopyWith(
+          QuoteSummary value, $Res Function(QuoteSummary) then) =
+      _$QuoteSummaryCopyWithImpl<$Res, QuoteSummary>;
+  @useResult
+  $Res call({QuoteSummaryResult quoteSummary, String? error});
+
+  $QuoteSummaryResultCopyWith<$Res> get quoteSummary;
+}
+
+/// @nodoc
+class _$QuoteSummaryCopyWithImpl<$Res, $Val extends QuoteSummary>
+    implements $QuoteSummaryCopyWith<$Res> {
+  _$QuoteSummaryCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? quoteSummary = null,
+    Object? error = freezed,
+  }) {
+    return _then(_value.copyWith(
+      quoteSummary: null == quoteSummary
+          ? _value.quoteSummary
+          : quoteSummary // ignore: cast_nullable_to_non_nullable
+              as QuoteSummaryResult,
+      error: freezed == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $QuoteSummaryResultCopyWith<$Res> get quoteSummary {
+    return $QuoteSummaryResultCopyWith<$Res>(_value.quoteSummary, (value) {
+      return _then(_value.copyWith(quoteSummary: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$QuoteSummaryImplCopyWith<$Res>
+    implements $QuoteSummaryCopyWith<$Res> {
+  factory _$$QuoteSummaryImplCopyWith(
+          _$QuoteSummaryImpl value, $Res Function(_$QuoteSummaryImpl) then) =
+      __$$QuoteSummaryImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({QuoteSummaryResult quoteSummary, String? error});
+
+  @override
+  $QuoteSummaryResultCopyWith<$Res> get quoteSummary;
+}
+
+/// @nodoc
+class __$$QuoteSummaryImplCopyWithImpl<$Res>
+    extends _$QuoteSummaryCopyWithImpl<$Res, _$QuoteSummaryImpl>
+    implements _$$QuoteSummaryImplCopyWith<$Res> {
+  __$$QuoteSummaryImplCopyWithImpl(
+      _$QuoteSummaryImpl _value, $Res Function(_$QuoteSummaryImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? quoteSummary = null,
+    Object? error = freezed,
+  }) {
+    return _then(_$QuoteSummaryImpl(
+      quoteSummary: null == quoteSummary
+          ? _value.quoteSummary
+          : quoteSummary // ignore: cast_nullable_to_non_nullable
+              as QuoteSummaryResult,
+      error: freezed == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$QuoteSummaryImpl implements _QuoteSummary {
+  const _$QuoteSummaryImpl({required this.quoteSummary, this.error});
+
+  factory _$QuoteSummaryImpl.fromJson(Map<String, dynamic> json) =>
+      _$$QuoteSummaryImplFromJson(json);
+
+  @override
+  final QuoteSummaryResult quoteSummary;
+  @override
+  final String? error;
+
+  @override
+  String toString() {
+    return 'QuoteSummary(quoteSummary: $quoteSummary, error: $error)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$QuoteSummaryImpl &&
+            (identical(other.quoteSummary, quoteSummary) ||
+                other.quoteSummary == quoteSummary) &&
+            (identical(other.error, error) || other.error == error));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, quoteSummary, error);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$QuoteSummaryImplCopyWith<_$QuoteSummaryImpl> get copyWith =>
+      __$$QuoteSummaryImplCopyWithImpl<_$QuoteSummaryImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$QuoteSummaryImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _QuoteSummary implements QuoteSummary {
+  const factory _QuoteSummary(
+      {required final QuoteSummaryResult quoteSummary,
+      final String? error}) = _$QuoteSummaryImpl;
+
+  factory _QuoteSummary.fromJson(Map<String, dynamic> json) =
+      _$QuoteSummaryImpl.fromJson;
+
+  @override
+  QuoteSummaryResult get quoteSummary;
+  @override
+  String? get error;
+  @override
+  @JsonKey(ignore: true)
+  _$$QuoteSummaryImplCopyWith<_$QuoteSummaryImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+QuoteSummaryResult _$QuoteSummaryResultFromJson(Map<String, dynamic> json) {
+  return _QuoteSummaryResult.fromJson(json);
+}
+
+/// @nodoc
+mixin _$QuoteSummaryResult {
+  List<QuoteSummaryResultData> get result => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $QuoteSummaryResultCopyWith<QuoteSummaryResult> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $QuoteSummaryResultCopyWith<$Res> {
+  factory $QuoteSummaryResultCopyWith(
+          QuoteSummaryResult value, $Res Function(QuoteSummaryResult) then) =
+      _$QuoteSummaryResultCopyWithImpl<$Res, QuoteSummaryResult>;
+  @useResult
+  $Res call({List<QuoteSummaryResultData> result});
+}
+
+/// @nodoc
+class _$QuoteSummaryResultCopyWithImpl<$Res, $Val extends QuoteSummaryResult>
+    implements $QuoteSummaryResultCopyWith<$Res> {
+  _$QuoteSummaryResultCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? result = null,
+  }) {
+    return _then(_value.copyWith(
+      result: null == result
+          ? _value.result
+          : result // ignore: cast_nullable_to_non_nullable
+              as List<QuoteSummaryResultData>,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$QuoteSummaryResultImplCopyWith<$Res>
+    implements $QuoteSummaryResultCopyWith<$Res> {
+  factory _$$QuoteSummaryResultImplCopyWith(_$QuoteSummaryResultImpl value,
+          $Res Function(_$QuoteSummaryResultImpl) then) =
+      __$$QuoteSummaryResultImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({List<QuoteSummaryResultData> result});
+}
+
+/// @nodoc
+class __$$QuoteSummaryResultImplCopyWithImpl<$Res>
+    extends _$QuoteSummaryResultCopyWithImpl<$Res, _$QuoteSummaryResultImpl>
+    implements _$$QuoteSummaryResultImplCopyWith<$Res> {
+  __$$QuoteSummaryResultImplCopyWithImpl(_$QuoteSummaryResultImpl _value,
+      $Res Function(_$QuoteSummaryResultImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? result = null,
+  }) {
+    return _then(_$QuoteSummaryResultImpl(
+      result: null == result
+          ? _value._result
+          : result // ignore: cast_nullable_to_non_nullable
+              as List<QuoteSummaryResultData>,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$QuoteSummaryResultImpl implements _QuoteSummaryResult {
+  const _$QuoteSummaryResultImpl(
+      {required final List<QuoteSummaryResultData> result})
+      : _result = result;
+
+  factory _$QuoteSummaryResultImpl.fromJson(Map<String, dynamic> json) =>
+      _$$QuoteSummaryResultImplFromJson(json);
+
+  final List<QuoteSummaryResultData> _result;
+  @override
+  List<QuoteSummaryResultData> get result {
+    if (_result is EqualUnmodifiableListView) return _result;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_result);
+  }
+
+  @override
+  String toString() {
+    return 'QuoteSummaryResult(result: $result)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$QuoteSummaryResultImpl &&
+            const DeepCollectionEquality().equals(other._result, _result));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_result));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$QuoteSummaryResultImplCopyWith<_$QuoteSummaryResultImpl> get copyWith =>
+      __$$QuoteSummaryResultImplCopyWithImpl<_$QuoteSummaryResultImpl>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$QuoteSummaryResultImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _QuoteSummaryResult implements QuoteSummaryResult {
+  const factory _QuoteSummaryResult(
+          {required final List<QuoteSummaryResultData> result}) =
+      _$QuoteSummaryResultImpl;
+
+  factory _QuoteSummaryResult.fromJson(Map<String, dynamic> json) =
+      _$QuoteSummaryResultImpl.fromJson;
+
+  @override
+  List<QuoteSummaryResultData> get result;
+  @override
+  @JsonKey(ignore: true)
+  _$$QuoteSummaryResultImplCopyWith<_$QuoteSummaryResultImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+QuoteSummaryResultData _$QuoteSummaryResultDataFromJson(
+    Map<String, dynamic> json) {
+  return _QuoteSummaryResultData.fromJson(json);
+}
+
+/// @nodoc
+mixin _$QuoteSummaryResultData {
+  AssetProfile? get assetProfile => throw _privateConstructorUsedError;
+  SummaryDetail? get summaryDetail => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $QuoteSummaryResultDataCopyWith<QuoteSummaryResultData> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $QuoteSummaryResultDataCopyWith<$Res> {
+  factory $QuoteSummaryResultDataCopyWith(QuoteSummaryResultData value,
+          $Res Function(QuoteSummaryResultData) then) =
+      _$QuoteSummaryResultDataCopyWithImpl<$Res, QuoteSummaryResultData>;
+  @useResult
+  $Res call({AssetProfile? assetProfile, SummaryDetail? summaryDetail});
+
+  $AssetProfileCopyWith<$Res>? get assetProfile;
+  $SummaryDetailCopyWith<$Res>? get summaryDetail;
+}
+
+/// @nodoc
+class _$QuoteSummaryResultDataCopyWithImpl<$Res,
+        $Val extends QuoteSummaryResultData>
+    implements $QuoteSummaryResultDataCopyWith<$Res> {
+  _$QuoteSummaryResultDataCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? assetProfile = freezed,
+    Object? summaryDetail = freezed,
+  }) {
+    return _then(_value.copyWith(
+      assetProfile: freezed == assetProfile
+          ? _value.assetProfile
+          : assetProfile // ignore: cast_nullable_to_non_nullable
+              as AssetProfile?,
+      summaryDetail: freezed == summaryDetail
+          ? _value.summaryDetail
+          : summaryDetail // ignore: cast_nullable_to_non_nullable
+              as SummaryDetail?,
+    ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $AssetProfileCopyWith<$Res>? get assetProfile {
+    if (_value.assetProfile == null) {
+      return null;
+    }
+
+    return $AssetProfileCopyWith<$Res>(_value.assetProfile!, (value) {
+      return _then(_value.copyWith(assetProfile: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $SummaryDetailCopyWith<$Res>? get summaryDetail {
+    if (_value.summaryDetail == null) {
+      return null;
+    }
+
+    return $SummaryDetailCopyWith<$Res>(_value.summaryDetail!, (value) {
+      return _then(_value.copyWith(summaryDetail: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$QuoteSummaryResultDataImplCopyWith<$Res>
+    implements $QuoteSummaryResultDataCopyWith<$Res> {
+  factory _$$QuoteSummaryResultDataImplCopyWith(
+          _$QuoteSummaryResultDataImpl value,
+          $Res Function(_$QuoteSummaryResultDataImpl) then) =
+      __$$QuoteSummaryResultDataImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({AssetProfile? assetProfile, SummaryDetail? summaryDetail});
+
+  @override
+  $AssetProfileCopyWith<$Res>? get assetProfile;
+  @override
+  $SummaryDetailCopyWith<$Res>? get summaryDetail;
+}
+
+/// @nodoc
+class __$$QuoteSummaryResultDataImplCopyWithImpl<$Res>
+    extends _$QuoteSummaryResultDataCopyWithImpl<$Res,
+        _$QuoteSummaryResultDataImpl>
+    implements _$$QuoteSummaryResultDataImplCopyWith<$Res> {
+  __$$QuoteSummaryResultDataImplCopyWithImpl(
+      _$QuoteSummaryResultDataImpl _value,
+      $Res Function(_$QuoteSummaryResultDataImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? assetProfile = freezed,
+    Object? summaryDetail = freezed,
+  }) {
+    return _then(_$QuoteSummaryResultDataImpl(
+      assetProfile: freezed == assetProfile
+          ? _value.assetProfile
+          : assetProfile // ignore: cast_nullable_to_non_nullable
+              as AssetProfile?,
+      summaryDetail: freezed == summaryDetail
+          ? _value.summaryDetail
+          : summaryDetail // ignore: cast_nullable_to_non_nullable
+              as SummaryDetail?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$QuoteSummaryResultDataImpl implements _QuoteSummaryResultData {
+  const _$QuoteSummaryResultDataImpl({this.assetProfile, this.summaryDetail});
+
+  factory _$QuoteSummaryResultDataImpl.fromJson(Map<String, dynamic> json) =>
+      _$$QuoteSummaryResultDataImplFromJson(json);
+
+  @override
+  final AssetProfile? assetProfile;
+  @override
+  final SummaryDetail? summaryDetail;
+
+  @override
+  String toString() {
+    return 'QuoteSummaryResultData(assetProfile: $assetProfile, summaryDetail: $summaryDetail)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$QuoteSummaryResultDataImpl &&
+            (identical(other.assetProfile, assetProfile) ||
+                other.assetProfile == assetProfile) &&
+            (identical(other.summaryDetail, summaryDetail) ||
+                other.summaryDetail == summaryDetail));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, assetProfile, summaryDetail);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$QuoteSummaryResultDataImplCopyWith<_$QuoteSummaryResultDataImpl>
+      get copyWith => __$$QuoteSummaryResultDataImplCopyWithImpl<
+          _$QuoteSummaryResultDataImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$QuoteSummaryResultDataImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _QuoteSummaryResultData implements QuoteSummaryResultData {
+  const factory _QuoteSummaryResultData(
+      {final AssetProfile? assetProfile,
+      final SummaryDetail? summaryDetail}) = _$QuoteSummaryResultDataImpl;
+
+  factory _QuoteSummaryResultData.fromJson(Map<String, dynamic> json) =
+      _$QuoteSummaryResultDataImpl.fromJson;
+
+  @override
+  AssetProfile? get assetProfile;
+  @override
+  SummaryDetail? get summaryDetail;
+  @override
+  @JsonKey(ignore: true)
+  _$$QuoteSummaryResultDataImplCopyWith<_$QuoteSummaryResultDataImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+AssetProfile _$AssetProfileFromJson(Map<String, dynamic> json) {
+  return _AssetProfile.fromJson(json);
+}
+
+/// @nodoc
+mixin _$AssetProfile {
+  String? get address1 => throw _privateConstructorUsedError;
+  String? get city => throw _privateConstructorUsedError;
+  String? get state => throw _privateConstructorUsedError;
+  String? get zip => throw _privateConstructorUsedError;
+  String? get country => throw _privateConstructorUsedError;
+  String? get phone => throw _privateConstructorUsedError;
+  String? get website => throw _privateConstructorUsedError;
+  String? get industry => throw _privateConstructorUsedError;
+  String? get industryKey => throw _privateConstructorUsedError;
+  String? get industryDisp => throw _privateConstructorUsedError;
+  String? get sector => throw _privateConstructorUsedError;
+  String? get sectorKey => throw _privateConstructorUsedError;
+  String? get sectorDisp => throw _privateConstructorUsedError;
+  String? get longBusinessSummary => throw _privateConstructorUsedError;
+  int? get fullTimeEmployees => throw _privateConstructorUsedError;
+  List<CompanyOfficer>? get companyOfficers =>
+      throw _privateConstructorUsedError;
+  int? get auditRisk => throw _privateConstructorUsedError;
+  int? get boardRisk => throw _privateConstructorUsedError;
+  int? get compensationRisk => throw _privateConstructorUsedError;
+  int? get shareHolderRightsRisk => throw _privateConstructorUsedError;
+  int? get overallRisk => throw _privateConstructorUsedError;
+  int? get governanceEpochDate => throw _privateConstructorUsedError;
+  int? get compensationAsOfEpochDate => throw _privateConstructorUsedError;
+  String? get irWebsite => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $AssetProfileCopyWith<AssetProfile> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $AssetProfileCopyWith<$Res> {
+  factory $AssetProfileCopyWith(
+          AssetProfile value, $Res Function(AssetProfile) then) =
+      _$AssetProfileCopyWithImpl<$Res, AssetProfile>;
+  @useResult
+  $Res call(
+      {String? address1,
+      String? city,
+      String? state,
+      String? zip,
+      String? country,
+      String? phone,
+      String? website,
+      String? industry,
+      String? industryKey,
+      String? industryDisp,
+      String? sector,
+      String? sectorKey,
+      String? sectorDisp,
+      String? longBusinessSummary,
+      int? fullTimeEmployees,
+      List<CompanyOfficer>? companyOfficers,
+      int? auditRisk,
+      int? boardRisk,
+      int? compensationRisk,
+      int? shareHolderRightsRisk,
+      int? overallRisk,
+      int? governanceEpochDate,
+      int? compensationAsOfEpochDate,
+      String? irWebsite});
+}
+
+/// @nodoc
+class _$AssetProfileCopyWithImpl<$Res, $Val extends AssetProfile>
+    implements $AssetProfileCopyWith<$Res> {
+  _$AssetProfileCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? address1 = freezed,
+    Object? city = freezed,
+    Object? state = freezed,
+    Object? zip = freezed,
+    Object? country = freezed,
+    Object? phone = freezed,
+    Object? website = freezed,
+    Object? industry = freezed,
+    Object? industryKey = freezed,
+    Object? industryDisp = freezed,
+    Object? sector = freezed,
+    Object? sectorKey = freezed,
+    Object? sectorDisp = freezed,
+    Object? longBusinessSummary = freezed,
+    Object? fullTimeEmployees = freezed,
+    Object? companyOfficers = freezed,
+    Object? auditRisk = freezed,
+    Object? boardRisk = freezed,
+    Object? compensationRisk = freezed,
+    Object? shareHolderRightsRisk = freezed,
+    Object? overallRisk = freezed,
+    Object? governanceEpochDate = freezed,
+    Object? compensationAsOfEpochDate = freezed,
+    Object? irWebsite = freezed,
+  }) {
+    return _then(_value.copyWith(
+      address1: freezed == address1
+          ? _value.address1
+          : address1 // ignore: cast_nullable_to_non_nullable
+              as String?,
+      city: freezed == city
+          ? _value.city
+          : city // ignore: cast_nullable_to_non_nullable
+              as String?,
+      state: freezed == state
+          ? _value.state
+          : state // ignore: cast_nullable_to_non_nullable
+              as String?,
+      zip: freezed == zip
+          ? _value.zip
+          : zip // ignore: cast_nullable_to_non_nullable
+              as String?,
+      country: freezed == country
+          ? _value.country
+          : country // ignore: cast_nullable_to_non_nullable
+              as String?,
+      phone: freezed == phone
+          ? _value.phone
+          : phone // ignore: cast_nullable_to_non_nullable
+              as String?,
+      website: freezed == website
+          ? _value.website
+          : website // ignore: cast_nullable_to_non_nullable
+              as String?,
+      industry: freezed == industry
+          ? _value.industry
+          : industry // ignore: cast_nullable_to_non_nullable
+              as String?,
+      industryKey: freezed == industryKey
+          ? _value.industryKey
+          : industryKey // ignore: cast_nullable_to_non_nullable
+              as String?,
+      industryDisp: freezed == industryDisp
+          ? _value.industryDisp
+          : industryDisp // ignore: cast_nullable_to_non_nullable
+              as String?,
+      sector: freezed == sector
+          ? _value.sector
+          : sector // ignore: cast_nullable_to_non_nullable
+              as String?,
+      sectorKey: freezed == sectorKey
+          ? _value.sectorKey
+          : sectorKey // ignore: cast_nullable_to_non_nullable
+              as String?,
+      sectorDisp: freezed == sectorDisp
+          ? _value.sectorDisp
+          : sectorDisp // ignore: cast_nullable_to_non_nullable
+              as String?,
+      longBusinessSummary: freezed == longBusinessSummary
+          ? _value.longBusinessSummary
+          : longBusinessSummary // ignore: cast_nullable_to_non_nullable
+              as String?,
+      fullTimeEmployees: freezed == fullTimeEmployees
+          ? _value.fullTimeEmployees
+          : fullTimeEmployees // ignore: cast_nullable_to_non_nullable
+              as int?,
+      companyOfficers: freezed == companyOfficers
+          ? _value.companyOfficers
+          : companyOfficers // ignore: cast_nullable_to_non_nullable
+              as List<CompanyOfficer>?,
+      auditRisk: freezed == auditRisk
+          ? _value.auditRisk
+          : auditRisk // ignore: cast_nullable_to_non_nullable
+              as int?,
+      boardRisk: freezed == boardRisk
+          ? _value.boardRisk
+          : boardRisk // ignore: cast_nullable_to_non_nullable
+              as int?,
+      compensationRisk: freezed == compensationRisk
+          ? _value.compensationRisk
+          : compensationRisk // ignore: cast_nullable_to_non_nullable
+              as int?,
+      shareHolderRightsRisk: freezed == shareHolderRightsRisk
+          ? _value.shareHolderRightsRisk
+          : shareHolderRightsRisk // ignore: cast_nullable_to_non_nullable
+              as int?,
+      overallRisk: freezed == overallRisk
+          ? _value.overallRisk
+          : overallRisk // ignore: cast_nullable_to_non_nullable
+              as int?,
+      governanceEpochDate: freezed == governanceEpochDate
+          ? _value.governanceEpochDate
+          : governanceEpochDate // ignore: cast_nullable_to_non_nullable
+              as int?,
+      compensationAsOfEpochDate: freezed == compensationAsOfEpochDate
+          ? _value.compensationAsOfEpochDate
+          : compensationAsOfEpochDate // ignore: cast_nullable_to_non_nullable
+              as int?,
+      irWebsite: freezed == irWebsite
+          ? _value.irWebsite
+          : irWebsite // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$AssetProfileImplCopyWith<$Res>
+    implements $AssetProfileCopyWith<$Res> {
+  factory _$$AssetProfileImplCopyWith(
+          _$AssetProfileImpl value, $Res Function(_$AssetProfileImpl) then) =
+      __$$AssetProfileImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {String? address1,
+      String? city,
+      String? state,
+      String? zip,
+      String? country,
+      String? phone,
+      String? website,
+      String? industry,
+      String? industryKey,
+      String? industryDisp,
+      String? sector,
+      String? sectorKey,
+      String? sectorDisp,
+      String? longBusinessSummary,
+      int? fullTimeEmployees,
+      List<CompanyOfficer>? companyOfficers,
+      int? auditRisk,
+      int? boardRisk,
+      int? compensationRisk,
+      int? shareHolderRightsRisk,
+      int? overallRisk,
+      int? governanceEpochDate,
+      int? compensationAsOfEpochDate,
+      String? irWebsite});
+}
+
+/// @nodoc
+class __$$AssetProfileImplCopyWithImpl<$Res>
+    extends _$AssetProfileCopyWithImpl<$Res, _$AssetProfileImpl>
+    implements _$$AssetProfileImplCopyWith<$Res> {
+  __$$AssetProfileImplCopyWithImpl(
+      _$AssetProfileImpl _value, $Res Function(_$AssetProfileImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? address1 = freezed,
+    Object? city = freezed,
+    Object? state = freezed,
+    Object? zip = freezed,
+    Object? country = freezed,
+    Object? phone = freezed,
+    Object? website = freezed,
+    Object? industry = freezed,
+    Object? industryKey = freezed,
+    Object? industryDisp = freezed,
+    Object? sector = freezed,
+    Object? sectorKey = freezed,
+    Object? sectorDisp = freezed,
+    Object? longBusinessSummary = freezed,
+    Object? fullTimeEmployees = freezed,
+    Object? companyOfficers = freezed,
+    Object? auditRisk = freezed,
+    Object? boardRisk = freezed,
+    Object? compensationRisk = freezed,
+    Object? shareHolderRightsRisk = freezed,
+    Object? overallRisk = freezed,
+    Object? governanceEpochDate = freezed,
+    Object? compensationAsOfEpochDate = freezed,
+    Object? irWebsite = freezed,
+  }) {
+    return _then(_$AssetProfileImpl(
+      address1: freezed == address1
+          ? _value.address1
+          : address1 // ignore: cast_nullable_to_non_nullable
+              as String?,
+      city: freezed == city
+          ? _value.city
+          : city // ignore: cast_nullable_to_non_nullable
+              as String?,
+      state: freezed == state
+          ? _value.state
+          : state // ignore: cast_nullable_to_non_nullable
+              as String?,
+      zip: freezed == zip
+          ? _value.zip
+          : zip // ignore: cast_nullable_to_non_nullable
+              as String?,
+      country: freezed == country
+          ? _value.country
+          : country // ignore: cast_nullable_to_non_nullable
+              as String?,
+      phone: freezed == phone
+          ? _value.phone
+          : phone // ignore: cast_nullable_to_non_nullable
+              as String?,
+      website: freezed == website
+          ? _value.website
+          : website // ignore: cast_nullable_to_non_nullable
+              as String?,
+      industry: freezed == industry
+          ? _value.industry
+          : industry // ignore: cast_nullable_to_non_nullable
+              as String?,
+      industryKey: freezed == industryKey
+          ? _value.industryKey
+          : industryKey // ignore: cast_nullable_to_non_nullable
+              as String?,
+      industryDisp: freezed == industryDisp
+          ? _value.industryDisp
+          : industryDisp // ignore: cast_nullable_to_non_nullable
+              as String?,
+      sector: freezed == sector
+          ? _value.sector
+          : sector // ignore: cast_nullable_to_non_nullable
+              as String?,
+      sectorKey: freezed == sectorKey
+          ? _value.sectorKey
+          : sectorKey // ignore: cast_nullable_to_non_nullable
+              as String?,
+      sectorDisp: freezed == sectorDisp
+          ? _value.sectorDisp
+          : sectorDisp // ignore: cast_nullable_to_non_nullable
+              as String?,
+      longBusinessSummary: freezed == longBusinessSummary
+          ? _value.longBusinessSummary
+          : longBusinessSummary // ignore: cast_nullable_to_non_nullable
+              as String?,
+      fullTimeEmployees: freezed == fullTimeEmployees
+          ? _value.fullTimeEmployees
+          : fullTimeEmployees // ignore: cast_nullable_to_non_nullable
+              as int?,
+      companyOfficers: freezed == companyOfficers
+          ? _value._companyOfficers
+          : companyOfficers // ignore: cast_nullable_to_non_nullable
+              as List<CompanyOfficer>?,
+      auditRisk: freezed == auditRisk
+          ? _value.auditRisk
+          : auditRisk // ignore: cast_nullable_to_non_nullable
+              as int?,
+      boardRisk: freezed == boardRisk
+          ? _value.boardRisk
+          : boardRisk // ignore: cast_nullable_to_non_nullable
+              as int?,
+      compensationRisk: freezed == compensationRisk
+          ? _value.compensationRisk
+          : compensationRisk // ignore: cast_nullable_to_non_nullable
+              as int?,
+      shareHolderRightsRisk: freezed == shareHolderRightsRisk
+          ? _value.shareHolderRightsRisk
+          : shareHolderRightsRisk // ignore: cast_nullable_to_non_nullable
+              as int?,
+      overallRisk: freezed == overallRisk
+          ? _value.overallRisk
+          : overallRisk // ignore: cast_nullable_to_non_nullable
+              as int?,
+      governanceEpochDate: freezed == governanceEpochDate
+          ? _value.governanceEpochDate
+          : governanceEpochDate // ignore: cast_nullable_to_non_nullable
+              as int?,
+      compensationAsOfEpochDate: freezed == compensationAsOfEpochDate
+          ? _value.compensationAsOfEpochDate
+          : compensationAsOfEpochDate // ignore: cast_nullable_to_non_nullable
+              as int?,
+      irWebsite: freezed == irWebsite
+          ? _value.irWebsite
+          : irWebsite // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$AssetProfileImpl implements _AssetProfile {
+  const _$AssetProfileImpl(
+      {this.address1,
+      this.city,
+      this.state,
+      this.zip,
+      this.country,
+      this.phone,
+      this.website,
+      this.industry,
+      this.industryKey,
+      this.industryDisp,
+      this.sector,
+      this.sectorKey,
+      this.sectorDisp,
+      this.longBusinessSummary,
+      this.fullTimeEmployees,
+      final List<CompanyOfficer>? companyOfficers,
+      this.auditRisk,
+      this.boardRisk,
+      this.compensationRisk,
+      this.shareHolderRightsRisk,
+      this.overallRisk,
+      this.governanceEpochDate,
+      this.compensationAsOfEpochDate,
+      this.irWebsite})
+      : _companyOfficers = companyOfficers;
+
+  factory _$AssetProfileImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AssetProfileImplFromJson(json);
+
+  @override
+  final String? address1;
+  @override
+  final String? city;
+  @override
+  final String? state;
+  @override
+  final String? zip;
+  @override
+  final String? country;
+  @override
+  final String? phone;
+  @override
+  final String? website;
+  @override
+  final String? industry;
+  @override
+  final String? industryKey;
+  @override
+  final String? industryDisp;
+  @override
+  final String? sector;
+  @override
+  final String? sectorKey;
+  @override
+  final String? sectorDisp;
+  @override
+  final String? longBusinessSummary;
+  @override
+  final int? fullTimeEmployees;
+  final List<CompanyOfficer>? _companyOfficers;
+  @override
+  List<CompanyOfficer>? get companyOfficers {
+    final value = _companyOfficers;
+    if (value == null) return null;
+    if (_companyOfficers is EqualUnmodifiableListView) return _companyOfficers;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final int? auditRisk;
+  @override
+  final int? boardRisk;
+  @override
+  final int? compensationRisk;
+  @override
+  final int? shareHolderRightsRisk;
+  @override
+  final int? overallRisk;
+  @override
+  final int? governanceEpochDate;
+  @override
+  final int? compensationAsOfEpochDate;
+  @override
+  final String? irWebsite;
+
+  @override
+  String toString() {
+    return 'AssetProfile(address1: $address1, city: $city, state: $state, zip: $zip, country: $country, phone: $phone, website: $website, industry: $industry, industryKey: $industryKey, industryDisp: $industryDisp, sector: $sector, sectorKey: $sectorKey, sectorDisp: $sectorDisp, longBusinessSummary: $longBusinessSummary, fullTimeEmployees: $fullTimeEmployees, companyOfficers: $companyOfficers, auditRisk: $auditRisk, boardRisk: $boardRisk, compensationRisk: $compensationRisk, shareHolderRightsRisk: $shareHolderRightsRisk, overallRisk: $overallRisk, governanceEpochDate: $governanceEpochDate, compensationAsOfEpochDate: $compensationAsOfEpochDate, irWebsite: $irWebsite)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AssetProfileImpl &&
+            (identical(other.address1, address1) ||
+                other.address1 == address1) &&
+            (identical(other.city, city) || other.city == city) &&
+            (identical(other.state, state) || other.state == state) &&
+            (identical(other.zip, zip) || other.zip == zip) &&
+            (identical(other.country, country) || other.country == country) &&
+            (identical(other.phone, phone) || other.phone == phone) &&
+            (identical(other.website, website) || other.website == website) &&
+            (identical(other.industry, industry) ||
+                other.industry == industry) &&
+            (identical(other.industryKey, industryKey) ||
+                other.industryKey == industryKey) &&
+            (identical(other.industryDisp, industryDisp) ||
+                other.industryDisp == industryDisp) &&
+            (identical(other.sector, sector) || other.sector == sector) &&
+            (identical(other.sectorKey, sectorKey) ||
+                other.sectorKey == sectorKey) &&
+            (identical(other.sectorDisp, sectorDisp) ||
+                other.sectorDisp == sectorDisp) &&
+            (identical(other.longBusinessSummary, longBusinessSummary) ||
+                other.longBusinessSummary == longBusinessSummary) &&
+            (identical(other.fullTimeEmployees, fullTimeEmployees) ||
+                other.fullTimeEmployees == fullTimeEmployees) &&
+            const DeepCollectionEquality()
+                .equals(other._companyOfficers, _companyOfficers) &&
+            (identical(other.auditRisk, auditRisk) ||
+                other.auditRisk == auditRisk) &&
+            (identical(other.boardRisk, boardRisk) ||
+                other.boardRisk == boardRisk) &&
+            (identical(other.compensationRisk, compensationRisk) ||
+                other.compensationRisk == compensationRisk) &&
+            (identical(other.shareHolderRightsRisk, shareHolderRightsRisk) ||
+                other.shareHolderRightsRisk == shareHolderRightsRisk) &&
+            (identical(other.overallRisk, overallRisk) ||
+                other.overallRisk == overallRisk) &&
+            (identical(other.governanceEpochDate, governanceEpochDate) ||
+                other.governanceEpochDate == governanceEpochDate) &&
+            (identical(other.compensationAsOfEpochDate,
+                    compensationAsOfEpochDate) ||
+                other.compensationAsOfEpochDate == compensationAsOfEpochDate) &&
+            (identical(other.irWebsite, irWebsite) ||
+                other.irWebsite == irWebsite));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        address1,
+        city,
+        state,
+        zip,
+        country,
+        phone,
+        website,
+        industry,
+        industryKey,
+        industryDisp,
+        sector,
+        sectorKey,
+        sectorDisp,
+        longBusinessSummary,
+        fullTimeEmployees,
+        const DeepCollectionEquality().hash(_companyOfficers),
+        auditRisk,
+        boardRisk,
+        compensationRisk,
+        shareHolderRightsRisk,
+        overallRisk,
+        governanceEpochDate,
+        compensationAsOfEpochDate,
+        irWebsite
+      ]);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AssetProfileImplCopyWith<_$AssetProfileImpl> get copyWith =>
+      __$$AssetProfileImplCopyWithImpl<_$AssetProfileImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$AssetProfileImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _AssetProfile implements AssetProfile {
+  const factory _AssetProfile(
+      {final String? address1,
+      final String? city,
+      final String? state,
+      final String? zip,
+      final String? country,
+      final String? phone,
+      final String? website,
+      final String? industry,
+      final String? industryKey,
+      final String? industryDisp,
+      final String? sector,
+      final String? sectorKey,
+      final String? sectorDisp,
+      final String? longBusinessSummary,
+      final int? fullTimeEmployees,
+      final List<CompanyOfficer>? companyOfficers,
+      final int? auditRisk,
+      final int? boardRisk,
+      final int? compensationRisk,
+      final int? shareHolderRightsRisk,
+      final int? overallRisk,
+      final int? governanceEpochDate,
+      final int? compensationAsOfEpochDate,
+      final String? irWebsite}) = _$AssetProfileImpl;
+
+  factory _AssetProfile.fromJson(Map<String, dynamic> json) =
+      _$AssetProfileImpl.fromJson;
+
+  @override
+  String? get address1;
+  @override
+  String? get city;
+  @override
+  String? get state;
+  @override
+  String? get zip;
+  @override
+  String? get country;
+  @override
+  String? get phone;
+  @override
+  String? get website;
+  @override
+  String? get industry;
+  @override
+  String? get industryKey;
+  @override
+  String? get industryDisp;
+  @override
+  String? get sector;
+  @override
+  String? get sectorKey;
+  @override
+  String? get sectorDisp;
+  @override
+  String? get longBusinessSummary;
+  @override
+  int? get fullTimeEmployees;
+  @override
+  List<CompanyOfficer>? get companyOfficers;
+  @override
+  int? get auditRisk;
+  @override
+  int? get boardRisk;
+  @override
+  int? get compensationRisk;
+  @override
+  int? get shareHolderRightsRisk;
+  @override
+  int? get overallRisk;
+  @override
+  int? get governanceEpochDate;
+  @override
+  int? get compensationAsOfEpochDate;
+  @override
+  String? get irWebsite;
+  @override
+  @JsonKey(ignore: true)
+  _$$AssetProfileImplCopyWith<_$AssetProfileImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+CompanyOfficer _$CompanyOfficerFromJson(Map<String, dynamic> json) {
+  return _CompanyOfficer.fromJson(json);
+}
+
+/// @nodoc
+mixin _$CompanyOfficer {
+  int? get maxAge => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
+  int? get age => throw _privateConstructorUsedError;
+  String? get title => throw _privateConstructorUsedError;
+  int? get yearBorn => throw _privateConstructorUsedError;
+  TotalPay? get totalPay => throw _privateConstructorUsedError;
+  ExercisedValue? get exercisedValue => throw _privateConstructorUsedError;
+  ExercisedValue? get unexercisedValue => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $CompanyOfficerCopyWith<CompanyOfficer> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $CompanyOfficerCopyWith<$Res> {
+  factory $CompanyOfficerCopyWith(
+          CompanyOfficer value, $Res Function(CompanyOfficer) then) =
+      _$CompanyOfficerCopyWithImpl<$Res, CompanyOfficer>;
+  @useResult
+  $Res call(
+      {int? maxAge,
+      String? name,
+      int? age,
+      String? title,
+      int? yearBorn,
+      TotalPay? totalPay,
+      ExercisedValue? exercisedValue,
+      ExercisedValue? unexercisedValue});
+
+  $TotalPayCopyWith<$Res>? get totalPay;
+  $ExercisedValueCopyWith<$Res>? get exercisedValue;
+  $ExercisedValueCopyWith<$Res>? get unexercisedValue;
+}
+
+/// @nodoc
+class _$CompanyOfficerCopyWithImpl<$Res, $Val extends CompanyOfficer>
+    implements $CompanyOfficerCopyWith<$Res> {
+  _$CompanyOfficerCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? maxAge = freezed,
+    Object? name = freezed,
+    Object? age = freezed,
+    Object? title = freezed,
+    Object? yearBorn = freezed,
+    Object? totalPay = freezed,
+    Object? exercisedValue = freezed,
+    Object? unexercisedValue = freezed,
+  }) {
+    return _then(_value.copyWith(
+      maxAge: freezed == maxAge
+          ? _value.maxAge
+          : maxAge // ignore: cast_nullable_to_non_nullable
+              as int?,
+      name: freezed == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      age: freezed == age
+          ? _value.age
+          : age // ignore: cast_nullable_to_non_nullable
+              as int?,
+      title: freezed == title
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String?,
+      yearBorn: freezed == yearBorn
+          ? _value.yearBorn
+          : yearBorn // ignore: cast_nullable_to_non_nullable
+              as int?,
+      totalPay: freezed == totalPay
+          ? _value.totalPay
+          : totalPay // ignore: cast_nullable_to_non_nullable
+              as TotalPay?,
+      exercisedValue: freezed == exercisedValue
+          ? _value.exercisedValue
+          : exercisedValue // ignore: cast_nullable_to_non_nullable
+              as ExercisedValue?,
+      unexercisedValue: freezed == unexercisedValue
+          ? _value.unexercisedValue
+          : unexercisedValue // ignore: cast_nullable_to_non_nullable
+              as ExercisedValue?,
+    ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $TotalPayCopyWith<$Res>? get totalPay {
+    if (_value.totalPay == null) {
+      return null;
+    }
+
+    return $TotalPayCopyWith<$Res>(_value.totalPay!, (value) {
+      return _then(_value.copyWith(totalPay: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ExercisedValueCopyWith<$Res>? get exercisedValue {
+    if (_value.exercisedValue == null) {
+      return null;
+    }
+
+    return $ExercisedValueCopyWith<$Res>(_value.exercisedValue!, (value) {
+      return _then(_value.copyWith(exercisedValue: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ExercisedValueCopyWith<$Res>? get unexercisedValue {
+    if (_value.unexercisedValue == null) {
+      return null;
+    }
+
+    return $ExercisedValueCopyWith<$Res>(_value.unexercisedValue!, (value) {
+      return _then(_value.copyWith(unexercisedValue: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$CompanyOfficerImplCopyWith<$Res>
+    implements $CompanyOfficerCopyWith<$Res> {
+  factory _$$CompanyOfficerImplCopyWith(_$CompanyOfficerImpl value,
+          $Res Function(_$CompanyOfficerImpl) then) =
+      __$$CompanyOfficerImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {int? maxAge,
+      String? name,
+      int? age,
+      String? title,
+      int? yearBorn,
+      TotalPay? totalPay,
+      ExercisedValue? exercisedValue,
+      ExercisedValue? unexercisedValue});
+
+  @override
+  $TotalPayCopyWith<$Res>? get totalPay;
+  @override
+  $ExercisedValueCopyWith<$Res>? get exercisedValue;
+  @override
+  $ExercisedValueCopyWith<$Res>? get unexercisedValue;
+}
+
+/// @nodoc
+class __$$CompanyOfficerImplCopyWithImpl<$Res>
+    extends _$CompanyOfficerCopyWithImpl<$Res, _$CompanyOfficerImpl>
+    implements _$$CompanyOfficerImplCopyWith<$Res> {
+  __$$CompanyOfficerImplCopyWithImpl(
+      _$CompanyOfficerImpl _value, $Res Function(_$CompanyOfficerImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? maxAge = freezed,
+    Object? name = freezed,
+    Object? age = freezed,
+    Object? title = freezed,
+    Object? yearBorn = freezed,
+    Object? totalPay = freezed,
+    Object? exercisedValue = freezed,
+    Object? unexercisedValue = freezed,
+  }) {
+    return _then(_$CompanyOfficerImpl(
+      maxAge: freezed == maxAge
+          ? _value.maxAge
+          : maxAge // ignore: cast_nullable_to_non_nullable
+              as int?,
+      name: freezed == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      age: freezed == age
+          ? _value.age
+          : age // ignore: cast_nullable_to_non_nullable
+              as int?,
+      title: freezed == title
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String?,
+      yearBorn: freezed == yearBorn
+          ? _value.yearBorn
+          : yearBorn // ignore: cast_nullable_to_non_nullable
+              as int?,
+      totalPay: freezed == totalPay
+          ? _value.totalPay
+          : totalPay // ignore: cast_nullable_to_non_nullable
+              as TotalPay?,
+      exercisedValue: freezed == exercisedValue
+          ? _value.exercisedValue
+          : exercisedValue // ignore: cast_nullable_to_non_nullable
+              as ExercisedValue?,
+      unexercisedValue: freezed == unexercisedValue
+          ? _value.unexercisedValue
+          : unexercisedValue // ignore: cast_nullable_to_non_nullable
+              as ExercisedValue?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$CompanyOfficerImpl implements _CompanyOfficer {
+  const _$CompanyOfficerImpl(
+      {this.maxAge,
+      this.name,
+      this.age,
+      this.title,
+      this.yearBorn,
+      this.totalPay,
+      this.exercisedValue,
+      this.unexercisedValue});
+
+  factory _$CompanyOfficerImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CompanyOfficerImplFromJson(json);
+
+  @override
+  final int? maxAge;
+  @override
+  final String? name;
+  @override
+  final int? age;
+  @override
+  final String? title;
+  @override
+  final int? yearBorn;
+  @override
+  final TotalPay? totalPay;
+  @override
+  final ExercisedValue? exercisedValue;
+  @override
+  final ExercisedValue? unexercisedValue;
+
+  @override
+  String toString() {
+    return 'CompanyOfficer(maxAge: $maxAge, name: $name, age: $age, title: $title, yearBorn: $yearBorn, totalPay: $totalPay, exercisedValue: $exercisedValue, unexercisedValue: $unexercisedValue)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$CompanyOfficerImpl &&
+            (identical(other.maxAge, maxAge) || other.maxAge == maxAge) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.age, age) || other.age == age) &&
+            (identical(other.title, title) || other.title == title) &&
+            (identical(other.yearBorn, yearBorn) ||
+                other.yearBorn == yearBorn) &&
+            (identical(other.totalPay, totalPay) ||
+                other.totalPay == totalPay) &&
+            (identical(other.exercisedValue, exercisedValue) ||
+                other.exercisedValue == exercisedValue) &&
+            (identical(other.unexercisedValue, unexercisedValue) ||
+                other.unexercisedValue == unexercisedValue));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, maxAge, name, age, title,
+      yearBorn, totalPay, exercisedValue, unexercisedValue);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$CompanyOfficerImplCopyWith<_$CompanyOfficerImpl> get copyWith =>
+      __$$CompanyOfficerImplCopyWithImpl<_$CompanyOfficerImpl>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$CompanyOfficerImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _CompanyOfficer implements CompanyOfficer {
+  const factory _CompanyOfficer(
+      {final int? maxAge,
+      final String? name,
+      final int? age,
+      final String? title,
+      final int? yearBorn,
+      final TotalPay? totalPay,
+      final ExercisedValue? exercisedValue,
+      final ExercisedValue? unexercisedValue}) = _$CompanyOfficerImpl;
+
+  factory _CompanyOfficer.fromJson(Map<String, dynamic> json) =
+      _$CompanyOfficerImpl.fromJson;
+
+  @override
+  int? get maxAge;
+  @override
+  String? get name;
+  @override
+  int? get age;
+  @override
+  String? get title;
+  @override
+  int? get yearBorn;
+  @override
+  TotalPay? get totalPay;
+  @override
+  ExercisedValue? get exercisedValue;
+  @override
+  ExercisedValue? get unexercisedValue;
+  @override
+  @JsonKey(ignore: true)
+  _$$CompanyOfficerImplCopyWith<_$CompanyOfficerImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+TotalPay _$TotalPayFromJson(Map<String, dynamic> json) {
+  return _TotalPay.fromJson(json);
+}
+
+/// @nodoc
+mixin _$TotalPay {
+  double? get raw => throw _privateConstructorUsedError;
+  String? get fmt => throw _privateConstructorUsedError;
+  String? get longFmt => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $TotalPayCopyWith<TotalPay> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $TotalPayCopyWith<$Res> {
+  factory $TotalPayCopyWith(TotalPay value, $Res Function(TotalPay) then) =
+      _$TotalPayCopyWithImpl<$Res, TotalPay>;
+  @useResult
+  $Res call({double? raw, String? fmt, String? longFmt});
+}
+
+/// @nodoc
+class _$TotalPayCopyWithImpl<$Res, $Val extends TotalPay>
+    implements $TotalPayCopyWith<$Res> {
+  _$TotalPayCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? raw = freezed,
+    Object? fmt = freezed,
+    Object? longFmt = freezed,
+  }) {
+    return _then(_value.copyWith(
+      raw: freezed == raw
+          ? _value.raw
+          : raw // ignore: cast_nullable_to_non_nullable
+              as double?,
+      fmt: freezed == fmt
+          ? _value.fmt
+          : fmt // ignore: cast_nullable_to_non_nullable
+              as String?,
+      longFmt: freezed == longFmt
+          ? _value.longFmt
+          : longFmt // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$TotalPayImplCopyWith<$Res>
+    implements $TotalPayCopyWith<$Res> {
+  factory _$$TotalPayImplCopyWith(
+          _$TotalPayImpl value, $Res Function(_$TotalPayImpl) then) =
+      __$$TotalPayImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({double? raw, String? fmt, String? longFmt});
+}
+
+/// @nodoc
+class __$$TotalPayImplCopyWithImpl<$Res>
+    extends _$TotalPayCopyWithImpl<$Res, _$TotalPayImpl>
+    implements _$$TotalPayImplCopyWith<$Res> {
+  __$$TotalPayImplCopyWithImpl(
+      _$TotalPayImpl _value, $Res Function(_$TotalPayImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? raw = freezed,
+    Object? fmt = freezed,
+    Object? longFmt = freezed,
+  }) {
+    return _then(_$TotalPayImpl(
+      raw: freezed == raw
+          ? _value.raw
+          : raw // ignore: cast_nullable_to_non_nullable
+              as double?,
+      fmt: freezed == fmt
+          ? _value.fmt
+          : fmt // ignore: cast_nullable_to_non_nullable
+              as String?,
+      longFmt: freezed == longFmt
+          ? _value.longFmt
+          : longFmt // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$TotalPayImpl implements _TotalPay {
+  const _$TotalPayImpl({this.raw, this.fmt, this.longFmt});
+
+  factory _$TotalPayImpl.fromJson(Map<String, dynamic> json) =>
+      _$$TotalPayImplFromJson(json);
+
+  @override
+  final double? raw;
+  @override
+  final String? fmt;
+  @override
+  final String? longFmt;
+
+  @override
+  String toString() {
+    return 'TotalPay(raw: $raw, fmt: $fmt, longFmt: $longFmt)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$TotalPayImpl &&
+            (identical(other.raw, raw) || other.raw == raw) &&
+            (identical(other.fmt, fmt) || other.fmt == fmt) &&
+            (identical(other.longFmt, longFmt) || other.longFmt == longFmt));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, raw, fmt, longFmt);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$TotalPayImplCopyWith<_$TotalPayImpl> get copyWith =>
+      __$$TotalPayImplCopyWithImpl<_$TotalPayImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$TotalPayImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _TotalPay implements TotalPay {
+  const factory _TotalPay(
+      {final double? raw,
+      final String? fmt,
+      final String? longFmt}) = _$TotalPayImpl;
+
+  factory _TotalPay.fromJson(Map<String, dynamic> json) =
+      _$TotalPayImpl.fromJson;
+
+  @override
+  double? get raw;
+  @override
+  String? get fmt;
+  @override
+  String? get longFmt;
+  @override
+  @JsonKey(ignore: true)
+  _$$TotalPayImplCopyWith<_$TotalPayImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+ExercisedValue _$ExercisedValueFromJson(Map<String, dynamic> json) {
+  return _ExercisedValue.fromJson(json);
+}
+
+/// @nodoc
+mixin _$ExercisedValue {
+  double? get raw => throw _privateConstructorUsedError;
+  String? get fmt => throw _privateConstructorUsedError;
+  String? get longFmt => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ExercisedValueCopyWith<ExercisedValue> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ExercisedValueCopyWith<$Res> {
+  factory $ExercisedValueCopyWith(
+          ExercisedValue value, $Res Function(ExercisedValue) then) =
+      _$ExercisedValueCopyWithImpl<$Res, ExercisedValue>;
+  @useResult
+  $Res call({double? raw, String? fmt, String? longFmt});
+}
+
+/// @nodoc
+class _$ExercisedValueCopyWithImpl<$Res, $Val extends ExercisedValue>
+    implements $ExercisedValueCopyWith<$Res> {
+  _$ExercisedValueCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? raw = freezed,
+    Object? fmt = freezed,
+    Object? longFmt = freezed,
+  }) {
+    return _then(_value.copyWith(
+      raw: freezed == raw
+          ? _value.raw
+          : raw // ignore: cast_nullable_to_non_nullable
+              as double?,
+      fmt: freezed == fmt
+          ? _value.fmt
+          : fmt // ignore: cast_nullable_to_non_nullable
+              as String?,
+      longFmt: freezed == longFmt
+          ? _value.longFmt
+          : longFmt // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$ExercisedValueImplCopyWith<$Res>
+    implements $ExercisedValueCopyWith<$Res> {
+  factory _$$ExercisedValueImplCopyWith(_$ExercisedValueImpl value,
+          $Res Function(_$ExercisedValueImpl) then) =
+      __$$ExercisedValueImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({double? raw, String? fmt, String? longFmt});
+}
+
+/// @nodoc
+class __$$ExercisedValueImplCopyWithImpl<$Res>
+    extends _$ExercisedValueCopyWithImpl<$Res, _$ExercisedValueImpl>
+    implements _$$ExercisedValueImplCopyWith<$Res> {
+  __$$ExercisedValueImplCopyWithImpl(
+      _$ExercisedValueImpl _value, $Res Function(_$ExercisedValueImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? raw = freezed,
+    Object? fmt = freezed,
+    Object? longFmt = freezed,
+  }) {
+    return _then(_$ExercisedValueImpl(
+      raw: freezed == raw
+          ? _value.raw
+          : raw // ignore: cast_nullable_to_non_nullable
+              as double?,
+      fmt: freezed == fmt
+          ? _value.fmt
+          : fmt // ignore: cast_nullable_to_non_nullable
+              as String?,
+      longFmt: freezed == longFmt
+          ? _value.longFmt
+          : longFmt // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$ExercisedValueImpl implements _ExercisedValue {
+  const _$ExercisedValueImpl({this.raw, this.fmt, this.longFmt});
+
+  factory _$ExercisedValueImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ExercisedValueImplFromJson(json);
+
+  @override
+  final double? raw;
+  @override
+  final String? fmt;
+  @override
+  final String? longFmt;
+
+  @override
+  String toString() {
+    return 'ExercisedValue(raw: $raw, fmt: $fmt, longFmt: $longFmt)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ExercisedValueImpl &&
+            (identical(other.raw, raw) || other.raw == raw) &&
+            (identical(other.fmt, fmt) || other.fmt == fmt) &&
+            (identical(other.longFmt, longFmt) || other.longFmt == longFmt));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, raw, fmt, longFmt);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ExercisedValueImplCopyWith<_$ExercisedValueImpl> get copyWith =>
+      __$$ExercisedValueImplCopyWithImpl<_$ExercisedValueImpl>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$ExercisedValueImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _ExercisedValue implements ExercisedValue {
+  const factory _ExercisedValue(
+      {final double? raw,
+      final String? fmt,
+      final String? longFmt}) = _$ExercisedValueImpl;
+
+  factory _ExercisedValue.fromJson(Map<String, dynamic> json) =
+      _$ExercisedValueImpl.fromJson;
+
+  @override
+  double? get raw;
+  @override
+  String? get fmt;
+  @override
+  String? get longFmt;
+  @override
+  @JsonKey(ignore: true)
+  _$$ExercisedValueImplCopyWith<_$ExercisedValueImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+SummaryDetail _$SummaryDetailFromJson(Map<String, dynamic> json) {
+  return _SummaryDetail.fromJson(json);
+}
+
+/// @nodoc
+mixin _$SummaryDetail {
+  int? get maxAge => throw _privateConstructorUsedError;
+  PriceHint? get priceHint => throw _privateConstructorUsedError;
+  Price? get previousClose => throw _privateConstructorUsedError;
+  Price? get open => throw _privateConstructorUsedError;
+  Price? get dayLow => throw _privateConstructorUsedError;
+  Price? get dayHigh => throw _privateConstructorUsedError;
+  Price? get regularMarketPreviousClose => throw _privateConstructorUsedError;
+  Price? get regularMarketOpen => throw _privateConstructorUsedError;
+  Price? get regularMarketDayLow => throw _privateConstructorUsedError;
+  Price? get regularMarketDayHigh => throw _privateConstructorUsedError;
+  DividendRate? get dividendRate => throw _privateConstructorUsedError;
+  DividendYield? get dividendYield => throw _privateConstructorUsedError;
+  ExDividendDate? get exDividendDate => throw _privateConstructorUsedError;
+  PayoutRatio? get payoutRatio => throw _privateConstructorUsedError;
+  DividendYield? get fiveYearAvgDividendYield =>
+      throw _privateConstructorUsedError;
+  Beta? get beta => throw _privateConstructorUsedError;
+  Pe? get trailingPE => throw _privateConstructorUsedError;
+  Pe? get forwardPE => throw _privateConstructorUsedError;
+  Volume? get volume => throw _privateConstructorUsedError;
+  Volume? get regularMarketVolume => throw _privateConstructorUsedError;
+  AverageVolume? get averageVolume => throw _privateConstructorUsedError;
+  AverageVolume? get averageVolume10days => throw _privateConstructorUsedError;
+  AverageVolume? get averageDailyVolume10Day =>
+      throw _privateConstructorUsedError;
+  Price? get bid => throw _privateConstructorUsedError;
+  Price? get ask => throw _privateConstructorUsedError;
+  BidSize? get bidSize => throw _privateConstructorUsedError;
+  BidSize? get askSize => throw _privateConstructorUsedError;
+  MarketCap? get marketCap => throw _privateConstructorUsedError;
+  Price? get fiftyTwoWeekLow => throw _privateConstructorUsedError;
+  Price? get fiftyTwoWeekHigh => throw _privateConstructorUsedError;
+  PriceToSales? get priceToSalesTrailing12Months =>
+      throw _privateConstructorUsedError;
+  AveragePrice? get fiftyDayAverage => throw _privateConstructorUsedError;
+  AveragePrice? get twoHundredDayAverage => throw _privateConstructorUsedError;
+  DividendRate? get trailingAnnualDividendRate =>
+      throw _privateConstructorUsedError;
+  DividendYield? get trailingAnnualDividendYield =>
+      throw _privateConstructorUsedError;
+  String? get currency => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $SummaryDetailCopyWith<SummaryDetail> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $SummaryDetailCopyWith<$Res> {
+  factory $SummaryDetailCopyWith(
+          SummaryDetail value, $Res Function(SummaryDetail) then) =
+      _$SummaryDetailCopyWithImpl<$Res, SummaryDetail>;
+  @useResult
+  $Res call(
+      {int? maxAge,
+      PriceHint? priceHint,
+      Price? previousClose,
+      Price? open,
+      Price? dayLow,
+      Price? dayHigh,
+      Price? regularMarketPreviousClose,
+      Price? regularMarketOpen,
+      Price? regularMarketDayLow,
+      Price? regularMarketDayHigh,
+      DividendRate? dividendRate,
+      DividendYield? dividendYield,
+      ExDividendDate? exDividendDate,
+      PayoutRatio? payoutRatio,
+      DividendYield? fiveYearAvgDividendYield,
+      Beta? beta,
+      Pe? trailingPE,
+      Pe? forwardPE,
+      Volume? volume,
+      Volume? regularMarketVolume,
+      AverageVolume? averageVolume,
+      AverageVolume? averageVolume10days,
+      AverageVolume? averageDailyVolume10Day,
+      Price? bid,
+      Price? ask,
+      BidSize? bidSize,
+      BidSize? askSize,
+      MarketCap? marketCap,
+      Price? fiftyTwoWeekLow,
+      Price? fiftyTwoWeekHigh,
+      PriceToSales? priceToSalesTrailing12Months,
+      AveragePrice? fiftyDayAverage,
+      AveragePrice? twoHundredDayAverage,
+      DividendRate? trailingAnnualDividendRate,
+      DividendYield? trailingAnnualDividendYield,
+      String? currency});
+
+  $PriceHintCopyWith<$Res>? get priceHint;
+  $PriceCopyWith<$Res>? get previousClose;
+  $PriceCopyWith<$Res>? get open;
+  $PriceCopyWith<$Res>? get dayLow;
+  $PriceCopyWith<$Res>? get dayHigh;
+  $PriceCopyWith<$Res>? get regularMarketPreviousClose;
+  $PriceCopyWith<$Res>? get regularMarketOpen;
+  $PriceCopyWith<$Res>? get regularMarketDayLow;
+  $PriceCopyWith<$Res>? get regularMarketDayHigh;
+  $DividendRateCopyWith<$Res>? get dividendRate;
+  $DividendYieldCopyWith<$Res>? get dividendYield;
+  $ExDividendDateCopyWith<$Res>? get exDividendDate;
+  $PayoutRatioCopyWith<$Res>? get payoutRatio;
+  $DividendYieldCopyWith<$Res>? get fiveYearAvgDividendYield;
+  $BetaCopyWith<$Res>? get beta;
+  $PeCopyWith<$Res>? get trailingPE;
+  $PeCopyWith<$Res>? get forwardPE;
+  $VolumeCopyWith<$Res>? get volume;
+  $VolumeCopyWith<$Res>? get regularMarketVolume;
+  $AverageVolumeCopyWith<$Res>? get averageVolume;
+  $AverageVolumeCopyWith<$Res>? get averageVolume10days;
+  $AverageVolumeCopyWith<$Res>? get averageDailyVolume10Day;
+  $PriceCopyWith<$Res>? get bid;
+  $PriceCopyWith<$Res>? get ask;
+  $BidSizeCopyWith<$Res>? get bidSize;
+  $BidSizeCopyWith<$Res>? get askSize;
+  $MarketCapCopyWith<$Res>? get marketCap;
+  $PriceCopyWith<$Res>? get fiftyTwoWeekLow;
+  $PriceCopyWith<$Res>? get fiftyTwoWeekHigh;
+  $PriceToSalesCopyWith<$Res>? get priceToSalesTrailing12Months;
+  $AveragePriceCopyWith<$Res>? get fiftyDayAverage;
+  $AveragePriceCopyWith<$Res>? get twoHundredDayAverage;
+  $DividendRateCopyWith<$Res>? get trailingAnnualDividendRate;
+  $DividendYieldCopyWith<$Res>? get trailingAnnualDividendYield;
+}
+
+/// @nodoc
+class _$SummaryDetailCopyWithImpl<$Res, $Val extends SummaryDetail>
+    implements $SummaryDetailCopyWith<$Res> {
+  _$SummaryDetailCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? maxAge = freezed,
+    Object? priceHint = freezed,
+    Object? previousClose = freezed,
+    Object? open = freezed,
+    Object? dayLow = freezed,
+    Object? dayHigh = freezed,
+    Object? regularMarketPreviousClose = freezed,
+    Object? regularMarketOpen = freezed,
+    Object? regularMarketDayLow = freezed,
+    Object? regularMarketDayHigh = freezed,
+    Object? dividendRate = freezed,
+    Object? dividendYield = freezed,
+    Object? exDividendDate = freezed,
+    Object? payoutRatio = freezed,
+    Object? fiveYearAvgDividendYield = freezed,
+    Object? beta = freezed,
+    Object? trailingPE = freezed,
+    Object? forwardPE = freezed,
+    Object? volume = freezed,
+    Object? regularMarketVolume = freezed,
+    Object? averageVolume = freezed,
+    Object? averageVolume10days = freezed,
+    Object? averageDailyVolume10Day = freezed,
+    Object? bid = freezed,
+    Object? ask = freezed,
+    Object? bidSize = freezed,
+    Object? askSize = freezed,
+    Object? marketCap = freezed,
+    Object? fiftyTwoWeekLow = freezed,
+    Object? fiftyTwoWeekHigh = freezed,
+    Object? priceToSalesTrailing12Months = freezed,
+    Object? fiftyDayAverage = freezed,
+    Object? twoHundredDayAverage = freezed,
+    Object? trailingAnnualDividendRate = freezed,
+    Object? trailingAnnualDividendYield = freezed,
+    Object? currency = freezed,
+  }) {
+    return _then(_value.copyWith(
+      maxAge: freezed == maxAge
+          ? _value.maxAge
+          : maxAge // ignore: cast_nullable_to_non_nullable
+              as int?,
+      priceHint: freezed == priceHint
+          ? _value.priceHint
+          : priceHint // ignore: cast_nullable_to_non_nullable
+              as PriceHint?,
+      previousClose: freezed == previousClose
+          ? _value.previousClose
+          : previousClose // ignore: cast_nullable_to_non_nullable
+              as Price?,
+      open: freezed == open
+          ? _value.open
+          : open // ignore: cast_nullable_to_non_nullable
+              as Price?,
+      dayLow: freezed == dayLow
+          ? _value.dayLow
+          : dayLow // ignore: cast_nullable_to_non_nullable
+              as Price?,
+      dayHigh: freezed == dayHigh
+          ? _value.dayHigh
+          : dayHigh // ignore: cast_nullable_to_non_nullable
+              as Price?,
+      regularMarketPreviousClose: freezed == regularMarketPreviousClose
+          ? _value.regularMarketPreviousClose
+          : regularMarketPreviousClose // ignore: cast_nullable_to_non_nullable
+              as Price?,
+      regularMarketOpen: freezed == regularMarketOpen
+          ? _value.regularMarketOpen
+          : regularMarketOpen // ignore: cast_nullable_to_non_nullable
+              as Price?,
+      regularMarketDayLow: freezed == regularMarketDayLow
+          ? _value.regularMarketDayLow
+          : regularMarketDayLow // ignore: cast_nullable_to_non_nullable
+              as Price?,
+      regularMarketDayHigh: freezed == regularMarketDayHigh
+          ? _value.regularMarketDayHigh
+          : regularMarketDayHigh // ignore: cast_nullable_to_non_nullable
+              as Price?,
+      dividendRate: freezed == dividendRate
+          ? _value.dividendRate
+          : dividendRate // ignore: cast_nullable_to_non_nullable
+              as DividendRate?,
+      dividendYield: freezed == dividendYield
+          ? _value.dividendYield
+          : dividendYield // ignore: cast_nullable_to_non_nullable
+              as DividendYield?,
+      exDividendDate: freezed == exDividendDate
+          ? _value.exDividendDate
+          : exDividendDate // ignore: cast_nullable_to_non_nullable
+              as ExDividendDate?,
+      payoutRatio: freezed == payoutRatio
+          ? _value.payoutRatio
+          : payoutRatio // ignore: cast_nullable_to_non_nullable
+              as PayoutRatio?,
+      fiveYearAvgDividendYield: freezed == fiveYearAvgDividendYield
+          ? _value.fiveYearAvgDividendYield
+          : fiveYearAvgDividendYield // ignore: cast_nullable_to_non_nullable
+              as DividendYield?,
+      beta: freezed == beta
+          ? _value.beta
+          : beta // ignore: cast_nullable_to_non_nullable
+              as Beta?,
+      trailingPE: freezed == trailingPE
+          ? _value.trailingPE
+          : trailingPE // ignore: cast_nullable_to_non_nullable
+              as Pe?,
+      forwardPE: freezed == forwardPE
+          ? _value.forwardPE
+          : forwardPE // ignore: cast_nullable_to_non_nullable
+              as Pe?,
+      volume: freezed == volume
+          ? _value.volume
+          : volume // ignore: cast_nullable_to_non_nullable
+              as Volume?,
+      regularMarketVolume: freezed == regularMarketVolume
+          ? _value.regularMarketVolume
+          : regularMarketVolume // ignore: cast_nullable_to_non_nullable
+              as Volume?,
+      averageVolume: freezed == averageVolume
+          ? _value.averageVolume
+          : averageVolume // ignore: cast_nullable_to_non_nullable
+              as AverageVolume?,
+      averageVolume10days: freezed == averageVolume10days
+          ? _value.averageVolume10days
+          : averageVolume10days // ignore: cast_nullable_to_non_nullable
+              as AverageVolume?,
+      averageDailyVolume10Day: freezed == averageDailyVolume10Day
+          ? _value.averageDailyVolume10Day
+          : averageDailyVolume10Day // ignore: cast_nullable_to_non_nullable
+              as AverageVolume?,
+      bid: freezed == bid
+          ? _value.bid
+          : bid // ignore: cast_nullable_to_non_nullable
+              as Price?,
+      ask: freezed == ask
+          ? _value.ask
+          : ask // ignore: cast_nullable_to_non_nullable
+              as Price?,
+      bidSize: freezed == bidSize
+          ? _value.bidSize
+          : bidSize // ignore: cast_nullable_to_non_nullable
+              as BidSize?,
+      askSize: freezed == askSize
+          ? _value.askSize
+          : askSize // ignore: cast_nullable_to_non_nullable
+              as BidSize?,
+      marketCap: freezed == marketCap
+          ? _value.marketCap
+          : marketCap // ignore: cast_nullable_to_non_nullable
+              as MarketCap?,
+      fiftyTwoWeekLow: freezed == fiftyTwoWeekLow
+          ? _value.fiftyTwoWeekLow
+          : fiftyTwoWeekLow // ignore: cast_nullable_to_non_nullable
+              as Price?,
+      fiftyTwoWeekHigh: freezed == fiftyTwoWeekHigh
+          ? _value.fiftyTwoWeekHigh
+          : fiftyTwoWeekHigh // ignore: cast_nullable_to_non_nullable
+              as Price?,
+      priceToSalesTrailing12Months: freezed == priceToSalesTrailing12Months
+          ? _value.priceToSalesTrailing12Months
+          : priceToSalesTrailing12Months // ignore: cast_nullable_to_non_nullable
+              as PriceToSales?,
+      fiftyDayAverage: freezed == fiftyDayAverage
+          ? _value.fiftyDayAverage
+          : fiftyDayAverage // ignore: cast_nullable_to_non_nullable
+              as AveragePrice?,
+      twoHundredDayAverage: freezed == twoHundredDayAverage
+          ? _value.twoHundredDayAverage
+          : twoHundredDayAverage // ignore: cast_nullable_to_non_nullable
+              as AveragePrice?,
+      trailingAnnualDividendRate: freezed == trailingAnnualDividendRate
+          ? _value.trailingAnnualDividendRate
+          : trailingAnnualDividendRate // ignore: cast_nullable_to_non_nullable
+              as DividendRate?,
+      trailingAnnualDividendYield: freezed == trailingAnnualDividendYield
+          ? _value.trailingAnnualDividendYield
+          : trailingAnnualDividendYield // ignore: cast_nullable_to_non_nullable
+              as DividendYield?,
+      currency: freezed == currency
+          ? _value.currency
+          : currency // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $PriceHintCopyWith<$Res>? get priceHint {
+    if (_value.priceHint == null) {
+      return null;
+    }
+
+    return $PriceHintCopyWith<$Res>(_value.priceHint!, (value) {
+      return _then(_value.copyWith(priceHint: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $PriceCopyWith<$Res>? get previousClose {
+    if (_value.previousClose == null) {
+      return null;
+    }
+
+    return $PriceCopyWith<$Res>(_value.previousClose!, (value) {
+      return _then(_value.copyWith(previousClose: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $PriceCopyWith<$Res>? get open {
+    if (_value.open == null) {
+      return null;
+    }
+
+    return $PriceCopyWith<$Res>(_value.open!, (value) {
+      return _then(_value.copyWith(open: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $PriceCopyWith<$Res>? get dayLow {
+    if (_value.dayLow == null) {
+      return null;
+    }
+
+    return $PriceCopyWith<$Res>(_value.dayLow!, (value) {
+      return _then(_value.copyWith(dayLow: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $PriceCopyWith<$Res>? get dayHigh {
+    if (_value.dayHigh == null) {
+      return null;
+    }
+
+    return $PriceCopyWith<$Res>(_value.dayHigh!, (value) {
+      return _then(_value.copyWith(dayHigh: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $PriceCopyWith<$Res>? get regularMarketPreviousClose {
+    if (_value.regularMarketPreviousClose == null) {
+      return null;
+    }
+
+    return $PriceCopyWith<$Res>(_value.regularMarketPreviousClose!, (value) {
+      return _then(_value.copyWith(regularMarketPreviousClose: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $PriceCopyWith<$Res>? get regularMarketOpen {
+    if (_value.regularMarketOpen == null) {
+      return null;
+    }
+
+    return $PriceCopyWith<$Res>(_value.regularMarketOpen!, (value) {
+      return _then(_value.copyWith(regularMarketOpen: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $PriceCopyWith<$Res>? get regularMarketDayLow {
+    if (_value.regularMarketDayLow == null) {
+      return null;
+    }
+
+    return $PriceCopyWith<$Res>(_value.regularMarketDayLow!, (value) {
+      return _then(_value.copyWith(regularMarketDayLow: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $PriceCopyWith<$Res>? get regularMarketDayHigh {
+    if (_value.regularMarketDayHigh == null) {
+      return null;
+    }
+
+    return $PriceCopyWith<$Res>(_value.regularMarketDayHigh!, (value) {
+      return _then(_value.copyWith(regularMarketDayHigh: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $DividendRateCopyWith<$Res>? get dividendRate {
+    if (_value.dividendRate == null) {
+      return null;
+    }
+
+    return $DividendRateCopyWith<$Res>(_value.dividendRate!, (value) {
+      return _then(_value.copyWith(dividendRate: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $DividendYieldCopyWith<$Res>? get dividendYield {
+    if (_value.dividendYield == null) {
+      return null;
+    }
+
+    return $DividendYieldCopyWith<$Res>(_value.dividendYield!, (value) {
+      return _then(_value.copyWith(dividendYield: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ExDividendDateCopyWith<$Res>? get exDividendDate {
+    if (_value.exDividendDate == null) {
+      return null;
+    }
+
+    return $ExDividendDateCopyWith<$Res>(_value.exDividendDate!, (value) {
+      return _then(_value.copyWith(exDividendDate: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $PayoutRatioCopyWith<$Res>? get payoutRatio {
+    if (_value.payoutRatio == null) {
+      return null;
+    }
+
+    return $PayoutRatioCopyWith<$Res>(_value.payoutRatio!, (value) {
+      return _then(_value.copyWith(payoutRatio: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $DividendYieldCopyWith<$Res>? get fiveYearAvgDividendYield {
+    if (_value.fiveYearAvgDividendYield == null) {
+      return null;
+    }
+
+    return $DividendYieldCopyWith<$Res>(_value.fiveYearAvgDividendYield!,
+        (value) {
+      return _then(_value.copyWith(fiveYearAvgDividendYield: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $BetaCopyWith<$Res>? get beta {
+    if (_value.beta == null) {
+      return null;
+    }
+
+    return $BetaCopyWith<$Res>(_value.beta!, (value) {
+      return _then(_value.copyWith(beta: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $PeCopyWith<$Res>? get trailingPE {
+    if (_value.trailingPE == null) {
+      return null;
+    }
+
+    return $PeCopyWith<$Res>(_value.trailingPE!, (value) {
+      return _then(_value.copyWith(trailingPE: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $PeCopyWith<$Res>? get forwardPE {
+    if (_value.forwardPE == null) {
+      return null;
+    }
+
+    return $PeCopyWith<$Res>(_value.forwardPE!, (value) {
+      return _then(_value.copyWith(forwardPE: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $VolumeCopyWith<$Res>? get volume {
+    if (_value.volume == null) {
+      return null;
+    }
+
+    return $VolumeCopyWith<$Res>(_value.volume!, (value) {
+      return _then(_value.copyWith(volume: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $VolumeCopyWith<$Res>? get regularMarketVolume {
+    if (_value.regularMarketVolume == null) {
+      return null;
+    }
+
+    return $VolumeCopyWith<$Res>(_value.regularMarketVolume!, (value) {
+      return _then(_value.copyWith(regularMarketVolume: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $AverageVolumeCopyWith<$Res>? get averageVolume {
+    if (_value.averageVolume == null) {
+      return null;
+    }
+
+    return $AverageVolumeCopyWith<$Res>(_value.averageVolume!, (value) {
+      return _then(_value.copyWith(averageVolume: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $AverageVolumeCopyWith<$Res>? get averageVolume10days {
+    if (_value.averageVolume10days == null) {
+      return null;
+    }
+
+    return $AverageVolumeCopyWith<$Res>(_value.averageVolume10days!, (value) {
+      return _then(_value.copyWith(averageVolume10days: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $AverageVolumeCopyWith<$Res>? get averageDailyVolume10Day {
+    if (_value.averageDailyVolume10Day == null) {
+      return null;
+    }
+
+    return $AverageVolumeCopyWith<$Res>(_value.averageDailyVolume10Day!,
+        (value) {
+      return _then(_value.copyWith(averageDailyVolume10Day: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $PriceCopyWith<$Res>? get bid {
+    if (_value.bid == null) {
+      return null;
+    }
+
+    return $PriceCopyWith<$Res>(_value.bid!, (value) {
+      return _then(_value.copyWith(bid: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $PriceCopyWith<$Res>? get ask {
+    if (_value.ask == null) {
+      return null;
+    }
+
+    return $PriceCopyWith<$Res>(_value.ask!, (value) {
+      return _then(_value.copyWith(ask: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $BidSizeCopyWith<$Res>? get bidSize {
+    if (_value.bidSize == null) {
+      return null;
+    }
+
+    return $BidSizeCopyWith<$Res>(_value.bidSize!, (value) {
+      return _then(_value.copyWith(bidSize: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $BidSizeCopyWith<$Res>? get askSize {
+    if (_value.askSize == null) {
+      return null;
+    }
+
+    return $BidSizeCopyWith<$Res>(_value.askSize!, (value) {
+      return _then(_value.copyWith(askSize: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $MarketCapCopyWith<$Res>? get marketCap {
+    if (_value.marketCap == null) {
+      return null;
+    }
+
+    return $MarketCapCopyWith<$Res>(_value.marketCap!, (value) {
+      return _then(_value.copyWith(marketCap: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $PriceCopyWith<$Res>? get fiftyTwoWeekLow {
+    if (_value.fiftyTwoWeekLow == null) {
+      return null;
+    }
+
+    return $PriceCopyWith<$Res>(_value.fiftyTwoWeekLow!, (value) {
+      return _then(_value.copyWith(fiftyTwoWeekLow: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $PriceCopyWith<$Res>? get fiftyTwoWeekHigh {
+    if (_value.fiftyTwoWeekHigh == null) {
+      return null;
+    }
+
+    return $PriceCopyWith<$Res>(_value.fiftyTwoWeekHigh!, (value) {
+      return _then(_value.copyWith(fiftyTwoWeekHigh: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $PriceToSalesCopyWith<$Res>? get priceToSalesTrailing12Months {
+    if (_value.priceToSalesTrailing12Months == null) {
+      return null;
+    }
+
+    return $PriceToSalesCopyWith<$Res>(_value.priceToSalesTrailing12Months!,
+        (value) {
+      return _then(
+          _value.copyWith(priceToSalesTrailing12Months: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $AveragePriceCopyWith<$Res>? get fiftyDayAverage {
+    if (_value.fiftyDayAverage == null) {
+      return null;
+    }
+
+    return $AveragePriceCopyWith<$Res>(_value.fiftyDayAverage!, (value) {
+      return _then(_value.copyWith(fiftyDayAverage: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $AveragePriceCopyWith<$Res>? get twoHundredDayAverage {
+    if (_value.twoHundredDayAverage == null) {
+      return null;
+    }
+
+    return $AveragePriceCopyWith<$Res>(_value.twoHundredDayAverage!, (value) {
+      return _then(_value.copyWith(twoHundredDayAverage: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $DividendRateCopyWith<$Res>? get trailingAnnualDividendRate {
+    if (_value.trailingAnnualDividendRate == null) {
+      return null;
+    }
+
+    return $DividendRateCopyWith<$Res>(_value.trailingAnnualDividendRate!,
+        (value) {
+      return _then(_value.copyWith(trailingAnnualDividendRate: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $DividendYieldCopyWith<$Res>? get trailingAnnualDividendYield {
+    if (_value.trailingAnnualDividendYield == null) {
+      return null;
+    }
+
+    return $DividendYieldCopyWith<$Res>(_value.trailingAnnualDividendYield!,
+        (value) {
+      return _then(_value.copyWith(trailingAnnualDividendYield: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$SummaryDetailImplCopyWith<$Res>
+    implements $SummaryDetailCopyWith<$Res> {
+  factory _$$SummaryDetailImplCopyWith(
+          _$SummaryDetailImpl value, $Res Function(_$SummaryDetailImpl) then) =
+      __$$SummaryDetailImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {int? maxAge,
+      PriceHint? priceHint,
+      Price? previousClose,
+      Price? open,
+      Price? dayLow,
+      Price? dayHigh,
+      Price? regularMarketPreviousClose,
+      Price? regularMarketOpen,
+      Price? regularMarketDayLow,
+      Price? regularMarketDayHigh,
+      DividendRate? dividendRate,
+      DividendYield? dividendYield,
+      ExDividendDate? exDividendDate,
+      PayoutRatio? payoutRatio,
+      DividendYield? fiveYearAvgDividendYield,
+      Beta? beta,
+      Pe? trailingPE,
+      Pe? forwardPE,
+      Volume? volume,
+      Volume? regularMarketVolume,
+      AverageVolume? averageVolume,
+      AverageVolume? averageVolume10days,
+      AverageVolume? averageDailyVolume10Day,
+      Price? bid,
+      Price? ask,
+      BidSize? bidSize,
+      BidSize? askSize,
+      MarketCap? marketCap,
+      Price? fiftyTwoWeekLow,
+      Price? fiftyTwoWeekHigh,
+      PriceToSales? priceToSalesTrailing12Months,
+      AveragePrice? fiftyDayAverage,
+      AveragePrice? twoHundredDayAverage,
+      DividendRate? trailingAnnualDividendRate,
+      DividendYield? trailingAnnualDividendYield,
+      String? currency});
+
+  @override
+  $PriceHintCopyWith<$Res>? get priceHint;
+  @override
+  $PriceCopyWith<$Res>? get previousClose;
+  @override
+  $PriceCopyWith<$Res>? get open;
+  @override
+  $PriceCopyWith<$Res>? get dayLow;
+  @override
+  $PriceCopyWith<$Res>? get dayHigh;
+  @override
+  $PriceCopyWith<$Res>? get regularMarketPreviousClose;
+  @override
+  $PriceCopyWith<$Res>? get regularMarketOpen;
+  @override
+  $PriceCopyWith<$Res>? get regularMarketDayLow;
+  @override
+  $PriceCopyWith<$Res>? get regularMarketDayHigh;
+  @override
+  $DividendRateCopyWith<$Res>? get dividendRate;
+  @override
+  $DividendYieldCopyWith<$Res>? get dividendYield;
+  @override
+  $ExDividendDateCopyWith<$Res>? get exDividendDate;
+  @override
+  $PayoutRatioCopyWith<$Res>? get payoutRatio;
+  @override
+  $DividendYieldCopyWith<$Res>? get fiveYearAvgDividendYield;
+  @override
+  $BetaCopyWith<$Res>? get beta;
+  @override
+  $PeCopyWith<$Res>? get trailingPE;
+  @override
+  $PeCopyWith<$Res>? get forwardPE;
+  @override
+  $VolumeCopyWith<$Res>? get volume;
+  @override
+  $VolumeCopyWith<$Res>? get regularMarketVolume;
+  @override
+  $AverageVolumeCopyWith<$Res>? get averageVolume;
+  @override
+  $AverageVolumeCopyWith<$Res>? get averageVolume10days;
+  @override
+  $AverageVolumeCopyWith<$Res>? get averageDailyVolume10Day;
+  @override
+  $PriceCopyWith<$Res>? get bid;
+  @override
+  $PriceCopyWith<$Res>? get ask;
+  @override
+  $BidSizeCopyWith<$Res>? get bidSize;
+  @override
+  $BidSizeCopyWith<$Res>? get askSize;
+  @override
+  $MarketCapCopyWith<$Res>? get marketCap;
+  @override
+  $PriceCopyWith<$Res>? get fiftyTwoWeekLow;
+  @override
+  $PriceCopyWith<$Res>? get fiftyTwoWeekHigh;
+  @override
+  $PriceToSalesCopyWith<$Res>? get priceToSalesTrailing12Months;
+  @override
+  $AveragePriceCopyWith<$Res>? get fiftyDayAverage;
+  @override
+  $AveragePriceCopyWith<$Res>? get twoHundredDayAverage;
+  @override
+  $DividendRateCopyWith<$Res>? get trailingAnnualDividendRate;
+  @override
+  $DividendYieldCopyWith<$Res>? get trailingAnnualDividendYield;
+}
+
+/// @nodoc
+class __$$SummaryDetailImplCopyWithImpl<$Res>
+    extends _$SummaryDetailCopyWithImpl<$Res, _$SummaryDetailImpl>
+    implements _$$SummaryDetailImplCopyWith<$Res> {
+  __$$SummaryDetailImplCopyWithImpl(
+      _$SummaryDetailImpl _value, $Res Function(_$SummaryDetailImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? maxAge = freezed,
+    Object? priceHint = freezed,
+    Object? previousClose = freezed,
+    Object? open = freezed,
+    Object? dayLow = freezed,
+    Object? dayHigh = freezed,
+    Object? regularMarketPreviousClose = freezed,
+    Object? regularMarketOpen = freezed,
+    Object? regularMarketDayLow = freezed,
+    Object? regularMarketDayHigh = freezed,
+    Object? dividendRate = freezed,
+    Object? dividendYield = freezed,
+    Object? exDividendDate = freezed,
+    Object? payoutRatio = freezed,
+    Object? fiveYearAvgDividendYield = freezed,
+    Object? beta = freezed,
+    Object? trailingPE = freezed,
+    Object? forwardPE = freezed,
+    Object? volume = freezed,
+    Object? regularMarketVolume = freezed,
+    Object? averageVolume = freezed,
+    Object? averageVolume10days = freezed,
+    Object? averageDailyVolume10Day = freezed,
+    Object? bid = freezed,
+    Object? ask = freezed,
+    Object? bidSize = freezed,
+    Object? askSize = freezed,
+    Object? marketCap = freezed,
+    Object? fiftyTwoWeekLow = freezed,
+    Object? fiftyTwoWeekHigh = freezed,
+    Object? priceToSalesTrailing12Months = freezed,
+    Object? fiftyDayAverage = freezed,
+    Object? twoHundredDayAverage = freezed,
+    Object? trailingAnnualDividendRate = freezed,
+    Object? trailingAnnualDividendYield = freezed,
+    Object? currency = freezed,
+  }) {
+    return _then(_$SummaryDetailImpl(
+      maxAge: freezed == maxAge
+          ? _value.maxAge
+          : maxAge // ignore: cast_nullable_to_non_nullable
+              as int?,
+      priceHint: freezed == priceHint
+          ? _value.priceHint
+          : priceHint // ignore: cast_nullable_to_non_nullable
+              as PriceHint?,
+      previousClose: freezed == previousClose
+          ? _value.previousClose
+          : previousClose // ignore: cast_nullable_to_non_nullable
+              as Price?,
+      open: freezed == open
+          ? _value.open
+          : open // ignore: cast_nullable_to_non_nullable
+              as Price?,
+      dayLow: freezed == dayLow
+          ? _value.dayLow
+          : dayLow // ignore: cast_nullable_to_non_nullable
+              as Price?,
+      dayHigh: freezed == dayHigh
+          ? _value.dayHigh
+          : dayHigh // ignore: cast_nullable_to_non_nullable
+              as Price?,
+      regularMarketPreviousClose: freezed == regularMarketPreviousClose
+          ? _value.regularMarketPreviousClose
+          : regularMarketPreviousClose // ignore: cast_nullable_to_non_nullable
+              as Price?,
+      regularMarketOpen: freezed == regularMarketOpen
+          ? _value.regularMarketOpen
+          : regularMarketOpen // ignore: cast_nullable_to_non_nullable
+              as Price?,
+      regularMarketDayLow: freezed == regularMarketDayLow
+          ? _value.regularMarketDayLow
+          : regularMarketDayLow // ignore: cast_nullable_to_non_nullable
+              as Price?,
+      regularMarketDayHigh: freezed == regularMarketDayHigh
+          ? _value.regularMarketDayHigh
+          : regularMarketDayHigh // ignore: cast_nullable_to_non_nullable
+              as Price?,
+      dividendRate: freezed == dividendRate
+          ? _value.dividendRate
+          : dividendRate // ignore: cast_nullable_to_non_nullable
+              as DividendRate?,
+      dividendYield: freezed == dividendYield
+          ? _value.dividendYield
+          : dividendYield // ignore: cast_nullable_to_non_nullable
+              as DividendYield?,
+      exDividendDate: freezed == exDividendDate
+          ? _value.exDividendDate
+          : exDividendDate // ignore: cast_nullable_to_non_nullable
+              as ExDividendDate?,
+      payoutRatio: freezed == payoutRatio
+          ? _value.payoutRatio
+          : payoutRatio // ignore: cast_nullable_to_non_nullable
+              as PayoutRatio?,
+      fiveYearAvgDividendYield: freezed == fiveYearAvgDividendYield
+          ? _value.fiveYearAvgDividendYield
+          : fiveYearAvgDividendYield // ignore: cast_nullable_to_non_nullable
+              as DividendYield?,
+      beta: freezed == beta
+          ? _value.beta
+          : beta // ignore: cast_nullable_to_non_nullable
+              as Beta?,
+      trailingPE: freezed == trailingPE
+          ? _value.trailingPE
+          : trailingPE // ignore: cast_nullable_to_non_nullable
+              as Pe?,
+      forwardPE: freezed == forwardPE
+          ? _value.forwardPE
+          : forwardPE // ignore: cast_nullable_to_non_nullable
+              as Pe?,
+      volume: freezed == volume
+          ? _value.volume
+          : volume // ignore: cast_nullable_to_non_nullable
+              as Volume?,
+      regularMarketVolume: freezed == regularMarketVolume
+          ? _value.regularMarketVolume
+          : regularMarketVolume // ignore: cast_nullable_to_non_nullable
+              as Volume?,
+      averageVolume: freezed == averageVolume
+          ? _value.averageVolume
+          : averageVolume // ignore: cast_nullable_to_non_nullable
+              as AverageVolume?,
+      averageVolume10days: freezed == averageVolume10days
+          ? _value.averageVolume10days
+          : averageVolume10days // ignore: cast_nullable_to_non_nullable
+              as AverageVolume?,
+      averageDailyVolume10Day: freezed == averageDailyVolume10Day
+          ? _value.averageDailyVolume10Day
+          : averageDailyVolume10Day // ignore: cast_nullable_to_non_nullable
+              as AverageVolume?,
+      bid: freezed == bid
+          ? _value.bid
+          : bid // ignore: cast_nullable_to_non_nullable
+              as Price?,
+      ask: freezed == ask
+          ? _value.ask
+          : ask // ignore: cast_nullable_to_non_nullable
+              as Price?,
+      bidSize: freezed == bidSize
+          ? _value.bidSize
+          : bidSize // ignore: cast_nullable_to_non_nullable
+              as BidSize?,
+      askSize: freezed == askSize
+          ? _value.askSize
+          : askSize // ignore: cast_nullable_to_non_nullable
+              as BidSize?,
+      marketCap: freezed == marketCap
+          ? _value.marketCap
+          : marketCap // ignore: cast_nullable_to_non_nullable
+              as MarketCap?,
+      fiftyTwoWeekLow: freezed == fiftyTwoWeekLow
+          ? _value.fiftyTwoWeekLow
+          : fiftyTwoWeekLow // ignore: cast_nullable_to_non_nullable
+              as Price?,
+      fiftyTwoWeekHigh: freezed == fiftyTwoWeekHigh
+          ? _value.fiftyTwoWeekHigh
+          : fiftyTwoWeekHigh // ignore: cast_nullable_to_non_nullable
+              as Price?,
+      priceToSalesTrailing12Months: freezed == priceToSalesTrailing12Months
+          ? _value.priceToSalesTrailing12Months
+          : priceToSalesTrailing12Months // ignore: cast_nullable_to_non_nullable
+              as PriceToSales?,
+      fiftyDayAverage: freezed == fiftyDayAverage
+          ? _value.fiftyDayAverage
+          : fiftyDayAverage // ignore: cast_nullable_to_non_nullable
+              as AveragePrice?,
+      twoHundredDayAverage: freezed == twoHundredDayAverage
+          ? _value.twoHundredDayAverage
+          : twoHundredDayAverage // ignore: cast_nullable_to_non_nullable
+              as AveragePrice?,
+      trailingAnnualDividendRate: freezed == trailingAnnualDividendRate
+          ? _value.trailingAnnualDividendRate
+          : trailingAnnualDividendRate // ignore: cast_nullable_to_non_nullable
+              as DividendRate?,
+      trailingAnnualDividendYield: freezed == trailingAnnualDividendYield
+          ? _value.trailingAnnualDividendYield
+          : trailingAnnualDividendYield // ignore: cast_nullable_to_non_nullable
+              as DividendYield?,
+      currency: freezed == currency
+          ? _value.currency
+          : currency // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$SummaryDetailImpl implements _SummaryDetail {
+  const _$SummaryDetailImpl(
+      {this.maxAge,
+      this.priceHint,
+      this.previousClose,
+      this.open,
+      this.dayLow,
+      this.dayHigh,
+      this.regularMarketPreviousClose,
+      this.regularMarketOpen,
+      this.regularMarketDayLow,
+      this.regularMarketDayHigh,
+      this.dividendRate,
+      this.dividendYield,
+      this.exDividendDate,
+      this.payoutRatio,
+      this.fiveYearAvgDividendYield,
+      this.beta,
+      this.trailingPE,
+      this.forwardPE,
+      this.volume,
+      this.regularMarketVolume,
+      this.averageVolume,
+      this.averageVolume10days,
+      this.averageDailyVolume10Day,
+      this.bid,
+      this.ask,
+      this.bidSize,
+      this.askSize,
+      this.marketCap,
+      this.fiftyTwoWeekLow,
+      this.fiftyTwoWeekHigh,
+      this.priceToSalesTrailing12Months,
+      this.fiftyDayAverage,
+      this.twoHundredDayAverage,
+      this.trailingAnnualDividendRate,
+      this.trailingAnnualDividendYield,
+      this.currency});
+
+  factory _$SummaryDetailImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SummaryDetailImplFromJson(json);
+
+  @override
+  final int? maxAge;
+  @override
+  final PriceHint? priceHint;
+  @override
+  final Price? previousClose;
+  @override
+  final Price? open;
+  @override
+  final Price? dayLow;
+  @override
+  final Price? dayHigh;
+  @override
+  final Price? regularMarketPreviousClose;
+  @override
+  final Price? regularMarketOpen;
+  @override
+  final Price? regularMarketDayLow;
+  @override
+  final Price? regularMarketDayHigh;
+  @override
+  final DividendRate? dividendRate;
+  @override
+  final DividendYield? dividendYield;
+  @override
+  final ExDividendDate? exDividendDate;
+  @override
+  final PayoutRatio? payoutRatio;
+  @override
+  final DividendYield? fiveYearAvgDividendYield;
+  @override
+  final Beta? beta;
+  @override
+  final Pe? trailingPE;
+  @override
+  final Pe? forwardPE;
+  @override
+  final Volume? volume;
+  @override
+  final Volume? regularMarketVolume;
+  @override
+  final AverageVolume? averageVolume;
+  @override
+  final AverageVolume? averageVolume10days;
+  @override
+  final AverageVolume? averageDailyVolume10Day;
+  @override
+  final Price? bid;
+  @override
+  final Price? ask;
+  @override
+  final BidSize? bidSize;
+  @override
+  final BidSize? askSize;
+  @override
+  final MarketCap? marketCap;
+  @override
+  final Price? fiftyTwoWeekLow;
+  @override
+  final Price? fiftyTwoWeekHigh;
+  @override
+  final PriceToSales? priceToSalesTrailing12Months;
+  @override
+  final AveragePrice? fiftyDayAverage;
+  @override
+  final AveragePrice? twoHundredDayAverage;
+  @override
+  final DividendRate? trailingAnnualDividendRate;
+  @override
+  final DividendYield? trailingAnnualDividendYield;
+  @override
+  final String? currency;
+
+  @override
+  String toString() {
+    return 'SummaryDetail(maxAge: $maxAge, priceHint: $priceHint, previousClose: $previousClose, open: $open, dayLow: $dayLow, dayHigh: $dayHigh, regularMarketPreviousClose: $regularMarketPreviousClose, regularMarketOpen: $regularMarketOpen, regularMarketDayLow: $regularMarketDayLow, regularMarketDayHigh: $regularMarketDayHigh, dividendRate: $dividendRate, dividendYield: $dividendYield, exDividendDate: $exDividendDate, payoutRatio: $payoutRatio, fiveYearAvgDividendYield: $fiveYearAvgDividendYield, beta: $beta, trailingPE: $trailingPE, forwardPE: $forwardPE, volume: $volume, regularMarketVolume: $regularMarketVolume, averageVolume: $averageVolume, averageVolume10days: $averageVolume10days, averageDailyVolume10Day: $averageDailyVolume10Day, bid: $bid, ask: $ask, bidSize: $bidSize, askSize: $askSize, marketCap: $marketCap, fiftyTwoWeekLow: $fiftyTwoWeekLow, fiftyTwoWeekHigh: $fiftyTwoWeekHigh, priceToSalesTrailing12Months: $priceToSalesTrailing12Months, fiftyDayAverage: $fiftyDayAverage, twoHundredDayAverage: $twoHundredDayAverage, trailingAnnualDividendRate: $trailingAnnualDividendRate, trailingAnnualDividendYield: $trailingAnnualDividendYield, currency: $currency)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SummaryDetailImpl &&
+            (identical(other.maxAge, maxAge) || other.maxAge == maxAge) &&
+            (identical(other.priceHint, priceHint) ||
+                other.priceHint == priceHint) &&
+            (identical(other.previousClose, previousClose) ||
+                other.previousClose == previousClose) &&
+            (identical(other.open, open) || other.open == open) &&
+            (identical(other.dayLow, dayLow) || other.dayLow == dayLow) &&
+            (identical(other.dayHigh, dayHigh) || other.dayHigh == dayHigh) &&
+            (identical(other.regularMarketPreviousClose, regularMarketPreviousClose) ||
+                other.regularMarketPreviousClose ==
+                    regularMarketPreviousClose) &&
+            (identical(other.regularMarketOpen, regularMarketOpen) ||
+                other.regularMarketOpen == regularMarketOpen) &&
+            (identical(other.regularMarketDayLow, regularMarketDayLow) ||
+                other.regularMarketDayLow == regularMarketDayLow) &&
+            (identical(other.regularMarketDayHigh, regularMarketDayHigh) ||
+                other.regularMarketDayHigh == regularMarketDayHigh) &&
+            (identical(other.dividendRate, dividendRate) ||
+                other.dividendRate == dividendRate) &&
+            (identical(other.dividendYield, dividendYield) ||
+                other.dividendYield == dividendYield) &&
+            (identical(other.exDividendDate, exDividendDate) ||
+                other.exDividendDate == exDividendDate) &&
+            (identical(other.payoutRatio, payoutRatio) ||
+                other.payoutRatio == payoutRatio) &&
+            (identical(other.fiveYearAvgDividendYield, fiveYearAvgDividendYield) ||
+                other.fiveYearAvgDividendYield == fiveYearAvgDividendYield) &&
+            (identical(other.beta, beta) || other.beta == beta) &&
+            (identical(other.trailingPE, trailingPE) ||
+                other.trailingPE == trailingPE) &&
+            (identical(other.forwardPE, forwardPE) ||
+                other.forwardPE == forwardPE) &&
+            (identical(other.volume, volume) || other.volume == volume) &&
+            (identical(other.regularMarketVolume, regularMarketVolume) ||
+                other.regularMarketVolume == regularMarketVolume) &&
+            (identical(other.averageVolume, averageVolume) ||
+                other.averageVolume == averageVolume) &&
+            (identical(other.averageVolume10days, averageVolume10days) ||
+                other.averageVolume10days == averageVolume10days) &&
+            (identical(other.averageDailyVolume10Day, averageDailyVolume10Day) ||
+                other.averageDailyVolume10Day == averageDailyVolume10Day) &&
+            (identical(other.bid, bid) || other.bid == bid) &&
+            (identical(other.ask, ask) || other.ask == ask) &&
+            (identical(other.bidSize, bidSize) || other.bidSize == bidSize) &&
+            (identical(other.askSize, askSize) || other.askSize == askSize) &&
+            (identical(other.marketCap, marketCap) ||
+                other.marketCap == marketCap) &&
+            (identical(other.fiftyTwoWeekLow, fiftyTwoWeekLow) ||
+                other.fiftyTwoWeekLow == fiftyTwoWeekLow) &&
+            (identical(other.fiftyTwoWeekHigh, fiftyTwoWeekHigh) ||
+                other.fiftyTwoWeekHigh == fiftyTwoWeekHigh) &&
+            (identical(other.priceToSalesTrailing12Months, priceToSalesTrailing12Months) ||
+                other.priceToSalesTrailing12Months ==
+                    priceToSalesTrailing12Months) &&
+            (identical(other.fiftyDayAverage, fiftyDayAverage) ||
+                other.fiftyDayAverage == fiftyDayAverage) &&
+            (identical(other.twoHundredDayAverage, twoHundredDayAverage) ||
+                other.twoHundredDayAverage == twoHundredDayAverage) &&
+            (identical(other.trailingAnnualDividendRate, trailingAnnualDividendRate) ||
+                other.trailingAnnualDividendRate ==
+                    trailingAnnualDividendRate) &&
+            (identical(other.trailingAnnualDividendYield, trailingAnnualDividendYield) ||
+                other.trailingAnnualDividendYield ==
+                    trailingAnnualDividendYield) &&
+            (identical(other.currency, currency) || other.currency == currency));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        maxAge,
+        priceHint,
+        previousClose,
+        open,
+        dayLow,
+        dayHigh,
+        regularMarketPreviousClose,
+        regularMarketOpen,
+        regularMarketDayLow,
+        regularMarketDayHigh,
+        dividendRate,
+        dividendYield,
+        exDividendDate,
+        payoutRatio,
+        fiveYearAvgDividendYield,
+        beta,
+        trailingPE,
+        forwardPE,
+        volume,
+        regularMarketVolume,
+        averageVolume,
+        averageVolume10days,
+        averageDailyVolume10Day,
+        bid,
+        ask,
+        bidSize,
+        askSize,
+        marketCap,
+        fiftyTwoWeekLow,
+        fiftyTwoWeekHigh,
+        priceToSalesTrailing12Months,
+        fiftyDayAverage,
+        twoHundredDayAverage,
+        trailingAnnualDividendRate,
+        trailingAnnualDividendYield,
+        currency
+      ]);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SummaryDetailImplCopyWith<_$SummaryDetailImpl> get copyWith =>
+      __$$SummaryDetailImplCopyWithImpl<_$SummaryDetailImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$SummaryDetailImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _SummaryDetail implements SummaryDetail {
+  const factory _SummaryDetail(
+      {final int? maxAge,
+      final PriceHint? priceHint,
+      final Price? previousClose,
+      final Price? open,
+      final Price? dayLow,
+      final Price? dayHigh,
+      final Price? regularMarketPreviousClose,
+      final Price? regularMarketOpen,
+      final Price? regularMarketDayLow,
+      final Price? regularMarketDayHigh,
+      final DividendRate? dividendRate,
+      final DividendYield? dividendYield,
+      final ExDividendDate? exDividendDate,
+      final PayoutRatio? payoutRatio,
+      final DividendYield? fiveYearAvgDividendYield,
+      final Beta? beta,
+      final Pe? trailingPE,
+      final Pe? forwardPE,
+      final Volume? volume,
+      final Volume? regularMarketVolume,
+      final AverageVolume? averageVolume,
+      final AverageVolume? averageVolume10days,
+      final AverageVolume? averageDailyVolume10Day,
+      final Price? bid,
+      final Price? ask,
+      final BidSize? bidSize,
+      final BidSize? askSize,
+      final MarketCap? marketCap,
+      final Price? fiftyTwoWeekLow,
+      final Price? fiftyTwoWeekHigh,
+      final PriceToSales? priceToSalesTrailing12Months,
+      final AveragePrice? fiftyDayAverage,
+      final AveragePrice? twoHundredDayAverage,
+      final DividendRate? trailingAnnualDividendRate,
+      final DividendYield? trailingAnnualDividendYield,
+      final String? currency}) = _$SummaryDetailImpl;
+
+  factory _SummaryDetail.fromJson(Map<String, dynamic> json) =
+      _$SummaryDetailImpl.fromJson;
+
+  @override
+  int? get maxAge;
+  @override
+  PriceHint? get priceHint;
+  @override
+  Price? get previousClose;
+  @override
+  Price? get open;
+  @override
+  Price? get dayLow;
+  @override
+  Price? get dayHigh;
+  @override
+  Price? get regularMarketPreviousClose;
+  @override
+  Price? get regularMarketOpen;
+  @override
+  Price? get regularMarketDayLow;
+  @override
+  Price? get regularMarketDayHigh;
+  @override
+  DividendRate? get dividendRate;
+  @override
+  DividendYield? get dividendYield;
+  @override
+  ExDividendDate? get exDividendDate;
+  @override
+  PayoutRatio? get payoutRatio;
+  @override
+  DividendYield? get fiveYearAvgDividendYield;
+  @override
+  Beta? get beta;
+  @override
+  Pe? get trailingPE;
+  @override
+  Pe? get forwardPE;
+  @override
+  Volume? get volume;
+  @override
+  Volume? get regularMarketVolume;
+  @override
+  AverageVolume? get averageVolume;
+  @override
+  AverageVolume? get averageVolume10days;
+  @override
+  AverageVolume? get averageDailyVolume10Day;
+  @override
+  Price? get bid;
+  @override
+  Price? get ask;
+  @override
+  BidSize? get bidSize;
+  @override
+  BidSize? get askSize;
+  @override
+  MarketCap? get marketCap;
+  @override
+  Price? get fiftyTwoWeekLow;
+  @override
+  Price? get fiftyTwoWeekHigh;
+  @override
+  PriceToSales? get priceToSalesTrailing12Months;
+  @override
+  AveragePrice? get fiftyDayAverage;
+  @override
+  AveragePrice? get twoHundredDayAverage;
+  @override
+  DividendRate? get trailingAnnualDividendRate;
+  @override
+  DividendYield? get trailingAnnualDividendYield;
+  @override
+  String? get currency;
+  @override
+  @JsonKey(ignore: true)
+  _$$SummaryDetailImplCopyWith<_$SummaryDetailImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+PriceHint _$PriceHintFromJson(Map<String, dynamic> json) {
+  return _PriceHint.fromJson(json);
+}
+
+/// @nodoc
+mixin _$PriceHint {
+  double? get raw => throw _privateConstructorUsedError;
+  String? get fmt => throw _privateConstructorUsedError;
+  String? get longFmt => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $PriceHintCopyWith<PriceHint> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $PriceHintCopyWith<$Res> {
+  factory $PriceHintCopyWith(PriceHint value, $Res Function(PriceHint) then) =
+      _$PriceHintCopyWithImpl<$Res, PriceHint>;
+  @useResult
+  $Res call({double? raw, String? fmt, String? longFmt});
+}
+
+/// @nodoc
+class _$PriceHintCopyWithImpl<$Res, $Val extends PriceHint>
+    implements $PriceHintCopyWith<$Res> {
+  _$PriceHintCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? raw = freezed,
+    Object? fmt = freezed,
+    Object? longFmt = freezed,
+  }) {
+    return _then(_value.copyWith(
+      raw: freezed == raw
+          ? _value.raw
+          : raw // ignore: cast_nullable_to_non_nullable
+              as double?,
+      fmt: freezed == fmt
+          ? _value.fmt
+          : fmt // ignore: cast_nullable_to_non_nullable
+              as String?,
+      longFmt: freezed == longFmt
+          ? _value.longFmt
+          : longFmt // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$PriceHintImplCopyWith<$Res>
+    implements $PriceHintCopyWith<$Res> {
+  factory _$$PriceHintImplCopyWith(
+          _$PriceHintImpl value, $Res Function(_$PriceHintImpl) then) =
+      __$$PriceHintImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({double? raw, String? fmt, String? longFmt});
+}
+
+/// @nodoc
+class __$$PriceHintImplCopyWithImpl<$Res>
+    extends _$PriceHintCopyWithImpl<$Res, _$PriceHintImpl>
+    implements _$$PriceHintImplCopyWith<$Res> {
+  __$$PriceHintImplCopyWithImpl(
+      _$PriceHintImpl _value, $Res Function(_$PriceHintImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? raw = freezed,
+    Object? fmt = freezed,
+    Object? longFmt = freezed,
+  }) {
+    return _then(_$PriceHintImpl(
+      raw: freezed == raw
+          ? _value.raw
+          : raw // ignore: cast_nullable_to_non_nullable
+              as double?,
+      fmt: freezed == fmt
+          ? _value.fmt
+          : fmt // ignore: cast_nullable_to_non_nullable
+              as String?,
+      longFmt: freezed == longFmt
+          ? _value.longFmt
+          : longFmt // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$PriceHintImpl implements _PriceHint {
+  const _$PriceHintImpl({this.raw, this.fmt, this.longFmt});
+
+  factory _$PriceHintImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PriceHintImplFromJson(json);
+
+  @override
+  final double? raw;
+  @override
+  final String? fmt;
+  @override
+  final String? longFmt;
+
+  @override
+  String toString() {
+    return 'PriceHint(raw: $raw, fmt: $fmt, longFmt: $longFmt)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$PriceHintImpl &&
+            (identical(other.raw, raw) || other.raw == raw) &&
+            (identical(other.fmt, fmt) || other.fmt == fmt) &&
+            (identical(other.longFmt, longFmt) || other.longFmt == longFmt));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, raw, fmt, longFmt);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$PriceHintImplCopyWith<_$PriceHintImpl> get copyWith =>
+      __$$PriceHintImplCopyWithImpl<_$PriceHintImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$PriceHintImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _PriceHint implements PriceHint {
+  const factory _PriceHint(
+      {final double? raw,
+      final String? fmt,
+      final String? longFmt}) = _$PriceHintImpl;
+
+  factory _PriceHint.fromJson(Map<String, dynamic> json) =
+      _$PriceHintImpl.fromJson;
+
+  @override
+  double? get raw;
+  @override
+  String? get fmt;
+  @override
+  String? get longFmt;
+  @override
+  @JsonKey(ignore: true)
+  _$$PriceHintImplCopyWith<_$PriceHintImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+Price _$PriceFromJson(Map<String, dynamic> json) {
+  return _Price.fromJson(json);
+}
+
+/// @nodoc
+mixin _$Price {
+  double? get raw => throw _privateConstructorUsedError;
+  String? get fmt => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $PriceCopyWith<Price> get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $PriceCopyWith<$Res> {
+  factory $PriceCopyWith(Price value, $Res Function(Price) then) =
+      _$PriceCopyWithImpl<$Res, Price>;
+  @useResult
+  $Res call({double? raw, String? fmt});
+}
+
+/// @nodoc
+class _$PriceCopyWithImpl<$Res, $Val extends Price>
+    implements $PriceCopyWith<$Res> {
+  _$PriceCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? raw = freezed,
+    Object? fmt = freezed,
+  }) {
+    return _then(_value.copyWith(
+      raw: freezed == raw
+          ? _value.raw
+          : raw // ignore: cast_nullable_to_non_nullable
+              as double?,
+      fmt: freezed == fmt
+          ? _value.fmt
+          : fmt // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$PriceImplCopyWith<$Res> implements $PriceCopyWith<$Res> {
+  factory _$$PriceImplCopyWith(
+          _$PriceImpl value, $Res Function(_$PriceImpl) then) =
+      __$$PriceImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({double? raw, String? fmt});
+}
+
+/// @nodoc
+class __$$PriceImplCopyWithImpl<$Res>
+    extends _$PriceCopyWithImpl<$Res, _$PriceImpl>
+    implements _$$PriceImplCopyWith<$Res> {
+  __$$PriceImplCopyWithImpl(
+      _$PriceImpl _value, $Res Function(_$PriceImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? raw = freezed,
+    Object? fmt = freezed,
+  }) {
+    return _then(_$PriceImpl(
+      raw: freezed == raw
+          ? _value.raw
+          : raw // ignore: cast_nullable_to_non_nullable
+              as double?,
+      fmt: freezed == fmt
+          ? _value.fmt
+          : fmt // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$PriceImpl implements _Price {
+  const _$PriceImpl({this.raw, this.fmt});
+
+  factory _$PriceImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PriceImplFromJson(json);
+
+  @override
+  final double? raw;
+  @override
+  final String? fmt;
+
+  @override
+  String toString() {
+    return 'Price(raw: $raw, fmt: $fmt)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$PriceImpl &&
+            (identical(other.raw, raw) || other.raw == raw) &&
+            (identical(other.fmt, fmt) || other.fmt == fmt));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, raw, fmt);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$PriceImplCopyWith<_$PriceImpl> get copyWith =>
+      __$$PriceImplCopyWithImpl<_$PriceImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$PriceImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _Price implements Price {
+  const factory _Price({final double? raw, final String? fmt}) = _$PriceImpl;
+
+  factory _Price.fromJson(Map<String, dynamic> json) = _$PriceImpl.fromJson;
+
+  @override
+  double? get raw;
+  @override
+  String? get fmt;
+  @override
+  @JsonKey(ignore: true)
+  _$$PriceImplCopyWith<_$PriceImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+DividendRate _$DividendRateFromJson(Map<String, dynamic> json) {
+  return _DividendRate.fromJson(json);
+}
+
+/// @nodoc
+mixin _$DividendRate {
+  double? get raw => throw _privateConstructorUsedError;
+  String? get fmt => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $DividendRateCopyWith<DividendRate> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $DividendRateCopyWith<$Res> {
+  factory $DividendRateCopyWith(
+          DividendRate value, $Res Function(DividendRate) then) =
+      _$DividendRateCopyWithImpl<$Res, DividendRate>;
+  @useResult
+  $Res call({double? raw, String? fmt});
+}
+
+/// @nodoc
+class _$DividendRateCopyWithImpl<$Res, $Val extends DividendRate>
+    implements $DividendRateCopyWith<$Res> {
+  _$DividendRateCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? raw = freezed,
+    Object? fmt = freezed,
+  }) {
+    return _then(_value.copyWith(
+      raw: freezed == raw
+          ? _value.raw
+          : raw // ignore: cast_nullable_to_non_nullable
+              as double?,
+      fmt: freezed == fmt
+          ? _value.fmt
+          : fmt // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$DividendRateImplCopyWith<$Res>
+    implements $DividendRateCopyWith<$Res> {
+  factory _$$DividendRateImplCopyWith(
+          _$DividendRateImpl value, $Res Function(_$DividendRateImpl) then) =
+      __$$DividendRateImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({double? raw, String? fmt});
+}
+
+/// @nodoc
+class __$$DividendRateImplCopyWithImpl<$Res>
+    extends _$DividendRateCopyWithImpl<$Res, _$DividendRateImpl>
+    implements _$$DividendRateImplCopyWith<$Res> {
+  __$$DividendRateImplCopyWithImpl(
+      _$DividendRateImpl _value, $Res Function(_$DividendRateImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? raw = freezed,
+    Object? fmt = freezed,
+  }) {
+    return _then(_$DividendRateImpl(
+      raw: freezed == raw
+          ? _value.raw
+          : raw // ignore: cast_nullable_to_non_nullable
+              as double?,
+      fmt: freezed == fmt
+          ? _value.fmt
+          : fmt // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$DividendRateImpl implements _DividendRate {
+  const _$DividendRateImpl({this.raw, this.fmt});
+
+  factory _$DividendRateImpl.fromJson(Map<String, dynamic> json) =>
+      _$$DividendRateImplFromJson(json);
+
+  @override
+  final double? raw;
+  @override
+  final String? fmt;
+
+  @override
+  String toString() {
+    return 'DividendRate(raw: $raw, fmt: $fmt)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$DividendRateImpl &&
+            (identical(other.raw, raw) || other.raw == raw) &&
+            (identical(other.fmt, fmt) || other.fmt == fmt));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, raw, fmt);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$DividendRateImplCopyWith<_$DividendRateImpl> get copyWith =>
+      __$$DividendRateImplCopyWithImpl<_$DividendRateImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$DividendRateImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _DividendRate implements DividendRate {
+  const factory _DividendRate({final double? raw, final String? fmt}) =
+      _$DividendRateImpl;
+
+  factory _DividendRate.fromJson(Map<String, dynamic> json) =
+      _$DividendRateImpl.fromJson;
+
+  @override
+  double? get raw;
+  @override
+  String? get fmt;
+  @override
+  @JsonKey(ignore: true)
+  _$$DividendRateImplCopyWith<_$DividendRateImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+DividendYield _$DividendYieldFromJson(Map<String, dynamic> json) {
+  return _DividendYield.fromJson(json);
+}
+
+/// @nodoc
+mixin _$DividendYield {
+  double? get raw => throw _privateConstructorUsedError;
+  String? get fmt => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $DividendYieldCopyWith<DividendYield> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $DividendYieldCopyWith<$Res> {
+  factory $DividendYieldCopyWith(
+          DividendYield value, $Res Function(DividendYield) then) =
+      _$DividendYieldCopyWithImpl<$Res, DividendYield>;
+  @useResult
+  $Res call({double? raw, String? fmt});
+}
+
+/// @nodoc
+class _$DividendYieldCopyWithImpl<$Res, $Val extends DividendYield>
+    implements $DividendYieldCopyWith<$Res> {
+  _$DividendYieldCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? raw = freezed,
+    Object? fmt = freezed,
+  }) {
+    return _then(_value.copyWith(
+      raw: freezed == raw
+          ? _value.raw
+          : raw // ignore: cast_nullable_to_non_nullable
+              as double?,
+      fmt: freezed == fmt
+          ? _value.fmt
+          : fmt // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$DividendYieldImplCopyWith<$Res>
+    implements $DividendYieldCopyWith<$Res> {
+  factory _$$DividendYieldImplCopyWith(
+          _$DividendYieldImpl value, $Res Function(_$DividendYieldImpl) then) =
+      __$$DividendYieldImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({double? raw, String? fmt});
+}
+
+/// @nodoc
+class __$$DividendYieldImplCopyWithImpl<$Res>
+    extends _$DividendYieldCopyWithImpl<$Res, _$DividendYieldImpl>
+    implements _$$DividendYieldImplCopyWith<$Res> {
+  __$$DividendYieldImplCopyWithImpl(
+      _$DividendYieldImpl _value, $Res Function(_$DividendYieldImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? raw = freezed,
+    Object? fmt = freezed,
+  }) {
+    return _then(_$DividendYieldImpl(
+      raw: freezed == raw
+          ? _value.raw
+          : raw // ignore: cast_nullable_to_non_nullable
+              as double?,
+      fmt: freezed == fmt
+          ? _value.fmt
+          : fmt // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$DividendYieldImpl implements _DividendYield {
+  const _$DividendYieldImpl({this.raw, this.fmt});
+
+  factory _$DividendYieldImpl.fromJson(Map<String, dynamic> json) =>
+      _$$DividendYieldImplFromJson(json);
+
+  @override
+  final double? raw;
+  @override
+  final String? fmt;
+
+  @override
+  String toString() {
+    return 'DividendYield(raw: $raw, fmt: $fmt)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$DividendYieldImpl &&
+            (identical(other.raw, raw) || other.raw == raw) &&
+            (identical(other.fmt, fmt) || other.fmt == fmt));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, raw, fmt);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$DividendYieldImplCopyWith<_$DividendYieldImpl> get copyWith =>
+      __$$DividendYieldImplCopyWithImpl<_$DividendYieldImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$DividendYieldImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _DividendYield implements DividendYield {
+  const factory _DividendYield({final double? raw, final String? fmt}) =
+      _$DividendYieldImpl;
+
+  factory _DividendYield.fromJson(Map<String, dynamic> json) =
+      _$DividendYieldImpl.fromJson;
+
+  @override
+  double? get raw;
+  @override
+  String? get fmt;
+  @override
+  @JsonKey(ignore: true)
+  _$$DividendYieldImplCopyWith<_$DividendYieldImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+ExDividendDate _$ExDividendDateFromJson(Map<String, dynamic> json) {
+  return _ExDividendDate.fromJson(json);
+}
+
+/// @nodoc
+mixin _$ExDividendDate {
+  int? get raw => throw _privateConstructorUsedError;
+  String? get fmt => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ExDividendDateCopyWith<ExDividendDate> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ExDividendDateCopyWith<$Res> {
+  factory $ExDividendDateCopyWith(
+          ExDividendDate value, $Res Function(ExDividendDate) then) =
+      _$ExDividendDateCopyWithImpl<$Res, ExDividendDate>;
+  @useResult
+  $Res call({int? raw, String? fmt});
+}
+
+/// @nodoc
+class _$ExDividendDateCopyWithImpl<$Res, $Val extends ExDividendDate>
+    implements $ExDividendDateCopyWith<$Res> {
+  _$ExDividendDateCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? raw = freezed,
+    Object? fmt = freezed,
+  }) {
+    return _then(_value.copyWith(
+      raw: freezed == raw
+          ? _value.raw
+          : raw // ignore: cast_nullable_to_non_nullable
+              as int?,
+      fmt: freezed == fmt
+          ? _value.fmt
+          : fmt // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$ExDividendDateImplCopyWith<$Res>
+    implements $ExDividendDateCopyWith<$Res> {
+  factory _$$ExDividendDateImplCopyWith(_$ExDividendDateImpl value,
+          $Res Function(_$ExDividendDateImpl) then) =
+      __$$ExDividendDateImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({int? raw, String? fmt});
+}
+
+/// @nodoc
+class __$$ExDividendDateImplCopyWithImpl<$Res>
+    extends _$ExDividendDateCopyWithImpl<$Res, _$ExDividendDateImpl>
+    implements _$$ExDividendDateImplCopyWith<$Res> {
+  __$$ExDividendDateImplCopyWithImpl(
+      _$ExDividendDateImpl _value, $Res Function(_$ExDividendDateImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? raw = freezed,
+    Object? fmt = freezed,
+  }) {
+    return _then(_$ExDividendDateImpl(
+      raw: freezed == raw
+          ? _value.raw
+          : raw // ignore: cast_nullable_to_non_nullable
+              as int?,
+      fmt: freezed == fmt
+          ? _value.fmt
+          : fmt // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$ExDividendDateImpl implements _ExDividendDate {
+  const _$ExDividendDateImpl({this.raw, this.fmt});
+
+  factory _$ExDividendDateImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ExDividendDateImplFromJson(json);
+
+  @override
+  final int? raw;
+  @override
+  final String? fmt;
+
+  @override
+  String toString() {
+    return 'ExDividendDate(raw: $raw, fmt: $fmt)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ExDividendDateImpl &&
+            (identical(other.raw, raw) || other.raw == raw) &&
+            (identical(other.fmt, fmt) || other.fmt == fmt));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, raw, fmt);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ExDividendDateImplCopyWith<_$ExDividendDateImpl> get copyWith =>
+      __$$ExDividendDateImplCopyWithImpl<_$ExDividendDateImpl>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$ExDividendDateImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _ExDividendDate implements ExDividendDate {
+  const factory _ExDividendDate({final int? raw, final String? fmt}) =
+      _$ExDividendDateImpl;
+
+  factory _ExDividendDate.fromJson(Map<String, dynamic> json) =
+      _$ExDividendDateImpl.fromJson;
+
+  @override
+  int? get raw;
+  @override
+  String? get fmt;
+  @override
+  @JsonKey(ignore: true)
+  _$$ExDividendDateImplCopyWith<_$ExDividendDateImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+PayoutRatio _$PayoutRatioFromJson(Map<String, dynamic> json) {
+  return _PayoutRatio.fromJson(json);
+}
+
+/// @nodoc
+mixin _$PayoutRatio {
+  double? get raw => throw _privateConstructorUsedError;
+  String? get fmt => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $PayoutRatioCopyWith<PayoutRatio> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $PayoutRatioCopyWith<$Res> {
+  factory $PayoutRatioCopyWith(
+          PayoutRatio value, $Res Function(PayoutRatio) then) =
+      _$PayoutRatioCopyWithImpl<$Res, PayoutRatio>;
+  @useResult
+  $Res call({double? raw, String? fmt});
+}
+
+/// @nodoc
+class _$PayoutRatioCopyWithImpl<$Res, $Val extends PayoutRatio>
+    implements $PayoutRatioCopyWith<$Res> {
+  _$PayoutRatioCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? raw = freezed,
+    Object? fmt = freezed,
+  }) {
+    return _then(_value.copyWith(
+      raw: freezed == raw
+          ? _value.raw
+          : raw // ignore: cast_nullable_to_non_nullable
+              as double?,
+      fmt: freezed == fmt
+          ? _value.fmt
+          : fmt // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$PayoutRatioImplCopyWith<$Res>
+    implements $PayoutRatioCopyWith<$Res> {
+  factory _$$PayoutRatioImplCopyWith(
+          _$PayoutRatioImpl value, $Res Function(_$PayoutRatioImpl) then) =
+      __$$PayoutRatioImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({double? raw, String? fmt});
+}
+
+/// @nodoc
+class __$$PayoutRatioImplCopyWithImpl<$Res>
+    extends _$PayoutRatioCopyWithImpl<$Res, _$PayoutRatioImpl>
+    implements _$$PayoutRatioImplCopyWith<$Res> {
+  __$$PayoutRatioImplCopyWithImpl(
+      _$PayoutRatioImpl _value, $Res Function(_$PayoutRatioImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? raw = freezed,
+    Object? fmt = freezed,
+  }) {
+    return _then(_$PayoutRatioImpl(
+      raw: freezed == raw
+          ? _value.raw
+          : raw // ignore: cast_nullable_to_non_nullable
+              as double?,
+      fmt: freezed == fmt
+          ? _value.fmt
+          : fmt // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$PayoutRatioImpl implements _PayoutRatio {
+  const _$PayoutRatioImpl({this.raw, this.fmt});
+
+  factory _$PayoutRatioImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PayoutRatioImplFromJson(json);
+
+  @override
+  final double? raw;
+  @override
+  final String? fmt;
+
+  @override
+  String toString() {
+    return 'PayoutRatio(raw: $raw, fmt: $fmt)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$PayoutRatioImpl &&
+            (identical(other.raw, raw) || other.raw == raw) &&
+            (identical(other.fmt, fmt) || other.fmt == fmt));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, raw, fmt);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$PayoutRatioImplCopyWith<_$PayoutRatioImpl> get copyWith =>
+      __$$PayoutRatioImplCopyWithImpl<_$PayoutRatioImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$PayoutRatioImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _PayoutRatio implements PayoutRatio {
+  const factory _PayoutRatio({final double? raw, final String? fmt}) =
+      _$PayoutRatioImpl;
+
+  factory _PayoutRatio.fromJson(Map<String, dynamic> json) =
+      _$PayoutRatioImpl.fromJson;
+
+  @override
+  double? get raw;
+  @override
+  String? get fmt;
+  @override
+  @JsonKey(ignore: true)
+  _$$PayoutRatioImplCopyWith<_$PayoutRatioImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+Beta _$BetaFromJson(Map<String, dynamic> json) {
+  return _Beta.fromJson(json);
+}
+
+/// @nodoc
+mixin _$Beta {
+  double? get raw => throw _privateConstructorUsedError;
+  String? get fmt => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $BetaCopyWith<Beta> get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $BetaCopyWith<$Res> {
+  factory $BetaCopyWith(Beta value, $Res Function(Beta) then) =
+      _$BetaCopyWithImpl<$Res, Beta>;
+  @useResult
+  $Res call({double? raw, String? fmt});
+}
+
+/// @nodoc
+class _$BetaCopyWithImpl<$Res, $Val extends Beta>
+    implements $BetaCopyWith<$Res> {
+  _$BetaCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? raw = freezed,
+    Object? fmt = freezed,
+  }) {
+    return _then(_value.copyWith(
+      raw: freezed == raw
+          ? _value.raw
+          : raw // ignore: cast_nullable_to_non_nullable
+              as double?,
+      fmt: freezed == fmt
+          ? _value.fmt
+          : fmt // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$BetaImplCopyWith<$Res> implements $BetaCopyWith<$Res> {
+  factory _$$BetaImplCopyWith(
+          _$BetaImpl value, $Res Function(_$BetaImpl) then) =
+      __$$BetaImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({double? raw, String? fmt});
+}
+
+/// @nodoc
+class __$$BetaImplCopyWithImpl<$Res>
+    extends _$BetaCopyWithImpl<$Res, _$BetaImpl>
+    implements _$$BetaImplCopyWith<$Res> {
+  __$$BetaImplCopyWithImpl(_$BetaImpl _value, $Res Function(_$BetaImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? raw = freezed,
+    Object? fmt = freezed,
+  }) {
+    return _then(_$BetaImpl(
+      raw: freezed == raw
+          ? _value.raw
+          : raw // ignore: cast_nullable_to_non_nullable
+              as double?,
+      fmt: freezed == fmt
+          ? _value.fmt
+          : fmt // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$BetaImpl implements _Beta {
+  const _$BetaImpl({this.raw, this.fmt});
+
+  factory _$BetaImpl.fromJson(Map<String, dynamic> json) =>
+      _$$BetaImplFromJson(json);
+
+  @override
+  final double? raw;
+  @override
+  final String? fmt;
+
+  @override
+  String toString() {
+    return 'Beta(raw: $raw, fmt: $fmt)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$BetaImpl &&
+            (identical(other.raw, raw) || other.raw == raw) &&
+            (identical(other.fmt, fmt) || other.fmt == fmt));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, raw, fmt);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$BetaImplCopyWith<_$BetaImpl> get copyWith =>
+      __$$BetaImplCopyWithImpl<_$BetaImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$BetaImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _Beta implements Beta {
+  const factory _Beta({final double? raw, final String? fmt}) = _$BetaImpl;
+
+  factory _Beta.fromJson(Map<String, dynamic> json) = _$BetaImpl.fromJson;
+
+  @override
+  double? get raw;
+  @override
+  String? get fmt;
+  @override
+  @JsonKey(ignore: true)
+  _$$BetaImplCopyWith<_$BetaImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+Pe _$PeFromJson(Map<String, dynamic> json) {
+  return _Pe.fromJson(json);
+}
+
+/// @nodoc
+mixin _$Pe {
+  double? get raw => throw _privateConstructorUsedError;
+  String? get fmt => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $PeCopyWith<Pe> get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $PeCopyWith<$Res> {
+  factory $PeCopyWith(Pe value, $Res Function(Pe) then) =
+      _$PeCopyWithImpl<$Res, Pe>;
+  @useResult
+  $Res call({double? raw, String? fmt});
+}
+
+/// @nodoc
+class _$PeCopyWithImpl<$Res, $Val extends Pe> implements $PeCopyWith<$Res> {
+  _$PeCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? raw = freezed,
+    Object? fmt = freezed,
+  }) {
+    return _then(_value.copyWith(
+      raw: freezed == raw
+          ? _value.raw
+          : raw // ignore: cast_nullable_to_non_nullable
+              as double?,
+      fmt: freezed == fmt
+          ? _value.fmt
+          : fmt // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$PeImplCopyWith<$Res> implements $PeCopyWith<$Res> {
+  factory _$$PeImplCopyWith(_$PeImpl value, $Res Function(_$PeImpl) then) =
+      __$$PeImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({double? raw, String? fmt});
+}
+
+/// @nodoc
+class __$$PeImplCopyWithImpl<$Res> extends _$PeCopyWithImpl<$Res, _$PeImpl>
+    implements _$$PeImplCopyWith<$Res> {
+  __$$PeImplCopyWithImpl(_$PeImpl _value, $Res Function(_$PeImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? raw = freezed,
+    Object? fmt = freezed,
+  }) {
+    return _then(_$PeImpl(
+      raw: freezed == raw
+          ? _value.raw
+          : raw // ignore: cast_nullable_to_non_nullable
+              as double?,
+      fmt: freezed == fmt
+          ? _value.fmt
+          : fmt // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$PeImpl implements _Pe {
+  const _$PeImpl({this.raw, this.fmt});
+
+  factory _$PeImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PeImplFromJson(json);
+
+  @override
+  final double? raw;
+  @override
+  final String? fmt;
+
+  @override
+  String toString() {
+    return 'Pe(raw: $raw, fmt: $fmt)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$PeImpl &&
+            (identical(other.raw, raw) || other.raw == raw) &&
+            (identical(other.fmt, fmt) || other.fmt == fmt));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, raw, fmt);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$PeImplCopyWith<_$PeImpl> get copyWith =>
+      __$$PeImplCopyWithImpl<_$PeImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$PeImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _Pe implements Pe {
+  const factory _Pe({final double? raw, final String? fmt}) = _$PeImpl;
+
+  factory _Pe.fromJson(Map<String, dynamic> json) = _$PeImpl.fromJson;
+
+  @override
+  double? get raw;
+  @override
+  String? get fmt;
+  @override
+  @JsonKey(ignore: true)
+  _$$PeImplCopyWith<_$PeImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+Volume _$VolumeFromJson(Map<String, dynamic> json) {
+  return _Volume.fromJson(json);
+}
+
+/// @nodoc
+mixin _$Volume {
+  double? get raw => throw _privateConstructorUsedError;
+  String? get fmt => throw _privateConstructorUsedError;
+  String? get longFmt => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $VolumeCopyWith<Volume> get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $VolumeCopyWith<$Res> {
+  factory $VolumeCopyWith(Volume value, $Res Function(Volume) then) =
+      _$VolumeCopyWithImpl<$Res, Volume>;
+  @useResult
+  $Res call({double? raw, String? fmt, String? longFmt});
+}
+
+/// @nodoc
+class _$VolumeCopyWithImpl<$Res, $Val extends Volume>
+    implements $VolumeCopyWith<$Res> {
+  _$VolumeCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? raw = freezed,
+    Object? fmt = freezed,
+    Object? longFmt = freezed,
+  }) {
+    return _then(_value.copyWith(
+      raw: freezed == raw
+          ? _value.raw
+          : raw // ignore: cast_nullable_to_non_nullable
+              as double?,
+      fmt: freezed == fmt
+          ? _value.fmt
+          : fmt // ignore: cast_nullable_to_non_nullable
+              as String?,
+      longFmt: freezed == longFmt
+          ? _value.longFmt
+          : longFmt // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$VolumeImplCopyWith<$Res> implements $VolumeCopyWith<$Res> {
+  factory _$$VolumeImplCopyWith(
+          _$VolumeImpl value, $Res Function(_$VolumeImpl) then) =
+      __$$VolumeImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({double? raw, String? fmt, String? longFmt});
+}
+
+/// @nodoc
+class __$$VolumeImplCopyWithImpl<$Res>
+    extends _$VolumeCopyWithImpl<$Res, _$VolumeImpl>
+    implements _$$VolumeImplCopyWith<$Res> {
+  __$$VolumeImplCopyWithImpl(
+      _$VolumeImpl _value, $Res Function(_$VolumeImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? raw = freezed,
+    Object? fmt = freezed,
+    Object? longFmt = freezed,
+  }) {
+    return _then(_$VolumeImpl(
+      raw: freezed == raw
+          ? _value.raw
+          : raw // ignore: cast_nullable_to_non_nullable
+              as double?,
+      fmt: freezed == fmt
+          ? _value.fmt
+          : fmt // ignore: cast_nullable_to_non_nullable
+              as String?,
+      longFmt: freezed == longFmt
+          ? _value.longFmt
+          : longFmt // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$VolumeImpl implements _Volume {
+  const _$VolumeImpl({this.raw, this.fmt, this.longFmt});
+
+  factory _$VolumeImpl.fromJson(Map<String, dynamic> json) =>
+      _$$VolumeImplFromJson(json);
+
+  @override
+  final double? raw;
+  @override
+  final String? fmt;
+  @override
+  final String? longFmt;
+
+  @override
+  String toString() {
+    return 'Volume(raw: $raw, fmt: $fmt, longFmt: $longFmt)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$VolumeImpl &&
+            (identical(other.raw, raw) || other.raw == raw) &&
+            (identical(other.fmt, fmt) || other.fmt == fmt) &&
+            (identical(other.longFmt, longFmt) || other.longFmt == longFmt));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, raw, fmt, longFmt);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$VolumeImplCopyWith<_$VolumeImpl> get copyWith =>
+      __$$VolumeImplCopyWithImpl<_$VolumeImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$VolumeImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _Volume implements Volume {
+  const factory _Volume(
+      {final double? raw,
+      final String? fmt,
+      final String? longFmt}) = _$VolumeImpl;
+
+  factory _Volume.fromJson(Map<String, dynamic> json) = _$VolumeImpl.fromJson;
+
+  @override
+  double? get raw;
+  @override
+  String? get fmt;
+  @override
+  String? get longFmt;
+  @override
+  @JsonKey(ignore: true)
+  _$$VolumeImplCopyWith<_$VolumeImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+AverageVolume _$AverageVolumeFromJson(Map<String, dynamic> json) {
+  return _AverageVolume.fromJson(json);
+}
+
+/// @nodoc
+mixin _$AverageVolume {
+  double? get raw => throw _privateConstructorUsedError;
+  String? get fmt => throw _privateConstructorUsedError;
+  String? get longFmt => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $AverageVolumeCopyWith<AverageVolume> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $AverageVolumeCopyWith<$Res> {
+  factory $AverageVolumeCopyWith(
+          AverageVolume value, $Res Function(AverageVolume) then) =
+      _$AverageVolumeCopyWithImpl<$Res, AverageVolume>;
+  @useResult
+  $Res call({double? raw, String? fmt, String? longFmt});
+}
+
+/// @nodoc
+class _$AverageVolumeCopyWithImpl<$Res, $Val extends AverageVolume>
+    implements $AverageVolumeCopyWith<$Res> {
+  _$AverageVolumeCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? raw = freezed,
+    Object? fmt = freezed,
+    Object? longFmt = freezed,
+  }) {
+    return _then(_value.copyWith(
+      raw: freezed == raw
+          ? _value.raw
+          : raw // ignore: cast_nullable_to_non_nullable
+              as double?,
+      fmt: freezed == fmt
+          ? _value.fmt
+          : fmt // ignore: cast_nullable_to_non_nullable
+              as String?,
+      longFmt: freezed == longFmt
+          ? _value.longFmt
+          : longFmt // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$AverageVolumeImplCopyWith<$Res>
+    implements $AverageVolumeCopyWith<$Res> {
+  factory _$$AverageVolumeImplCopyWith(
+          _$AverageVolumeImpl value, $Res Function(_$AverageVolumeImpl) then) =
+      __$$AverageVolumeImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({double? raw, String? fmt, String? longFmt});
+}
+
+/// @nodoc
+class __$$AverageVolumeImplCopyWithImpl<$Res>
+    extends _$AverageVolumeCopyWithImpl<$Res, _$AverageVolumeImpl>
+    implements _$$AverageVolumeImplCopyWith<$Res> {
+  __$$AverageVolumeImplCopyWithImpl(
+      _$AverageVolumeImpl _value, $Res Function(_$AverageVolumeImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? raw = freezed,
+    Object? fmt = freezed,
+    Object? longFmt = freezed,
+  }) {
+    return _then(_$AverageVolumeImpl(
+      raw: freezed == raw
+          ? _value.raw
+          : raw // ignore: cast_nullable_to_non_nullable
+              as double?,
+      fmt: freezed == fmt
+          ? _value.fmt
+          : fmt // ignore: cast_nullable_to_non_nullable
+              as String?,
+      longFmt: freezed == longFmt
+          ? _value.longFmt
+          : longFmt // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$AverageVolumeImpl implements _AverageVolume {
+  const _$AverageVolumeImpl({this.raw, this.fmt, this.longFmt});
+
+  factory _$AverageVolumeImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AverageVolumeImplFromJson(json);
+
+  @override
+  final double? raw;
+  @override
+  final String? fmt;
+  @override
+  final String? longFmt;
+
+  @override
+  String toString() {
+    return 'AverageVolume(raw: $raw, fmt: $fmt, longFmt: $longFmt)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AverageVolumeImpl &&
+            (identical(other.raw, raw) || other.raw == raw) &&
+            (identical(other.fmt, fmt) || other.fmt == fmt) &&
+            (identical(other.longFmt, longFmt) || other.longFmt == longFmt));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, raw, fmt, longFmt);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AverageVolumeImplCopyWith<_$AverageVolumeImpl> get copyWith =>
+      __$$AverageVolumeImplCopyWithImpl<_$AverageVolumeImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$AverageVolumeImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _AverageVolume implements AverageVolume {
+  const factory _AverageVolume(
+      {final double? raw,
+      final String? fmt,
+      final String? longFmt}) = _$AverageVolumeImpl;
+
+  factory _AverageVolume.fromJson(Map<String, dynamic> json) =
+      _$AverageVolumeImpl.fromJson;
+
+  @override
+  double? get raw;
+  @override
+  String? get fmt;
+  @override
+  String? get longFmt;
+  @override
+  @JsonKey(ignore: true)
+  _$$AverageVolumeImplCopyWith<_$AverageVolumeImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+BidSize _$BidSizeFromJson(Map<String, dynamic> json) {
+  return _BidSize.fromJson(json);
+}
+
+/// @nodoc
+mixin _$BidSize {
+  double? get raw => throw _privateConstructorUsedError;
+  String? get fmt => throw _privateConstructorUsedError;
+  String? get longFmt => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $BidSizeCopyWith<BidSize> get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $BidSizeCopyWith<$Res> {
+  factory $BidSizeCopyWith(BidSize value, $Res Function(BidSize) then) =
+      _$BidSizeCopyWithImpl<$Res, BidSize>;
+  @useResult
+  $Res call({double? raw, String? fmt, String? longFmt});
+}
+
+/// @nodoc
+class _$BidSizeCopyWithImpl<$Res, $Val extends BidSize>
+    implements $BidSizeCopyWith<$Res> {
+  _$BidSizeCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? raw = freezed,
+    Object? fmt = freezed,
+    Object? longFmt = freezed,
+  }) {
+    return _then(_value.copyWith(
+      raw: freezed == raw
+          ? _value.raw
+          : raw // ignore: cast_nullable_to_non_nullable
+              as double?,
+      fmt: freezed == fmt
+          ? _value.fmt
+          : fmt // ignore: cast_nullable_to_non_nullable
+              as String?,
+      longFmt: freezed == longFmt
+          ? _value.longFmt
+          : longFmt // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$BidSizeImplCopyWith<$Res> implements $BidSizeCopyWith<$Res> {
+  factory _$$BidSizeImplCopyWith(
+          _$BidSizeImpl value, $Res Function(_$BidSizeImpl) then) =
+      __$$BidSizeImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({double? raw, String? fmt, String? longFmt});
+}
+
+/// @nodoc
+class __$$BidSizeImplCopyWithImpl<$Res>
+    extends _$BidSizeCopyWithImpl<$Res, _$BidSizeImpl>
+    implements _$$BidSizeImplCopyWith<$Res> {
+  __$$BidSizeImplCopyWithImpl(
+      _$BidSizeImpl _value, $Res Function(_$BidSizeImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? raw = freezed,
+    Object? fmt = freezed,
+    Object? longFmt = freezed,
+  }) {
+    return _then(_$BidSizeImpl(
+      raw: freezed == raw
+          ? _value.raw
+          : raw // ignore: cast_nullable_to_non_nullable
+              as double?,
+      fmt: freezed == fmt
+          ? _value.fmt
+          : fmt // ignore: cast_nullable_to_non_nullable
+              as String?,
+      longFmt: freezed == longFmt
+          ? _value.longFmt
+          : longFmt // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$BidSizeImpl implements _BidSize {
+  const _$BidSizeImpl({this.raw, this.fmt, this.longFmt});
+
+  factory _$BidSizeImpl.fromJson(Map<String, dynamic> json) =>
+      _$$BidSizeImplFromJson(json);
+
+  @override
+  final double? raw;
+  @override
+  final String? fmt;
+  @override
+  final String? longFmt;
+
+  @override
+  String toString() {
+    return 'BidSize(raw: $raw, fmt: $fmt, longFmt: $longFmt)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$BidSizeImpl &&
+            (identical(other.raw, raw) || other.raw == raw) &&
+            (identical(other.fmt, fmt) || other.fmt == fmt) &&
+            (identical(other.longFmt, longFmt) || other.longFmt == longFmt));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, raw, fmt, longFmt);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$BidSizeImplCopyWith<_$BidSizeImpl> get copyWith =>
+      __$$BidSizeImplCopyWithImpl<_$BidSizeImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$BidSizeImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _BidSize implements BidSize {
+  const factory _BidSize(
+      {final double? raw,
+      final String? fmt,
+      final String? longFmt}) = _$BidSizeImpl;
+
+  factory _BidSize.fromJson(Map<String, dynamic> json) = _$BidSizeImpl.fromJson;
+
+  @override
+  double? get raw;
+  @override
+  String? get fmt;
+  @override
+  String? get longFmt;
+  @override
+  @JsonKey(ignore: true)
+  _$$BidSizeImplCopyWith<_$BidSizeImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+MarketCap _$MarketCapFromJson(Map<String, dynamic> json) {
+  return _MarketCap.fromJson(json);
+}
+
+/// @nodoc
+mixin _$MarketCap {
+  double? get raw => throw _privateConstructorUsedError;
+  String? get fmt => throw _privateConstructorUsedError;
+  String? get longFmt => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $MarketCapCopyWith<MarketCap> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $MarketCapCopyWith<$Res> {
+  factory $MarketCapCopyWith(MarketCap value, $Res Function(MarketCap) then) =
+      _$MarketCapCopyWithImpl<$Res, MarketCap>;
+  @useResult
+  $Res call({double? raw, String? fmt, String? longFmt});
+}
+
+/// @nodoc
+class _$MarketCapCopyWithImpl<$Res, $Val extends MarketCap>
+    implements $MarketCapCopyWith<$Res> {
+  _$MarketCapCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? raw = freezed,
+    Object? fmt = freezed,
+    Object? longFmt = freezed,
+  }) {
+    return _then(_value.copyWith(
+      raw: freezed == raw
+          ? _value.raw
+          : raw // ignore: cast_nullable_to_non_nullable
+              as double?,
+      fmt: freezed == fmt
+          ? _value.fmt
+          : fmt // ignore: cast_nullable_to_non_nullable
+              as String?,
+      longFmt: freezed == longFmt
+          ? _value.longFmt
+          : longFmt // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$MarketCapImplCopyWith<$Res>
+    implements $MarketCapCopyWith<$Res> {
+  factory _$$MarketCapImplCopyWith(
+          _$MarketCapImpl value, $Res Function(_$MarketCapImpl) then) =
+      __$$MarketCapImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({double? raw, String? fmt, String? longFmt});
+}
+
+/// @nodoc
+class __$$MarketCapImplCopyWithImpl<$Res>
+    extends _$MarketCapCopyWithImpl<$Res, _$MarketCapImpl>
+    implements _$$MarketCapImplCopyWith<$Res> {
+  __$$MarketCapImplCopyWithImpl(
+      _$MarketCapImpl _value, $Res Function(_$MarketCapImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? raw = freezed,
+    Object? fmt = freezed,
+    Object? longFmt = freezed,
+  }) {
+    return _then(_$MarketCapImpl(
+      raw: freezed == raw
+          ? _value.raw
+          : raw // ignore: cast_nullable_to_non_nullable
+              as double?,
+      fmt: freezed == fmt
+          ? _value.fmt
+          : fmt // ignore: cast_nullable_to_non_nullable
+              as String?,
+      longFmt: freezed == longFmt
+          ? _value.longFmt
+          : longFmt // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$MarketCapImpl implements _MarketCap {
+  const _$MarketCapImpl({this.raw, this.fmt, this.longFmt});
+
+  factory _$MarketCapImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MarketCapImplFromJson(json);
+
+  @override
+  final double? raw;
+  @override
+  final String? fmt;
+  @override
+  final String? longFmt;
+
+  @override
+  String toString() {
+    return 'MarketCap(raw: $raw, fmt: $fmt, longFmt: $longFmt)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$MarketCapImpl &&
+            (identical(other.raw, raw) || other.raw == raw) &&
+            (identical(other.fmt, fmt) || other.fmt == fmt) &&
+            (identical(other.longFmt, longFmt) || other.longFmt == longFmt));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, raw, fmt, longFmt);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$MarketCapImplCopyWith<_$MarketCapImpl> get copyWith =>
+      __$$MarketCapImplCopyWithImpl<_$MarketCapImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$MarketCapImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _MarketCap implements MarketCap {
+  const factory _MarketCap(
+      {final double? raw,
+      final String? fmt,
+      final String? longFmt}) = _$MarketCapImpl;
+
+  factory _MarketCap.fromJson(Map<String, dynamic> json) =
+      _$MarketCapImpl.fromJson;
+
+  @override
+  double? get raw;
+  @override
+  String? get fmt;
+  @override
+  String? get longFmt;
+  @override
+  @JsonKey(ignore: true)
+  _$$MarketCapImplCopyWith<_$MarketCapImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+PriceToSales _$PriceToSalesFromJson(Map<String, dynamic> json) {
+  return _PriceToSales.fromJson(json);
+}
+
+/// @nodoc
+mixin _$PriceToSales {
+  double? get raw => throw _privateConstructorUsedError;
+  String? get fmt => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $PriceToSalesCopyWith<PriceToSales> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $PriceToSalesCopyWith<$Res> {
+  factory $PriceToSalesCopyWith(
+          PriceToSales value, $Res Function(PriceToSales) then) =
+      _$PriceToSalesCopyWithImpl<$Res, PriceToSales>;
+  @useResult
+  $Res call({double? raw, String? fmt});
+}
+
+/// @nodoc
+class _$PriceToSalesCopyWithImpl<$Res, $Val extends PriceToSales>
+    implements $PriceToSalesCopyWith<$Res> {
+  _$PriceToSalesCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? raw = freezed,
+    Object? fmt = freezed,
+  }) {
+    return _then(_value.copyWith(
+      raw: freezed == raw
+          ? _value.raw
+          : raw // ignore: cast_nullable_to_non_nullable
+              as double?,
+      fmt: freezed == fmt
+          ? _value.fmt
+          : fmt // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$PriceToSalesImplCopyWith<$Res>
+    implements $PriceToSalesCopyWith<$Res> {
+  factory _$$PriceToSalesImplCopyWith(
+          _$PriceToSalesImpl value, $Res Function(_$PriceToSalesImpl) then) =
+      __$$PriceToSalesImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({double? raw, String? fmt});
+}
+
+/// @nodoc
+class __$$PriceToSalesImplCopyWithImpl<$Res>
+    extends _$PriceToSalesCopyWithImpl<$Res, _$PriceToSalesImpl>
+    implements _$$PriceToSalesImplCopyWith<$Res> {
+  __$$PriceToSalesImplCopyWithImpl(
+      _$PriceToSalesImpl _value, $Res Function(_$PriceToSalesImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? raw = freezed,
+    Object? fmt = freezed,
+  }) {
+    return _then(_$PriceToSalesImpl(
+      raw: freezed == raw
+          ? _value.raw
+          : raw // ignore: cast_nullable_to_non_nullable
+              as double?,
+      fmt: freezed == fmt
+          ? _value.fmt
+          : fmt // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$PriceToSalesImpl implements _PriceToSales {
+  const _$PriceToSalesImpl({this.raw, this.fmt});
+
+  factory _$PriceToSalesImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PriceToSalesImplFromJson(json);
+
+  @override
+  final double? raw;
+  @override
+  final String? fmt;
+
+  @override
+  String toString() {
+    return 'PriceToSales(raw: $raw, fmt: $fmt)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$PriceToSalesImpl &&
+            (identical(other.raw, raw) || other.raw == raw) &&
+            (identical(other.fmt, fmt) || other.fmt == fmt));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, raw, fmt);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$PriceToSalesImplCopyWith<_$PriceToSalesImpl> get copyWith =>
+      __$$PriceToSalesImplCopyWithImpl<_$PriceToSalesImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$PriceToSalesImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _PriceToSales implements PriceToSales {
+  const factory _PriceToSales({final double? raw, final String? fmt}) =
+      _$PriceToSalesImpl;
+
+  factory _PriceToSales.fromJson(Map<String, dynamic> json) =
+      _$PriceToSalesImpl.fromJson;
+
+  @override
+  double? get raw;
+  @override
+  String? get fmt;
+  @override
+  @JsonKey(ignore: true)
+  _$$PriceToSalesImplCopyWith<_$PriceToSalesImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+AveragePrice _$AveragePriceFromJson(Map<String, dynamic> json) {
+  return _AveragePrice.fromJson(json);
+}
+
+/// @nodoc
+mixin _$AveragePrice {
+  double? get raw => throw _privateConstructorUsedError;
+  String? get fmt => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $AveragePriceCopyWith<AveragePrice> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $AveragePriceCopyWith<$Res> {
+  factory $AveragePriceCopyWith(
+          AveragePrice value, $Res Function(AveragePrice) then) =
+      _$AveragePriceCopyWithImpl<$Res, AveragePrice>;
+  @useResult
+  $Res call({double? raw, String? fmt});
+}
+
+/// @nodoc
+class _$AveragePriceCopyWithImpl<$Res, $Val extends AveragePrice>
+    implements $AveragePriceCopyWith<$Res> {
+  _$AveragePriceCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? raw = freezed,
+    Object? fmt = freezed,
+  }) {
+    return _then(_value.copyWith(
+      raw: freezed == raw
+          ? _value.raw
+          : raw // ignore: cast_nullable_to_non_nullable
+              as double?,
+      fmt: freezed == fmt
+          ? _value.fmt
+          : fmt // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$AveragePriceImplCopyWith<$Res>
+    implements $AveragePriceCopyWith<$Res> {
+  factory _$$AveragePriceImplCopyWith(
+          _$AveragePriceImpl value, $Res Function(_$AveragePriceImpl) then) =
+      __$$AveragePriceImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({double? raw, String? fmt});
+}
+
+/// @nodoc
+class __$$AveragePriceImplCopyWithImpl<$Res>
+    extends _$AveragePriceCopyWithImpl<$Res, _$AveragePriceImpl>
+    implements _$$AveragePriceImplCopyWith<$Res> {
+  __$$AveragePriceImplCopyWithImpl(
+      _$AveragePriceImpl _value, $Res Function(_$AveragePriceImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? raw = freezed,
+    Object? fmt = freezed,
+  }) {
+    return _then(_$AveragePriceImpl(
+      raw: freezed == raw
+          ? _value.raw
+          : raw // ignore: cast_nullable_to_non_nullable
+              as double?,
+      fmt: freezed == fmt
+          ? _value.fmt
+          : fmt // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$AveragePriceImpl implements _AveragePrice {
+  const _$AveragePriceImpl({this.raw, this.fmt});
+
+  factory _$AveragePriceImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AveragePriceImplFromJson(json);
+
+  @override
+  final double? raw;
+  @override
+  final String? fmt;
+
+  @override
+  String toString() {
+    return 'AveragePrice(raw: $raw, fmt: $fmt)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AveragePriceImpl &&
+            (identical(other.raw, raw) || other.raw == raw) &&
+            (identical(other.fmt, fmt) || other.fmt == fmt));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType, raw, fmt);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AveragePriceImplCopyWith<_$AveragePriceImpl> get copyWith =>
+      __$$AveragePriceImplCopyWithImpl<_$AveragePriceImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$AveragePriceImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _AveragePrice implements AveragePrice {
+  const factory _AveragePrice({final double? raw, final String? fmt}) =
+      _$AveragePriceImpl;
+
+  factory _AveragePrice.fromJson(Map<String, dynamic> json) =
+      _$AveragePriceImpl.fromJson;
+
+  @override
+  double? get raw;
+  @override
+  String? get fmt;
+  @override
+  @JsonKey(ignore: true)
+  _$$AveragePriceImplCopyWith<_$AveragePriceImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}

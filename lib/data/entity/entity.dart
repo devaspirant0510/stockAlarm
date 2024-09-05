@@ -17,3 +17,4 @@ part 'news_entity.dart';
 part 'domestic_news_entity.dart';
 part 'global_news_item_entity.dart';
 part 'yh_chart_entity.dart';
+part 'quote_summary.dart';

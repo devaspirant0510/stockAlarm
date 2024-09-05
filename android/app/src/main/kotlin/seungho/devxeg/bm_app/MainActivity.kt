@@ -86,6 +86,24 @@ public class MainActivity : FlutterActivity() {
                 result.success("alarm queue success")
 
             }
+            else if (call.method == "cancelAlarm") {
+                val id = call.argument<Int>("id")
+                val alarmManager = getSystemService(Context.ALARM_SERVICE) as AlarmManager
+                val intent = Intent(this, AlarmReceiver::class.java)
+                intent.putExtra("id", id)
+
+                // 알람 설정 시와 동일한 PendingIntent를 생성
+                val pendingIntent = PendingIntent.getBroadcast(
+                    this,
+                    id!!,
+                    intent,
+                    PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
+                )
+
+                // AlarmManager에서 해당 PendingIntent로 등록된 알람을 취소
+                alarmManager.cancel(pendingIntent)
+                result.success("alarm cancel success")
+            }
             else if (call.method == "setAlarm") {
                 val alarmManager = getSystemService(Context.ALARM_SERVICE) as AlarmManager
                 val intent = Intent(this, AlarmReceiver::class.java)

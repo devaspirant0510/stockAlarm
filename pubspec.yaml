@@ -60,6 +60,7 @@ dependencies:
   skeletonizer: ^1.4.1+1
   fl_chart: ^0.68.0
   logger: ^2.4.0
+  translator: ^1.0.0
 
 dev_dependencies:
   flutter_test:

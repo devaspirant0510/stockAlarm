@@ -56,7 +56,12 @@ class _AlarmScreenState extends ConsumerState<AlarmScreen> {
                     },
                   );
                 },
-                child: const Text("알림추가하기"))
+                child: const Text("알림추가하기")),
+            ElevatedButton(onPressed: () async {
+              ref.read(alarmViewmodelProvider.notifier).removeAllAlarm();
+
+
+            }, child:Text("전체 삭제"))
           ],
         ),
         viewmodel.alarmList.when(

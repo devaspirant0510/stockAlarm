@@ -692,3 +692,506 @@ Map<String, dynamic> _$$AdjCloseImplToJson(_$AdjCloseImpl instance) =>
     <String, dynamic>{
       'adjclose': instance.adjclose,
     };
+
+_$QuoteSummaryImpl _$$QuoteSummaryImplFromJson(Map<String, dynamic> json) =>
+    _$QuoteSummaryImpl(
+      quoteSummary: QuoteSummaryResult.fromJson(
+          json['quoteSummary'] as Map<String, dynamic>),
+      error: json['error'] as String?,
+    );
+
+Map<String, dynamic> _$$QuoteSummaryImplToJson(_$QuoteSummaryImpl instance) =>
+    <String, dynamic>{
+      'quoteSummary': instance.quoteSummary,
+      'error': instance.error,
+    };
+
+_$QuoteSummaryResultImpl _$$QuoteSummaryResultImplFromJson(
+        Map<String, dynamic> json) =>
+    _$QuoteSummaryResultImpl(
+      result: (json['result'] as List<dynamic>)
+          .map(
+              (e) => QuoteSummaryResultData.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
+
+Map<String, dynamic> _$$QuoteSummaryResultImplToJson(
+        _$QuoteSummaryResultImpl instance) =>
+    <String, dynamic>{
+      'result': instance.result,
+    };
+
+_$QuoteSummaryResultDataImpl _$$QuoteSummaryResultDataImplFromJson(
+        Map<String, dynamic> json) =>
+    _$QuoteSummaryResultDataImpl(
+      assetProfile: json['assetProfile'] == null
+          ? null
+          : AssetProfile.fromJson(json['assetProfile'] as Map<String, dynamic>),
+      summaryDetail: json['summaryDetail'] == null
+          ? null
+          : SummaryDetail.fromJson(
+              json['summaryDetail'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$$QuoteSummaryResultDataImplToJson(
+        _$QuoteSummaryResultDataImpl instance) =>
+    <String, dynamic>{
+      'assetProfile': instance.assetProfile,
+      'summaryDetail': instance.summaryDetail,
+    };
+
+_$AssetProfileImpl _$$AssetProfileImplFromJson(Map<String, dynamic> json) =>
+    _$AssetProfileImpl(
+      address1: json['address1'] as String?,
+      city: json['city'] as String?,
+      state: json['state'] as String?,
+      zip: json['zip'] as String?,
+      country: json['country'] as String?,
+      phone: json['phone'] as String?,
+      website: json['website'] as String?,
+      industry: json['industry'] as String?,
+      industryKey: json['industryKey'] as String?,
+      industryDisp: json['industryDisp'] as String?,
+      sector: json['sector'] as String?,
+      sectorKey: json['sectorKey'] as String?,
+      sectorDisp: json['sectorDisp'] as String?,
+      longBusinessSummary: json['longBusinessSummary'] as String?,
+      fullTimeEmployees: json['fullTimeEmployees'] as int?,
+      companyOfficers: (json['companyOfficers'] as List<dynamic>?)
+          ?.map((e) => CompanyOfficer.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      auditRisk: json['auditRisk'] as int?,
+      boardRisk: json['boardRisk'] as int?,
+      compensationRisk: json['compensationRisk'] as int?,
+      shareHolderRightsRisk: json['shareHolderRightsRisk'] as int?,
+      overallRisk: json['overallRisk'] as int?,
+      governanceEpochDate: json['governanceEpochDate'] as int?,
+      compensationAsOfEpochDate: json['compensationAsOfEpochDate'] as int?,
+      irWebsite: json['irWebsite'] as String?,
+    );
+
+Map<String, dynamic> _$$AssetProfileImplToJson(_$AssetProfileImpl instance) =>
+    <String, dynamic>{
+      'address1': instance.address1,
+      'city': instance.city,
+      'state': instance.state,
+      'zip': instance.zip,
+      'country': instance.country,
+      'phone': instance.phone,
+      'website': instance.website,
+      'industry': instance.industry,
+      'industryKey': instance.industryKey,
+      'industryDisp': instance.industryDisp,
+      'sector': instance.sector,
+      'sectorKey': instance.sectorKey,
+      'sectorDisp': instance.sectorDisp,
+      'longBusinessSummary': instance.longBusinessSummary,
+      'fullTimeEmployees': instance.fullTimeEmployees,
+      'companyOfficers': instance.companyOfficers,
+      'auditRisk': instance.auditRisk,
+      'boardRisk': instance.boardRisk,
+      'compensationRisk': instance.compensationRisk,
+      'shareHolderRightsRisk': instance.shareHolderRightsRisk,
+      'overallRisk': instance.overallRisk,
+      'governanceEpochDate': instance.governanceEpochDate,
+      'compensationAsOfEpochDate': instance.compensationAsOfEpochDate,
+      'irWebsite': instance.irWebsite,
+    };
+
+_$CompanyOfficerImpl _$$CompanyOfficerImplFromJson(Map<String, dynamic> json) =>
+    _$CompanyOfficerImpl(
+      maxAge: json['maxAge'] as int?,
+      name: json['name'] as String?,
+      age: json['age'] as int?,
+      title: json['title'] as String?,
+      yearBorn: json['yearBorn'] as int?,
+      totalPay: json['totalPay'] == null
+          ? null
+          : TotalPay.fromJson(json['totalPay'] as Map<String, dynamic>),
+      exercisedValue: json['exercisedValue'] == null
+          ? null
+          : ExercisedValue.fromJson(
+              json['exercisedValue'] as Map<String, dynamic>),
+      unexercisedValue: json['unexercisedValue'] == null
+          ? null
+          : ExercisedValue.fromJson(
+              json['unexercisedValue'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$$CompanyOfficerImplToJson(
+        _$CompanyOfficerImpl instance) =>
+    <String, dynamic>{
+      'maxAge': instance.maxAge,
+      'name': instance.name,
+      'age': instance.age,
+      'title': instance.title,
+      'yearBorn': instance.yearBorn,
+      'totalPay': instance.totalPay,
+      'exercisedValue': instance.exercisedValue,
+      'unexercisedValue': instance.unexercisedValue,
+    };
+
+_$TotalPayImpl _$$TotalPayImplFromJson(Map<String, dynamic> json) =>
+    _$TotalPayImpl(
+      raw: (json['raw'] as num?)?.toDouble(),
+      fmt: json['fmt'] as String?,
+      longFmt: json['longFmt'] as String?,
+    );
+
+Map<String, dynamic> _$$TotalPayImplToJson(_$TotalPayImpl instance) =>
+    <String, dynamic>{
+      'raw': instance.raw,
+      'fmt': instance.fmt,
+      'longFmt': instance.longFmt,
+    };
+
+_$ExercisedValueImpl _$$ExercisedValueImplFromJson(Map<String, dynamic> json) =>
+    _$ExercisedValueImpl(
+      raw: (json['raw'] as num?)?.toDouble(),
+      fmt: json['fmt'] as String?,
+      longFmt: json['longFmt'] as String?,
+    );
+
+Map<String, dynamic> _$$ExercisedValueImplToJson(
+        _$ExercisedValueImpl instance) =>
+    <String, dynamic>{
+      'raw': instance.raw,
+      'fmt': instance.fmt,
+      'longFmt': instance.longFmt,
+    };
+
+_$SummaryDetailImpl _$$SummaryDetailImplFromJson(Map<String, dynamic> json) =>
+    _$SummaryDetailImpl(
+      maxAge: json['maxAge'] as int?,
+      priceHint: json['priceHint'] == null
+          ? null
+          : PriceHint.fromJson(json['priceHint'] as Map<String, dynamic>),
+      previousClose: json['previousClose'] == null
+          ? null
+          : Price.fromJson(json['previousClose'] as Map<String, dynamic>),
+      open: json['open'] == null
+          ? null
+          : Price.fromJson(json['open'] as Map<String, dynamic>),
+      dayLow: json['dayLow'] == null
+          ? null
+          : Price.fromJson(json['dayLow'] as Map<String, dynamic>),
+      dayHigh: json['dayHigh'] == null
+          ? null
+          : Price.fromJson(json['dayHigh'] as Map<String, dynamic>),
+      regularMarketPreviousClose: json['regularMarketPreviousClose'] == null
+          ? null
+          : Price.fromJson(
+              json['regularMarketPreviousClose'] as Map<String, dynamic>),
+      regularMarketOpen: json['regularMarketOpen'] == null
+          ? null
+          : Price.fromJson(json['regularMarketOpen'] as Map<String, dynamic>),
+      regularMarketDayLow: json['regularMarketDayLow'] == null
+          ? null
+          : Price.fromJson(json['regularMarketDayLow'] as Map<String, dynamic>),
+      regularMarketDayHigh: json['regularMarketDayHigh'] == null
+          ? null
+          : Price.fromJson(
+              json['regularMarketDayHigh'] as Map<String, dynamic>),
+      dividendRate: json['dividendRate'] == null
+          ? null
+          : DividendRate.fromJson(json['dividendRate'] as Map<String, dynamic>),
+      dividendYield: json['dividendYield'] == null
+          ? null
+          : DividendYield.fromJson(
+              json['dividendYield'] as Map<String, dynamic>),
+      exDividendDate: json['exDividendDate'] == null
+          ? null
+          : ExDividendDate.fromJson(
+              json['exDividendDate'] as Map<String, dynamic>),
+      payoutRatio: json['payoutRatio'] == null
+          ? null
+          : PayoutRatio.fromJson(json['payoutRatio'] as Map<String, dynamic>),
+      fiveYearAvgDividendYield: json['fiveYearAvgDividendYield'] == null
+          ? null
+          : DividendYield.fromJson(
+              json['fiveYearAvgDividendYield'] as Map<String, dynamic>),
+      beta: json['beta'] == null
+          ? null
+          : Beta.fromJson(json['beta'] as Map<String, dynamic>),
+      trailingPE: json['trailingPE'] == null
+          ? null
+          : Pe.fromJson(json['trailingPE'] as Map<String, dynamic>),
+      forwardPE: json['forwardPE'] == null
+          ? null
+          : Pe.fromJson(json['forwardPE'] as Map<String, dynamic>),
+      volume: json['volume'] == null
+          ? null
+          : Volume.fromJson(json['volume'] as Map<String, dynamic>),
+      regularMarketVolume: json['regularMarketVolume'] == null
+          ? null
+          : Volume.fromJson(
+              json['regularMarketVolume'] as Map<String, dynamic>),
+      averageVolume: json['averageVolume'] == null
+          ? null
+          : AverageVolume.fromJson(
+              json['averageVolume'] as Map<String, dynamic>),
+      averageVolume10days: json['averageVolume10days'] == null
+          ? null
+          : AverageVolume.fromJson(
+              json['averageVolume10days'] as Map<String, dynamic>),
+      averageDailyVolume10Day: json['averageDailyVolume10Day'] == null
+          ? null
+          : AverageVolume.fromJson(
+              json['averageDailyVolume10Day'] as Map<String, dynamic>),
+      bid: json['bid'] == null
+          ? null
+          : Price.fromJson(json['bid'] as Map<String, dynamic>),
+      ask: json['ask'] == null
+          ? null
+          : Price.fromJson(json['ask'] as Map<String, dynamic>),
+      bidSize: json['bidSize'] == null
+          ? null
+          : BidSize.fromJson(json['bidSize'] as Map<String, dynamic>),
+      askSize: json['askSize'] == null
+          ? null
+          : BidSize.fromJson(json['askSize'] as Map<String, dynamic>),
+      marketCap: json['marketCap'] == null
+          ? null
+          : MarketCap.fromJson(json['marketCap'] as Map<String, dynamic>),
+      fiftyTwoWeekLow: json['fiftyTwoWeekLow'] == null
+          ? null
+          : Price.fromJson(json['fiftyTwoWeekLow'] as Map<String, dynamic>),
+      fiftyTwoWeekHigh: json['fiftyTwoWeekHigh'] == null
+          ? null
+          : Price.fromJson(json['fiftyTwoWeekHigh'] as Map<String, dynamic>),
+      priceToSalesTrailing12Months: json['priceToSalesTrailing12Months'] == null
+          ? null
+          : PriceToSales.fromJson(
+              json['priceToSalesTrailing12Months'] as Map<String, dynamic>),
+      fiftyDayAverage: json['fiftyDayAverage'] == null
+          ? null
+          : AveragePrice.fromJson(
+              json['fiftyDayAverage'] as Map<String, dynamic>),
+      twoHundredDayAverage: json['twoHundredDayAverage'] == null
+          ? null
+          : AveragePrice.fromJson(
+              json['twoHundredDayAverage'] as Map<String, dynamic>),
+      trailingAnnualDividendRate: json['trailingAnnualDividendRate'] == null
+          ? null
+          : DividendRate.fromJson(
+              json['trailingAnnualDividendRate'] as Map<String, dynamic>),
+      trailingAnnualDividendYield: json['trailingAnnualDividendYield'] == null
+          ? null
+          : DividendYield.fromJson(
+              json['trailingAnnualDividendYield'] as Map<String, dynamic>),
+      currency: json['currency'] as String?,
+    );
+
+Map<String, dynamic> _$$SummaryDetailImplToJson(_$SummaryDetailImpl instance) =>
+    <String, dynamic>{
+      'maxAge': instance.maxAge,
+      'priceHint': instance.priceHint,
+      'previousClose': instance.previousClose,
+      'open': instance.open,
+      'dayLow': instance.dayLow,
+      'dayHigh': instance.dayHigh,
+      'regularMarketPreviousClose': instance.regularMarketPreviousClose,
+      'regularMarketOpen': instance.regularMarketOpen,
+      'regularMarketDayLow': instance.regularMarketDayLow,
+      'regularMarketDayHigh': instance.regularMarketDayHigh,
+      'dividendRate': instance.dividendRate,
+      'dividendYield': instance.dividendYield,
+      'exDividendDate': instance.exDividendDate,
+      'payoutRatio': instance.payoutRatio,
+      'fiveYearAvgDividendYield': instance.fiveYearAvgDividendYield,
+      'beta': instance.beta,
+      'trailingPE': instance.trailingPE,
+      'forwardPE': instance.forwardPE,
+      'volume': instance.volume,
+      'regularMarketVolume': instance.regularMarketVolume,
+      'averageVolume': instance.averageVolume,
+      'averageVolume10days': instance.averageVolume10days,
+      'averageDailyVolume10Day': instance.averageDailyVolume10Day,
+      'bid': instance.bid,
+      'ask': instance.ask,
+      'bidSize': instance.bidSize,
+      'askSize': instance.askSize,
+      'marketCap': instance.marketCap,
+      'fiftyTwoWeekLow': instance.fiftyTwoWeekLow,
+      'fiftyTwoWeekHigh': instance.fiftyTwoWeekHigh,
+      'priceToSalesTrailing12Months': instance.priceToSalesTrailing12Months,
+      'fiftyDayAverage': instance.fiftyDayAverage,
+      'twoHundredDayAverage': instance.twoHundredDayAverage,
+      'trailingAnnualDividendRate': instance.trailingAnnualDividendRate,
+      'trailingAnnualDividendYield': instance.trailingAnnualDividendYield,
+      'currency': instance.currency,
+    };
+
+_$PriceHintImpl _$$PriceHintImplFromJson(Map<String, dynamic> json) =>
+    _$PriceHintImpl(
+      raw: (json['raw'] as num?)?.toDouble(),
+      fmt: json['fmt'] as String?,
+      longFmt: json['longFmt'] as String?,
+    );
+
+Map<String, dynamic> _$$PriceHintImplToJson(_$PriceHintImpl instance) =>
+    <String, dynamic>{
+      'raw': instance.raw,
+      'fmt': instance.fmt,
+      'longFmt': instance.longFmt,
+    };
+
+_$PriceImpl _$$PriceImplFromJson(Map<String, dynamic> json) => _$PriceImpl(
+      raw: (json['raw'] as num?)?.toDouble(),
+      fmt: json['fmt'] as String?,
+    );
+
+Map<String, dynamic> _$$PriceImplToJson(_$PriceImpl instance) =>
+    <String, dynamic>{
+      'raw': instance.raw,
+      'fmt': instance.fmt,
+    };
+
+_$DividendRateImpl _$$DividendRateImplFromJson(Map<String, dynamic> json) =>
+    _$DividendRateImpl(
+      raw: (json['raw'] as num?)?.toDouble(),
+      fmt: json['fmt'] as String?,
+    );
+
+Map<String, dynamic> _$$DividendRateImplToJson(_$DividendRateImpl instance) =>
+    <String, dynamic>{
+      'raw': instance.raw,
+      'fmt': instance.fmt,
+    };
+
+_$DividendYieldImpl _$$DividendYieldImplFromJson(Map<String, dynamic> json) =>
+    _$DividendYieldImpl(
+      raw: (json['raw'] as num?)?.toDouble(),
+      fmt: json['fmt'] as String?,
+    );
+
+Map<String, dynamic> _$$DividendYieldImplToJson(_$DividendYieldImpl instance) =>
+    <String, dynamic>{
+      'raw': instance.raw,
+      'fmt': instance.fmt,
+    };
+
+_$ExDividendDateImpl _$$ExDividendDateImplFromJson(Map<String, dynamic> json) =>
+    _$ExDividendDateImpl(
+      raw: json['raw'] as int?,
+      fmt: json['fmt'] as String?,
+    );
+
+Map<String, dynamic> _$$ExDividendDateImplToJson(
+        _$ExDividendDateImpl instance) =>
+    <String, dynamic>{
+      'raw': instance.raw,
+      'fmt': instance.fmt,
+    };
+
+_$PayoutRatioImpl _$$PayoutRatioImplFromJson(Map<String, dynamic> json) =>
+    _$PayoutRatioImpl(
+      raw: (json['raw'] as num?)?.toDouble(),
+      fmt: json['fmt'] as String?,
+    );
+
+Map<String, dynamic> _$$PayoutRatioImplToJson(_$PayoutRatioImpl instance) =>
+    <String, dynamic>{
+      'raw': instance.raw,
+      'fmt': instance.fmt,
+    };
+
+_$BetaImpl _$$BetaImplFromJson(Map<String, dynamic> json) => _$BetaImpl(
+      raw: (json['raw'] as num?)?.toDouble(),
+      fmt: json['fmt'] as String?,
+    );
+
+Map<String, dynamic> _$$BetaImplToJson(_$BetaImpl instance) =>
+    <String, dynamic>{
+      'raw': instance.raw,
+      'fmt': instance.fmt,
+    };
+
+_$PeImpl _$$PeImplFromJson(Map<String, dynamic> json) => _$PeImpl(
+      raw: (json['raw'] as num?)?.toDouble(),
+      fmt: json['fmt'] as String?,
+    );
+
+Map<String, dynamic> _$$PeImplToJson(_$PeImpl instance) => <String, dynamic>{
+      'raw': instance.raw,
+      'fmt': instance.fmt,
+    };
+
+_$VolumeImpl _$$VolumeImplFromJson(Map<String, dynamic> json) => _$VolumeImpl(
+      raw: (json['raw'] as num?)?.toDouble(),
+      fmt: json['fmt'] as String?,
+      longFmt: json['longFmt'] as String?,
+    );
+
+Map<String, dynamic> _$$VolumeImplToJson(_$VolumeImpl instance) =>
+    <String, dynamic>{
+      'raw': instance.raw,
+      'fmt': instance.fmt,
+      'longFmt': instance.longFmt,
+    };
+
+_$AverageVolumeImpl _$$AverageVolumeImplFromJson(Map<String, dynamic> json) =>
+    _$AverageVolumeImpl(
+      raw: (json['raw'] as num?)?.toDouble(),
+      fmt: json['fmt'] as String?,
+      longFmt: json['longFmt'] as String?,
+    );
+
+Map<String, dynamic> _$$AverageVolumeImplToJson(_$AverageVolumeImpl instance) =>
+    <String, dynamic>{
+      'raw': instance.raw,
+      'fmt': instance.fmt,
+      'longFmt': instance.longFmt,
+    };
+
+_$BidSizeImpl _$$BidSizeImplFromJson(Map<String, dynamic> json) =>
+    _$BidSizeImpl(
+      raw: (json['raw'] as num?)?.toDouble(),
+      fmt: json['fmt'] as String?,
+      longFmt: json['longFmt'] as String?,
+    );
+
+Map<String, dynamic> _$$BidSizeImplToJson(_$BidSizeImpl instance) =>
+    <String, dynamic>{
+      'raw': instance.raw,
+      'fmt': instance.fmt,
+      'longFmt': instance.longFmt,
+    };
+
+_$MarketCapImpl _$$MarketCapImplFromJson(Map<String, dynamic> json) =>
+    _$MarketCapImpl(
+      raw: (json['raw'] as num?)?.toDouble(),
+      fmt: json['fmt'] as String?,
+      longFmt: json['longFmt'] as String?,
+    );
+
+Map<String, dynamic> _$$MarketCapImplToJson(_$MarketCapImpl instance) =>
+    <String, dynamic>{
+      'raw': instance.raw,
+      'fmt': instance.fmt,
+      'longFmt': instance.longFmt,
+    };
+
+_$PriceToSalesImpl _$$PriceToSalesImplFromJson(Map<String, dynamic> json) =>
+    _$PriceToSalesImpl(
+      raw: (json['raw'] as num?)?.toDouble(),
+      fmt: json['fmt'] as String?,
+    );
+
+Map<String, dynamic> _$$PriceToSalesImplToJson(_$PriceToSalesImpl instance) =>
+    <String, dynamic>{
+      'raw': instance.raw,
+      'fmt': instance.fmt,
+    };
+
+_$AveragePriceImpl _$$AveragePriceImplFromJson(Map<String, dynamic> json) =>
+    _$AveragePriceImpl(
+      raw: (json['raw'] as num?)?.toDouble(),
+      fmt: json['fmt'] as String?,
+    );
+
+Map<String, dynamic> _$$AveragePriceImplToJson(_$AveragePriceImpl instance) =>
+    <String, dynamic>{
+      'raw': instance.raw,
+      'fmt': instance.fmt,
+    };

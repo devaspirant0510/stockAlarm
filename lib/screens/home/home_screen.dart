@@ -1,5 +1,5 @@
 import 'package:bm_app/api/api_client.dart';
-import 'package:bm_app/common/utils.dart';
+import 'package:bm_app/common/constant.dart';
 import 'package:bm_app/screens/home/widgets/tech_article_section.dart';
 import 'package:bm_app/screens/home/widgets/top_actively_stock.dart';
 import 'package:bm_app/screens/home/widgets/top_popular_stock.dart';

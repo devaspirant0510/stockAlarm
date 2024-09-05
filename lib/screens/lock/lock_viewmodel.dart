@@ -1,4 +1,5 @@
 part of '../viewmodel_states.dart';
+
 @riverpod
 class LockViewmodel extends _$LockViewmodel {
   @override
@@ -9,7 +10,7 @@ class LockViewmodel extends _$LockViewmodel {
   Future<LockState> loadAlarmData(int alarmId) async {
     state = const AsyncValue.loading();
     final result = await AsyncValue.guard(() async {
-      final data = await ref.read(callGetOneAlarmProvider(id:alarmId).future);
+      final data = await ref.read(callGetOneAlarmProvider(id: alarmId).future);
       print("guard data:$data");
       return LockState(alarmData: data);
     });

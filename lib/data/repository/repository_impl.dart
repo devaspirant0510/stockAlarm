@@ -153,6 +153,26 @@ class RepositoryImpl implements RemoteRepository, LocalRepository {
   Future<YhChartData> getChartDataYesterday(String symbol) {
     return yhDatasource.getChartDataBySymbolOnYesterday(symbol: symbol);
   }
+
+  @override
+  Future<QuoteSummary> getQuoteSummaryBySymbol(String symbol) {
+    return yhDatasource.getQuoteSummaryBySymbol(symbol: symbol);
+  }
+
+  @override
+  Future<int> deleteBySymbol(int id) {
+    return localDatSource.deleteFavoriteSymbolById(id);
+  }
+
+  @override
+  Future<void> deleteAllAlarm() async {
+    await localDatSource.deleteAllAlarmData();
+  }
+
+  @override
+  Future<List<int>> getAllAlarmById() async {
+    return await localDatSource.getAllAlarmIds();
+  }
 }
 
 final repositoryProvider = Provider<RepositoryImpl>((ref) {

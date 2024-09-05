@@ -18,7 +18,7 @@ abstract class YhDatasource {
     @Query("region") String region = "US",
     @Query("interval") String interval = "5m",
     @Query("lang") String lang = "en",
-    @Header("X-API-KEY") String apiKey=Env.financeApiKey
+    @Header("X-API-KEY") String apiKey = Env.financeApiKey
   });
 
   @GET("v8/finance/chart/{ticker}")
@@ -28,7 +28,7 @@ abstract class YhDatasource {
     @Query("region") String region = "US",
     @Query("interval") String interval = "5m",
     @Query("lang") String lang = "en",
-    @Header("X-API-KEY") String apiKey=Env.financeApiKey
+    @Header("X-API-KEY") String apiKey = Env.financeApiKey
   });
 
   @GET("v8/finance/chart/{ticker}")
@@ -39,18 +39,18 @@ abstract class YhDatasource {
     @Query("interval") String interval = "15m",
     @Query("lang") String lang = "en",
     @Query("event") String event = "div,spilt", // 해당 주식에 관련된 이벤트 정보(배당,액분)
-    @Header("X-API-KEY") String apiKey=Env.financeApiKey
+    @Header("X-API-KEY") String apiKey = Env.financeApiKey
   });
 
   @GET("v8/finance/chart/{ticker}")
   Future<YhChartData> getChartDataBySymbolOnThreeMonth({
     @Path("ticker") required String symbol,
-    @Query("range") String range = "1mo",
+    @Query("range") String range = "3mo",
     @Query("region") String region = "US",
     @Query("interval") String interval = "1d",
     @Query("lang") String lang = "en",
     @Query("event") String event = "div,spilt", // 해당 주식에 관련된 이벤트 정보(배당,액분)
-    @Header("X-API-KEY") String apiKey=Env.financeApiKey
+    @Header("X-API-KEY") String apiKey = Env.financeApiKey
   });
 
   @GET("v8/finance/chart/{ticker}")
@@ -61,7 +61,7 @@ abstract class YhDatasource {
     @Query("interval") String interval = "1wk",
     @Query("lang") String lang = "en",
     @Query("event") String event = "div,spilt", // 해당 주식에 관련된 이벤트 정보(배당,액분)
-    @Header("X-API-KEY") String apiKey=Env.financeApiKey
+    @Header("X-API-KEY") String apiKey = Env.financeApiKey
   });
 
   @GET("v8/finance/chart/{ticker}")
@@ -72,6 +72,15 @@ abstract class YhDatasource {
     @Query("interval") String interval = "1mo",
     @Query("lang") String lang = "en",
     @Query("event") String event = "div,spilt", // 해당 주식에 관련된 이벤트 정보(배당,액분)
-    @Header("X-API-KEY") String apiKey=Env.financeApiKey
+    @Header("X-API-KEY") String apiKey = Env.financeApiKey
+  });
+
+  @GET("v11/finance/quoteSummary/{ticker}")
+  Future<QuoteSummary> getQuoteSummaryBySymbol({
+    @Path("ticker") required String symbol,
+    @Query("lang") String lang="en",
+    @Query("region") String region="US",
+    @Query("modules") String modules="summaryDetail,assetProfile",// 주가 정보(시총,종가,시가등), 주식 프로필(회사위치 대표이사)
+    @Header("X-API-KEY") String apiKey = Env.financeApiKey
   });
 }

@@ -5,6 +5,7 @@
 // gestures. You can also use WidgetTester to find child widgets in the widget
 // tree, read text, and verify that the values of widget properties are correct.
 
+import 'package:bm_app/common/utils.dart';
 import 'package:bm_app/data/data_source/remote_datasource.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
@@ -13,4 +14,5 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:bm_app/main.dart';
 
 void main() async{
+  print(isMarketOpen());
 }

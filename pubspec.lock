@@ -245,10 +245,10 @@ packages:
     dependency: "direct main"
     description:
       name: currency_converter
-      sha256: b27f7d04af5fc7b35b4e73ebe344cf42405f28bec18cf56cca84ccde36509242
+      sha256: "8a0edc6d7c1f1647ec33def1313b58519be63e4d2f19de9c8e4e2008beecea92"
       url: "https://pub.dev"
     source: hosted
-    version: "0.0.2"
+    version: "0.0.6"
   custom_lint_core:
     dependency: transitive
     description:
@@ -428,10 +428,10 @@ packages:
     dependency: transitive
     description:
       name: http
-      sha256: "5895291c13fa8a3bd82e76d5627f69e0d85ca6a30dcac95c4ea19a5d555879c2"
+      sha256: b9c29a161230ee03d3ccf545097fccd9b87a5264228c5d348202e0f0c28f9010
       url: "https://pub.dev"
     source: hosted
-    version: "0.13.6"
+    version: "1.2.2"
   http_multi_server:
     dependency: transitive
     description:
@@ -949,6 +949,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.1"
+  translator:
+    dependency: "direct main"
+    description:
+      name: translator
+      sha256: "03521d194365e758c66444a3b03005733e1daf0cd3de9c63257bf82b1a4e2ba1"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.0"
   tuple:
     dependency: transitive
     description:

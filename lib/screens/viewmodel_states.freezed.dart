@@ -200,8 +200,7 @@ abstract class _HomeState implements HomeState {
 
 /// @nodoc
 mixin _$MyState {
-  AsyncValue<List<FavoriteStock>> get favoriteStocks =>
-      throw _privateConstructorUsedError;
+  List<FavoriteStock> get favoriteStocks => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $MyStateCopyWith<MyState> get copyWith => throw _privateConstructorUsedError;
@@ -212,7 +211,7 @@ abstract class $MyStateCopyWith<$Res> {
   factory $MyStateCopyWith(MyState value, $Res Function(MyState) then) =
       _$MyStateCopyWithImpl<$Res, MyState>;
   @useResult
-  $Res call({AsyncValue<List<FavoriteStock>> favoriteStocks});
+  $Res call({List<FavoriteStock> favoriteStocks});
 }
 
 /// @nodoc
@@ -234,7 +233,7 @@ class _$MyStateCopyWithImpl<$Res, $Val extends MyState>
       favoriteStocks: null == favoriteStocks
           ? _value.favoriteStocks
           : favoriteStocks // ignore: cast_nullable_to_non_nullable
-              as AsyncValue<List<FavoriteStock>>,
+              as List<FavoriteStock>,
     ) as $Val);
   }
 }
@@ -246,7 +245,7 @@ abstract class _$$MyStateImplCopyWith<$Res> implements $MyStateCopyWith<$Res> {
       __$$MyStateImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({AsyncValue<List<FavoriteStock>> favoriteStocks});
+  $Res call({List<FavoriteStock> favoriteStocks});
 }
 
 /// @nodoc
@@ -264,9 +263,9 @@ class __$$MyStateImplCopyWithImpl<$Res>
   }) {
     return _then(_$MyStateImpl(
       favoriteStocks: null == favoriteStocks
-          ? _value.favoriteStocks
+          ? _value._favoriteStocks
           : favoriteStocks // ignore: cast_nullable_to_non_nullable
-              as AsyncValue<List<FavoriteStock>>,
+              as List<FavoriteStock>,
     ));
   }
 }
@@ -274,11 +273,17 @@ class __$$MyStateImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$MyStateImpl implements _MyState {
-  const _$MyStateImpl({this.favoriteStocks = const AsyncValue.data([])});
+  const _$MyStateImpl({final List<FavoriteStock> favoriteStocks = const []})
+      : _favoriteStocks = favoriteStocks;
 
+  final List<FavoriteStock> _favoriteStocks;
   @override
   @JsonKey()
-  final AsyncValue<List<FavoriteStock>> favoriteStocks;
+  List<FavoriteStock> get favoriteStocks {
+    if (_favoriteStocks is EqualUnmodifiableListView) return _favoriteStocks;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_favoriteStocks);
+  }
 
   @override
   String toString() {
@@ -290,12 +295,13 @@ class _$MyStateImpl implements _MyState {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MyStateImpl &&
-            (identical(other.favoriteStocks, favoriteStocks) ||
-                other.favoriteStocks == favoriteStocks));
+            const DeepCollectionEquality()
+                .equals(other._favoriteStocks, _favoriteStocks));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, favoriteStocks);
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(_favoriteStocks));
 
   @JsonKey(ignore: true)
   @override
@@ -305,11 +311,11 @@ class _$MyStateImpl implements _MyState {
 }
 
 abstract class _MyState implements MyState {
-  const factory _MyState(
-      {final AsyncValue<List<FavoriteStock>> favoriteStocks}) = _$MyStateImpl;
+  const factory _MyState({final List<FavoriteStock> favoriteStocks}) =
+      _$MyStateImpl;
 
   @override
-  AsyncValue<List<FavoriteStock>> get favoriteStocks;
+  List<FavoriteStock> get favoriteStocks;
   @override
   @JsonKey(ignore: true)
   _$$MyStateImplCopyWith<_$MyStateImpl> get copyWith =>
@@ -804,6 +810,7 @@ abstract class _AlarmState implements AlarmState {
 /// @nodoc
 mixin _$LockState {
   AlarmQueue? get alarmData => throw _privateConstructorUsedError;
+  List<StockModel> get stocks => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $LockStateCopyWith<LockState> get copyWith =>
@@ -815,7 +822,7 @@ abstract class $LockStateCopyWith<$Res> {
   factory $LockStateCopyWith(LockState value, $Res Function(LockState) then) =
       _$LockStateCopyWithImpl<$Res, LockState>;
   @useResult
-  $Res call({AlarmQueue? alarmData});
+  $Res call({AlarmQueue? alarmData, List<StockModel> stocks});
 
   $AlarmQueueCopyWith<$Res>? get alarmData;
 }
@@ -834,12 +841,17 @@ class _$LockStateCopyWithImpl<$Res, $Val extends LockState>
   @override
   $Res call({
     Object? alarmData = freezed,
+    Object? stocks = null,
   }) {
     return _then(_value.copyWith(
       alarmData: freezed == alarmData
           ? _value.alarmData
           : alarmData // ignore: cast_nullable_to_non_nullable
               as AlarmQueue?,
+      stocks: null == stocks
+          ? _value.stocks
+          : stocks // ignore: cast_nullable_to_non_nullable
+              as List<StockModel>,
     ) as $Val);
   }
 
@@ -864,7 +876,7 @@ abstract class _$$LockStateImplCopyWith<$Res>
       __$$LockStateImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({AlarmQueue? alarmData});
+  $Res call({AlarmQueue? alarmData, List<StockModel> stocks});
 
   @override
   $AlarmQueueCopyWith<$Res>? get alarmData;
@@ -882,12 +894,17 @@ class __$$LockStateImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? alarmData = freezed,
+    Object? stocks = null,
   }) {
     return _then(_$LockStateImpl(
       alarmData: freezed == alarmData
           ? _value.alarmData
           : alarmData // ignore: cast_nullable_to_non_nullable
               as AlarmQueue?,
+      stocks: null == stocks
+          ? _value._stocks
+          : stocks // ignore: cast_nullable_to_non_nullable
+              as List<StockModel>,
     ));
   }
 }
@@ -895,14 +912,24 @@ class __$$LockStateImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$LockStateImpl implements _LockState {
-  const _$LockStateImpl({this.alarmData});
+  const _$LockStateImpl(
+      {this.alarmData, final List<StockModel> stocks = const []})
+      : _stocks = stocks;
 
   @override
   final AlarmQueue? alarmData;
+  final List<StockModel> _stocks;
+  @override
+  @JsonKey()
+  List<StockModel> get stocks {
+    if (_stocks is EqualUnmodifiableListView) return _stocks;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_stocks);
+  }
 
   @override
   String toString() {
-    return 'LockState(alarmData: $alarmData)';
+    return 'LockState(alarmData: $alarmData, stocks: $stocks)';
   }
 
   @override
@@ -911,11 +938,13 @@ class _$LockStateImpl implements _LockState {
         (other.runtimeType == runtimeType &&
             other is _$LockStateImpl &&
             (identical(other.alarmData, alarmData) ||
-                other.alarmData == alarmData));
+                other.alarmData == alarmData) &&
+            const DeepCollectionEquality().equals(other._stocks, _stocks));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, alarmData);
+  int get hashCode => Object.hash(
+      runtimeType, alarmData, const DeepCollectionEquality().hash(_stocks));
 
   @JsonKey(ignore: true)
   @override
@@ -925,10 +954,14 @@ class _$LockStateImpl implements _LockState {
 }
 
 abstract class _LockState implements LockState {
-  const factory _LockState({final AlarmQueue? alarmData}) = _$LockStateImpl;
+  const factory _LockState(
+      {final AlarmQueue? alarmData,
+      final List<StockModel> stocks}) = _$LockStateImpl;
 
   @override
   AlarmQueue? get alarmData;
+  @override
+  List<StockModel> get stocks;
   @override
   @JsonKey(ignore: true)
   _$$LockStateImplCopyWith<_$LockStateImpl> get copyWith =>
@@ -941,6 +974,9 @@ mixin _$StockState {
   AsyncValue<Map<String, TimeSeriesData>> get chart =>
       throw _privateConstructorUsedError;
   AsyncValue<YhChartModel> get yhChartData =>
+      throw _privateConstructorUsedError;
+  ChartState get chartState => throw _privateConstructorUsedError;
+  AsyncValue<QuoteSummary> get quoteSummary =>
       throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -957,7 +993,9 @@ abstract class $StockStateCopyWith<$Res> {
   $Res call(
       {StockProfile? stockProfile,
       AsyncValue<Map<String, TimeSeriesData>> chart,
-      AsyncValue<YhChartModel> yhChartData});
+      AsyncValue<YhChartModel> yhChartData,
+      ChartState chartState,
+      AsyncValue<QuoteSummary> quoteSummary});
 
   $StockProfileCopyWith<$Res>? get stockProfile;
 }
@@ -978,6 +1016,8 @@ class _$StockStateCopyWithImpl<$Res, $Val extends StockState>
     Object? stockProfile = freezed,
     Object? chart = null,
     Object? yhChartData = null,
+    Object? chartState = null,
+    Object? quoteSummary = null,
   }) {
     return _then(_value.copyWith(
       stockProfile: freezed == stockProfile
@@ -992,6 +1032,14 @@ class _$StockStateCopyWithImpl<$Res, $Val extends StockState>
           ? _value.yhChartData
           : yhChartData // ignore: cast_nullable_to_non_nullable
               as AsyncValue<YhChartModel>,
+      chartState: null == chartState
+          ? _value.chartState
+          : chartState // ignore: cast_nullable_to_non_nullable
+              as ChartState,
+      quoteSummary: null == quoteSummary
+          ? _value.quoteSummary
+          : quoteSummary // ignore: cast_nullable_to_non_nullable
+              as AsyncValue<QuoteSummary>,
     ) as $Val);
   }
 
@@ -1019,7 +1067,9 @@ abstract class _$$StockStateImplCopyWith<$Res>
   $Res call(
       {StockProfile? stockProfile,
       AsyncValue<Map<String, TimeSeriesData>> chart,
-      AsyncValue<YhChartModel> yhChartData});
+      AsyncValue<YhChartModel> yhChartData,
+      ChartState chartState,
+      AsyncValue<QuoteSummary> quoteSummary});
 
   @override
   $StockProfileCopyWith<$Res>? get stockProfile;
@@ -1039,6 +1089,8 @@ class __$$StockStateImplCopyWithImpl<$Res>
     Object? stockProfile = freezed,
     Object? chart = null,
     Object? yhChartData = null,
+    Object? chartState = null,
+    Object? quoteSummary = null,
   }) {
     return _then(_$StockStateImpl(
       stockProfile: freezed == stockProfile
@@ -1053,6 +1105,14 @@ class __$$StockStateImplCopyWithImpl<$Res>
           ? _value.yhChartData
           : yhChartData // ignore: cast_nullable_to_non_nullable
               as AsyncValue<YhChartModel>,
+      chartState: null == chartState
+          ? _value.chartState
+          : chartState // ignore: cast_nullable_to_non_nullable
+              as ChartState,
+      quoteSummary: null == quoteSummary
+          ? _value.quoteSummary
+          : quoteSummary // ignore: cast_nullable_to_non_nullable
+              as AsyncValue<QuoteSummary>,
     ));
   }
 }
@@ -1063,7 +1123,9 @@ class _$StockStateImpl implements _StockState {
   const _$StockStateImpl(
       {this.stockProfile,
       this.chart = const AsyncValue.loading(),
-      this.yhChartData = const AsyncValue.loading()});
+      this.yhChartData = const AsyncValue.loading(),
+      this.chartState = ChartState.realtime,
+      this.quoteSummary = const AsyncValue.loading()});
 
   @override
   final StockProfile? stockProfile;
@@ -1073,10 +1135,16 @@ class _$StockStateImpl implements _StockState {
   @override
   @JsonKey()
   final AsyncValue<YhChartModel> yhChartData;
+  @override
+  @JsonKey()
+  final ChartState chartState;
+  @override
+  @JsonKey()
+  final AsyncValue<QuoteSummary> quoteSummary;
 
   @override
   String toString() {
-    return 'StockState(stockProfile: $stockProfile, chart: $chart, yhChartData: $yhChartData)';
+    return 'StockState(stockProfile: $stockProfile, chart: $chart, yhChartData: $yhChartData, chartState: $chartState, quoteSummary: $quoteSummary)';
   }
 
   @override
@@ -1088,12 +1156,16 @@ class _$StockStateImpl implements _StockState {
                 other.stockProfile == stockProfile) &&
             (identical(other.chart, chart) || other.chart == chart) &&
             (identical(other.yhChartData, yhChartData) ||
-                other.yhChartData == yhChartData));
+                other.yhChartData == yhChartData) &&
+            (identical(other.chartState, chartState) ||
+                other.chartState == chartState) &&
+            (identical(other.quoteSummary, quoteSummary) ||
+                other.quoteSummary == quoteSummary));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, stockProfile, chart, yhChartData);
+  int get hashCode => Object.hash(
+      runtimeType, stockProfile, chart, yhChartData, chartState, quoteSummary);
 
   @JsonKey(ignore: true)
   @override
@@ -1106,7 +1178,9 @@ abstract class _StockState implements StockState {
   const factory _StockState(
       {final StockProfile? stockProfile,
       final AsyncValue<Map<String, TimeSeriesData>> chart,
-      final AsyncValue<YhChartModel> yhChartData}) = _$StockStateImpl;
+      final AsyncValue<YhChartModel> yhChartData,
+      final ChartState chartState,
+      final AsyncValue<QuoteSummary> quoteSummary}) = _$StockStateImpl;
 
   @override
   StockProfile? get stockProfile;
@@ -1114,6 +1188,10 @@ abstract class _StockState implements StockState {
   AsyncValue<Map<String, TimeSeriesData>> get chart;
   @override
   AsyncValue<YhChartModel> get yhChartData;
+  @override
+  ChartState get chartState;
+  @override
+  AsyncValue<QuoteSummary> get quoteSummary;
   @override
   @JsonKey(ignore: true)
   _$$StockStateImplCopyWith<_$StockStateImpl> get copyWith =>

@@ -4,6 +4,7 @@ import 'package:bm_app/screens/my/widget/stock_price_item.dart';
 import 'package:bm_app/screens/viewmodel_states.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../data/entity/entity.dart';
 import '../../domain/usecase/websocket.dart';
@@ -31,23 +32,26 @@ class _MyScreenState extends ConsumerState<MyScreen> {
           Row(
             children: [
               Text("관심주식"),
-              ElevatedButton(onPressed: () {}, child: Text("전체보기"))
+              ElevatedButton(onPressed: () {
+                context.push("/my-stock");
+
+              }, child: Text("전체보기"))
             ],
           ),
-          viewmodel.favoriteStocks.when(
+          viewmodel.when(
             data: (data) {
               print(data);
               return Column(children: [
-                if (data.isNotEmpty)
-                  StockPriceItem(stock: data[0]),
-                if (data.length > 1)
-                  StockPriceItem(stock: data[1]),
-                if (data.length > 2)
-                  StockPriceItem(stock: data[2]),
-                if (data.length > 3)
-                  StockPriceItem(stock: data[3]),
-                if (data.length > 4)
-                  StockPriceItem(stock: data[4]),
+                if (data.favoriteStocks.isNotEmpty)
+                  StockPriceItem(stock: data.favoriteStocks[0]),
+                if (data.favoriteStocks.length > 1)
+                  StockPriceItem(stock: data.favoriteStocks[1]),
+                if (data.favoriteStocks.length > 2)
+                  StockPriceItem(stock: data.favoriteStocks[2]),
+                if (data.favoriteStocks.length > 3)
+                  StockPriceItem(stock: data.favoriteStocks[3]),
+                if (data.favoriteStocks.length > 4)
+                  StockPriceItem(stock: data.favoriteStocks[4]),
               ]);
             },
             error: (err, stackTrace) {

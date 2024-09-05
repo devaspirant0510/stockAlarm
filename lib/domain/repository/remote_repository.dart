@@ -17,4 +17,5 @@ abstract class RemoteRepository{
   Future<YhChartData> getChartDataThreeMonth(String symbol);
   Future<YhChartData> getChartDataYear(String symbol);
   Future<YhChartData> getChartDataTenYear(String symbol);
+  Future<QuoteSummary> getQuoteSummaryBySymbol(String symbol);
 }

@@ -145,7 +145,7 @@ class _YhDatasource implements YhDatasource {
   @override
   Future<YhChartData> getChartDataBySymbolOnThreeMonth({
     required String symbol,
-    String range = "1mo",
+    String range = "3mo",
     String region = "US",
     String interval = "1d",
     String lang = "en",
@@ -265,6 +265,44 @@ class _YhDatasource implements YhDatasource {
               baseUrl,
             ))));
     final value = YhChartData.fromJson(_result.data!);
+    return value;
+  }
+
+  @override
+  Future<QuoteSummary> getQuoteSummaryBySymbol({
+    required String symbol,
+    String lang = "en",
+    String region = "US",
+    String modules = "summaryDetail,assetProfile",
+    String apiKey = Env.financeApiKey,
+  }) async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{
+      r'lang': lang,
+      r'region': region,
+      r'modules': modules,
+    };
+    final _headers = <String, dynamic>{r'X-API-KEY': apiKey};
+    _headers.removeWhere((k, v) => v == null);
+    const Map<String, dynamic>? _data = null;
+    final _result = await _dio
+        .fetch<Map<String, dynamic>>(_setStreamType<QuoteSummary>(Options(
+      method: 'GET',
+      headers: _headers,
+      extra: _extra,
+    )
+            .compose(
+              _dio.options,
+              'v11/finance/quoteSummary/${symbol}',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
+    final value = QuoteSummary.fromJson(_result.data!);
     return value;
   }
 

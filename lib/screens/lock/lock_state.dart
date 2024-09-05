@@ -4,7 +4,9 @@ part of '../viewmodel_states.dart';
 class LockState with _$LockState {
   const factory LockState({
 
-    AlarmQueue? alarmData
+    AlarmQueue? alarmData,
+    @Default([])
+    List<StockModel> stocks
 }) = _LockState;
   factory LockState.initial()=>LockState();
 }

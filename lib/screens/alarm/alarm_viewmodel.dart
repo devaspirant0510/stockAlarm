@@ -18,6 +18,13 @@ class AlarmViewmodel extends _$AlarmViewmodel {
       },
     ));
   }
+  Future<void> removeAllAlarm() async {
+    final ids = await ref.read(repositoryProvider).getAllAlarmById();
+    await ref.read(repositoryProvider).deleteAllAlarm();
+    state = state.copyWith(
+      alarmList: AsyncValue.data([]),
+    );
+  }
 
   // 다이얼로그에 보여줄 유저가 선택한 관심 종목 리스트
   Future<void> loadFavoriteStocksAtDialog() async {
